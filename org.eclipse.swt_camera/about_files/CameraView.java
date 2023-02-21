@@ -55,6 +55,7 @@ public class CameraView extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -71,6 +72,7 @@ public class CameraView extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
 	public CameraView() {
 		setBackground(new Color(0, 0, 0));
 		setTitle("OpenLabFrame");
@@ -404,42 +406,87 @@ public class CameraView extends JFrame {
 					data_controller.clear();
 				}
 				
-				}
+			}
 		});
 		panel_coordinate_z.add(btn_coordinate_z);
 		
 		
-		ControllerCamera controller_cam = new ControllerCamera();
-
-		Thread t = new Thread(controller_cam);
+		
 		
 		// Panel Center //
 		
 		JPanel panel_Center = new JPanel();
 		contentPane.add(panel_Center, BorderLayout.CENTER);
-		panel_Center.setLayout(null);
 		
 		JButton btn_Preview = new JButton("Preview");
+		btn_Preview.setBounds(53, 28, 162, 41);
 		btn_Preview.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				ControllerCamera controller_cam = new ControllerCamera();
+				Thread t = new Thread(controller_cam);
 				t.start();
 			}
 		});
-		btn_Preview.setBounds(47, 26, 173, 52);
+		panel_Center.setLayout(null);
 		panel_Center.add(btn_Preview);
 		
 		JButton btn_Stop = new JButton("Stop");
+		btn_Stop.setBounds(53, 129, 162, 36);
 		btn_Stop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				StopCamera Stop_cam = new StopCamera();
 				Thread t1 = new Thread(Stop_cam);
 				t1.start();
-				Stop stop = new Stop();
-				Thread t2 = new Thread(stop);
-				dispose();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
-		btn_Stop.setBounds(47, 103, 173, 52);
+		
+		JButton btn_Taking_a_picture = new JButton("Taking a picture");
+		btn_Taking_a_picture.setBounds(53, 81, 162, 36);
+		panel_Center.add(btn_Taking_a_picture);
+		btn_Taking_a_picture.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				class Picture implements Runnable {
+					@Override
+					public void run() {
+						
+						Camera camera = new Camera();
+						
+						var config = new Camera.PicConfig.Builder().outputPath("/home/audrey/Images/")
+								.delay(Integer.parseInt(textField_Time.getText()))
+								.disablePreview(true)
+								.encoding(Camera.PicEncoding.valueOf(textField_encoding.getText()))
+								.useDate(true)
+								.quality(Integer.parseInt(textField_Quality.getText()))
+								.width(Integer.parseInt(textField_Width.getText()))
+								.height(Integer.parseInt(textField_Height.getText()))
+								.build();
+						
+						camera.takeStill(config);
+				 }
+			}
+				
+				StopCamera Stop_cam = new StopCamera();
+				Thread t1 = new Thread(Stop_cam);
+				t1.start();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					//e1.printStackTrace();
+				}
+				
+				Picture picture = new Picture();
+				Thread t3 = new Thread(picture);
+				t3.start();
+			}
+		});
 		panel_Center.add(btn_Stop);
 		
 		
@@ -453,28 +500,6 @@ public class CameraView extends JFrame {
 		lbl_Camera.setFont(new Font("Dialog", Font.BOLD, 14));
 		lbl_Camera.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_North.add(lbl_Camera);
-				
-		JButton btn_Taking_a_picture = new JButton("Taking a picture");
-		btn_Taking_a_picture.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				Camera camera = new Camera();
-
-				var config = new Camera.PicConfig.Builder().outputPath("/home/audrey/Images/")
-						.delay(Integer.parseInt(textField_Time.getText()))
-						.disablePreview(true)
-						.encoding(Camera.PicEncoding.PNG)
-						.useDate(true)
-						.quality(Integer.parseInt(textField_Quality.getText()))
-						.width(Integer.parseInt(textField_Width.getText()))
-						.height(Integer.parseInt(textField_Height.getText()))
-						.build();
-				
-				camera.takeStill(config);
-				
-			}
-		});
-		panel_North.add(btn_Taking_a_picture);
 		
 	}
 

@@ -62,7 +62,7 @@ public class Arduino {
 	
     public void Arduino()throws IOException, InterruptedException  {
     	
-		SerialPort[] get_port = SerialPort.getCommPorts();
+		/*SerialPort[] get_port = SerialPort.getCommPorts();
 				
 		for(SerialPort port : get_port) {
 			System.out.println(port.getSystemPortName());
@@ -73,6 +73,14 @@ public class Arduino {
 			}else {
 				System.out.println("Failed to open port");
 			}
+		}*/
+		
+		serial_port = SerialPort.getCommPort("ttyAMA0");
+		
+		if(serial_port.openPort()) {
+			System.out.println("Successfully open port!");
+		}else {
+			System.out.println("Failed to open port");
 		}
 		
 		serial_port.setBaudRate(115200); // Attention au BaudRate : avec Grbl 115200 au lieu de 9600//
