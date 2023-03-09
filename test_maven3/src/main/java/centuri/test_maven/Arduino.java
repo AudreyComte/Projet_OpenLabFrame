@@ -59,25 +59,20 @@ public class Arduino {
 	}
 	
 	
+	
 	static SerialPort serial_port;
 
 	
-	
-    public void arduino()throws IOException, InterruptedException, SerialException  {
+    public void arduino_openPort()throws IOException, InterruptedException, SerialException  {
     	
-		SerialPort[] get_port = SerialPort.getCommPorts();
-				
-		for(SerialPort port : get_port) {
-			System.out.println(port.getSystemPortName());
-			serial_port = SerialPort.getCommPort(port.getSystemPortName());
+    	serial_port = SerialPort.getCommPort("ttyACM0");
+ 				
 					
 			if(serial_port.openPort()) {
 				System.out.println("Successfully open port!");
 			}else {
 				System.out.println("Failed to open port");
 			}
-		}
-		
 		
 		if(serial_port.openPort()) {
 			System.out.println("Successfully open port!");
@@ -99,8 +94,16 @@ public class Arduino {
 		//InputStream input_stream  = serial_port.getInputStream();
 		//DataInputStream data_input = new DataInputStream(input_stream);
 		
+    }
 		
-		
+    public void arduino_closePort()throws IOException, InterruptedException, SerialException  {
+    	serial_port.closePort();
+		System.out.println("Successfully close port!");
+    }
+    	
+    
+    public void arduino_start()throws IOException, InterruptedException, SerialException  {
+    	
 		OutputStream output_stream  = serial_port.getOutputStream();
 		DataOutputStream data_output = new DataOutputStream(output_stream);
 		
@@ -129,6 +132,9 @@ public class Arduino {
 			
 		}
 		
+    }
+    
+    public void arduino_inPut()throws IOException, InterruptedException, SerialException  {
 		Thread thread = new Thread(){
 			@Override public void run() {
 				System.out.println("Arduino : ");
@@ -146,11 +152,7 @@ public class Arduino {
 		Thread.sleep(1000);
 		thread.start();
 		Thread.sleep(1000);
-		
-		
-		serial_port.closePort();
-		System.out.println("Successfully close port!");
-		
+			
 	}
     
 

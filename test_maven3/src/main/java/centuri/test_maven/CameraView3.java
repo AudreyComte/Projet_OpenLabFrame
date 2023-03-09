@@ -85,10 +85,14 @@ public class CameraView3 extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws InterruptedException 
+	 * @throws IOException 
+	 * @throws SerialException 
 	 */
 	 
-	public CameraView3() {
+	public CameraView3() throws SerialException, IOException, InterruptedException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
 		setBounds(700, 200, 650, 750);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -122,7 +126,10 @@ public class CameraView3 extends JFrame {
 		//Panel Moving//
 		
 		ArrayList data_controller= new ArrayList();
+		
 		Arduino arduino = new Arduino(data_controller);
+		
+		arduino.arduino_openPort();
 		
 		JPanel panel_Moving = new JPanel();
 		tabbedPane.addTab("Moving", null, panel_Moving, null);
@@ -198,7 +205,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -265,7 +272,7 @@ public class CameraView3 extends JFrame {
 						arduino.Save_Coordinate();
 						arduino.afficher_data_controller();
 						/*try {
-							arduino.arduino();
+							arduino.arduino_start();
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -308,14 +315,14 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}*/
+				arduino.arduino_start();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}*/
 				data_controller.clear();
 				textArea_y.setText((counter_y.get_Counter())+"");
 				}
@@ -354,7 +361,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -387,7 +394,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -426,7 +433,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -465,7 +472,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -506,7 +513,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -587,7 +594,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e2) {
 					// TODO Auto-generated catch block
 					e2.printStackTrace();
@@ -624,7 +631,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e2) {
 					// TODO Auto-generated catch block
 					e2.printStackTrace();
@@ -661,7 +668,7 @@ public class CameraView3 extends JFrame {
 				arduino.Save_Coordinate();
 				arduino.afficher_data_controller();
 				/*try {
-					arduino.arduino();
+					arduino.arduino_start();
 				} catch (IOException e2) {
 					// TODO Auto-generated catch block
 					e2.printStackTrace();
@@ -948,7 +955,6 @@ public class CameraView3 extends JFrame {
 		panel_Time.add(comboBox_Time);
 		
 		
-		
 		JPanel panel_50 = new JPanel();
 		panel_34.add(panel_50);
 		
@@ -969,46 +975,21 @@ public class CameraView3 extends JFrame {
 		
 		JPanel panel_70 = new JPanel();
 		contentPane.add(panel_70, BorderLayout.SOUTH);
-		panel_70.setLayout(new GridLayout(1, 1, 0, 0));
+		panel_70.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		SerialPort serial_port;
-
-	    	
-			SerialPort[] get_port = SerialPort.getCommPorts();
-					
-			for(SerialPort port : get_port) {
-				System.out.println(port.getSystemPortName());
-				serial_port = SerialPort.getCommPort(port.getSystemPortName());
-						
-				if(serial_port.openPort()) {
-					System.out.println("Successfully open port!");
-				}else {
-					System.out.println("Failed to open port");
-				}
-			}
-			
-			
-			if(serial_port.openPort()) {
-				System.out.println("Successfully open port!");
-			}else {
-				System.out.println("Failed to open port");
-			}
-		
-		serial_port.setBaudRate(115200);
+		JTextArea textArea = new JTextArea();
+		panel_70.add(textArea);
 		
 		Thread thread = new Thread(){
 			@Override public void run() {
-				System.out.println("Arduino : ");
+				SerialPort serial_port = SerialPort.getCommPort("ttyACM0");;
+				//System.out.println("Arduino : ");
 				Scanner scanner = new Scanner(serial_port.getInputStream());
 				
 				while(scanner.hasNextLine()) {
 					try {
 						String line = scanner.nextLine();
-						JTextArea textArea = new JTextArea();
-						textArea.setText(line);
-						panel_70.add(textArea);
-						
-						System.out.println(line);								
+						textArea.setText("Arduino : "+ line);								
 					} catch(Exception e) {}
 				}							
 				scanner.close();
@@ -1017,12 +998,6 @@ public class CameraView3 extends JFrame {
 		Thread.sleep(1000);
 		thread.start();
 		Thread.sleep(1000);
-		
-		
-		serial_port.closePort();
-		System.out.println("Successfully close port!");
-		
-		
 		
 		btnPicture.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1063,7 +1038,8 @@ public class CameraView3 extends JFrame {
 			}
 		});
 			
-		
+
+	
 	}
 }
 

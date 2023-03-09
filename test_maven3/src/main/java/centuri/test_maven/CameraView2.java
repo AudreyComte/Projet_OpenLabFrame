@@ -79,8 +79,11 @@ public class CameraView2 extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws InterruptedException 
+	 * @throws IOException 
+	 * @throws SerialException 
 	 */
-	public CameraView2() {
+	public CameraView2() throws SerialException, IOException, InterruptedException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 650);
 		contentPane = new JPanel();
@@ -115,7 +118,10 @@ public class CameraView2 extends JFrame {
 		//Panel Moving//
 		
 		ArrayList data_controller= new ArrayList();
+		
 		Arduino arduino = new Arduino(data_controller);
+		
+		arduino.arduino_openPort();
 		
 		JPanel panel_Moving = new JPanel();
 		tabbedPane.addTab("Moving", null, panel_Moving, null);
@@ -156,7 +162,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -196,7 +202,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -253,7 +259,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -291,7 +297,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -334,7 +340,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -366,7 +372,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -401,7 +407,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -436,7 +442,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -474,7 +480,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -551,7 +557,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -589,7 +595,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
@@ -627,7 +633,7 @@ public class CameraView2 extends JFrame {
 				//arduino.afficher_data_controller();
 				try {
 					try {
-						arduino.arduino();
+						arduino.arduino_start();
 					} catch (SerialException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
