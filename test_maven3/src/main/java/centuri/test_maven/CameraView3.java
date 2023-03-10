@@ -964,16 +964,34 @@ public class CameraView3 extends JFrame {
 		panel_Quality.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		
-		// Button Width //
+		ArrayList Width = new ArrayList();
+		ArrayList Heigth = new ArrayList();
+		String [] message_Heigth = {"small (110x150)", "medium (150x200)", "large(200x270)"};
 		
-		JLabel lblWidth = new JLabel("Width (mm)");
-		panel_Quality.add(lblWidth);
-		String [] message_Width = {"500", "1000", "5000", "10000"};
-		JComboBox comboBox_Width = new JComboBox(message_Width);
-		panel_Quality.add(comboBox_Width);
-		comboBox_Width.addActionListener(new ActionListener() {
+		JLabel lbl_Size = new JLabel("Size (mm)");
+		panel_Quality.add(lbl_Size);
+		JComboBox comboBox_Size = new JComboBox(message_Heigth);
+		panel_Quality.add(comboBox_Size);
+		comboBox_Size.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println(comboBox_Width.getSelectedItem().toString());
+				System.out.println(comboBox_Size.getSelectedItem().toString());
+				if (comboBox_Size.getSelectedItem() == "small (110x150)") {
+					Width.add("110");
+					Heigth.add("150");
+				}
+				if (comboBox_Size.getSelectedItem() == "medium (150x200)") {
+					Width.clear();
+					Width.add("150");
+					Heigth.clear();
+					Heigth.add("200");
+				}
+				if (comboBox_Size.getSelectedItem() == "large(200x270)") {
+					Width.clear();
+					Width.add("200");
+					Heigth.clear();
+					Heigth.add("270");
+				}
+				
 			}
 		});
 		
@@ -984,38 +1002,29 @@ public class CameraView3 extends JFrame {
 		panel_Width.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		
-		// Button Heigth //
+		// Button Time //
 		
-		JLabel lblHeigth = new JLabel("Heigth (mm)");
-		panel_Width.add(lblHeigth);
-		String [] message_Heigth = {"500", "1000", "5000", "10000"};
-		JComboBox comboBox_Heigth = new JComboBox(message_Heigth);
-		panel_Width.add(comboBox_Heigth);
-		comboBox_Heigth.addActionListener(new ActionListener() {
+		
+		JLabel lblTime = new JLabel("Delay Time (ms)");
+		panel_Width.add(lblTime);
+		
+		String [] message_encoT = {"1000","5000", "10000", "30000"};
+		JComboBox comboBox_Time = new JComboBox(message_encoT);
+		panel_Width.add(comboBox_Time);
+		comboBox_Time.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println(comboBox_Heigth.getSelectedItem().toString());
+				System.out.println(comboBox_Time.getSelectedItem().toString());
 			}
 		});
+		
+		
+		// Button Heigth //
 		
 		
 		
 		JPanel panel_Heigth = new JPanel();
 		panel_33.add(panel_Heigth);
 		panel_Heigth.setLayout(new GridLayout(0, 2, 0, 0));
-		
-		
-		// Button Time //
-		
-		JLabel lblTime = new JLabel("Delay Time (ms)");
-		panel_Heigth.add(lblTime);
-		String [] message_encoT = {"5000", "1000", "5000", "10000"};
-		JComboBox comboBox_Time = new JComboBox(message_encoT);
-		panel_Heigth.add(comboBox_Time);
-		comboBox_Time.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println(comboBox_Time.getSelectedItem().toString());
-			}
-		});
 		
 		
 		
@@ -1045,8 +1054,8 @@ public class CameraView3 extends JFrame {
 								.encoding(Camera.PicEncoding.valueOf("JPG"))
 								.useDate(true)
 								.quality(Integer.parseInt("100"))
-								.width(Integer.parseInt(comboBox_Width.getSelectedItem().toString()))
-								.height(Integer.parseInt(comboBox_Heigth.getSelectedItem().toString()))
+								.width(Integer.parseInt(Width.get(0).toString()))
+								.height(Integer.parseInt(Heigth.get(0).toString()))
 								.build();
 						
 						camera.takeStill(config);
@@ -1094,7 +1103,7 @@ public class CameraView3 extends JFrame {
 		textField = new JTextField();
 		panel_Time.add(textField);
 		textField.setColumns(10);
-		String [] message_Time = {"5000", "10000", "15000", "20000", "25000", "30000"};
+		
 		
 		
 		JPanel panel_50 = new JPanel();
