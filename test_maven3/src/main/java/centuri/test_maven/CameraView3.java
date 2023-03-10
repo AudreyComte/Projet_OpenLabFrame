@@ -152,7 +152,7 @@ public class CameraView3 extends JFrame {
 		panel_44.setBackground(Color.LIGHT_GRAY);
 		panel_10.add(panel_44);
 		panel_44.setBorder(new LineBorder(Color.GRAY));
-		panel_44.setLayout(new GridLayout(5, 3, 50, 0));
+		panel_44.setLayout(new GridLayout(4, 3, 50, 0));
 		
 		JPanel panel_55 = new JPanel();
 		panel_55.setBackground(Color.LIGHT_GRAY);
@@ -174,6 +174,7 @@ public class CameraView3 extends JFrame {
 		panel_58.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Coordinate X Y Z");
+		lblNewLabel_1_1.setVerticalAlignment(SwingConstants.TOP);
 		panel_58.add(lblNewLabel_1_1);
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_1_1.setForeground(Color.BLUE);
@@ -245,25 +246,9 @@ public class CameraView3 extends JFrame {
 		panel_65.add(textArea_z);
 		textArea_z.setText((counter_z.get_Counter())+"");
 		
-		JPanel panel_66 = new JPanel();
-		panel_66.setBackground(Color.LIGHT_GRAY);
-		panel_44.add(panel_66);
-		
-		JPanel panel_48 = new JPanel();
-		panel_48.setBackground(Color.LIGHT_GRAY);
-		panel_44.add(panel_48);
-		
-		JPanel panel_22 = new JPanel();
-		panel_22.setBackground(Color.LIGHT_GRAY);
-		panel_44.add(panel_22);
-		
 		JPanel panel_18_1 = new JPanel();
 		panel_10.add(panel_18_1);
-		panel_18_1.setLayout(new GridLayout(2, 1, 0, 0));
-		
-		JPanel panel_49_1 = new JPanel();
-		panel_18_1.add(panel_49_1);
-		panel_49_1.setLayout(new GridLayout(1, 0, 0, 0));
+		panel_18_1.setLayout(new GridLayout(1, 1, 0, 0));
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Relative coordinate");
 		lblNewLabel_1_2.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -729,7 +714,7 @@ public class CameraView3 extends JFrame {
 		JButton btnNewButton_1 = new JButton("X");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (Integer.parseInt((textField_coordinate_x.getText())) < 130 && Integer.parseInt((textField_coordinate_x.getText())) >= 0) {
+				if (Integer.parseInt((textField_coordinate_x.getText())) < 130 & Integer.parseInt((textField_coordinate_x.getText())) >= 0) {
 				data_controller.add("G90\n");
 				data_controller.add("G0x" + textField_coordinate_x.getText() + "\n");
 				arduino.Save_Coordinate();
@@ -766,7 +751,7 @@ public class CameraView3 extends JFrame {
 		JButton btnNewButton_2 = new JButton("Y");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (Integer.parseInt((textField_coordinate_y.getText())) < 90 && Integer.parseInt((textField_coordinate_y.getText())) >= 0) {
+				if (Integer.parseInt((textField_coordinate_y.getText())) < 90 & Integer.parseInt((textField_coordinate_y.getText())) >= 0) {
 				data_controller.add("G90\n");
 				data_controller.add("G0y" + textField_coordinate_y.getText() + "\n");
 				arduino.Save_Coordinate();
@@ -803,7 +788,7 @@ public class CameraView3 extends JFrame {
 		JButton btnNewButton_3 = new JButton("Z");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (Integer.parseInt((textField_coordinate_z.getText())) > -50 && Integer.parseInt((textField_coordinate_z.getText())) <= 0) {
+				if (Integer.parseInt((textField_coordinate_z.getText())) > -50 & Integer.parseInt((textField_coordinate_z.getText())) <= 0) {
 				data_controller.add("G90\n");
 				data_controller.add("G0z" + textField_coordinate_z.getText() + "\n");
 				arduino.Save_Coordinate();
@@ -1044,9 +1029,10 @@ public class CameraView3 extends JFrame {
 				 }
 			}
 				
-				StopCamera Stop_cam = new StopCamera();
-				Thread t1 = new Thread(Stop_cam);
-				t1.start();
+				//StopCamera Stop_cam = new StopCamera();
+				//Thread t1 = new Thread(Stop_cam);
+				//t1.start();
+				
 				try {
 					Thread.sleep(5000);
 				} catch (InterruptedException e1) {
@@ -1120,6 +1106,11 @@ public class CameraView3 extends JFrame {
 						camera.takeVid(vidconfig);
 				 }
 			}
+			
+			Video video = new Video();
+			Thread t4 = new Thread(video);
+			t4.start();	
+				
 			}
 		});
 		panel_73.add(btnPicture_1);
