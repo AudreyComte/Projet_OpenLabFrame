@@ -59,6 +59,8 @@ import com.fazecast.jSerialComm.SerialPort;
 
 import javax.swing.event.ChangeEvent;
 import javax.swing.DropMode;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
 
 public class CameraView3 extends JFrame {
 
@@ -316,13 +318,24 @@ public class CameraView3 extends JFrame {
 				panel_71.add(panel_23);
 				panel_23.setLayout(new GridLayout(1, 1, 0, 0));
 				
+				
 				ArrayList valeur = new ArrayList();
 				
+				
 				JButton btnNewButton = new JButton("Step of 0.1 mm");
+				JButton btnNewButton_4 = new JButton("Step of 1 mm");
+				JButton btnNewButton_5 = new JButton("Step of 10 mm");
+				
+				
 				btnNewButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						valeur.clear();
 						valeur.add(0.1);
+						btnNewButton.setBackground(Color.LIGHT_GRAY);
+						if (btnNewButton_4.getBackground( )==(Color.LIGHT_GRAY) || btnNewButton_5.getBackground( )==(Color.LIGHT_GRAY)) {
+							btnNewButton_4.setBackground(UIManager.getColor("Button.background"));
+							btnNewButton_5.setBackground(UIManager.getColor("Button.background"));
+						}
 					}
 				});
 				panel_23.add(btnNewButton);
@@ -331,11 +344,17 @@ public class CameraView3 extends JFrame {
 				panel_71.add(panel_25);
 				panel_25.setLayout(new GridLayout(0, 1, 0, 0));
 				
-				JButton btnNewButton_4 = new JButton("Step of 1 mm");
+				
+				
 				btnNewButton_4.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						valeur.clear();
 						valeur.add(1);
+						btnNewButton_4.setBackground(Color.LIGHT_GRAY);
+						if (btnNewButton.getBackground( )==(Color.LIGHT_GRAY) || btnNewButton_5.getBackground( )==(Color.LIGHT_GRAY)) {
+							btnNewButton.setBackground(UIManager.getColor("Button.background"));	
+							btnNewButton_5.setBackground(UIManager.getColor("Button.background"));
+					}
 					}
 				});
 				panel_25.add(btnNewButton_4);
@@ -345,11 +364,16 @@ public class CameraView3 extends JFrame {
 						panel_71.add(panel_17);
 						panel_17.setLayout(new GridLayout(1, 1, 0, 0));
 						
-						JButton btnNewButton_5 = new JButton("Step of 10 mm");
+						
 						btnNewButton_5.addActionListener(new ActionListener() {
 							public void actionPerformed(ActionEvent e) {
 								valeur.clear();
 								valeur.add(10);
+								btnNewButton_5.setBackground(Color.LIGHT_GRAY);
+								if (btnNewButton.getBackground( )==(Color.LIGHT_GRAY) || btnNewButton_4.getBackground( )==(Color.LIGHT_GRAY)) {
+									btnNewButton.setBackground(UIManager.getColor("Button.background"));	
+									btnNewButton_4.setBackground(UIManager.getColor("Button.background"));
+							}
 							}
 						});
 						panel_17.add(btnNewButton_5);
@@ -982,7 +1006,7 @@ public class CameraView3 extends JFrame {
 		
 		// Button Time //
 		
-		JLabel lblTime = new JLabel("Time (ms)");
+		JLabel lblTime = new JLabel("Delay Time (ms)");
 		panel_Heigth.add(lblTime);
 		String [] message_encoT = {"5000", "1000", "5000", "10000"};
 		JComboBox comboBox_Time = new JComboBox(message_encoT);
