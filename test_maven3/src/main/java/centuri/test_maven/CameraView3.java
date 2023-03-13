@@ -943,11 +943,11 @@ public class CameraView3 extends JFrame {
 		
 		JPanel panel_32 = new JPanel();
 		panel_Picture.add(panel_32);
-		panel_32.setLayout(new GridLayout(1, 2, 50, 0));
+		panel_32.setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel_33 = new JPanel();
-		panel_32.add(panel_33);
-		panel_33.setLayout(new GridLayout(6, 1, 50, 15));
+		panel_32.add(panel_33, BorderLayout.CENTER);
+		panel_33.setLayout(new GridLayout(8, 1, 50, 15));
 		
 		JPanel panel_45 = new JPanel();
 		panel_33.add(panel_45);
@@ -1032,11 +1032,52 @@ public class CameraView3 extends JFrame {
 		panel_33.add(panel_46);
 		panel_46.setLayout(new GridLayout(1, 2, 0, 0));
 		
+		JPanel panel_78 = new JPanel();
+		panel_33.add(panel_78);
+		panel_78.setLayout(new GridLayout(1, 2, 0, 0));
+		
+		JLabel lblNewLabel_3_1 = new JLabel("Video setting");
+		panel_78.add(lblNewLabel_3_1);
+		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_3_1.setForeground(Color.BLUE);
+		lblNewLabel_3_1.setFont(new Font("Dialog", Font.BOLD, 14));
+		
+		JPanel panel_79 = new JPanel();
+		panel_33.add(panel_79);
+		panel_79.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		JLabel lblRecordTimems = new JLabel("Record time (ms)");
+		panel_79.add(lblRecordTimems);
+		
+		textField = new JTextField();
+		panel_79.add(textField);
+		textField.setColumns(10);
+		
+		JPanel panel_80 = new JPanel();
+		panel_33.add(panel_80);
+		
+		JPanel panel_22 = new JPanel();
+		panel_32.add(panel_22, BorderLayout.EAST);
+		panel_22.setLayout(new GridLayout(8, 1, 50, 15));
+		
+		JPanel panel_48 = new JPanel();
+		panel_22.add(panel_48);
+		
+		JPanel panel_74 = new JPanel();
+		panel_22.add(panel_74);
+		
+		JPanel panel_66 = new JPanel();
+		panel_22.add(panel_66);
+		
+		JPanel panel_75 = new JPanel();
+		panel_22.add(panel_75);
+		panel_75.setLayout(new GridLayout(0, 1, 0, 0));
+		
 		
 		// Button Taking a picture //
 		
 		JButton btnPicture = new JButton("Taking a picture");
-		panel_33.add(btnPicture);
+		panel_75.add(btnPicture);
 		btnPicture.setBackground(Color.PINK);
 		
 		btnPicture.addActionListener(new ActionListener() {
@@ -1079,49 +1120,22 @@ public class CameraView3 extends JFrame {
 			}
 		});
 		
-		JPanel panel_34 = new JPanel();
-		panel_32.add(panel_34);
-		panel_34.setLayout(new GridLayout(6, 1, 50, 15));
+		JPanel panel_76 = new JPanel();
+		panel_22.add(panel_76);
 		
-		JPanel panel_43 = new JPanel();
-		panel_34.add(panel_43);
-		panel_43.setLayout(new GridLayout(0, 1, 0, 0));
+		JPanel panel_77 = new JPanel();
+		panel_22.add(panel_77);
 		
-		JLabel lblNewLabel_3_1 = new JLabel("Video setting");
-		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_3_1.setForeground(Color.BLUE);
-		lblNewLabel_3_1.setFont(new Font("Dialog", Font.BOLD, 14));
-		panel_43.add(lblNewLabel_3_1);
+		JPanel panel_83 = new JPanel();
+		panel_22.add(panel_83);
+		panel_83.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		JPanel panel_Time = new JPanel();
-		panel_34.add(panel_Time);
-		panel_Time.setLayout(new GridLayout(0, 2, 0, 0));
-		
-		JLabel lblRecordTimems = new JLabel("Record time (ms)");
-		panel_Time.add(lblRecordTimems);
-		
-		textField = new JTextField();
-		panel_Time.add(textField);
-		textField.setColumns(10);
-		
-		
-		
-		JPanel panel_50 = new JPanel();
-		panel_34.add(panel_50);
-		
-		JPanel panel_37 = new JPanel();
-		panel_34.add(panel_37);
-		panel_37.setLayout(new GridLayout(1, 1, 0, 0));
-		
-		JPanel panel_Taking_picture = new JPanel();
-		panel_34.add(panel_Taking_picture);
-		panel_Taking_picture.setLayout(new GridLayout(1, 1, 0, 0));
-		
-		JPanel panel_73 = new JPanel();
-		panel_34.add(panel_73);
-		panel_73.setLayout(new GridLayout(0, 1, 0, 0));
+		JPanel panel_84 = new JPanel();
+		panel_22.add(panel_84);
+		panel_84.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JButton btnPicture_1 = new JButton("Taking a video");
+		panel_84.add(btnPicture_1);
 		btnPicture_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				class Video implements Runnable {
@@ -1146,15 +1160,17 @@ public class CameraView3 extends JFrame {
 				
 			}
 		});
-		panel_73.add(btnPicture_1);
 		btnPicture_1.setBackground(Color.ORANGE);
 		
 		JPanel panel_South = new JPanel();
 		contentPane.add(panel_South, BorderLayout.SOUTH);
-		panel_South.setLayout(new GridLayout(1, 0, 0, 0));
+		panel_South.setLayout(new GridLayout(1, 1, 0, 0));
 		
 		JTextArea textArea = new JTextArea();
 		panel_South.add(textArea);
+		textArea.setRows(3);
+		textArea.setColumns(1);
+		
 		
 		Thread thread = new Thread(){
 			@Override public void run() {
@@ -1165,7 +1181,7 @@ public class CameraView3 extends JFrame {
 				while(scanner.hasNextLine()) {
 					try {
 						String line = scanner.nextLine();
-						textArea.setText("Arduino : "+ line);								
+						textArea.setText("Arduino : "+ line);
 					} catch(Exception e) {}
 				}							
 				scanner.close();
@@ -1174,8 +1190,7 @@ public class CameraView3 extends JFrame {
 		Thread.sleep(1000);
 		thread.start();
 		Thread.sleep(1000);
-			
-
+		
 	
 	}
 }
