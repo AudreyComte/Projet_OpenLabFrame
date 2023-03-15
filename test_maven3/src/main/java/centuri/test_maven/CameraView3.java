@@ -42,6 +42,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,6 +62,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.DropMode;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
+import javax.swing.JScrollPane;
 
 public class CameraView3 extends JFrame {
 
@@ -283,8 +285,9 @@ public class CameraView3 extends JFrame {
 				panel_71.add(panel_24);
 				panel_24.setLayout(new GridLayout(0, 1, 0, 0));
 				
-				// Button Set zero here //
+				JTextArea textArea_InPut = new JTextArea();
 				
+				// Button Set zero here //
 				
 				JButton btn_Origine = new JButton("Set zero here");
 				panel_24.add(btn_Origine);
@@ -302,13 +305,30 @@ public class CameraView3 extends JFrame {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}*/
-						data_controller.clear();
+						data_controller.clear();                              
 						counter_x.set_Counter(0.0);
 						counter_y.set_Counter(0.0);
 						counter_z.set_Counter(0.0);
 						textArea_x.setText((counter_x.get_Counter())+"");
 						textArea_y.setText((counter_y.get_Counter())+"");
 						textArea_z.setText((counter_z.get_Counter())+"");
+						
+						InputStream input_stream=arduino.getInput();
+						while(true) {
+							char msg;
+							try {
+								if(input_stream.available() == 0) {
+							        break;
+							    }
+								msg = (char)input_stream.read();
+								textArea_InPut.append(msg+"");
+								System.out.print(msg);
+							} catch (IOException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+							
+						}
 					}
 				});
 				btn_Origine.setBackground(Color.YELLOW);
@@ -422,6 +442,24 @@ public class CameraView3 extends JFrame {
 										counter_y.less_Counter(Double.parseDouble(valeur.get(0).toString()));
 										counter2_y.less_Counter(Double.parseDouble(valeur.get(0).toString()));
 									}
+									
+									InputStream input_stream=arduino.getInput();
+									while(true) {
+										char msg;
+										try {
+											if(input_stream.available() == 0) {
+										        break;
+										    }
+											msg = (char)input_stream.read();
+											textArea_InPut.append(msg+"");
+											System.out.print(msg);
+										} catch (IOException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										}
+										
+									}
+									
 							}
 						});
 						btn_plus_Y.setBackground(Color.CYAN);
@@ -465,8 +503,29 @@ public class CameraView3 extends JFrame {
 									else {
 										counter_z.less_Counter(Double.parseDouble(valeur.get(0).toString()));
 										counter2_z.less_Counter(Double.parseDouble(valeur.get(0).toString()));
+									}
+									
+									
+									
+									InputStream input_stream=arduino.getInput();
+									while(true) {
+										//Thread.sleep(100);
+										char msg;
+										try {
+											if(input_stream.available() == 0) {
+										        break;
+										    }
+											msg = (char)input_stream.read();
+											textArea_InPut.append(msg+"");
+											System.out.print(msg);
+										} catch (IOException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										}
 										
-							}}
+									}		
+										
+						 }
 								
 						});
 						btn_plus_Z.setBackground(Color.CYAN);
@@ -515,6 +574,25 @@ public class CameraView3 extends JFrame {
 								textArea_x.setText((counter_x.get_Counter())+"");
 								textArea_y.setText((counter_y.get_Counter())+"");
 								textArea_z.setText((counter_z.get_Counter())+"");
+								
+								
+								InputStream input_stream=arduino.getInput();
+								while(true) {
+									char msg;
+									try {
+										if(input_stream.available() == 0) {
+									        break;
+									    }
+										msg = (char)input_stream.read();
+										textArea_InPut.append(msg+"");
+										System.out.print(msg);
+									} catch (IOException e1) {
+										// TODO Auto-generated catch block
+										e1.printStackTrace();
+									}
+									
+								}
+								
 							}
 						});
 						btn_Home.setForeground(new Color(255, 255, 255));
@@ -557,6 +635,26 @@ public class CameraView3 extends JFrame {
 									counter_x.less_Counter(Double.parseDouble(valeur.get(0).toString()));
 									counter2_x.less_Counter(Double.parseDouble(valeur.get(0).toString()));
 								}
+								
+								
+								InputStream input_stream=arduino.getInput();
+								while(true) {
+									char msg;
+									try {
+										if(input_stream.available() == 0) {
+									        break;
+									    }
+										msg = (char)input_stream.read();
+										textArea_InPut.append(msg+"");
+										System.out.print(msg);
+									} catch (IOException e1) {
+										// TODO Auto-generated catch block
+										e1.printStackTrace();
+									}
+									
+								}
+								
+								
 							}
 						});
 						btn_plus_x.setBackground(Color.CYAN);
@@ -606,6 +704,24 @@ public class CameraView3 extends JFrame {
 										counter_y.add_Counter(Double.parseDouble(valeur.get(0).toString()));
 										counter2_y.add_Counter(Double.parseDouble(valeur.get(0).toString()));
 									}
+									
+									InputStream input_stream=arduino.getInput();
+									while(true) {
+										char msg;
+										try {
+											if(input_stream.available() == 0) {
+										        break;
+										    }
+											msg = (char)input_stream.read();
+											textArea_InPut.append(msg+"");
+											System.out.print(msg);
+										} catch (IOException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										}
+										
+									}
+									
 							}
 						});
 						btn_moins_Y.setBackground(Color.CYAN);
@@ -648,7 +764,27 @@ public class CameraView3 extends JFrame {
 								textArea_z.setText((counter_z.get_Counter())+"");
 								}
 									else {counter_z.add_Counter(Double.parseDouble(valeur.get(0).toString()));
-									     counter2_z.add_Counter(Double.parseDouble(valeur.get(0).toString()));}
+									     counter2_z.add_Counter(Double.parseDouble(valeur.get(0).toString()));
+									     }
+									
+									
+									InputStream input_stream=arduino.getInput();
+									while(true) {
+										char msg;
+										try {
+											if(input_stream.available() == 0) {
+										        break;
+										    }
+											msg = (char)input_stream.read();
+											textArea_InPut.append(msg+"");
+											System.out.print(msg);
+										} catch (IOException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										}
+										
+									}
+									
 							}
 						});
 						btn_moins_Z.setBackground(Color.CYAN);
@@ -682,6 +818,25 @@ public class CameraView3 extends JFrame {
 									counter_x.add_Counter(Double.parseDouble(valeur.get(0).toString()));
 									counter2_x.add_Counter(Double.parseDouble(valeur.get(0).toString()));
 								}
+								
+								
+								InputStream input_stream=arduino.getInput();
+								while(true) {
+									char msg;
+									try {
+										if(input_stream.available() == 0) {
+									        break;
+									    }
+										msg = (char)input_stream.read();
+										textArea_InPut.append(msg+"");
+										System.out.print(msg);
+									} catch (IOException e1) {
+										// TODO Auto-generated catch block
+										e1.printStackTrace();
+									}
+									
+								}
+								
 							}
 						});
 		
@@ -755,6 +910,24 @@ public class CameraView3 extends JFrame {
 				data_controller.clear();
 				counter_x.set_Counter(Double.parseDouble((textField_coordinate_x.getText())));
 				textArea_x.setText((counter_x.get_Counter())+"");
+				
+				InputStream input_stream=arduino.getInput();
+				while(true) {
+					//Thread.sleep(100);
+					char msg;
+					try {
+						if(input_stream.available() == 0) {
+					        break;
+					    }
+						msg = (char)input_stream.read();
+						textArea_InPut.append(msg+"");
+						System.out.print(msg);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
+				}
 			}}
 		});
 		panel_35.add(btnNewButton_1);
@@ -792,6 +965,23 @@ public class CameraView3 extends JFrame {
 				data_controller.clear();
 				counter_y.set_Counter(Double.parseDouble((textField_coordinate_y.getText())));
 				textArea_y.setText((counter_y.get_Counter())+"");
+				
+				InputStream input_stream=arduino.getInput();
+				while(true) {
+					char msg;
+					try {
+						if(input_stream.available() == 0) {
+					        break;
+					    }
+						msg = (char)input_stream.read();
+						textArea_InPut.append(msg+"");
+						System.out.print(msg);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
+				}
 			}}
 		});
 		panel_36.add(btnNewButton_2);
@@ -829,6 +1019,23 @@ public class CameraView3 extends JFrame {
 				data_controller.clear();
 				counter_z.set_Counter(Double.parseDouble((textField_coordinate_z.getText())));
 				textArea_z.setText((counter_z.get_Counter())+"");
+				
+				InputStream input_stream=arduino.getInput();
+				while(true) {
+					char msg;
+					try {
+						if(input_stream.available() == 0) {
+					        break;
+					    }
+						msg = (char)input_stream.read();
+						textArea_InPut.append(msg+"");
+						System.out.print(msg);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
+				}
 			}}
 		});
 		panel_38.add(btnNewButton_3);
@@ -1166,32 +1373,47 @@ public class CameraView3 extends JFrame {
 		contentPane.add(panel_South, BorderLayout.SOUTH);
 		panel_South.setLayout(new GridLayout(1, 1, 0, 0));
 		
-		JTextArea textArea = new JTextArea();
-		panel_South.add(textArea);
-		textArea.setRows(3);
-		textArea.setColumns(1);
+		
+		textArea_InPut.setTabSize(3);
 		
 		
-		Thread thread = new Thread(){
-			@Override public void run() {
-				SerialPort serial_port = SerialPort.getCommPort("ttyACM0");;
+		panel_South.add(textArea_InPut);
+		textArea_InPut.setRows(3);
+		textArea_InPut.setColumns(1);
+		JScrollPane scrollPane = new JScrollPane(textArea_InPut);
+		panel_South.add(scrollPane);
+		
+		
+		
+		//Thread thread = new Thread(){
+			//@Override public void run() {
+				//SerialPort serial_port = SerialPort.getCommPort("ttyACM0");
 				//System.out.println("Arduino : ");
-				Scanner scanner = new Scanner(serial_port.getInputStream());
-				
-				while(scanner.hasNextLine()) {
-					try {
-						String line = scanner.nextLine();
-						textArea.setText("Arduino : "+ line);
-					} catch(Exception e) {}
-				}							
-				scanner.close();
-			}
+				//Scanner scanner = new Scanner(serial_port.getInputStream());
+				//try {
+					//Thread.sleep(2000);
+				//} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					//e1.printStackTrace();
+				//}
+				//while(scanner.hasNextLine()) {
+				    //try {
+				        //String line = scanner.nextLine();
+				        //System.out.println("Arduino : " + line);
+				        //textArea_InPut.setText("Arduino : " + line + "\n");
+				    //} catch(Exception e) {
+				    	//e.printStackTrace();
+				    //}
+				//}
+				//scanner.close();            	
+			//}
 		};
-		Thread.sleep(1000);
-		thread.start();
-		Thread.sleep(1000);
+		
+		//Thread.sleep(2000);
+		//thread.start();
+		//Thread.sleep(2000);
 		
 	
-	}
+	//}
 }
 

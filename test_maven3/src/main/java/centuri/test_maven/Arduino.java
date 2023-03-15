@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.sql.rowset.serial.SerialException;
+import javax.swing.JTextArea;
 
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
@@ -82,13 +83,10 @@ public class Arduino {
 		
 		serial_port.setBaudRate(115200); // Attention au BaudRate : avec Grbl 115200 au lieu de 9600//
 		
-		//InputStream input_stream = serial_port.getInputStream();
-			//while(input_stream!=null) {
-				//char msg =(char)input_stream.read();
-				//System.out.print(msg);
-			//}
-			
-		 //Thread.sleep(5000);
+		
+		
+		 	
+		
 							
 		
 		//InputStream input_stream  = serial_port.getInputStream();
@@ -134,26 +132,61 @@ public class Arduino {
 		
     }
     
-    public void arduino_inPut()throws IOException, InterruptedException, SerialException  {
-		Thread thread = new Thread(){
-			@Override public void run() {
-				System.out.println("Arduino : ");
-				Scanner scanner = new Scanner(serial_port.getInputStream());
-				
-				while(scanner.hasNextLine()) {
-					try {
-						String line = scanner.nextLine();
-						System.out.println(line);								
-					} catch(Exception e) {}
-				}							
-				scanner.close();
-			}
-		};
-		Thread.sleep(1000);
-		thread.start();
-		Thread.sleep(1000);
-			
-	}
+    public InputStream getInput() {
+    	InputStream input_stream = serial_port.getInputStream();
+    	return input_stream;
+    }
     
-
+    
+    public void arduino_inPut()throws IOException, InterruptedException, SerialException  {
+    	
+    	InputStream input_stream = serial_port.getInputStream();
+		Thread.sleep(2000); // Attendre 2 secondes avant de débuter
+			while(input_stream != null) {
+				//Thread.sleep(100);
+				char msg =(char)input_stream.read();
+				System.out.print(msg);
+				if(msg == ']') {
+					break;
+				}
+			}
+    	
+    	
+    	//InputStream input_stream  = serial_port.getInputStream();
+    	//Thread.sleep(2000);
+		//DataInputStream data_input = new DataInputStream(input_stream);
+		//data_input.
+		//Thread.sleep(5000);
+        //String str = data_input.readUTF();
+        //Thread.sleep(5000);
+        //System.out.println("Arduino : "+ str);
+     
+        
+		//Thread thread = new Thread(){
+			//@Override public void run() {
+	
+				//Scanner scanner = new Scanner(serial_port.getInputStream());
+				//try {
+					//Thread.sleep(2000);
+				//} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					//e1.printStackTrace();
+				//}
+				//while(scanner.hasNextLine()) {
+					//try {
+						//String line = scanner.nextLine();
+						//System.out.println("Arduino : "+line);								
+					//} catch(Exception e) {}
+				//}							
+				//scanner.close();
+				
+			//}
+		//};
+		//Thread.sleep(2000);
+		//thread.start();
+		//Thread.sleep(2000);	
+		
+	//}
+    
+    }
 }
