@@ -63,6 +63,7 @@ import javax.swing.DropMode;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
 import javax.swing.JScrollPane;
+import centuri.test_maven.Cross;
 
 public class CameraView3 extends JFrame {
 
@@ -112,7 +113,8 @@ public class CameraView3 extends JFrame {
 		JPanel panel_16 = new JPanel();
 		panel_North.add(panel_16);
 		
-		
+		Cross cross = new Cross();
+		cross.Cross();
 		// Titer Camera //
 		
 		JLabel lblCamera = new JLabel("Camera");
@@ -1123,6 +1125,7 @@ public class CameraView3 extends JFrame {
 		panel_42.add(btnNewButton_Start);
 		btnNewButton_Start.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Cross point = new Cross();
 				ControllerCamera controller_cam = new ControllerCamera();
 				Thread t = new Thread(controller_cam);
 				t.start();
@@ -1382,7 +1385,6 @@ public class CameraView3 extends JFrame {
 		textArea_InPut.setColumns(1);
 		JScrollPane scrollPane = new JScrollPane(textArea_InPut);
 		panel_South.add(scrollPane);
-		
 		
 		
 		//Thread thread = new Thread(){

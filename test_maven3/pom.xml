@@ -32,6 +32,11 @@
 			<artifactId>pi4j-example-components</artifactId>
 			<version>0.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>com.rvantwisk</groupId>
+			<artifactId>cnctools</artifactId>
+			<version>1.0.0-ALPHA</version>
+		</dependency>
     </dependencies>
     <build>
   <plugins>
