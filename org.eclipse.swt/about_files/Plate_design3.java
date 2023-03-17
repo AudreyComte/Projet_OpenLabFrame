@@ -498,16 +498,16 @@ public class Plate_design3 extends JFrame {
 						controller1.go();
 						controller1.Save_Coordinate();
 						controller1.afficher_data_controller();
-						Thread t = new Thread(controller1);
-						t.start();
+						//Thread t = new Thread(controller1);
+						//t.start();
 						
-						//try {
-							//controller1.Arduino();
-						//}
-						//catch (IOException | InterruptedException e1) {
+						try {
+							controller1.Arduino();
+						}
+						catch (IOException | InterruptedException e1) {
 							// TODO Auto-generated catch block
-							//e1.printStackTrace();
-						//}
+							e1.printStackTrace();
+						}
 					}
 				});
 				panel.add(btnButton_Go);

@@ -23,7 +23,7 @@ import about_files.Event;
 import about_files.G_code;
 import java.lang.Thread;
 
-public class Controller implements Runnable {
+public class Controller {
 	Field myField;
 	Coordinate_Field myCoordinate;
 	Head myHead;
@@ -123,12 +123,8 @@ public class Controller implements Runnable {
 	public void Arduino()throws IOException, InterruptedException  {
     	
 		
-	}
-
-
-
-	@Override
-	public void run() {
+	//@Override
+	//public void run() {
 		
 		SerialPort[] get_port = SerialPort.getCommPorts();
 		
@@ -162,7 +158,7 @@ public class Controller implements Runnable {
 		OutputStream output_stream  = serial_port.getOutputStream();
 		DataOutputStream data_output = new DataOutputStream(output_stream);
 		
-		Scanner scanner1 = new Scanner(System.in);
+		/*Scanner scanner1 = new Scanner(System.in);
 		if(scanner1.next()== "stop") {
 			String msg = "M30\n";
 			try {
@@ -178,9 +174,9 @@ public class Controller implements Runnable {
 				e.printStackTrace();
 			}
 		
-		}	
+		}	*/
 			
-		String filename = "C:\\Users\\Audrey\\eclipse-workspace\\org.eclipse.swt\\Save_Coordiate.txt";
+		String filename = "/home/centuri/eclipse-workspace/org.eclipse.swt/Save_Coordiate.txt";
 		
 		try (BufferedReader bufferedreader = new BufferedReader(new FileReader(filename))) {
 		      String strCurrentLine;
@@ -201,7 +197,7 @@ public class Controller implements Runnable {
 		      }
 		      
 		serial_port.closePort();
-		
+	
 	};
 
 

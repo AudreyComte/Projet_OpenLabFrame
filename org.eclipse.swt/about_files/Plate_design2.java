@@ -309,9 +309,6 @@ public class Plate_design2 extends JFrame {
 		
 		
 		
-		
-		
-		
 		// Button A1 //
 		JButton btnButton_A1 = new JButton("A1");
 		btnButton_A1.setBackground(Color.LIGHT_GRAY);
@@ -483,7 +480,7 @@ public class Plate_design2 extends JFrame {
 					public void actionPerformed(ActionEvent e) {
 						controller1.go(); 
 						controller1.Save_Coordinate();
-						controller1.go.run();
+						controller1.Arduino();
 					}
 				});
 				panel.add(btnButton_Go);

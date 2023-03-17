@@ -32,15 +32,12 @@ public class Arduino {
 		this.data_controller=data_controller;
 	}
 	
-
-	
 	
 	public void afficher_data_controller() {
 		for (int i =0;i<this.data_controller.size(); i ++) {
 			System.out.print(data_controller.get(i));
 		}	
 	}
-	
 	
 	
 	public void Save_Coordinate () {
@@ -82,18 +79,15 @@ public class Arduino {
 		}
 		
 		serial_port.setBaudRate(115200); // Attention au BaudRate : avec Grbl 115200 au lieu de 9600//
-		
-		
-		
-		 	
-		
+				
 							
 		
 		//InputStream input_stream  = serial_port.getInputStream();
 		//DataInputStream data_input = new DataInputStream(input_stream);
 		
     }
-		
+	
+    
     public void arduino_closePort()throws IOException, InterruptedException, SerialException  {
     	serial_port.closePort();
 		System.out.println("Successfully close port!");
@@ -131,6 +125,7 @@ public class Arduino {
 		}
 		
     }
+    
     
     public InputStream getInput() {
     	InputStream input_stream = serial_port.getInputStream();
