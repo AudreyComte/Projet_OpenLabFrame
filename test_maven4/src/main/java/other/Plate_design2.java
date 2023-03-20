@@ -1,4 +1,4 @@
-package centuri.test_maven;
+package other;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

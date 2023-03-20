@@ -1,4 +1,4 @@
-package centuri.test_maven;
+package other;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,9 +15,12 @@ import java.util.Scanner;
 import com.fazecast.jSerialComm.SerialPort;
 
 import centuri.test_maven.Field;
+import centuri.test_maven.Head;
 import centuri.test_maven.Coordinate_Field;
 import centuri.test_maven.Manip;
+import centuri.test_maven.StopCamera;
 //import gnu.io.SerialPortEvent;
+import other.Event;
 
 import java.lang.Thread;
 
@@ -25,7 +28,7 @@ public class Controller implements Runnable {
 	Field myField;
 	Coordinate_Field myCoordinate;
 	Head myHead;
-	Manip myManip;
+	public Manip myManip;
 	ArrayList data_controller;
 	
 	public Controller (Field myField, Coordinate_Field myCoordinate, Head myHead, Manip myManip) {
@@ -205,7 +208,7 @@ public class Controller implements Runnable {
 							//e1.printStackTrace();
 						}
 						
-						Picture picture = new Picture(0,0,0);
+						Picture2 picture = new Picture2(0,0,0);
 						Thread t3 = new Thread(picture);
 						t3.start();
 		    	  }

@@ -123,7 +123,7 @@ public class Menu extends JFrame {
 		btnButton_New_Project.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				New_project nw = new New_project();
-				nw.NewProject();
+				nw.New_Project2();
 			}
 		});
 		panel_Center.add(btnButton_New_Project);
