@@ -6,13 +6,7 @@ import java.io.OutputStream;
 import com.fazecast.jSerialComm.SerialPort;
 
 public class CloseArduino extends Event {
-	
-	String record_Time;
-	
-	public CloseArduino (String record_Time){
-		this.record_Time =record_Time;
-	}
-	
+
 
 	@Override
 	public void Do()  {

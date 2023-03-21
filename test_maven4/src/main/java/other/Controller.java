@@ -20,7 +20,7 @@ import centuri.test_maven.Coordinate_Field;
 import centuri.test_maven.Manip;
 import centuri.test_maven.StopCamera;
 //import gnu.io.SerialPortEvent;
-import other.Event;
+//import other.Event;
 
 import java.lang.Thread;
 
@@ -75,7 +75,7 @@ public class Controller implements Runnable {
 	
 	
 	
-	public void go () {
+	/*public void go () {
 		int nbEvent = myManip.get_nb_event();
 		Event[] event = new Event[nbEvent+1];
 		for(int i=0; i<=nbEvent; i++) {
@@ -90,7 +90,8 @@ public class Controller implements Runnable {
 			this.data_controller.add("G0y" + event[i].get_y().toString()+ "\n");
 			this.data_controller.add("G4 P"+ event[i].get_time()+ "\n");
 		}
-	}	
+	}	*/
+	
 	
 	
 	public void afficher_data_controller() {
@@ -208,9 +209,9 @@ public class Controller implements Runnable {
 							//e1.printStackTrace();
 						}
 						
-						Picture2 picture = new Picture2(0,0,0);
+					    /*Picture2 picture = new Picture2(0,0,0);
 						Thread t3 = new Thread(picture);
-						t3.start();
+						t3.start();*/
 		    	  }
 		      }
 		    } catch (IOException ioe) {

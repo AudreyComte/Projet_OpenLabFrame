@@ -186,293 +186,298 @@ public class New_project extends JFrame {
 				panel_2.add(textField);
 				textField.setColumns(50);
 				
-		JPanel panel = new JPanel();
-		panel_South.add(panel);
-		panel.setLayout(new GridLayout(0, 4, 100, 0));
+				JPanel panel = new JPanel();
+				panel_South.add(panel);
+				panel.setLayout(new GridLayout(0, 4, 100, 0));
 		
 		
-		// Button Back //
+				// Button Back //
 		
-		JButton btnButton_Back = new JButton("Back");
-		btnButton_Back.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dispose();	
-			}
-		});
-		panel.add(btnButton_Back);
+				JButton btnButton_Back = new JButton("Back");
+				btnButton_Back.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						dispose();	
+					}
+				});
+				panel.add(btnButton_Back);
 				
 				
-		
+				// ArrayList Protocol //
 				
+				ArrayList<Event> protocol = new ArrayList<Event>();
+				
+				protocol.add(0,new OpenArduino());
+				
+				protocol.add(protocol.size(), new CloseArduino());
+		
 				
 				
 				// Panel West //
 				
-						JPanel panel_West = new JPanel();
-						panel_Plate_Design.add(panel_West, BorderLayout.WEST);
-						panel_West.setLayout(new GridLayout(5, 1, 0, 5));
+				JPanel panel_West = new JPanel();
+				panel_Plate_Design.add(panel_West, BorderLayout.WEST);
+				panel_West.setLayout(new GridLayout(5, 1, 0, 5));
 						
 						
-						// Panel Type of plate //
+				// Panel Type of plate //
 						
-						JPanel panel_Type_of_plate = new JPanel();
-						panel_West.add(panel_Type_of_plate);
-						panel_Type_of_plate.setLayout(new GridLayout(2, 1, 0, 0));
+				JPanel panel_Type_of_plate = new JPanel();
+				panel_West.add(panel_Type_of_plate);
+				panel_Type_of_plate.setLayout(new GridLayout(2, 1, 0, 0));
 						
-						JLabel lblLabel_Type_of_plate = new JLabel("Type of plate");
-						lblLabel_Type_of_plate.setForeground(Color.BLUE);
-						panel_Type_of_plate.add(lblLabel_Type_of_plate);
-						JComboBox comboBox_Type_of_plate = new JComboBox(message_type_of_well);
-						
-						
-						panel_Type_of_plate.add(comboBox_Type_of_plate);
+				JLabel lblLabel_Type_of_plate = new JLabel("Type of plate");
+				lblLabel_Type_of_plate.setForeground(Color.BLUE);
+				panel_Type_of_plate.add(lblLabel_Type_of_plate);
+				JComboBox comboBox_Type_of_plate = new JComboBox(message_type_of_well);
 						
 						
-						// Panel First well //
-						
-						JPanel panel_First_well = new JPanel();
-						panel_West.add(panel_First_well);
-						panel_First_well.setLayout(new GridLayout(2, 1, 0, 0));
-						
-						JLabel lblLabel_First_well = new JLabel("First well");
-						lblLabel_First_well.setForeground(Color.BLUE);
-						panel_First_well.add(lblLabel_First_well);
-						JComboBox comboBox_First_well = new JComboBox(message_First_well);
-						comboBox_First_well.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-								System.out.println("Valeur: " + comboBox_First_well.getSelectedItem().toString());
-							}
-						});
-						panel_First_well.add(comboBox_First_well);
+				panel_Type_of_plate.add(comboBox_Type_of_plate);
 						
 						
 						
-						// Panel Last well //
+				// Panel First well //
 						
-						JPanel panel_Last_well = new JPanel();
-						panel_West.add(panel_Last_well);
-						panel_Last_well.setLayout(new GridLayout(2, 1, 0, 0));
+				JPanel panel_First_well = new JPanel();
+				panel_West.add(panel_First_well);
+				panel_First_well.setLayout(new GridLayout(2, 1, 0, 0));
 						
-						JLabel lblLabel_Last_well = new JLabel("Last well");
-						lblLabel_Last_well.setForeground(Color.BLUE);
-						panel_Last_well.add(lblLabel_Last_well);
-						JComboBox comboBox_Last_well = new JComboBox(message_Last_well);
-						comboBox_Last_well.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-								System.out.println("Valeur: " + comboBox_Last_well.getSelectedItem().toString());
-								textField.setText("");
-								int pos = well.indexOf(comboBox_First_well.getSelectedItem().toString());
-								System.out.println(pos +"  "+comboBox_First_well.getSelectedItem().toString());
-								data.add(comboBox_First_well.getSelectedItem().toString());
-								textField.setText(textField.getText() + comboBox_First_well.getSelectedItem().toString()+" ");
+				JLabel lblLabel_First_well = new JLabel("First well");
+				lblLabel_First_well.setForeground(Color.BLUE);
+				panel_First_well.add(lblLabel_First_well);
+				JComboBox comboBox_First_well = new JComboBox(message_First_well);
+				comboBox_First_well.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("Valeur: " + comboBox_First_well.getSelectedItem().toString());
+						}
+					});
+				panel_First_well.add(comboBox_First_well);
+						
+						
+						
+				// Panel Last well //
+						
+				JPanel panel_Last_well = new JPanel();
+				panel_West.add(panel_Last_well);
+				panel_Last_well.setLayout(new GridLayout(2, 1, 0, 0));
+						
+				JLabel lblLabel_Last_well = new JLabel("Last well");
+				lblLabel_Last_well.setForeground(Color.BLUE);
+				panel_Last_well.add(lblLabel_Last_well);
+				JComboBox comboBox_Last_well = new JComboBox(message_Last_well);
+				comboBox_Last_well.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("Valeur: " + comboBox_Last_well.getSelectedItem().toString());
+						textField.setText("");
+						int pos = well.indexOf(comboBox_First_well.getSelectedItem().toString());
+						System.out.println(pos +"  "+comboBox_First_well.getSelectedItem().toString());
+						data.add(comboBox_First_well.getSelectedItem().toString());
+						textField.setText(textField.getText() + comboBox_First_well.getSelectedItem().toString()+" ");
 								
-								int stop = well.indexOf(comboBox_Last_well.getSelectedItem().toString());
-								for(int i = pos; i <= stop-1; i++) {
-									pos = pos + 1;
-									String wellAdd = well.get(pos);
-									data.add(wellAdd);
-									textField.setText(textField.getText() + wellAdd + " ");
-									System.out.println(pos+"  "+ wellAdd);
-									}
+						int stop = well.indexOf(comboBox_Last_well.getSelectedItem().toString());
+						for(int i = pos; i <= stop-1; i++) {
+							pos = pos + 1;
+							String wellAdd = well.get(pos);
+							data.add(wellAdd);
+							textField.setText(textField.getText() + wellAdd + " ");
+							System.out.println(pos+"  "+ wellAdd);
 							}
-						});
-						panel_Last_well.add(comboBox_Last_well);
+						}
+					});
+					panel_Last_well.add(comboBox_Last_well);
 						
-						// Panel Reading direction //
+					
+					
+					// Panel Reading direction //
 						
-						JPanel panel_Reading_direction = new JPanel();
-						panel_West.add(panel_Reading_direction);
-						panel_Reading_direction.setLayout(new GridLayout(2, 1, 0, 0));
+					JPanel panel_Reading_direction = new JPanel();
+					panel_West.add(panel_Reading_direction);
+					panel_Reading_direction.setLayout(new GridLayout(2, 1, 0, 0));
 						
-						JLabel lblLabel_Reading_direction = new JLabel("Reading direction");
-						lblLabel_Reading_direction.setForeground(Color.BLUE);
-						panel_Reading_direction.add(lblLabel_Reading_direction);
-						JComboBox comboBox_Reading_direction = new JComboBox(message_reading_direction);
-						panel_Reading_direction.add(comboBox_Reading_direction);
+					JLabel lblLabel_Reading_direction = new JLabel("Reading direction");
+					lblLabel_Reading_direction.setForeground(Color.BLUE);
+					panel_Reading_direction.add(lblLabel_Reading_direction);
+					JComboBox comboBox_Reading_direction = new JComboBox(message_reading_direction);
+					panel_Reading_direction.add(comboBox_Reading_direction);
 						
 						
 					//  Création d'un objet de la classe Manip //
-						Manip essaiManip = new Manip (comboBox_First_well.getSelectedItem().toString(), comboBox_Last_well.getSelectedItem().toString(), 
-		                comboBox_Reading_direction.getName(),"time",data);
+					Manip essaiManip = new Manip (comboBox_First_well.getSelectedItem().toString(), comboBox_Last_well.getSelectedItem().toString(), 
+		            comboBox_Reading_direction.getName(),"time",data);
 			
+					
 						
-
+					// Panel Time //
 						
-						// Panel Time //
+					JPanel panel_Time = new JPanel();
+					panel_West.add(panel_Time);
+					panel_Time.setLayout(new GridLayout(2, 1, 0, 0));
 						
-						JPanel panel_Time = new JPanel();
-						panel_West.add(panel_Time);
-						panel_Time.setLayout(new GridLayout(2, 1, 0, 0));
-						
-						JLabel lblLabel_Time = new JLabel("Time");
-						lblLabel_Time.setForeground(Color.BLUE);
-						panel_Time.add(lblLabel_Time);
-						JComboBox comboBox_Time = new JComboBox(message_Time);
-						comboBox_Time.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-								System.out.println(comboBox_Time.getSelectedItem().toString());
-								essaiManip.Time(comboBox_Time.getSelectedItem().toString());
-							}
-						});
-						panel_Time.add(comboBox_Time);
+					JLabel lblLabel_Time = new JLabel("Time");
+					lblLabel_Time.setForeground(Color.BLUE);
+					panel_Time.add(lblLabel_Time);
+					JComboBox comboBox_Time = new JComboBox(message_Time);
+					comboBox_Time.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) {
+							System.out.println(comboBox_Time.getSelectedItem().toString());
+							essaiManip.Time(comboBox_Time.getSelectedItem().toString());
+						}
+					});
+					panel_Time.add(comboBox_Time);
 	
-		// Panel Center //
-		
-		JPanel panel_Center = new JPanel();
-		panel_Plate_Design.add(panel_Center, BorderLayout.CENTER);
-		panel_Center.setLayout(new BorderLayout(0, 0));
-		
-		JPanel panel_1 = new JPanel();
-		panel_Center.add(panel_1, BorderLayout.CENTER);
-		panel_1.setLayout(new GridLayout(2, 3, 0, 0));
-		
-		
-		
-		
-		
-		
-		
-		// Button A1 //
-		JButton btnButton_A1 = new JButton("A1");
-		btnButton_A1.setBackground(Color.LIGHT_GRAY);
-		btnButton_A1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(btnButton_A1.getBackground()== Color.LIGHT_GRAY){
-					data.add(btnButton_A1.getText());
-					textField.setText(textField.getText()+"A1 ");
-					btnButton_A1.setBackground(Color.CYAN);
-				}
-				else {
+					// Panel Center //
+					
+					JPanel panel_Center = new JPanel();
+					panel_Plate_Design.add(panel_Center, BorderLayout.CENTER);
+					panel_Center.setLayout(new BorderLayout(0, 0));
+					
+					JPanel panel_1 = new JPanel();
+					panel_Center.add(panel_1, BorderLayout.CENTER);
+					panel_1.setLayout(new GridLayout(2, 3, 0, 0));
+					
+					
+					
+					
+					// Button A1 //
+					JButton btnButton_A1 = new JButton("A1");
 					btnButton_A1.setBackground(Color.LIGHT_GRAY);
-					data.remove(btnButton_A1.getText());
-					textField.setText((textField.getText()).replaceAll("A1 ", ""));
-				}    
-			}
-		});
-		btnButton_A1.setHorizontalAlignment(SwingConstants.CENTER);
-		btnButton_A1.setBorder(border);
-		panel_1.add(btnButton_A1);
-		
-		
-		// Button A2 //
-		
-		JButton btnButton_A2 = new JButton("A2");
-		btnButton_A2.setBackground(Color.LIGHT_GRAY);
-		btnButton_A2.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(btnButton_A2.getBackground()== Color.LIGHT_GRAY){
-					data.add(btnButton_A2.getText());
-					textField.setText(textField.getText()+"A2 ");
-					btnButton_A2.setBackground(Color.CYAN);
-				}
-				else {
+					btnButton_A1.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseClicked(MouseEvent e) {
+							if(btnButton_A1.getBackground()== Color.LIGHT_GRAY){
+								data.add(btnButton_A1.getText());
+								textField.setText(textField.getText()+"A1 ");
+								btnButton_A1.setBackground(Color.CYAN);
+							}
+							else {
+								btnButton_A1.setBackground(Color.LIGHT_GRAY);
+								data.remove(btnButton_A1.getText());
+								textField.setText((textField.getText()).replaceAll("A1 ", ""));
+							}    
+						}
+					});
+					btnButton_A1.setHorizontalAlignment(SwingConstants.CENTER);
+					btnButton_A1.setBorder(border);
+					panel_1.add(btnButton_A1);
+					
+					
+					// Button A2 //
+					
+					JButton btnButton_A2 = new JButton("A2");
 					btnButton_A2.setBackground(Color.LIGHT_GRAY);
-					data.remove(btnButton_A2.getText());
-					textField.setText((textField.getText()).replaceAll("A2 ", ""));
-				}    
-			}
-		});
-		btnButton_A2.setHorizontalAlignment(SwingConstants.CENTER);
-		btnButton_A2.setBorder(border);
-		panel_1.add(btnButton_A2);
-		
-		
-		// Button A3 //
-		
-		JButton btnButton_A3 = new JButton("A3");
-		btnButton_A3.setBackground(Color.LIGHT_GRAY);
-		btnButton_A3.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(btnButton_A3.getBackground()== Color.LIGHT_GRAY){
-					data.add(btnButton_A3.getText());
-					textField.setText(textField.getText()+"A3 ");
-					btnButton_A3.setBackground(Color.CYAN);
-				}
-				else {
+					btnButton_A2.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseClicked(MouseEvent e) {
+							if(btnButton_A2.getBackground()== Color.LIGHT_GRAY){
+								data.add(btnButton_A2.getText());
+								textField.setText(textField.getText()+"A2 ");
+								btnButton_A2.setBackground(Color.CYAN);
+							}
+							else {
+								btnButton_A2.setBackground(Color.LIGHT_GRAY);
+								data.remove(btnButton_A2.getText());
+								textField.setText((textField.getText()).replaceAll("A2 ", ""));
+							}    
+						}
+					});
+					btnButton_A2.setHorizontalAlignment(SwingConstants.CENTER);
+					btnButton_A2.setBorder(border);
+					panel_1.add(btnButton_A2);
+					
+					
+					// Button A3 //
+					
+					JButton btnButton_A3 = new JButton("A3");
 					btnButton_A3.setBackground(Color.LIGHT_GRAY);
-					data.remove(btnButton_A3.getText());
-					textField.setText((textField.getText()).replaceAll("A3 ", ""));
-				}    
-			}
-		});
-		btnButton_A3.setHorizontalAlignment(SwingConstants.CENTER);
-		btnButton_A3.setBorder(border);
-		panel_1.add(btnButton_A3);
-		
-		
-		// Button B1 //
-		
-		JButton btnButton_B1 = new JButton("B1");
-		btnButton_B1.setBackground(Color.LIGHT_GRAY);
-		btnButton_B1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(btnButton_B1.getBackground()== Color.LIGHT_GRAY){
-					data.add(btnButton_B1.getText());
-					textField.setText(textField.getText()+"B1 ");
-					btnButton_B1.setBackground(Color.CYAN);
-				}
-				else {
+					btnButton_A3.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseClicked(MouseEvent e) {
+							if(btnButton_A3.getBackground()== Color.LIGHT_GRAY){
+								data.add(btnButton_A3.getText());
+								textField.setText(textField.getText()+"A3 ");
+								btnButton_A3.setBackground(Color.CYAN);
+							}
+							else {
+								btnButton_A3.setBackground(Color.LIGHT_GRAY);
+								data.remove(btnButton_A3.getText());
+								textField.setText((textField.getText()).replaceAll("A3 ", ""));
+							}    
+						}
+					});
+					btnButton_A3.setHorizontalAlignment(SwingConstants.CENTER);
+					btnButton_A3.setBorder(border);
+					panel_1.add(btnButton_A3);
+					
+					
+					// Button B1 //
+					
+					JButton btnButton_B1 = new JButton("B1");
 					btnButton_B1.setBackground(Color.LIGHT_GRAY);
-					data.remove(btnButton_B1.getText());
-					textField.setText((textField.getText()).replaceAll("B1 ", ""));
-				}    
-			}
-		});
-		btnButton_B1.setHorizontalAlignment(SwingConstants.CENTER);
-		btnButton_B1.setBorder(border);
-		panel_1.add(btnButton_B1);
-		
-		
-		// Button B2 //
-		
-		JButton btnButton_B2 = new JButton("B2");
-		btnButton_B2.setBackground(Color.LIGHT_GRAY);
-		btnButton_B2.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(btnButton_B2.getBackground()== Color.LIGHT_GRAY){
-					data.add(btnButton_B2.getText());
-					textField.setText(textField.getText()+"B2 ");
-					btnButton_B2.setBackground(Color.CYAN);
-				}
-				else {
+					btnButton_B1.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseClicked(MouseEvent e) {
+							if(btnButton_B1.getBackground()== Color.LIGHT_GRAY){
+								data.add(btnButton_B1.getText());
+								textField.setText(textField.getText()+"B1 ");
+								btnButton_B1.setBackground(Color.CYAN);
+							}
+							else {
+								btnButton_B1.setBackground(Color.LIGHT_GRAY);
+								data.remove(btnButton_B1.getText());
+								textField.setText((textField.getText()).replaceAll("B1 ", ""));
+							}    
+						}
+					});
+					btnButton_B1.setHorizontalAlignment(SwingConstants.CENTER);
+					btnButton_B1.setBorder(border);
+					panel_1.add(btnButton_B1);
+					
+					
+					// Button B2 //
+					
+					JButton btnButton_B2 = new JButton("B2");
 					btnButton_B2.setBackground(Color.LIGHT_GRAY);
-					data.remove(btnButton_B2.getText());
-					textField.setText((textField.getText()).replaceAll("B2 ", ""));
-				}    
-			}
-		});
-		btnButton_B2.setHorizontalAlignment(SwingConstants.CENTER);
-		btnButton_B2.setBorder(border);
-		panel_1.add(btnButton_B2);
+					btnButton_B2.addMouseListener(new MouseAdapter() {
+						@Override
+						public void mouseClicked(MouseEvent e) {
+							if(btnButton_B2.getBackground()== Color.LIGHT_GRAY){
+								data.add(btnButton_B2.getText());
+								textField.setText(textField.getText()+"B2 ");
+								btnButton_B2.setBackground(Color.CYAN);
+							}
+							else {
+								btnButton_B2.setBackground(Color.LIGHT_GRAY);
+								data.remove(btnButton_B2.getText());
+								textField.setText((textField.getText()).replaceAll("B2 ", ""));
+							}    
+						}
+					});
+					btnButton_B2.setHorizontalAlignment(SwingConstants.CENTER);
+					btnButton_B2.setBorder(border);
+					panel_1.add(btnButton_B2);
 		
 		
-		// Button B3 //
+				// Button B3 //
 		
-		JButton btnButton_B3 = new JButton("B3");
-		btnButton_B3.setBackground(Color.LIGHT_GRAY);
-		btnButton_B3.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if(btnButton_B3.getBackground()== (Color.LIGHT_GRAY)){
-					data.add(btnButton_B3.getText());
-					textField.setText(textField.getText()+"B3 ");
-					btnButton_B3.setBackground(Color.CYAN);
-				}
-				else {
-					btnButton_B3.setBackground(Color.LIGHT_GRAY);
-					data.remove(btnButton_B3.getText());
-					textField.setText((textField.getText()).replaceAll("B3 ", ""));
-				}    
-			}
-		});
-		btnButton_B3.setHorizontalAlignment(SwingConstants.CENTER);
-		btnButton_B3.setBorder(border);
-		panel_1.add(btnButton_B3);
+				JButton btnButton_B3 = new JButton("B3");
+				btnButton_B3.setBackground(Color.LIGHT_GRAY);
+				btnButton_B3.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						if(btnButton_B3.getBackground()== (Color.LIGHT_GRAY)){
+							data.add(btnButton_B3.getText());
+							textField.setText(textField.getText()+"B3 ");
+							btnButton_B3.setBackground(Color.CYAN);
+						}
+						else {
+							btnButton_B3.setBackground(Color.LIGHT_GRAY);
+							data.remove(btnButton_B3.getText());
+							textField.setText((textField.getText()).replaceAll("B3 ", ""));
+						}    
+					}
+				});
+				btnButton_B3.setHorizontalAlignment(SwingConstants.CENTER);
+				btnButton_B3.setBorder(border);
+				panel_1.add(btnButton_B3);
 				
 				JPanel panel_Camera = new JPanel();
 				tabbedPane.addTab("Camera", null, panel_Camera, null);
@@ -498,15 +503,7 @@ public class New_project extends JFrame {
 				JRadioButton rdbtnNewRadioButton = new JRadioButton("Picture");
 				rdbtnNewRadioButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						
-						Picture2 picture = new Picture2(0,0,0);
-						picture.setDelay(Integer.parseInt(comboBox_Time.getSelectedItem().toString()));
-						picture.setWidth(Integer.parseInt(Width.get(0).toString()));
-						picture.setHeight(Integer.parseInt(Heigth.get(0).toString()));
-						
-						
-						
-						
+						//Picture picture = new Picture(comboBox_Time1.getSelectedItem().toString(),Width.get(0), Heigth.get(0));		
 					}
 				});
 				rdbtnNewRadioButton.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -581,31 +578,17 @@ public class New_project extends JFrame {
 				panel_46.setLayout(new GridLayout(1, 2, 0, 0));
 				
 				textField_1 = new JTextField();
-				
+				JLabel lblRecordTimems = new JLabel("Record time (ms)");
 				JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Video");
+				
+				
 				rdbtnNewRadioButton_1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						class Video implements Runnable {
-							@Override
-							public void run() {
-								
-								Camera camera = new Camera();
-								
-								var vidconfig = Camera.VidConfig.Builder.newInstance()
-								         .outputPath("/home/audrey/Videos/")
-								         .recordTime(Integer.parseInt(textField_1.getText()))
-								         .useDate(true)
-								         .build();
-								
-								camera.takeVid(vidconfig);
-						 }
-					}
-					
-					Video video = new Video();
-					Thread t4 = new Thread(video);
-					t4.start();	
+						Video video = new Video(lblRecordTimems.getText());
+						
 					}
 				});
+				
 				rdbtnNewRadioButton_1.setVerticalAlignment(SwingConstants.BOTTOM);
 				rdbtnNewRadioButton_1.setForeground(Color.BLUE);
 				panel_46.add(rdbtnNewRadioButton_1);
@@ -625,7 +608,7 @@ public class New_project extends JFrame {
 				panel_33.add(panel_79);
 				panel_79.setLayout(new GridLayout(0, 2, 0, 0));
 				
-				JLabel lblRecordTimems = new JLabel("Record time (ms)");
+				
 				panel_79.add(lblRecordTimems);
 				
 				
@@ -689,7 +672,14 @@ public class New_project extends JFrame {
 				JLabel lblNewLabel = new JLabel("");
 				panel_3.add(lblNewLabel);
 				
+				Head head1 = new Head (0.0,0.0,0.0);
+				Field essaiField= new Field(130.0, 90.0, 3 ,2);
+				
+				Coordinate_Field coordinate1 = new Coordinate_Field (essaiField);
+				
+				
 		
+				
 				// Button Go //
 				
 				JButton btnButton_Go = new JButton("Go");
@@ -697,26 +687,8 @@ public class New_project extends JFrame {
 				panel_3.add(btnButton_Go);
 				btnButton_Go.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						
-						Head head1 = new Head (0.0,0.0,0.0);
-						Field essaiField= new Field(130.0, 90.0, 3 ,2);
-						
-						Coordinate_Field coordinate1 = new Coordinate_Field (essaiField);
-						  
-						Controller controller1 = new Controller (essaiField,coordinate1,head1,essaiManip); 
-						controller1.go();
-						controller1.Save_Coordinate();
-						controller1.afficher_data_controller();
-						Thread t = new Thread(controller1);
-						t.start();
-						
-						//try {
-							//controller1.Arduino();
-						//}
-						//catch (IOException | InterruptedException e1) {
-							// TODO Auto-generated catch block
-							//e1.printStackTrace();
-						//}
+						for (Event event : protocol)
+							event.Do();
 					}
 				});
 				

@@ -261,8 +261,8 @@ public class Plate_design2 extends JFrame {
 				
 				
 			//  Création d'un objet de la classe Manip //
-				Manip essaiManip = new Manip (comboBox_First_well.getSelectedItem().toString(), comboBox_Last_well.getSelectedItem().toString(), 
-		                comboBox_Reading_direction.getName(),"time",data);
+				//Manip essaiManip = new Manip (comboBox_First_well.getSelectedItem().toString(), comboBox_Last_well.getSelectedItem().toString(), 
+		               // comboBox_Reading_direction.getName(),"time",data);
 				
 				
 				
@@ -280,7 +280,7 @@ public class Plate_design2 extends JFrame {
 				comboBox_Time.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						System.out.println(comboBox_Time.getSelectedItem().toString());
-						essaiManip.Time(comboBox_Time.getSelectedItem().toString());
+						//essaiManip.Time(comboBox_Time.getSelectedItem().toString());
 					}
 				});
 				panel_Time.add(comboBox_Time);
@@ -464,19 +464,19 @@ public class Plate_design2 extends JFrame {
 				
 				
 		// Button Go //
-				Head head1 = new Head (0.0,0.0,0.0);
-				Field essaiField= new Field(12.0, 8.0, 3 ,2);
+				//Head head1 = new Head (0.0,0.0,0.0);
+				//Field essaiField= new Field(12.0, 8.0, 3 ,2);
 				
-				Coordinate_Field coordinate1 = new Coordinate_Field (essaiField);
+				//Coordinate_Field coordinate1 = new Coordinate_Field (essaiField);
 				  
-				Controller controller1 = new Controller (essaiField,coordinate1,head1,essaiManip); 
+				//Controller controller1 = new Controller (essaiField,coordinate1,head1,essaiManip); 
 		
 				JButton btnButton_Go = new JButton("Go");
 				btnButton_Go.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						controller1.go(); 
-						controller1.Save_Coordinate();
-						controller1.run();
+						//controller1.go(); 
+						//controller1.Save_Coordinate();
+						//controller1.run();
 					}
 				});
 				panel.add(btnButton_Go);
