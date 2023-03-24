@@ -13,7 +13,7 @@ public class Main {
 		
 		protocol.add(new Mouvement("2.0","2.0"));
 		
-		protocol.add(new Pause("2000"));
+		protocol.add(new Pause("10"));
 		
 		protocol.add(new Picture("5000","800","1240"));
 		
