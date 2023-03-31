@@ -16,13 +16,21 @@ int pause;
 	
 	@Override
 	public boolean Do() {
+		
+		boolean pause_boolean = false;
+		
 		System.out.println((pause/1000) + " secondes break... \r\n");
+		
 		try {
-				Thread.sleep(pause);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			Thread.sleep(pause) 
+			pause_boolean = true;	
 			}
-		return true;
+			} catch (InterruptedException e) {
+				e.printStackTrace(pause_boolean = false);
+				
+			}
+			
+		return pause_boolean;
 	}
 
 
