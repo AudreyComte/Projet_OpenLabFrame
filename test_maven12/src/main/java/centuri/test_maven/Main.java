@@ -18,13 +18,14 @@ public class Main {
 		//data.add(new Mouvement(150.0, 100.0, arduino));
 		data.add(new Pause(10000));
 		data.add(new Mouvement(90.0, 40.0, arduino));
-		data.add(new Picture(1000,1240,800));
+		//data.add(new Picture(1000,505852,656131154));
 
 		arduino.Start();
 
 		for (Event event : data) {
 			boolean ok = event.Do();
 			if (!ok){
+				System.out.println("WARNING : ERROR !");
 				break;
 			}
 			event.Info(ok);
