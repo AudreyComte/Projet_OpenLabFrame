@@ -11,6 +11,9 @@ public class Picture extends Event {
 	int delay;
 	int width;
 	int heigth;
+	static final int quality =100;
+	static final String encoding="JPG";
+	static final String path = "/home/audrey/Images/";
 	
 	public Picture (int delay, int width, int heigth){
 		this.delay =delay;
@@ -20,28 +23,33 @@ public class Picture extends Event {
 	
 
 	@Override
-	public void Do() {
+	public boolean Do() {
 		
 		Camera camera = new Camera();
 		
-		var config = new Camera.PicConfig.Builder().outputPath("/home/audrey/Images/")
+		var config = new Camera.PicConfig.Builder().outputPath(path)
 				.delay(delay)
 				.disablePreview(true)
-				.encoding(Camera.PicEncoding.valueOf("JPG"))
+				.encoding(Camera.PicEncoding.valueOf(encoding))
 				.useDate(true)
-				.quality(100)
+				.quality(quality)
 				.width(width)
 				.height(heigth)
 				.build();
 		
-		camera.takeStill(config);
+		
+		return camera.takeStill(config);
 	}
 
 
 	@Override
-	public String Info() {
-		String nb = delay+2000+"";
-		return ("G4 P"+ nb);		
-	}
+	public void Info() {
+		if(Do() == true) {
+			System.out.println("The picture was taken");	
+		}
+		else {
+			System.out.println("Error : the picture wasn't taken");
+		}
 
+	}
 }

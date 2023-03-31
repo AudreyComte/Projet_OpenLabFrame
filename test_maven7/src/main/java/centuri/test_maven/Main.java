@@ -11,20 +11,23 @@ public class Main {
 		
 			ArrayList<Event> data= new ArrayList();
 			data.add(new Initialisation());
-			data.add(new Mouvement("20","10"));
-			data.add(new Pause("10"));
-			data.add(new Picture(5000,800,1240));
-			data.add(new Pause("10"));
+			data.add(new Mouvement(20.0,10.0));
+			data.add(new Pause(10000));
+			//data.add(new Picture(5000,800,1240));
+			//data.add(new Pause(10000));
 			
-			Protocol protocol = new Protocol(data);
+			Arduino arduino = new Arduino();
 			
-			
-			ArduinoTest3 essai3 = new ArduinoTest3(protocol);
-			
-			essai3.Start_arduino();
-			essai3.Go_arduino();
+			arduino.Start_arduino();
+			arduino.input();
 		
-		
-	}
+			for (Event event : data) {
+				event.Do();	
+				event.Info();
+				arduino.input();
+				}
+				
+			arduino.Close_arduino();
 
+	}
 }

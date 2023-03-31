@@ -28,7 +28,6 @@ public class Main {
 			essai3.Go_arduino();
 		
 		
-		
 	}
 
 }

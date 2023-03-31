@@ -7,22 +7,33 @@ import java.io.OutputStream;
 import com.fazecast.jSerialComm.SerialPort;
 
 public class Pause extends Event{
-	String pause;
+int pause;
 	
-	public Pause (String pause) {
+	public Pause (int pause) {
 		this.pause = pause;
 	}
 	
 	
 	@Override
-	public void Do() {
-		System.out.println("Pause de " + pause);
+	public boolean Do() {
+		System.out.println((pause/1000) + " secondes break...");
+		try {
+				Thread.sleep(pause);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		return true;
 	}
 
 
 	@Override
-	public String Info() {
-		return ("G4 P" + pause);
+	public void Info() {
+		if (Do() == true) {
+			System.out.println("End of the " + (pause/1000) +" secondes break");
+		}
+		else {
+			System.out.println("Error : no break");	
+		}
 	}
 
 }

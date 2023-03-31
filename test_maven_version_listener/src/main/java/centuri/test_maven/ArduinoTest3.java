@@ -36,7 +36,7 @@ Protocol myProtocol;
 
 	   public void Start_arduino()throws IOException, InterruptedException, SerialException  {
 	    	
-   		serial_port = SerialPort.getCommPort("ttyAMA1");
+   		serial_port = SerialPort.getCommPort("ttyACM0");
 				
 					
 			if(serial_port.openPort()) {
@@ -90,9 +90,9 @@ Protocol myProtocol;
 	         int numRead = serial_port.readBytes(newData, newData.length);
 	         String dataString = new String(newData, 0, numRead);
 	         System.out.println("Arduino : " + dataString);
-	         if (dataString.contains("ok")) {
+	         if (dataString.contains("[GC")) {
 				for (int i =0; i< myProtocol.getProtocol().size(); i++) {
-					if (dataString.contains("ok")) {
+					if (dataString.contains("[GC")) {
 	        			 myProtocol.getProtocol().get(i).Do();
 	        			 Go(myProtocol.getProtocol().get(i).Info());
 	        			 System.out.println("Arduino : " + dataString);
