@@ -436,5 +436,3 @@ public class Camera extends Component{
 	        }
 	    }
 	}
-
-

@@ -26,10 +26,9 @@ import com.fazecast.jSerialComm.SerialPortEvent;
 
 public class Arduino {
 
-	
 	static SerialPort serial_port;
 	String message;
-
+	
 	
 	// method Start
 	public boolean Start() {
@@ -53,11 +52,6 @@ public class Arduino {
 		
 	}
 
-	
-	// method getSearialPort
-	public SerialPort getSerialPort() {
-		return this.serial_port;
-	}
 
 	
 	// method Go
@@ -124,19 +118,31 @@ public class Arduino {
 	}
 
 	
-	// method getMessage
-	public String getMessage() {
-		return message;
+	public boolean event_go(ArrayList<Event> data) {
+		
+		boolean event_go = false;
+		
+		for (Event event : data) {
+			event.Info(event.Do());
+			event_go = true;
+		}
+		
+		return event_go;
+		
 	}
-
-
+	
 	// method Close
 	public boolean Close()  {
+		
+		boolean close = false;
+		
+		if(serial_port.closePort()) {
+			System.out.println("Successfully close port!");
+			close = true;
+		}
 
-		serial_port.closePort();
-		System.out.println("Successfully close port!");
-
-		return true;
+		
+		return close;
 		
 	}
 

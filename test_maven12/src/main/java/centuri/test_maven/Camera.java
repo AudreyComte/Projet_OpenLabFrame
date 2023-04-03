@@ -42,7 +42,7 @@ public class Camera extends Component{
 	    
 	    // changement de type de méthode boolean au lieu de void
 	    public boolean takeStill(PicConfig config) {
-	    	
+	    	boolean picture = false;
 	        //logDebug("Taking Picture");
 	    	System.out.println("Taking Picture");
 
@@ -50,12 +50,15 @@ public class Camera extends Component{
 	        processBuilder.command("bash", "-c", config.asCommand());
 
 	        try {
-	           callBash(processBuilder);
+	           if (callBash(processBuilder) == true){
+		       picture = true;
+		   }
 	        } catch (Exception e) {
 	        	System.out.println("Camera: Error while taking picture: " + e.getMessage());
 	            //logError("Camera: Error while taking picture: " + e.getMessage());
 	        }
-	        return true;
+		
+	        return picture;
 	    }
 
 	    /**
@@ -80,7 +83,7 @@ public class Camera extends Component{
 	        processBuilder.command("bash", "-c", config.asCommand());
 
 	        try {
-	            callBash(processBuilder);
+	           callBash(processBuilder);
 	        } catch (Exception e) {
 	        	System.out.println("Camera_video: Error while taking video: " + e.getMessage());
 	            //logError("Camera: Error while taking video: " + e.getMessage());
@@ -96,6 +99,8 @@ public class Camera extends Component{
 	    
 	    // changement de type de méthode boolean au lieu de void
 	    public boolean callBash(ProcessBuilder processBuilder) throws IOException, InterruptedException {
+		boolean callbash = false;
+		
 	        Process process = processBuilder.start();
 
 	        BufferedReader reader =
@@ -110,11 +115,12 @@ public class Camera extends Component{
 	        int exitCode = process.waitFor();
 	        if(exitCode != 0){
 	            System.out.println("\nCamera exited with error code : " + exitCode);
-	            return true;
 	        }else{
 	            System.out.println("\nCamera finished successfully");
-	            return false;
+	            callbash = true; 
 	        }
+		
+		return callbash;
 	    }
 
 	    /**

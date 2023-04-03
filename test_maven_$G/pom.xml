@@ -27,21 +27,6 @@
    			<artifactId>jSerialComm</artifactId>
    			<version>2.9.3</version>
 		</dependency>
-		<dependency>
-			<groupId>com.pi4j.example</groupId>
-			<artifactId>pi4j-example-components</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.rvantwisk</groupId>
-			<artifactId>cnctools</artifactId>
-			<version>1.0.0-ALPHA</version>
-		</dependency>
-		<dependency>
-			<groupId>org.rxtx</groupId>
-			<artifactId>rxtx</artifactId>
-			<version>2.1.7</version>
-		</dependency>
     </dependencies>
     <build>
   <plugins>
@@ -50,7 +35,7 @@
       <configuration>
         <archive>
           <manifest>
-            <mainClass>fully.qualified.MainClass</mainClass>
+            <mainClass>centuri.test_maven.Main</mainClass>
           </manifest>
         </archive>
         <descriptorRefs>

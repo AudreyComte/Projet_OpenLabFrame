@@ -1,4 +1,3 @@
-
 package centuri.test_maven;
 
 import java.io.DataOutputStream;
@@ -26,6 +25,8 @@ public class Picture extends Event {
 	@Override
 	public boolean Do() {
 		
+		boolean ok = false;
+		
 		Camera camera = new Camera();
 		
 		var config = new Camera.PicConfig.Builder().outputPath(path)
@@ -37,9 +38,10 @@ public class Picture extends Event {
 				.width(width)
 				.height(heigth)
 				.build();
+				
+		ok = camera.takeStill(config);
 		
-		
-		return camera.takeStill(config);
+		return ok ;
 	}
 
 

@@ -72,7 +72,9 @@ public class Camera extends Component{
 	     *
 	     * @param config path to the .h264 file
 	     */
-	    public void takeVid(VidConfig config) {
+	    
+	    // changement de type de méthode boolean au lieu de void
+	    public boolean takeVid(VidConfig config) {
 	        //logDebug("Taking Video");
 	    	System.out.println("Taking Video");
 
@@ -85,6 +87,8 @@ public class Camera extends Component{
 	        	System.out.println("Camera_video: Error while taking video: " + e.getMessage());
 	            //logError("Camera: Error while taking video: " + e.getMessage());
 	        }
+	        
+	        return true;
 	    }
 
 	    /**
