@@ -15,17 +15,24 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.border.LineBorder;
+
+
+
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
+import javax.swing.UIManager;
+import javax.swing.JTextArea;
+import java.awt.FlowLayout;
 
 public class Interface_graphique extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_break;
 	private JTextField textField_Time_Video;
-	private JTextField textField;
+	private JTextField textField_Picture;
 
 	/**
 	 * Launch the application.
@@ -55,6 +62,29 @@ public class Interface_graphique extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(10, 0));
 		
+		
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				
+		
+		Field field= new Field(12.0, 8.0, 3 ,2);
+		
+		Coordinate_Field coordinate = new Coordinate_Field (field);		
+		
+		Arduino arduino = new Arduino();
+		
+		ArrayList<Event> initilization_homing = new ArrayList<Event>();
+		
+		Initialisation initialization = new Initialisation(arduino);
+		
+		initilization_homing.add(initialization);
+		
+		ArrayList<Event> data = new ArrayList<Event>();
+		
+		
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		
 		JPanel panel_List = new JPanel();
 		contentPane.add(panel_List, BorderLayout.EAST);
 		panel_List.setLayout(new BorderLayout(0, 0));
@@ -63,39 +93,64 @@ public class Interface_graphique extends JFrame {
 		panel_List.add(panel_List_titre, BorderLayout.NORTH);
 		panel_List_titre.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		JLabel lblNewLabel_4 = new JLabel("List");
-		panel_List_titre.add(lblNewLabel_4);
-		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		
+		// List ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		JLabel lblNewLabel_List = new JLabel("             List of events             ");
+		panel_List_titre.add(lblNewLabel_List);
+		lblNewLabel_List.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		JPanel panel_1 = new JPanel();
 		panel_List.add(panel_1, BorderLayout.CENTER);
-		panel_1.setLayout(new GridLayout(20, 0, 0, 0));
+		panel_1.setLayout(new BorderLayout(0, 0));
 		
-		JScrollPane scrollPane = new JScrollPane();
+		JTextArea textArea = new JTextArea();
+		textArea.setRows(1);
+		textArea.setColumns(1);
+		panel_1.add(textArea);
+		
+		JScrollPane scrollPane = new JScrollPane(textArea);
 		panel_1.add(scrollPane);
 		
-		JLabel lblNewLabel_Initialization = new JLabel("   Initialization   ");
-		lblNewLabel_Initialization.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_1.add(lblNewLabel_Initialization);
 		
 		JPanel panel_2 = new JPanel();
 		panel_List.add(panel_2, BorderLayout.SOUTH);
 		panel_2.setLayout(new GridLayout(0, 1, 0, 0));
 		
-		JButton btnNewButton = new JButton("Start");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		panel_2.add(btnNewButton);
 		
 		JPanel panel_3 = new JPanel();
-		panel_List.add(panel_3, BorderLayout.EAST);
-		panel_3.setLayout(new GridLayout(1, 0, 0, 0));
+		panel_2.add(panel_3);
+		panel_3.setLayout(new GridLayout(2, 1, 0, 10));
 		
-		JLabel lblNewLabel_2 = new JLabel("     ");
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_3.add(lblNewLabel_2);
+		JPanel panel_4 = new JPanel();
+		panel_3.add(panel_4);
+		panel_4.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		JLabel lblNewLabel_2 = new JLabel("<html> Number of <br/> repetition of  <br/> the list </html>");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);
+		panel_4.add(lblNewLabel_2);
+		
+		String [] rep = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+		JComboBox comboBox_1 = new JComboBox(rep);
+		panel_4.add(comboBox_1);
+		
+		int n = Integer.parseInt(comboBox_1.getSelectedItem().toString());
+		
+		// Start ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		JButton btnNewButton = new JButton("Start");
+		panel_3.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				arduino.Start();
+				arduino.event_go(initilization_homing);
+				for (int i = 1; i <= n; i ++) {
+					arduino.event_go(data);
+				}
+				arduino.Close();
+			}
+		});
 		
 		JPanel panel_parameter = new JPanel();
 		contentPane.add(panel_parameter, BorderLayout.CENTER);
@@ -103,7 +158,7 @@ public class Interface_graphique extends JFrame {
 		
 		JPanel panel_Parameter_titre = new JPanel();
 		panel_parameter.add(panel_Parameter_titre, BorderLayout.NORTH);
-		panel_Parameter_titre.setLayout(new BoxLayout(panel_Parameter_titre, BoxLayout.X_AXIS));
+		panel_Parameter_titre.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JLabel lblNewLabel = new JLabel("Parameter");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -117,6 +172,11 @@ public class Interface_graphique extends JFrame {
 		panel_Mouvement.setBorder(new LineBorder(Color.GRAY));
 		panel_Parameter_contenu.add(panel_Mouvement);
 		panel_Mouvement.setLayout(new GridLayout(3, 1, 15, 15));
+		
+		
+		
+		
+		// Mouvement ////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		JLabel lblNewLabel_Mouvement = new JLabel("Mouvement");
 		lblNewLabel_Mouvement.setHorizontalAlignment(SwingConstants.CENTER);
@@ -133,6 +193,7 @@ public class Interface_graphique extends JFrame {
 		JComboBox comboBox = new JComboBox(well);
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				comboBox.getSelectedItem().toString();
 			}
 		});
 		panel.add(comboBox);
@@ -141,19 +202,23 @@ public class Interface_graphique extends JFrame {
 		panel_Mouvement.add(panel_7_1_1_1);
 		panel_7_1_1_1.setLayout(new GridLayout(0, 2, 15, 15));
 		
-		JButton btnNewButton_2_1_1 = new JButton("Remove");
-		btnNewButton_2_1_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		panel_7_1_1_1.add(btnNewButton_2_1_1);
-		
+			
 		JButton btnNewButton_1_1_1_1 = new JButton("Add");
 		btnNewButton_1_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
+				textArea.append(comboBox.getSelectedItem().toString() + "\n");
+				double coordinate_x = coordinate.get_x_coordinate(coordinate.get_c (comboBox.getSelectedItem().toString())) * 10;
+				double coordinate_y = coordinate.get_y_coordinate(coordinate.get_r (comboBox.getSelectedItem().toString())) * 10;
+				Mouvement well = new Mouvement( coordinate_x, coordinate_y, arduino);
+				data.add(well);
+			}	
 		});
 		panel_7_1_1_1.add(btnNewButton_1_1_1_1);
+		
+		
+		
+		
+		// Break ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		JPanel panel_Break = new JPanel();
 		panel_Break.setBorder(new LineBorder(Color.GRAY));
@@ -183,28 +248,27 @@ public class Interface_graphique extends JFrame {
 		panel_Break.add(panel_7);
 		panel_7.setLayout(new GridLayout(0, 2, 15, 15));
 		
-		JButton btnNewButton_Remouve_Break = new JButton("Remove");
-		btnNewButton_Remouve_Break.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		panel_7.add(btnNewButton_Remouve_Break);
-		
 		JButton btnNewButton_Add_Break = new JButton("Add");
 		btnNewButton_Add_Break.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JLabel lblNewLabel_Break = new JLabel("Break "+ textField_break.getText() + " sec.");
-				panel_1.add(lblNewLabel_Break);
+				textArea.append("Break "+ textField_break.getText() + " sec." + "\n");
+				Pause pause = new Pause((Integer.parseInt(textField_break.getText().toString()))*1000);
+				data.add(pause);
 			}
 		});
 		panel_7.add(btnNewButton_Add_Break);
+		
+		
+		
+		
+		// Picture ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		JPanel panel_Picture = new JPanel();
 		panel_Picture.setBorder(new LineBorder(Color.GRAY));
 		panel_Parameter_contenu.add(panel_Picture);
 		panel_Picture.setLayout(new GridLayout(3, 1, 15, 15));
-		
 		JLabel lblNewLabel_3_1 = new JLabel("Picture");
+		
 		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_Picture.add(lblNewLabel_3_1);
 		
@@ -215,31 +279,32 @@ public class Interface_graphique extends JFrame {
 		JLabel lblNewLabel_Time_Video_1 = new JLabel("Delay (sec.)");
 		panel_6_1_1.add(lblNewLabel_Time_Video_1);
 		
-		textField = new JTextField();
-		textField.addActionListener(new ActionListener() {
+		textField_Picture = new JTextField();
+		textField_Picture.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		textField.setColumns(10);
-		panel_6_1_1.add(textField);
+		textField_Picture.setColumns(10);
+		panel_6_1_1.add(textField_Picture);
 		
 		JPanel panel_7_1_1 = new JPanel();
 		panel_Picture.add(panel_7_1_1);
 		panel_7_1_1.setLayout(new GridLayout(0, 2, 15, 15));
 		
-		JButton btnNewButton_2_1 = new JButton("Remove");
-		btnNewButton_2_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		panel_7_1_1.add(btnNewButton_2_1);
-		
 		JButton btnNewButton_1_1_1 = new JButton("Add");
 		btnNewButton_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				textArea.append("Picture "+ textField_Picture.getText() + " sec. delay" + "\n");
+				Picture picture = new Picture((Integer.parseInt(textField_Picture.getText().toString()))*1000);
+				data.add(picture);
 			}
 		});
 		panel_7_1_1.add(btnNewButton_1_1_1);
+		
+		
+		
+		
+		// Video /////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		JPanel panel_Video = new JPanel();
 		panel_Video.setBorder(new LineBorder(Color.GRAY));
@@ -269,18 +334,15 @@ public class Interface_graphique extends JFrame {
 		panel_Video.add(panel_7_1);
 		panel_7_1.setLayout(new GridLayout(0, 2, 15, 15));
 		
-		JButton btnNewButton_2 = new JButton("Remove");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		panel_7_1.add(btnNewButton_2);
-		
 		JButton btnNewButton_1_1 = new JButton("Add");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				textArea.append("Video "+ textField_Time_Video.getText() + " sec. record time" + "\n");
+				Video video = new Video((Integer.parseInt(textField_Time_Video.getText().toString()))*1000);
+				data.add(video);
 			}
 		});
+		
 		panel_7_1.add(btnNewButton_1_1);
 	}
 }

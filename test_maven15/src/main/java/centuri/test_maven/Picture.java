@@ -10,16 +10,14 @@ import com.fazecast.jSerialComm.SerialPort;
 public class Picture extends Event {
 	
 	int delay;
-	int width;
-	int heigth;
+	int width = 10000;
+	int heigth = 15000;
 	static final int quality =100;
 	static final String encoding="JPG";
 	static final String path = "/home/audrey/Images/";
 	
-	public Picture (int delay, int width, int heigth){
+	public Picture (int delay){
 		this.delay =delay;
-		this.width =width;
-		this.heigth =heigth;
 	}
 	
 

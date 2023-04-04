@@ -338,6 +338,10 @@ public class New_project2 extends JFrame {
 		
 		// Button A1 //
 		JButton btnButton_A1 = new JButton("A1");
+		btnButton_A1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnButton_A1.setBackground(Color.LIGHT_GRAY);
 		btnButton_A1.addMouseListener(new MouseAdapter() {
 			@Override
