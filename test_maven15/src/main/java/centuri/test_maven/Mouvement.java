@@ -23,6 +23,7 @@ public class Mouvement extends Event {
 		this.coordinate_y = coordinate_y;
 		this.myArduino = new Arduino();
 	}
+	
 
 	
 	@Override
@@ -31,7 +32,7 @@ public class Mouvement extends Event {
 		boolean ok = false;
 
 		// command sent to arduino
-		String info = type_of_coordinate + "G0X" + coordinate_x + "Y" + coordinate_y + "\n";
+		String info =  "$J=X" + coordinate_x + "Y" + coordinate_y + "F10000" + "\n";
 		
 		System.out.println(coordinate_x + " mm movement in x and " + coordinate_y + " mm movement in y \r\n");
 

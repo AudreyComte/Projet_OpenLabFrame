@@ -16,8 +16,6 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.border.LineBorder;
 
-
-
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -121,7 +119,7 @@ public class Interface_graphique extends JFrame {
 		
 		JPanel panel_3 = new JPanel();
 		panel_2.add(panel_3);
-		panel_3.setLayout(new GridLayout(3, 1, 0, 10));
+		panel_3.setLayout(new GridLayout(4, 1, 0, 10));
 		
 		JPanel panel_5 = new JPanel();
 		panel_3.add(panel_5);
@@ -165,16 +163,43 @@ public class Interface_graphique extends JFrame {
 		
 		JButton btnNewButton = new JButton("Start");
 		panel_3.add(btnNewButton);
+		
+		JPanel panel_8 = new JPanel();
+		panel_3.add(panel_8);
+		
+		JButton btnNewButton_2 = new JButton("Stop");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 Runnable stop = new Runnable() {
+				        @Override
+				        public void run() {
+							arduino.Close();
+				        }
+				    };
+
+				    Thread t1 = new Thread(stop);
+				    t1.start();
+			}
+		});
+		
+		panel_8.add(btnNewButton_2);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				arduino.Start();
-				arduino.event_go(initilization_homing);
-				int n = Integer.parseInt(comboBox_1.getSelectedItem().toString());
-				System.out.println(n);
-				for (int i = 1; i <= n; i ++) {
-					arduino.event_go(data);
-				}
-				arduino.Close();
+				 Runnable start = new Runnable() {
+				        @Override
+				        public void run() {
+				        	arduino.Start();
+							arduino.event_go(initilization_homing);
+							int n = Integer.parseInt(comboBox_1.getSelectedItem().toString());
+							for (int i = 1; i <= n; i ++) {
+								arduino.event_go(data);
+							}
+							arduino.Close();
+				        }
+				    };
+
+				    Thread t2 = new Thread(start);
+				    t2.start();
 			}
 		});
 		
@@ -233,8 +258,8 @@ public class Interface_graphique extends JFrame {
 		btnNewButton_1_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textArea.append(comboBox.getSelectedItem().toString() + "\n");
-				double coordinate_x = coordinate.get_x_coordinate(coordinate.get_c (comboBox.getSelectedItem().toString())) * 10;
-				double coordinate_y = coordinate.get_y_coordinate(coordinate.get_r (comboBox.getSelectedItem().toString())) * 10;
+				double coordinate_x = (coordinate.get_x_coordinate(coordinate.get_c (comboBox.getSelectedItem().toString())) * 10);
+				double coordinate_y = (coordinate.get_y_coordinate(coordinate.get_r (comboBox.getSelectedItem().toString())) * 10);
 				Mouvement well = new Mouvement( coordinate_x, coordinate_y, arduino);
 				data.add(well);
 			}	
