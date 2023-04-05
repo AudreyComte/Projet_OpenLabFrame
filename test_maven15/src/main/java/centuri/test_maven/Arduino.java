@@ -121,7 +121,7 @@ public class Arduino {
 	public boolean event_go(ArrayList<Event> data) {
 		
 		boolean ok = false;
-		
+	
 		for (Event event : data) {
 			ok = event.Do();
 			if (!ok){
@@ -134,6 +134,7 @@ public class Arduino {
 		return ok;
 		
 	}
+	
 	
 	// method Close
 	public boolean Close()  {

@@ -121,7 +121,23 @@ public class Interface_graphique extends JFrame {
 		
 		JPanel panel_3 = new JPanel();
 		panel_2.add(panel_3);
-		panel_3.setLayout(new GridLayout(2, 1, 0, 10));
+		panel_3.setLayout(new GridLayout(3, 1, 0, 10));
+		
+		JPanel panel_5 = new JPanel();
+		panel_3.add(panel_5);
+		
+		JButton btnNewButton_1 = new JButton("Remove");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String text = textArea.getText();
+				if (!text.isEmpty()) {
+					  text = text.replaceFirst("(?s)[^\n]*\n?$", "");
+					  textArea.setText(text);
+					}
+				data.remove((data.size())-1);
+			}
+		});
+		panel_5.add(btnNewButton_1);
 		
 		JPanel panel_4 = new JPanel();
 		panel_3.add(panel_4);
@@ -131,11 +147,19 @@ public class Interface_graphique extends JFrame {
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_4.add(lblNewLabel_2);
 		
+				
 		String [] rep = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
 		JComboBox comboBox_1 = new JComboBox(rep);
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+			}
+		});
 		panel_4.add(comboBox_1);
 		
-		int n = Integer.parseInt(comboBox_1.getSelectedItem().toString());
+		
+		
+		
 		
 		// Start ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
@@ -145,6 +169,8 @@ public class Interface_graphique extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				arduino.Start();
 				arduino.event_go(initilization_homing);
+				int n = Integer.parseInt(comboBox_1.getSelectedItem().toString());
+				System.out.println(n);
 				for (int i = 1; i <= n; i ++) {
 					arduino.event_go(data);
 				}
@@ -251,9 +277,14 @@ public class Interface_graphique extends JFrame {
 		JButton btnNewButton_Add_Break = new JButton("Add");
 		btnNewButton_Add_Break.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (textField_break.getText().isEmpty() == false) {
 				textArea.append("Break "+ textField_break.getText() + " sec." + "\n");
 				Pause pause = new Pause((Integer.parseInt(textField_break.getText().toString()))*1000);
 				data.add(pause);
+			}
+				else {
+					btnNewButton_Add_Break.setEnabled(true);
+				}
 			}
 		});
 		panel_7.add(btnNewButton_Add_Break);
@@ -294,9 +325,14 @@ public class Interface_graphique extends JFrame {
 		JButton btnNewButton_1_1_1 = new JButton("Add");
 		btnNewButton_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (textField_Picture.getText().isEmpty() == false) {
 				textArea.append("Picture "+ textField_Picture.getText() + " sec. delay" + "\n");
 				Picture picture = new Picture((Integer.parseInt(textField_Picture.getText().toString()))*1000);
 				data.add(picture);
+				}
+				else {
+					btnNewButton_1_1_1.setEnabled(true);
+				}
 			}
 		});
 		panel_7_1_1.add(btnNewButton_1_1_1);
@@ -337,9 +373,14 @@ public class Interface_graphique extends JFrame {
 		JButton btnNewButton_1_1 = new JButton("Add");
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (textField_Time_Video.getText().isEmpty() == false) {
 				textArea.append("Video "+ textField_Time_Video.getText() + " sec. record time" + "\n");
 				Video video = new Video((Integer.parseInt(textField_Time_Video.getText().toString()))*1000);
 				data.add(video);
+				}
+				else {
+					btnNewButton_1_1.setEnabled(true);
+				}
 			}
 		});
 		
