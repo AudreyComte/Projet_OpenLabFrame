@@ -17,7 +17,7 @@ public class Main {
 		//data.add(new Picture(1000,800,1240));
 		data.add(new Pause(10000));
 		//data.add(new Mouvement(500000.0, 10.0, arduino));
-		data.add(new Video (30000));
+		//data.add(new Video (30000));
 		data.add(new Mouvement(50.0, 10.0, arduino));
 
 		arduino.Start();

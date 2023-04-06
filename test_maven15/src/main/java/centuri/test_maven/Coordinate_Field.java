@@ -36,10 +36,10 @@ public class Coordinate_Field {
 		int row = myField.getRow();
 		
 		// Point A1 en x
-		Double A1_x = ((myField.getxField()/column)/2); // = 2
+		Double A1_x = 5.4;       //((myField.getxField()/column)/2);
 		
 		// Point A1 en y
-		Double A1_y = ((myField.getyField()/row)/2)+(((myField.getyField()/row))*(row-1)); // = 2 + 4 * (2-1)
+		Double A1_y = 1.4;  //((myField.getyField()/row)/2)+(((myField.getyField()/row))*(row-1)); // 
 				
 		//Boucle pour récuppérer les coordonnées du x et du y en fontion des puits
 		for (int r = 1; r < this.ty.length; r ++) {

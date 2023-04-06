@@ -114,7 +114,7 @@ public class Camera extends Component{
 	        //exitCode 0 = No Errors
 	        int exitCode = process.waitFor();
 	        if(exitCode != 0){
-	            System.out.println("\nCamera exited with error code : " + exitCode);
+	            System.out.println(" ");  //("\nCamera exited with error code : " + exitCode);
 	            return true;
 	        }else{
 	            System.out.println("\nCamera finished successfully");
@@ -136,7 +136,7 @@ public class Camera extends Component{
 	        try {
 	            callBash(processBuilder);
 	        } catch (Exception e) {
-	        	System.out.println("Camera: Error at initialisation: " + e.getMessage());
+	        	System.out.println(" ");  //("Camera: Error at initialisation: " + e.getMessage());
 	            //logError("Camera: Error at initialisation: " + e.getMessage());
 	        }
 	    }

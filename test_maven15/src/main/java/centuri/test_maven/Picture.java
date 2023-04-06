@@ -9,15 +9,16 @@ import com.fazecast.jSerialComm.SerialPort;
 
 public class Picture extends Event {
 	
-	int delay;
+	Camera myCamera;
+	int delay = 1;
 	int width = 10000;
 	int heigth = 15000;
 	static final int quality =100;
 	static final String encoding="JPG";
 	static final String path = "/home/audrey/Images/";
 	
-	public Picture (int delay){
-		this.delay =delay;
+	public Picture (Camera myCamera){
+		this.myCamera = myCamera;;
 	}
 	
 
@@ -26,7 +27,6 @@ public class Picture extends Event {
 		
 		boolean ok = false;
 		
-		Camera camera = new Camera();
 		
 		var config = new Camera.PicConfig.Builder().outputPath(path)
 				.delay(delay)
@@ -38,7 +38,7 @@ public class Picture extends Event {
 				.height(heigth)
 				.build();
 				
-		ok = camera.takeStill(config);
+		ok = this.myCamera.takeStill(config);
 		
 		return ok ;
 	}

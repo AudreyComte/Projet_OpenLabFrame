@@ -9,10 +9,12 @@ import com.fazecast.jSerialComm.SerialPort;
 public class Video extends Event {
 
 	int record_Time;
+	Camera myCamera;
 	
 	static final String path = "/home/audrey/Images/";
 
-	public Video(int record_Time) {
+	public Video(Camera myCamera, int record_Time) {
+		this.myCamera = myCamera;
 		this.record_Time = record_Time;
 	}
 

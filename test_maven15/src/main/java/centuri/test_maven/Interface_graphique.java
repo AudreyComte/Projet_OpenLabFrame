@@ -18,19 +18,24 @@ import javax.swing.border.LineBorder;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.UIManager;
 import javax.swing.JTextArea;
 import java.awt.FlowLayout;
+import java.awt.Font;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Interface_graphique extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_break;
 	private JTextField textField_Time_Video;
-	private JTextField textField_Picture;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -79,6 +84,7 @@ public class Interface_graphique extends JFrame {
 		
 		ArrayList<Event> data = new ArrayList<Event>();
 		
+		Camera camera = new Camera();
 		
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
@@ -137,23 +143,13 @@ public class Interface_graphique extends JFrame {
 		});
 		panel_5.add(btnNewButton_1);
 		
-		JPanel panel_4 = new JPanel();
-		panel_3.add(panel_4);
-		panel_4.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		JLabel lblNewLabel_2 = new JLabel("<html> Number of <br/> repetition of  <br/> the list </html>");
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);
-		panel_4.add(lblNewLabel_2);
+		JPanel panel_9 = new JPanel();
+		panel_3.add(panel_9);
+		panel_9.setLayout(new GridLayout(1, 2, 0, 0));
 		
-				
-		String [] rep = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
-		JComboBox comboBox_1 = new JComboBox(rep);
-		comboBox_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-			}
-		});
-		panel_4.add(comboBox_1);
+		JLabel lblNewLabel_3 = new JLabel("Total time (min.) : ");
+		panel_9.add(lblNewLabel_3);
 		
 		
 		
@@ -165,9 +161,12 @@ public class Interface_graphique extends JFrame {
 		panel_3.add(btnNewButton);
 		
 		JPanel panel_8 = new JPanel();
+		FlowLayout flowLayout = (FlowLayout) panel_8.getLayout();
+		flowLayout.setAlignment(FlowLayout.LEFT);
 		panel_3.add(panel_8);
 		
 		JButton btnNewButton_2 = new JButton("Stop");
+		btnNewButton_2.setVerticalAlignment(SwingConstants.BOTTOM);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 Runnable stop = new Runnable() {
@@ -181,6 +180,9 @@ public class Interface_graphique extends JFrame {
 				    t1.start();
 			}
 		});
+		
+		String [] rep = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+		JComboBox comboBox_1 = new JComboBox(rep);
 		
 		panel_8.add(btnNewButton_2);
 		btnNewButton.addActionListener(new ActionListener() {
@@ -332,17 +334,6 @@ public class Interface_graphique extends JFrame {
 		panel_Picture.add(panel_6_1_1);
 		panel_6_1_1.setLayout(new GridLayout(1, 2, 0, 0));
 		
-		JLabel lblNewLabel_Time_Video_1 = new JLabel("Delay (sec.)");
-		panel_6_1_1.add(lblNewLabel_Time_Video_1);
-		
-		textField_Picture = new JTextField();
-		textField_Picture.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		textField_Picture.setColumns(10);
-		panel_6_1_1.add(textField_Picture);
-		
 		JPanel panel_7_1_1 = new JPanel();
 		panel_Picture.add(panel_7_1_1);
 		panel_7_1_1.setLayout(new GridLayout(0, 2, 15, 15));
@@ -350,14 +341,9 @@ public class Interface_graphique extends JFrame {
 		JButton btnNewButton_1_1_1 = new JButton("Add");
 		btnNewButton_1_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (textField_Picture.getText().isEmpty() == false) {
-				textArea.append("Picture "+ textField_Picture.getText() + " sec. delay" + "\n");
-				Picture picture = new Picture((Integer.parseInt(textField_Picture.getText().toString()))*1000);
+				textArea.append("Picture" + "\n");
+				Picture picture = new Picture(camera);
 				data.add(picture);
-				}
-				else {
-					btnNewButton_1_1_1.setEnabled(true);
-				}
 			}
 		});
 		panel_7_1_1.add(btnNewButton_1_1_1);
@@ -400,7 +386,7 @@ public class Interface_graphique extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Time_Video.getText().isEmpty() == false) {
 				textArea.append("Video "+ textField_Time_Video.getText() + " sec. record time" + "\n");
-				Video video = new Video((Integer.parseInt(textField_Time_Video.getText().toString()))*1000);
+				Video video = new Video(camera, (Integer.parseInt(textField_Time_Video.getText().toString()))*1000);
 				data.add(video);
 				}
 				else {
@@ -410,5 +396,100 @@ public class Interface_graphique extends JFrame {
 		});
 		
 		panel_7_1.add(btnNewButton_1_1);
+		
+		
+		
+		// Home /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		JPanel panel_Home = new JPanel();
+		panel_Home.setBorder(new LineBorder(Color.GRAY));
+		panel_Parameter_contenu.add(panel_Home);
+		panel_Home.setLayout(new GridLayout(3, 1, 15, 15));
+		
+		JLabel lblNewLabel_Home = new JLabel("Home");
+		lblNewLabel_Home.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_Home.add(lblNewLabel_Home);
+		
+		JPanel panel_6_1_1_1 = new JPanel();
+		panel_Home.add(panel_6_1_1_1);
+		panel_6_1_1_1.setLayout(new GridLayout(1, 2, 0, 0));
+		
+		JPanel panel_7_1_1_2 = new JPanel();
+		panel_Home.add(panel_7_1_1_2);
+		panel_7_1_1_2.setLayout(new GridLayout(0, 2, 15, 15));
+		
+		JButton btnNewButton_1_1_1_2 = new JButton("Add");
+		btnNewButton_1_1_1_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textArea.append("Home" + "\n");
+				Initialisation home = new Initialisation(arduino);
+				data.add(home);
+			}
+		});
+		panel_7_1_1_2.add(btnNewButton_1_1_1_2);
+		
+		
+		
+		// Repetitions ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		JPanel panel_Timer = new JPanel();
+		panel_Timer.setBorder(new LineBorder(Color.GRAY));
+		panel_Parameter_contenu.add(panel_Timer);
+		panel_Timer.setLayout(new GridLayout(4, 1, 10, 10));
+		
+		JLabel lblNewLabel_3_1_1 = new JLabel("Repetition");
+		lblNewLabel_3_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_Timer.add(lblNewLabel_3_1_1);
+		
+		JPanel panel_4 = new JPanel();
+		panel_Timer.add(panel_4);
+		panel_4.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		JLabel lblNewLabel_2 = new JLabel("<html>Number of repetition of the list</html>");
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 9));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);
+		panel_4.add(lblNewLabel_2);
+		
+		
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_4.add(comboBox_1);
+		
+		JPanel panel_6_1_1_2 = new JPanel();
+		panel_Timer.add(panel_6_1_1_2);
+		panel_6_1_1_2.setLayout(new GridLayout(1, 2, 0, 0));
+		
+		JLabel lblNewLabel_Time_Video_1 = new JLabel("<html>Time between 2 repetitions (min.)</html>");
+		lblNewLabel_Time_Video_1.setFont(new Font("Dialog", Font.BOLD, 10));
+		lblNewLabel_Time_Video_1.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_6_1_1_2.add(lblNewLabel_Time_Video_1);
+		
+		textField = new JTextField();
+		textField.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		textField.setColumns(10);
+		panel_6_1_1_2.add(textField);
+		
+		JPanel panel_7_1_1_3 = new JPanel();
+		panel_Timer.add(panel_7_1_1_3);
+		panel_7_1_1_3.setLayout(new GridLayout(0, 2, 15, 15));
+		
+		JButton btnNewButton_1_1_1_3 = new JButton("Validate");
+		btnNewButton_1_1_1_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				LocalTime time_start = LocalTime.of(0, 0);
+				time_start.adjustInto(time_start);
+				System.out.println(time_start.toString());
+				LocalTime time_end = time_start.plusMinutes(Integer.parseInt(textField.getText().toString()));
+				
+				System.out.println(time_end.toString());
+			}
+		});
+		panel_7_1_1_3.add(btnNewButton_1_1_1_3);
 	}
 }
