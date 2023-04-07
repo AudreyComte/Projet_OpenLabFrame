@@ -33,8 +33,10 @@ import java.util.TimerTask;
 import java.util.Vector;
 
 import javax.swing.JList;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
-public class Interface_graphique extends JFrame {
+public class Interface_graphique2 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_break;
@@ -48,7 +50,7 @@ public class Interface_graphique extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Interface_graphique frame = new Interface_graphique();
+					Interface_graphique2 frame = new Interface_graphique2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -60,7 +62,7 @@ public class Interface_graphique extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Interface_graphique() {
+	public Interface_graphique2() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 500);
 		contentPane = new JPanel();
@@ -100,14 +102,14 @@ public class Interface_graphique extends JFrame {
 		// List
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-		JLabel lblNewLabel_List = new JLabel("             List of events             ");
+		JLabel lblNewLabel_List = new JLabel("List of events");
 		panel_List_titre.add(lblNewLabel_List);
 		lblNewLabel_List.setHorizontalAlignment(SwingConstants.CENTER);
 
 		JPanel panel_1 = new JPanel();
 		panel_List.add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new BorderLayout(0, 0));
-		
+
 		DefaultListModel listData = new DefaultListModel();
 
 		JList list = new JList(listData);
@@ -115,7 +117,7 @@ public class Interface_graphique extends JFrame {
 		panel_1.add(list);
 
 		JScrollPane scrollPane = new JScrollPane(list);
-		panel_1.add(scrollPane);
+		panel_1.add(scrollPane, BorderLayout.CENTER);
 
 		JPanel panel_2 = new JPanel();
 		panel_List.add(panel_2, BorderLayout.SOUTH);
@@ -126,6 +128,7 @@ public class Interface_graphique extends JFrame {
 		panel_3.setLayout(new GridLayout(4, 1, 0, 10));
 
 		JPanel panel_5 = new JPanel();
+		FlowLayout flowLayout_1 = (FlowLayout) panel_5.getLayout();
 		panel_3.add(panel_5);
 
 		JButton btnNewButton_1 = new JButton("Remove");
@@ -134,18 +137,36 @@ public class Interface_graphique extends JFrame {
 				String text = listData.lastElement().toString();
 				if (!text.isEmpty()) {
 					text = text.replaceFirst("(?s)[^\n]*\n?$", "");
-					listData.removeElementAt(listData.getSize()-1);
+					listData.removeElementAt(listData.getSize() - 1);
 				}
 				data.remove((data.size()) - 1);
 			}
 		});
+		
+		JButton btnNewButton_4 = new JButton("Apply to all well");
+		panel_5.add(btnNewButton_4);
 		panel_5.add(btnNewButton_1);
 
 		JPanel panel_9 = new JPanel();
 		panel_3.add(panel_9);
-		panel_9.setLayout(new GridLayout(1, 2, 0, 0));
+		panel_9.setLayout(new GridLayout(0, 1, 0, 0));
 
 		JLabel lblNewLabel_3 = new JLabel("Total time (min.) : ");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
+			
+
+		textField = new JTextField();
+		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		String[] rep = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+
+		JComboBox comboBox_1 = new JComboBox(rep);
+		
+		textField.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+
 		panel_9.add(lblNewLabel_3);
 
 		// Start
@@ -156,7 +177,6 @@ public class Interface_graphique extends JFrame {
 
 		JPanel panel_8 = new JPanel();
 		FlowLayout flowLayout = (FlowLayout) panel_8.getLayout();
-		flowLayout.setAlignment(FlowLayout.LEFT);
 		panel_3.add(panel_8);
 
 		JButton btnNewButton_2 = new JButton("Stop");
@@ -175,35 +195,32 @@ public class Interface_graphique extends JFrame {
 			}
 		});
 
-		textField = new JTextField();
-
-		String[] rep = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-		JComboBox comboBox_1 = new JComboBox(rep);
-
 		panel_8.add(btnNewButton_2);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Runnable start = new Runnable() {
-					@Override
+
+				arduino.Start();
+				arduino.event_go(initilization_homing);
+
+				Timer timer = new Timer();
+
+				TimerTask task = new TimerTask() {
+					int n = 0;
+
 					public void run() {
-						arduino.Start();
-						arduino.event_go(initilization_homing);
-						int n = Integer.parseInt(comboBox_1.getSelectedItem().toString());
-						for (int i = 1; i <= n; i++) {
-							arduino.event_go(data);
-							try {
-								Thread.sleep(Integer.parseInt(textField.getText().toString()) * 60000);
-							} catch (NumberFormatException | InterruptedException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
+
+						n++;
+						arduino.event_go(data);
+
+						if (n == Integer.parseInt(comboBox_1.getSelectedItem().toString())) {
+							timer.cancel();
+							arduino.Close();
 						}
-						arduino.Close();
 					}
 				};
 
-				Thread t2 = new Thread(start);
-				t2.start();
+				timer.scheduleAtFixedRate(task, 0, Integer.parseInt(textField.getText().toString()) * 60000);
+
 			}
 		});
 
@@ -435,7 +452,7 @@ public class Interface_graphique extends JFrame {
 
 		JPanel panel_4 = new JPanel();
 		panel_Timer.add(panel_4);
-		panel_4.setLayout(new GridLayout(0, 2, 0, 0));
+		panel_4.setLayout(new BorderLayout(0, 0));
 
 		JLabel lblNewLabel_2 = new JLabel("<html>Number of repetition of the list</html>");
 		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 9));
@@ -446,40 +463,36 @@ public class Interface_graphique extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		panel_4.add(comboBox_1);
+		panel_4.add(comboBox_1, BorderLayout.EAST);
 
 		JPanel panel_6_1_1_2 = new JPanel();
 		panel_Timer.add(panel_6_1_1_2);
-		panel_6_1_1_2.setLayout(new GridLayout(1, 2, 0, 0));
+		panel_6_1_1_2.setLayout(new GridLayout(0, 2, 0, 0));
 
-		JLabel lblNewLabel_Time_Video_1 = new JLabel("<html>Time between 2 repetitions (min.)</html>");
+		JLabel lblNewLabel_Time_Video_1 = new JLabel("<html>Time between repetitions(min)</html>");
 		lblNewLabel_Time_Video_1.setFont(new Font("Dialog", Font.BOLD, 10));
 		lblNewLabel_Time_Video_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6_1_1_2.add(lblNewLabel_Time_Video_1);
 
-		textField.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		textField.setColumns(10);
 		panel_6_1_1_2.add(textField);
-
-		JPanel panel_7_1_1_3 = new JPanel();
-		panel_Timer.add(panel_7_1_1_3);
-		panel_7_1_1_3.setLayout(new GridLayout(0, 2, 15, 15));
-
-		JButton btnNewButton_1_1_1_3 = new JButton("Validate");
-		btnNewButton_1_1_1_3.addActionListener(new ActionListener() {
+		
+		JPanel panel_10 = new JPanel();
+		panel_Timer.add(panel_10);
+		
+		JButton btnNewButton_3 = new JButton("Validate");
+		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				LocalTime time_start = LocalTime.of(0, 0);
-				time_start.adjustInto(time_start);
-				System.out.println(time_start.toString());
-				LocalTime time_end = time_start.plusMinutes(Integer.parseInt(textField.getText().toString()));
-
-				System.out.println(time_end.toString());
+				if (!textField.getText().toString().isEmpty()) {
+					lblNewLabel_3.setText("Total time (min.) : " + (Integer.parseInt(textField.getText().toString())
+							* Integer.parseInt(comboBox_1.getSelectedItem().toString())));
+				}
 			}
 		});
-		panel_7_1_1_3.add(btnNewButton_1_1_1_3);
+		panel_10.setLayout(new BorderLayout(0, 0));
+		
+		JLabel label = new JLabel("                  ");
+		panel_10.add(label, BorderLayout.EAST);
+		panel_10.add(btnNewButton_3);
 	}
 }
