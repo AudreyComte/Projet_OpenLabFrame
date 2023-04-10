@@ -142,8 +142,39 @@ public class Interface_graphique2 extends JFrame {
 				data.remove((data.size()) - 1);
 			}
 		});
+
+		ArrayList wellName = new ArrayList();
+		wellName.add("A1");
+		wellName.add("A2");
+		wellName.add("A3");
+		wellName.add("B1");
+		wellName.add("B2");
+		wellName.add("B3");
 		
-		JButton btnNewButton_4 = new JButton("Apply to all well");
+		
+		JButton btnNewButton_4 = new JButton("Apply to all wells");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int count = 5;
+				int size = listData.getSize();
+				for(int i = 0; i < count; i++) {
+					for(int j = 0; j < size ; j++) {
+						listData.addElement(listData.getElementAt(j));
+						}
+					}
+				int l = 0;
+				for(int k = 0; k < listData.getSize(); k ++) {
+					if(listData.getElementAt(k).toString().contains("A1")== true) { 
+							 listData.remove(k);
+						     listData.add(k, wellName.get(l));
+							 System.out.println(listData.getElementAt(k).toString());
+							 l ++;
+						}
+						
+					}
+		
+			}
+		});
 		panel_5.add(btnNewButton_4);
 		panel_5.add(btnNewButton_1);
 
@@ -151,7 +182,7 @@ public class Interface_graphique2 extends JFrame {
 		panel_3.add(panel_9);
 		panel_9.setLayout(new GridLayout(0, 1, 0, 0));
 
-		JLabel lblNewLabel_3 = new JLabel("Total time (min.) : ");
+		JLabel lblNewLabel_3 = new JLabel("Total time : ");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
 			
 
@@ -484,8 +515,8 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!textField.getText().toString().isEmpty()) {
-					lblNewLabel_3.setText("Total time (min.) : " + (Integer.parseInt(textField.getText().toString())
-							* Integer.parseInt(comboBox_1.getSelectedItem().toString())));
+					lblNewLabel_3.setText("Total time (approximate) : " + (Integer.parseInt(textField.getText().toString())
+							* (Integer.parseInt(comboBox_1.getSelectedItem().toString()))) +" minutes");
 				}
 			}
 		});
