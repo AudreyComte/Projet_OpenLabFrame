@@ -11,6 +11,9 @@ public class Coordinate_Field {
 	Field myField;
 	Double [] tx;
 	Double [] ty;
+	Double A1_x = 0.0;
+	Double A1_y = 0.0;
+	Double A1_z = 0.0;
 	
 	public Coordinate_Field (Field myField) {
 		this.myField = myField;
@@ -26,6 +29,18 @@ public class Coordinate_Field {
 	public Field get_myField () {
 		return this.myField;
 	}
+	
+	public void setA1_x (Double A1_x) {
+		this.A1_x = A1_x;
+	}
+	
+	public void setA1_y (Double A1_y) {
+		this.A1_y = A1_y;
+	}
+	
+	public void setA1_z (Double A1_z) {
+		this.A1_z = A1_z;
+	}
 	 
 	void coordinate() {
 		
@@ -36,18 +51,18 @@ public class Coordinate_Field {
 		int row = myField.getRow();
 		
 		// Point A1 en x
-		Double A1_x = 5.4;       //((myField.getxField()/column)/2);
+		//Double A1_x = 5.4;       //((myField.getxField()/column)/2);
 		
 		// Point A1 en y
-		Double A1_y = 1.4;  //((myField.getyField()/row)/2)+(((myField.getyField()/row))*(row-1)); // 
+		//Double A1_y = 1.4;  //((myField.getyField()/row)/2)+(((myField.getyField()/row))*(row-1)); // 
 				
 		//Boucle pour récuppérer les coordonnées du x et du y en fontion des puits
 		for (int r = 1; r < this.ty.length; r ++) {
-			Double y = A1_y - ((myField.getyField()/row)*(r-1));
+			Double y = this.A1_y - ((myField.getyField()/row)*(r-1));
 			ty[r]= y;
 			
 			for (int c = 1; c < this.tx.length; c ++) {
-				Double x = A1_x + ((myField.getxField()/column)*(c-1)); 
+				Double x = this.A1_x + ((myField.getxField()/column)*(c-1)); 
 				tx[c]= x;
 				//System.out.println(x+" ; "+y);
 			}	

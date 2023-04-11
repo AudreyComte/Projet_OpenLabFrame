@@ -14,18 +14,20 @@ public class Mouvement extends Event {
 	
 	double coordinate_x;
 	double coordinate_y;
+	double coordinate_z;
 	static final String type_of_coordinate = "G90";
 	Arduino myArduino;
 
 	
-	public Mouvement(double coordinate_x, double coordinate_y, Arduino myArduino) {
+	public Mouvement(double coordinate_x, double coordinate_y, double coordinate_z, Arduino myArduino) {
 		this.coordinate_x = coordinate_x;
 		this.coordinate_y = coordinate_y;
 		this.myArduino = new Arduino();
 	}
 	
-
-	
+	public void set_x (Double coordinate_x) {
+		this.coordinate_x = coordinate_x;
+	}
 	@Override
 	public boolean Do() {
 		

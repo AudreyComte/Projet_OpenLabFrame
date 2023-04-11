@@ -134,7 +134,7 @@ public class CameraView3 extends JFrame {
 		
 		ArrayList data_controller= new ArrayList();
 		
-		Arduino arduino = new Arduino(data_controller);
+		Arduino2 arduino = new Arduino2(data_controller);
 		
 		arduino.arduino_openPort();
 		
