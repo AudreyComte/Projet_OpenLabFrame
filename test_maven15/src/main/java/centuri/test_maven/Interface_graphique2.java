@@ -256,6 +256,8 @@ public class Interface_graphique2 extends JFrame {
 		panel_1.setLayout(new GridLayout(0, 1, 0, 0));
 
 		JTextArea textArea_InPut = new JTextArea();
+		textArea_InPut.setRows(1);
+		textArea_InPut.setTabSize(1);
 		// Button Set zero here //
 
 		JButton btn_Origine = new JButton("Set zero here");

@@ -10,6 +10,7 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JSplitPane;
 import javax.swing.SwingConstants;
+import javax.lang.model.element.Element;
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.JTextField;
@@ -35,6 +36,8 @@ import java.util.Vector;
 import javax.swing.JList;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import javax.swing.event.AncestorListener;
+import javax.swing.event.AncestorEvent;
 
 public class Interface_graphique2 extends JFrame {
 
@@ -110,9 +113,10 @@ public class Interface_graphique2 extends JFrame {
 		panel_List.add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new BorderLayout(0, 0));
 
-		DefaultListModel listData = new DefaultListModel();
+		DefaultListModel<String> listData = new DefaultListModel();
 
-		JList list = new JList(listData);
+		JList<String> list = new JList(listData);
+		
 
 		panel_1.add(list);
 
@@ -134,12 +138,19 @@ public class Interface_graphique2 extends JFrame {
 		JButton btnNewButton_1 = new JButton("Remove");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String text = listData.lastElement().toString();
+				String selectedValue = list.getSelectedValue();
+				int indexData = listData.indexOf(selectedValue);
+				if (selectedValue != null) {
+		            listData.removeElement(selectedValue);
+		            data.remove(indexData);
+		        }
+				
+				/*String text = listData.lastElement().toString();
 				if (!text.isEmpty()) {
 					text = text.replaceFirst("(?s)[^\n]*\n?$", "");
 					listData.removeElementAt(listData.getSize() - 1);
-				}
-				data.remove((data.size()) - 1);
+				}*/
+				
 			}
 		});
 
@@ -166,7 +177,7 @@ public class Interface_graphique2 extends JFrame {
 				for(int k = 0; k < listData.getSize(); k ++) {
 					if(listData.getElementAt(k).toString().contains("A1")== true) { 
 							 listData.remove(k);
-						     listData.add(k, wellName.get(l));
+						     listData.add(k, wellName.get(l).toString());
 							 System.out.println(listData.getElementAt(k).toString());
 							 l ++;
 						}
@@ -515,8 +526,8 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!textField.getText().toString().isEmpty()) {
-					lblNewLabel_3.setText("Total time (approximate) : " + (Integer.parseInt(textField.getText().toString())
-							* (Integer.parseInt(comboBox_1.getSelectedItem().toString()))) +" minutes");
+					lblNewLabel_3.setText("Total time (approximate) : " + (Integer.parseInt(textField.getText().toString())+
+							(Integer.parseInt(comboBox_1.getSelectedItem().toString()))) +" minutes");
 				}
 			}
 		});
