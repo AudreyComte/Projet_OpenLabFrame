@@ -47,7 +47,6 @@ public class Arduino {
 
 		serial_port.setBaudRate(115200); // Attention au BaudRate : avec Grbl 115200 au lieu de 9600//
 		
-		
 		return start;
 		
 	}

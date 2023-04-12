@@ -1517,6 +1517,7 @@ public class Interface_graphique2 extends JFrame {
 							+ (Integer.parseInt(textField_time_repetition.getText().toString())
 									* (Integer.parseInt(comboBox_number_repetition.getSelectedItem().toString())))
 							+ " minutes");
+					btnNewButton_validate.setBackground(Color.gray);
 				}
 			}
 		});
@@ -1539,13 +1540,7 @@ public class Interface_graphique2 extends JFrame {
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		btnNewButton_start_list.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				try {
-					arduino2.arduino_closePort();
-				} catch (SerialException | IOException | InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-
+				
 				arduino.Start();
 				arduino.event_go(initilization_homing);
 
@@ -1565,9 +1560,11 @@ public class Interface_graphique2 extends JFrame {
 						}
 					}
 				};
-
-				timer.scheduleAtFixedRate(task, 0,
-						Integer.parseInt(textField_time_repetition.getText().toString()) * 60000);
+				if(btnNewButton_validate.getBackground()== Color.gray) {
+					timer.scheduleAtFixedRate(task, 0,
+							Integer.parseInt(textField_time_repetition.getText().toString()) * 60000);
+				}
+				
 
 			}
 		});

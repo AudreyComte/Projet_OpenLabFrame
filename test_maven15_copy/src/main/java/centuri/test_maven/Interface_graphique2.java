@@ -116,7 +116,6 @@ public class Interface_graphique2 extends JFrame {
 		DefaultListModel<String> listData = new DefaultListModel();
 
 		JList<String> list = new JList(listData);
-		
 
 		panel_1.add(list);
 
@@ -138,20 +137,18 @@ public class Interface_graphique2 extends JFrame {
 		JButton btnNewButton_1 = new JButton("Remove");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String selectedValue = list.getSelectedValue();
-				int indexData = listData.indexOf(selectedValue);
-				if (selectedValue != null) {
-		            listData.removeElement(selectedValue);
-		            data.remove(indexData);
-		        }
-				
-				/*String text = listData.lastElement().toString();
-				if (!text.isEmpty()) {
-					text = text.replaceFirst("(?s)[^\n]*\n?$", "");
-					listData.removeElementAt(listData.getSize() - 1);
-				}*/
-				
+				int selectedValue = list.getSelectedIndex();
+				System.out.println(selectedValue);
+				listData.remove(selectedValue);
+				data.remove(selectedValue);
 			}
+
+			/*
+			 * String text = listData.lastElement().toString(); if (!text.isEmpty()) { text
+			 * = text.replaceFirst("(?s)[^\n]*\n?$", "");
+			 * listData.removeElementAt(listData.getSize() - 1); }
+			 */
+
 		});
 
 		ArrayList wellName = new ArrayList();
@@ -161,29 +158,28 @@ public class Interface_graphique2 extends JFrame {
 		wellName.add("B1");
 		wellName.add("B2");
 		wellName.add("B3");
-		
-		
+
 		JButton btnNewButton_4 = new JButton("Apply to all wells");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int count = 5;
 				int size = listData.getSize();
-				for(int i = 0; i < count; i++) {
-					for(int j = 0; j < size ; j++) {
+				for (int i = 0; i < count; i++) {
+					for (int j = 0; j < size; j++) {
 						listData.addElement(listData.getElementAt(j));
-						}
 					}
+				}
 				int l = 0;
-				for(int k = 0; k < listData.getSize(); k ++) {
-					if(listData.getElementAt(k).toString().contains("A1")== true) { 
-							 listData.remove(k);
-						     listData.add(k, wellName.get(l).toString());
-							 System.out.println(listData.getElementAt(k).toString());
-							 l ++;
-						}
-						
+				for (int k = 0; k < listData.getSize(); k++) {
+					if (listData.getElementAt(k).toString().contains("A1") == true) {
+						listData.remove(k);
+						listData.add(k, wellName.get(l).toString());
+						System.out.println(listData.getElementAt(k).toString());
+						l++;
 					}
-		
+
+				}
+
 			}
 		});
 		panel_5.add(btnNewButton_4);
@@ -195,17 +191,16 @@ public class Interface_graphique2 extends JFrame {
 
 		JLabel lblNewLabel_3 = new JLabel("Total time : ");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
-			
 
 		textField = new JTextField();
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		String[] rep = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
 		JComboBox comboBox_1 = new JComboBox(rep);
-		
+
 		textField.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 			}
 		});
 
@@ -238,33 +233,7 @@ public class Interface_graphique2 extends JFrame {
 		});
 
 		panel_8.add(btnNewButton_2);
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				arduino.Start();
-				arduino.event_go(initilization_homing);
-
-				Timer timer = new Timer();
-
-				TimerTask task = new TimerTask() {
-					int n = 0;
-
-					public void run() {
-
-						n++;
-						arduino.event_go(data);
-
-						if (n == Integer.parseInt(comboBox_1.getSelectedItem().toString())) {
-							timer.cancel();
-							arduino.Close();
-						}
-					}
-				};
-
-				timer.scheduleAtFixedRate(task, 0, Integer.parseInt(textField.getText().toString()) * 60000);
-
-			}
-		});
+		
 
 		JPanel panel_parameter = new JPanel();
 		contentPane.add(panel_parameter, BorderLayout.CENTER);
@@ -518,23 +487,57 @@ public class Interface_graphique2 extends JFrame {
 
 		textField.setColumns(10);
 		panel_6_1_1_2.add(textField);
-		
+
 		JPanel panel_10 = new JPanel();
 		panel_Timer.add(panel_10);
-		
+
 		JButton btnNewButton_3 = new JButton("Validate");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!textField.getText().toString().isEmpty()) {
-					lblNewLabel_3.setText("Total time (approximate) : " + (Integer.parseInt(textField.getText().toString())+
-							(Integer.parseInt(comboBox_1.getSelectedItem().toString()))) +" minutes");
+					lblNewLabel_3
+							.setText("Total time (approximate) : "
+									+ (Integer.parseInt(textField.getText().toString())
+											+ (Integer.parseInt(comboBox_1.getSelectedItem().toString())))
+									+ " minutes");
+					btnNewButton_3.setBackground(Color.gray);
 				}
 			}
 		});
 		panel_10.setLayout(new BorderLayout(0, 0));
-		
+
 		JLabel label = new JLabel("                  ");
 		panel_10.add(label, BorderLayout.EAST);
 		panel_10.add(btnNewButton_3);
-	}
+	
+	btnNewButton.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+
+			arduino.Start();
+			arduino.event_go(initilization_homing);
+
+			Timer timer = new Timer();
+
+			TimerTask task = new TimerTask() {
+				int n = 0;
+
+				public void run() {
+
+					n++;
+					arduino.event_go(data);
+
+					if (n == Integer.parseInt(comboBox_1.getSelectedItem().toString())) {
+						timer.cancel();
+						arduino.Close();
+					}
+				}
+			};
+			if (btnNewButton_3.getBackground() == Color.gray) {
+				timer.scheduleAtFixedRate(task, 0,
+						Integer.parseInt(textField.getText().toString()) * 60000);
+			}
+
+		}
+	});
+  }
 }
