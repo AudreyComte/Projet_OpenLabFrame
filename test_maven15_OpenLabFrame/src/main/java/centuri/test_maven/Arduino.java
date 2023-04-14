@@ -35,7 +35,7 @@ public class Arduino {
 		
 		boolean start;
 
-		serial_port = SerialPort.getCommPort("ttyACM0"); //ttyAMA1
+		serial_port = SerialPort.getCommPort("ttyAMA1"); //ttyAMA1
 
 		if (serial_port.openPort()) {
 			System.out.println("Successfully open port! \r\n");

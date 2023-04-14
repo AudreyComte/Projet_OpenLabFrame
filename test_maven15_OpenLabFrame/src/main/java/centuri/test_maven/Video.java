@@ -10,18 +10,15 @@ public class Video extends Event {
 
 	int record_Time;
 	Camera myCamera;
-	
 	static final String path = "/home/audrey/Images/";
 
-	public Video(Camera myCamera, int record_Time) {
-		this.myCamera = myCamera;
+	public Video(int record_Time, Camera myCamera) {
 		this.record_Time = record_Time;
+		this.myCamera = myCamera;
 	}
 
 	@Override
 	public boolean Do() {
-
-		Camera camera = new Camera();
 		
 		var vidconfig = Camera.VidConfig.Builder.newInstance()
 		         .outputPath(path)
@@ -29,7 +26,7 @@ public class Video extends Event {
 		         .useDate(true)
 		         .build();
 		
-		return camera.takeVid(vidconfig);
+		return this.myCamera.takeVid(vidconfig);
 	}
 
 	@Override
