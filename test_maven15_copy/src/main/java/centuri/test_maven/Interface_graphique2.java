@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JSplitPane;
 import javax.swing.SwingConstants;
 import javax.lang.model.element.Element;
+import javax.sql.rowset.serial.SerialException;
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.JTextField;
@@ -36,6 +37,8 @@ import java.util.Vector;
 import javax.swing.JList;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+
 import javax.swing.event.AncestorListener;
 import javax.swing.event.AncestorEvent;
 
@@ -514,7 +517,12 @@ public class Interface_graphique2 extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 
 			arduino.Start();
-			arduino.event_go(initilization_homing);
+			try {
+				arduino.event_go(initilization_homing);
+			} catch (SerialException | IOException | InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 
 			Timer timer = new Timer();
 
@@ -524,7 +532,12 @@ public class Interface_graphique2 extends JFrame {
 				public void run() {
 
 					n++;
-					arduino.event_go(data);
+					try {
+						arduino.event_go(data);
+					} catch (SerialException | IOException | InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 
 					if (n == Integer.parseInt(comboBox_1.getSelectedItem().toString())) {
 						timer.cancel();

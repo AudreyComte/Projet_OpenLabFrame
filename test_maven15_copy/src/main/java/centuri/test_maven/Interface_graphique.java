@@ -10,6 +10,7 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JSplitPane;
 import javax.swing.SwingConstants;
+import javax.sql.rowset.serial.SerialException;
 import javax.swing.BoxLayout;
 import javax.swing.DefaultListModel;
 import javax.swing.JTextField;
@@ -19,6 +20,7 @@ import javax.swing.border.LineBorder;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
@@ -187,10 +189,20 @@ public class Interface_graphique extends JFrame {
 					@Override
 					public void run() {
 						arduino.Start();
-						arduino.event_go(initilization_homing);
+						try {
+							arduino.event_go(initilization_homing);
+						} catch (SerialException | IOException | InterruptedException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
 						int n = Integer.parseInt(comboBox_1.getSelectedItem().toString());
 						for (int i = 1; i <= n; i++) {
-							arduino.event_go(data);
+							try {
+								arduino.event_go(data);
+							} catch (SerialException | IOException | InterruptedException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
 							try {
 								Thread.sleep(Integer.parseInt(textField.getText().toString()) * 60000);
 							} catch (NumberFormatException | InterruptedException e) {

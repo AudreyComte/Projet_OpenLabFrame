@@ -27,7 +27,7 @@ public class Mouvement extends Event {
 
 	
 	@Override
-	public boolean Do() {
+	public boolean Do() throws SerialException, IOException, InterruptedException {
 		
 		boolean ok = false;
 
@@ -38,7 +38,7 @@ public class Mouvement extends Event {
 
 		ArrayList data = new ArrayList();
 		data.add(type_of_coordinate + "G0X" + coordinate_x + "Y" + coordinate_y + "\n");
-		data.add("?\n");
+		//data.add("G4 P1\n");
 
 		System.out.println("Mouvement \r\n");
 

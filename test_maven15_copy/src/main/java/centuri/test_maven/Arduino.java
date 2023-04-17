@@ -82,6 +82,7 @@ public class Arduino {
 		}
 
 	}
+	
 
 	
 	// method test_$G
@@ -117,7 +118,7 @@ public class Arduino {
 	}
 
 	
-	public boolean event_go(ArrayList<Event> data) {
+	public boolean event_go(ArrayList<Event> data) throws SerialException, IOException, InterruptedException {
 		
 		boolean ok = false;
 	
