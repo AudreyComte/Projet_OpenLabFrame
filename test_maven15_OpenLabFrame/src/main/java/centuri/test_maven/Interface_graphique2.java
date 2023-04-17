@@ -181,7 +181,16 @@ public class Interface_graphique2 extends JFrame {
 						double coordinate_y = (coordinate
 								.get_y_coordinate(coordinate.get_r(wellName.get(l).toString())) * 10);
 						double coordinate_z = 35.0;
-						data.set(k, new Mouvement(coordinate_x, coordinate_y,coordinate_z,arduino));
+						double AB= Math.sqrt((coordinate_x*coordinate_x)+(coordinate_y*coordinate_y));
+						double d1 =70.91;
+						double time;
+						if(AB <= d1) {
+							time=532;
+						}
+						else {
+							time=(0.532 + ((AB-70.91)/133.3))*1000;
+						}
+						data.set(k, new Mouvement(coordinate_x, coordinate_y,coordinate_z,(int)Math.round(time),arduino));
 						l++;
 					}
 				}	
@@ -296,7 +305,16 @@ public class Interface_graphique2 extends JFrame {
 				double coordinate_y = (coordinate
 						.get_y_coordinate(coordinate.get_r(comboBox.getSelectedItem().toString())) * 10);
 				double coordinate_z = 35.0;
-				Mouvement well = new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino);
+				double AB= Math.sqrt((coordinate_x*coordinate_x)+(coordinate_y*coordinate_y));
+				double d1 =70.91;
+				double time;
+				if(AB <= d1) {
+					time=532;
+				}
+				else {
+					time=(0.532 + ((AB-70.91)/133.3))*1000;
+				}
+				Mouvement well = new Mouvement(coordinate_x, coordinate_y, coordinate_z,(int)Math.round(time), arduino);
 				data.add(well);
 			}
 		});
@@ -457,7 +475,16 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
 					listData.addElement("Syringue : " + textField_Syringue_i.getText() + " ml injected" + "\n");
-					Syringue_Injection injection = new Syringue_Injection((Integer.parseInt(textField_Syringue_i.getText().toString())), arduino2);
+					double time;
+					double AB= Integer.parseInt(textField_Syringue_i.getText().toString());
+					double d1 =0.0054;
+					if(AB <= d1) {
+						time=532;
+					}
+					else {
+						time=(0.532 + ((AB-d1)/1.667))*1000;
+					}
+					Syringue_Injection injection = new Syringue_Injection((Integer.parseInt(textField_Syringue_i.getText().toString())),(int)Math.round(time), arduino2);
 					data.add(injection);
 					}
 					else {
@@ -512,7 +539,16 @@ public class Interface_graphique2 extends JFrame {
 							public void actionPerformed(ActionEvent e) {
 								if (textField_Syringue_a.getText().isEmpty() == false) {
 									listData.addElement("Syringue : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
-									Syringue_Aspiration aspiration = new Syringue_Aspiration((Integer.parseInt(textField_Syringue_a.getText().toString())), arduino2);
+									double time;
+									double AB= Integer.parseInt(textField_Syringue_i.getText().toString());
+									double d1 =0.0054;
+									if(AB <= d1) {
+										time=532;
+									}
+									else {
+										time=(0.532 + ((AB-d1)/1.667))*1000;
+									}
+									Syringue_Aspiration aspiration = new Syringue_Aspiration((Integer.parseInt(textField_Syringue_a.getText().toString())), (int)Math.round(time), arduino2);
 									data.add(aspiration);
 									}
 									else {

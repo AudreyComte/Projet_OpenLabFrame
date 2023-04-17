@@ -8,10 +8,12 @@ public class Syringue_Aspiration extends Event {
 
 	int volum;
 	int round;
+	int time;
 	Arduino2 myArduino2;
 
-	public Syringue_Aspiration(int volum, Arduino2 myArduino2) {
+	public Syringue_Aspiration(int volum, int time, Arduino2 myArduino2) {
 		this.volum = volum;
+		this.time=time;
 		this.myArduino2 = myArduino2;
 	}
 
@@ -29,7 +31,7 @@ public class Syringue_Aspiration extends Event {
 
 		// send to arduino
 		try {
-			myArduino2.Go(info);
+			myArduino2.Go(info,time);
 		} catch (SerialException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

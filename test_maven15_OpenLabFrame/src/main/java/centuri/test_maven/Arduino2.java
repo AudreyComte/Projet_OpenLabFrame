@@ -55,7 +55,7 @@ public class Arduino2 {
 
 	
 	// method Go
-	public void Go(String info) throws IOException, InterruptedException, SerialException {
+	public void Go(String info, int time) throws IOException, InterruptedException, SerialException {
 		
 		OutputStream output_stream = serial_port.getOutputStream();
 		DataOutputStream data_output = new DataOutputStream(output_stream);
@@ -72,7 +72,7 @@ public class Arduino2 {
 			e1.printStackTrace();
 		}
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(time);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -90,7 +90,7 @@ public class Arduino2 {
 
 		boolean test;
 
-		Go("$G");
+		Go("$G", 100);
 		
 		InputStream input_stream = serial_port.getInputStream();
 		

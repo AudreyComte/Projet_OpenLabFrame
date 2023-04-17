@@ -15,14 +15,16 @@ public class Mouvement extends Event {
 	double coordinate_x;
 	double coordinate_y;
 	double coordinate_z;
+	int time;
 	static final String type_of_coordinate = "G90";
 	Arduino myArduino;
 
 	
-	public Mouvement(double coordinate_x, double coordinate_y, double coordinate_z, Arduino myArduino) {
+	public Mouvement(double coordinate_x, double coordinate_y, double coordinate_z, int time, Arduino myArduino) {
 		this.coordinate_x = coordinate_x;
 		this.coordinate_y = coordinate_y;
 		this.coordinate_z = coordinate_z;
+		this.time=time;
 		this.myArduino = new Arduino();
 	}
 
@@ -39,7 +41,7 @@ public class Mouvement extends Event {
 
 		// send to arduino
 		try {
-			myArduino.Go(info);
+			myArduino.Go(info, time);
 		} catch (SerialException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
