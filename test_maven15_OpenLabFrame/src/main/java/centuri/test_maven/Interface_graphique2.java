@@ -80,7 +80,7 @@ public class Interface_graphique2 extends JFrame {
 		Coordinate_Field coordinate = new Coordinate_Field(field);
 
 		Arduino arduino = new Arduino();
-		
+
 		Arduino2 arduino2 = new Arduino2();
 
 		ArrayList<Event> initilization_homing = new ArrayList<Event>();
@@ -92,6 +92,8 @@ public class Interface_graphique2 extends JFrame {
 		ArrayList<Event> data = new ArrayList<Event>();
 
 		Camera camera = new Camera();
+		
+		Motor2 motor2 = new Motor2();
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -139,19 +141,18 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int selectedIndex = list.getSelectedIndex();
-		        listData.remove(selectedIndex);
-		        data.remove(selectedIndex);
-				//}
-				/*String text = listData.lastElement().toString();
-				if (!text.isEmpty()) {
-					text = text.replaceFirst("(?s)[^\n]*\n?$", "");
-					listData.removeElementAt(listData.getSize() - 1);
-				}
-				data.remove((data.size()) - 1);
-				*/
+				listData.remove(selectedIndex);
+				data.remove(selectedIndex);
+				// }
+				/*
+				 * String text = listData.lastElement().toString(); if (!text.isEmpty()) { text
+				 * = text.replaceFirst("(?s)[^\n]*\n?$", "");
+				 * listData.removeElementAt(listData.getSize() - 1); } data.remove((data.size())
+				 * - 1);
+				 */
 			}
 		});
-		
+
 		ArrayList wellName = new ArrayList();
 		wellName.add("A1");
 		wellName.add("A2");
@@ -159,7 +160,7 @@ public class Interface_graphique2 extends JFrame {
 		wellName.add("B1");
 		wellName.add("B2");
 		wellName.add("B3");
-		
+
 		JButton btnNewButton_4 = new JButton("Apply to all well");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -176,24 +177,23 @@ public class Interface_graphique2 extends JFrame {
 					if (listData.getElementAt(k).toString().contains("A1") == true) {
 						listData.remove(k);
 						listData.add(k, wellName.get(l).toString());
-						double coordinate_x = (coordinate
-								.get_x_coordinate(coordinate.get_c(wellName.get(l).toString())) * 10);
-						double coordinate_y = (coordinate
-								.get_y_coordinate(coordinate.get_r(wellName.get(l).toString())) * 10);
+						double coordinate_x = (coordinate.get_x_coordinate(coordinate.get_c(wellName.get(l).toString()))
+								* 10);
+						double coordinate_y = (coordinate.get_y_coordinate(coordinate.get_r(wellName.get(l).toString()))
+								* 10);
 						double coordinate_z = 35.0;
-						double AB= Math.sqrt((coordinate_x*coordinate_x)+(coordinate_y*coordinate_y));
-						double d1 =70.91;
+						double AB = Math.sqrt((coordinate_x * coordinate_x) + (coordinate_y * coordinate_y));
+						double d1 = 70.91;
 						double time;
-						if(AB <= d1) {
-							time=532;
+						if (AB <= d1) {
+							time = 532;
+						} else {
+							time = (0.532 + ((AB - 70.91) / 133.3)) * 1000;
 						}
-						else {
-							time=(0.532 + ((AB-70.91)/133.3))*1000;
-						}
-						data.set(k, new Mouvement(coordinate_x, coordinate_y,coordinate_z,(int)Math.round(time),arduino));
+						data.set(k, new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino));
 						l++;
 					}
-				}	
+				}
 			}
 		});
 		panel_5.add(btnNewButton_4);
@@ -234,10 +234,10 @@ public class Interface_graphique2 extends JFrame {
 							camera.callBash(processBuilder);
 						} catch (Exception f) {
 							System.out.println("Camera: Error : " + f.getMessage());
-							//logError("Camera: Error while taking picture: " + e.getMessage());
+							// logError("Camera: Error while taking picture: " + e.getMessage());
 						}
 					}
-										
+
 				};
 
 				Thread t1 = new Thread(stop);
@@ -246,7 +246,6 @@ public class Interface_graphique2 extends JFrame {
 		});
 
 		panel_8.add(btnNewButton_2);
-		
 
 		JPanel panel_parameter = new JPanel();
 		contentPane.add(panel_parameter, BorderLayout.CENTER);
@@ -305,16 +304,15 @@ public class Interface_graphique2 extends JFrame {
 				double coordinate_y = (coordinate
 						.get_y_coordinate(coordinate.get_r(comboBox.getSelectedItem().toString())) * 10);
 				double coordinate_z = 35.0;
-				double AB= Math.sqrt((coordinate_x*coordinate_x)+(coordinate_y*coordinate_y));
-				double d1 =70.91;
+				double AB = Math.sqrt((coordinate_x * coordinate_x) + (coordinate_y * coordinate_y));
+				double d1 = 70.91;
 				double time;
-				if(AB <= d1) {
-					time=532;
+				if (AB <= d1) {
+					time = 532;
+				} else {
+					time = (0.532 + ((AB - 70.91) / 133.3)) * 1000;
 				}
-				else {
-					time=(0.532 + ((AB-70.91)/133.3))*1000;
-				}
-				Mouvement well = new Mouvement(coordinate_x, coordinate_y, coordinate_z,(int)Math.round(time), arduino);
+				Mouvement well = new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino);
 				data.add(well);
 			}
 		});
@@ -430,34 +428,34 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Time_Video.getText().isEmpty() == false) {
-				listData.addElement("Video " + textField_Time_Video.getText() + " sec. record time" + "\n");
-				Video video = new Video((Integer.parseInt(textField_Time_Video.getText().toString())*1000), camera);
-				data.add(video);
-				}
-				else {
+					listData.addElement("Video " + textField_Time_Video.getText() + " sec. record time" + "\n");
+					Video video = new Video((Integer.parseInt(textField_Time_Video.getText().toString()) * 1000),
+							camera);
+					data.add(video);
+				} else {
 					btnNewButton_1_1.setEnabled(true);
 				}
 			}
 		});
 
 		panel_7_1.add(btnNewButton_1_1);
-		
+
 		JPanel panel_Syringe_injected = new JPanel();
 		panel_Syringe_injected.setBorder(new LineBorder(Color.GRAY));
 		panel_Parameter_contenu.add(panel_Syringe_injected);
 		panel_Syringe_injected.setLayout(new GridLayout(3, 1, 15, 15));
-		
+
 		JLabel lblNewLabel_Syringue_i = new JLabel("Syringue injection");
 		lblNewLabel_Syringue_i.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_Syringe_injected.add(lblNewLabel_Syringue_i);
-		
+
 		JPanel panel_6_1_2 = new JPanel();
 		panel_Syringe_injected.add(panel_6_1_2);
 		panel_6_1_2.setLayout(new GridLayout(1, 2, 0, 0));
-		
+
 		JLabel lblNewLabel_volume_i = new JLabel("Volume (ml.)");
 		panel_6_1_2.add(lblNewLabel_volume_i);
-		
+
 		textField_Syringue_i = new JTextField();
 		textField_Syringue_i.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -465,196 +463,181 @@ public class Interface_graphique2 extends JFrame {
 		});
 		textField_Syringue_i.setColumns(10);
 		panel_6_1_2.add(textField_Syringue_i);
-		
+
 		JPanel panel_7_1_2 = new JPanel();
 		panel_Syringe_injected.add(panel_7_1_2);
 		panel_7_1_2.setLayout(new GridLayout(0, 2, 15, 15));
-		
+
 		JButton btnNewButton_Syringue_i = new JButton("Add");
 		btnNewButton_Syringue_i.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
 					listData.addElement("Syringue : " + textField_Syringue_i.getText() + " ml injected" + "\n");
-					listData.addElement("Pause : injection"+ "\n");
-					double time;
-					double AB= Integer.parseInt(textField_Syringue_i.getText().toString());
-					double d1 =0.0054;
-					if(AB <= d1) {
-						time=0.003;
-					}
-					else {
-						time=(0.003 + ((AB-d1)/1.667))*1000;
-					}
-					Syringue_Injection injection = new Syringue_Injection((Integer.parseInt(textField_Syringue_i.getText().toString())),(int)Math.round(time), arduino2);
+					listData.addElement("Pause : injection" + "\n");
+					Syringue_Injection injection = new Syringue_Injection(
+							(Integer.parseInt(textField_Syringue_i.getText().toString())), arduino2);
 					data.add(injection);
-					Pause pause = new Pause((int)Math.round(time));
+					Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_i.getText().toString()))));
 					data.add(pause);
-					}
-					else {
-						btnNewButton_Syringue_i.setEnabled(true);
-					}
+				} else {
+					btnNewButton_Syringue_i.setEnabled(true);
+				}
 			}
 		});
 		panel_7_1_2.add(btnNewButton_Syringue_i);
-		
 
 		textField = new JTextField();
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
+
+		JComboBox comboBox_1 = new JComboBox(rep);
+
+		textField.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
 		
-				JComboBox comboBox_1 = new JComboBox(rep);
-				
-				textField.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						
-					}
-				});
-						
-						JPanel panel_Syringe_aspirated = new JPanel();
-						panel_Syringe_aspirated.setBorder(new LineBorder(Color.GRAY));
-						panel_Parameter_contenu.add(panel_Syringe_aspirated);
-						panel_Syringe_aspirated.setLayout(new GridLayout(3, 1, 15, 15));
-						
-						JLabel lblNewLabel_Syringue_a = new JLabel("Syringue aspiration");
-						lblNewLabel_Syringue_a.setHorizontalAlignment(SwingConstants.CENTER);
-						panel_Syringe_aspirated.add(lblNewLabel_Syringue_a);
-						
-						JPanel panel_6_1_2_1 = new JPanel();
-						panel_Syringe_aspirated.add(panel_6_1_2_1);
-						panel_6_1_2_1.setLayout(new GridLayout(1, 2, 0, 0));
-						
-						JLabel lblNewLabel_volume_a = new JLabel("Volume (ml.)");
-						panel_6_1_2_1.add(lblNewLabel_volume_a);
-						
-						textField_Syringue_a = new JTextField();
-						textField_Syringue_a.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-							}
-						});
-						textField_Syringue_a.setColumns(10);
-						panel_6_1_2_1.add(textField_Syringue_a);
-						
-						JPanel panel_7_1_2_1 = new JPanel();
-						panel_Syringe_aspirated.add(panel_7_1_2_1);
-						panel_7_1_2_1.setLayout(new GridLayout(0, 2, 15, 15));
-						
-						JButton btnNewButton_Syringue_a = new JButton("Add");
-						btnNewButton_Syringue_a.addActionListener(new ActionListener() {
-							public void actionPerformed(ActionEvent e) {
-								if (textField_Syringue_a.getText().isEmpty() == false) {
-									listData.addElement("Syringue : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
-									listData.addElement("Pause : aspiration"+ "\n");
-									double time;
-									double AB= Integer.parseInt(textField_Syringue_i.getText().toString());
-									double d1 =0.0054;
-									if(AB <= d1) {
-										time=0.003;
-									}
-									else {
-										time=(0.003 + ((AB-d1)/1.667))*1000;
-									}
-									Syringue_Aspiration aspiration = new Syringue_Aspiration((Integer.parseInt(textField_Syringue_a.getText().toString())), (int)Math.round(time), arduino2);
-									data.add(aspiration);
-									Pause pause = new Pause((int)Math.round(time));
-									data.add(pause);
-									}
-									else {
-										btnNewButton_Syringue_a.setEnabled(true);
-									}
-							}
-						});
-						panel_7_1_2_1.add(btnNewButton_Syringue_a);
-						
-								// Home
-								// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-						
-								JPanel panel_Home = new JPanel();
-								panel_Home.setBorder(new LineBorder(Color.GRAY));
-								panel_Parameter_contenu.add(panel_Home);
-								panel_Home.setLayout(new GridLayout(3, 1, 15, 15));
-								
-										JLabel lblNewLabel_Home = new JLabel("Home");
-										lblNewLabel_Home.setHorizontalAlignment(SwingConstants.CENTER);
-										panel_Home.add(lblNewLabel_Home);
-										
-												JPanel panel_6_1_1_1 = new JPanel();
-												panel_Home.add(panel_6_1_1_1);
-												panel_6_1_1_1.setLayout(new GridLayout(1, 2, 0, 0));
-												
-														JPanel panel_7_1_1_2 = new JPanel();
-														panel_Home.add(panel_7_1_1_2);
-														panel_7_1_1_2.setLayout(new GridLayout(0, 2, 15, 15));
-														
-																JButton btnNewButton_1_1_1_2 = new JButton("Add");
-																btnNewButton_1_1_1_2.addActionListener(new ActionListener() {
-																	public void actionPerformed(ActionEvent e) {
-																		listData.addElement("Home" + "\n");
-																		Initialisation home = new Initialisation(arduino);
-																		data.add(home);
-																	}
-																});
-																panel_7_1_1_2.add(btnNewButton_1_1_1_2);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-				
-						// Repetitions
-						// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				
-						JPanel panel_Timer = new JPanel();
-						panel_Parameter_contenu.add(panel_Timer);
-						panel_Timer.setBorder(new LineBorder(Color.GRAY));
-						panel_Timer.setLayout(new GridLayout(4, 1, 10, 10));
-						
-								JLabel lblNewLabel_3_1_1 = new JLabel("Repetition");
-								lblNewLabel_3_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-								panel_Timer.add(lblNewLabel_3_1_1);
-								
-										JPanel panel_4 = new JPanel();
-										panel_Timer.add(panel_4);
-										panel_4.setLayout(new BorderLayout(0, 0));
-										
-												JLabel lblNewLabel_2 = new JLabel("<html>Number of repetition of the list</html>");
-												lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 11));
-												lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);
-												panel_4.add(lblNewLabel_2);
-												
-														comboBox_1.addActionListener(new ActionListener() {
-															public void actionPerformed(ActionEvent e) {
-															}
-														});
-														panel_4.add(comboBox_1, BorderLayout.EAST);
-														
-																JPanel panel_6_1_1_2 = new JPanel();
-																panel_Timer.add(panel_6_1_1_2);
-																panel_6_1_1_2.setLayout(new GridLayout(0, 2, 0, 0));
-																
-																		JLabel lblNewLabel_Time_Video_1 = new JLabel("<html>Time between repetitions(min)</html>");
-																		lblNewLabel_Time_Video_1.setFont(new Font("Dialog", Font.BOLD, 11));
-																		lblNewLabel_Time_Video_1.setHorizontalAlignment(SwingConstants.CENTER);
-																		panel_6_1_1_2.add(lblNewLabel_Time_Video_1);
-																		
-																				textField.setColumns(10);
-																				panel_6_1_1_2.add(textField);
-																				
-																				JPanel panel_10 = new JPanel();
-																				panel_Timer.add(panel_10);
-																				
-																				JButton btnNewButton_3 = new JButton("Validate");
-																				btnNewButton_3.addActionListener(new ActionListener() {
-																					public void actionPerformed(ActionEvent e) {
-																						if (!textField.getText().toString().isEmpty()) {
-																							lblNewLabel_3.setText("Total time (approximate) : " + (Integer.parseInt(textField.getText().toString())
-																									* Integer.parseInt(comboBox_1.getSelectedItem().toString())) + " min.");
-																						}
-																						else{
-																							lblNewLabel_3.setText("Total time : less than 1 min.");
-																						}
-																					}
-																				});
-																				panel_10.setLayout(new BorderLayout(0, 0));
-																				
-																				JLabel label = new JLabel("                  ");
-																				panel_10.add(label, BorderLayout.EAST);
-																				panel_10.add(btnNewButton_3);
+
+		JPanel panel_Syringe_aspirated = new JPanel();
+		panel_Syringe_aspirated.setBorder(new LineBorder(Color.GRAY));
+		panel_Parameter_contenu.add(panel_Syringe_aspirated);
+		panel_Syringe_aspirated.setLayout(new GridLayout(3, 1, 15, 15));
+
+		JLabel lblNewLabel_Syringue_a = new JLabel("Syringue aspiration");
+		lblNewLabel_Syringue_a.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_Syringe_aspirated.add(lblNewLabel_Syringue_a);
+
+		JPanel panel_6_1_2_1 = new JPanel();
+		panel_Syringe_aspirated.add(panel_6_1_2_1);
+		panel_6_1_2_1.setLayout(new GridLayout(1, 2, 0, 0));
+
+		JLabel lblNewLabel_volume_a = new JLabel("Volume (ml.)");
+		panel_6_1_2_1.add(lblNewLabel_volume_a);
+
+		textField_Syringue_a = new JTextField();
+		textField_Syringue_a.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		textField_Syringue_a.setColumns(10);
+		panel_6_1_2_1.add(textField_Syringue_a);
+
+		JPanel panel_7_1_2_1 = new JPanel();
+		panel_Syringe_aspirated.add(panel_7_1_2_1);
+		panel_7_1_2_1.setLayout(new GridLayout(0, 2, 15, 15));
+
+		JButton btnNewButton_Syringue_a = new JButton("Add");
+		btnNewButton_Syringue_a.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (textField_Syringue_a.getText().isEmpty() == false) {
+					listData.addElement("Syringue : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
+					listData.addElement("Pause : aspiration" + "\n");
+					Syringue_Aspiration aspiration = new Syringue_Aspiration(
+							(Integer.parseInt(textField_Syringue_a.getText().toString())), arduino2);
+					data.add(aspiration);
+					Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_a.getText().toString()))));
+					data.add(pause);
+				} else {
+					btnNewButton_Syringue_a.setEnabled(true);
+				}
+			}
+		});
+		panel_7_1_2_1.add(btnNewButton_Syringue_a);
 		
-																				
+		
+		// Home
+		// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		JPanel panel_Home = new JPanel();
+		panel_Home.setBorder(new LineBorder(Color.GRAY));
+		panel_Parameter_contenu.add(panel_Home);
+		panel_Home.setLayout(new GridLayout(3, 1, 15, 15));
+
+		JLabel lblNewLabel_Home = new JLabel("Home");
+		lblNewLabel_Home.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_Home.add(lblNewLabel_Home);
+
+		JPanel panel_6_1_1_1 = new JPanel();
+		panel_Home.add(panel_6_1_1_1);
+		panel_6_1_1_1.setLayout(new GridLayout(1, 2, 0, 0));
+
+		JPanel panel_7_1_1_2 = new JPanel();
+		panel_Home.add(panel_7_1_1_2);
+		panel_7_1_1_2.setLayout(new GridLayout(0, 2, 15, 15));
+
+		JButton btnNewButton_1_1_1_2 = new JButton("Add");
+		btnNewButton_1_1_1_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				listData.addElement("Home" + "\n");
+				Initialisation home = new Initialisation(arduino);
+				data.add(home);
+			}
+		});
+		panel_7_1_1_2.add(btnNewButton_1_1_1_2);
+
+		// Repetitions
+		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		JPanel panel_Timer = new JPanel();
+		panel_Parameter_contenu.add(panel_Timer);
+		panel_Timer.setBorder(new LineBorder(Color.GRAY));
+		panel_Timer.setLayout(new GridLayout(4, 1, 10, 10));
+
+		JLabel lblNewLabel_3_1_1 = new JLabel("Repetition");
+		lblNewLabel_3_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_Timer.add(lblNewLabel_3_1_1);
+
+		JPanel panel_4 = new JPanel();
+		panel_Timer.add(panel_4);
+		panel_4.setLayout(new BorderLayout(0, 0));
+
+		JLabel lblNewLabel_2 = new JLabel("<html>Number of repetition of the list</html>");
+		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 11));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);
+		panel_4.add(lblNewLabel_2);
+
+		comboBox_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		panel_4.add(comboBox_1, BorderLayout.EAST);
+
+		JPanel panel_6_1_1_2 = new JPanel();
+		panel_Timer.add(panel_6_1_1_2);
+		panel_6_1_1_2.setLayout(new GridLayout(0, 2, 0, 0));
+
+		JLabel lblNewLabel_Time_Video_1 = new JLabel("<html>Time between repetitions(min)</html>");
+		lblNewLabel_Time_Video_1.setFont(new Font("Dialog", Font.BOLD, 11));
+		lblNewLabel_Time_Video_1.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_6_1_1_2.add(lblNewLabel_Time_Video_1);
+
+		textField.setColumns(10);
+		panel_6_1_1_2.add(textField);
+
+		JPanel panel_10 = new JPanel();
+		panel_Timer.add(panel_10);
+
+		JButton btnNewButton_3 = new JButton("Validate");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!textField.getText().toString().isEmpty()) {
+					lblNewLabel_3
+							.setText(
+									"Total time (approximate) : "
+											+ (Integer.parseInt(textField.getText().toString())
+													* Integer.parseInt(comboBox_1.getSelectedItem().toString()))
+											+ " min.");
+				} else {
+					lblNewLabel_3.setText("Total time : less than 1 min.");
+				}
+			}
+		});
+		panel_10.setLayout(new BorderLayout(0, 0));
+
+		JLabel label = new JLabel("                  ");
+		panel_10.add(label, BorderLayout.EAST);
+		panel_10.add(btnNewButton_3);
+
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -665,30 +648,28 @@ public class Interface_graphique2 extends JFrame {
 				Timer timer = new Timer();
 
 				TimerTask task = new TimerTask() {
-				int n = 0;
+					int n = 0;
 
 					public void run() {
 
 						n++;
 						Start start = new Start();
 						start.event_go(data);
-						
+
 						if (n == Integer.parseInt(comboBox_1.getSelectedItem().toString())) {
 							timer.cancel();
 							arduino.Close();
 							arduino2.Close();
 						}
-						
+
 					}
 				};
-				if (!textField.getText().toString().isEmpty()){
-				timer.scheduleAtFixedRate(task, 0,
-						Integer.parseInt(textField.getText().toString()) * 60000);
-					}
-					else{
-						timer.scheduleAtFixedRate(task, 0, 1);
-					}
-			
+				if (!textField.getText().toString().isEmpty()) {
+					timer.scheduleAtFixedRate(task, 0, Integer.parseInt(textField.getText().toString()) * 60000);
+				} else {
+					timer.scheduleAtFixedRate(task, 0, 1);
+				}
+
 			}
 		});
 	}

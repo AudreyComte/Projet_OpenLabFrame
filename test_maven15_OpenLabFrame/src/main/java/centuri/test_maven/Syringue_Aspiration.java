@@ -9,12 +9,10 @@ public class Syringue_Aspiration extends Event {
 
 	int volum;
 	int round;
-	int time;
 	Arduino2 myArduino2;
 
-	public Syringue_Aspiration(int volum, int time, Arduino2 myArduino2) {
+	public Syringue_Aspiration(int volum, Arduino2 myArduino2) {
 		this.volum = volum;
-		this.time=time;
 		this.myArduino2 = myArduino2;
 	}
 

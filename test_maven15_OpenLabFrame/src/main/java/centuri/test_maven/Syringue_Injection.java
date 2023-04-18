@@ -9,10 +9,9 @@ public class Syringue_Injection extends Event {
 
 	int volum;
 	int round;
-	int time;
 	Arduino2 myArduino2;
 
-	public Syringue_Injection(int volum, int time, Arduino2 myArduino2) {
+	public Syringue_Injection(int volum, Arduino2 myArduino2) {
 		this.volum = volum;
 		this.myArduino2 = myArduino2;
 	}
