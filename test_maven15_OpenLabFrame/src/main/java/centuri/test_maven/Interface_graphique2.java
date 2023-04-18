@@ -475,17 +475,20 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
 					listData.addElement("Syringue : " + textField_Syringue_i.getText() + " ml injected" + "\n");
+					listData.addElement("Pause : injection"+ "\n");
 					double time;
 					double AB= Integer.parseInt(textField_Syringue_i.getText().toString());
 					double d1 =0.0054;
 					if(AB <= d1) {
-						time=532;
+						time=0.003;
 					}
 					else {
-						time=(0.532 + ((AB-d1)/1.667))*1000;
+						time=(0.003 + ((AB-d1)/1.667))*1000;
 					}
 					Syringue_Injection injection = new Syringue_Injection((Integer.parseInt(textField_Syringue_i.getText().toString())),(int)Math.round(time), arduino2);
 					data.add(injection);
+					Pause pause = new Pause((int)Math.round(time));
+					data.add(pause);
 					}
 					else {
 						btnNewButton_Syringue_i.setEnabled(true);
@@ -539,17 +542,20 @@ public class Interface_graphique2 extends JFrame {
 							public void actionPerformed(ActionEvent e) {
 								if (textField_Syringue_a.getText().isEmpty() == false) {
 									listData.addElement("Syringue : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
+									listData.addElement("Pause : aspiration"+ "\n");
 									double time;
 									double AB= Integer.parseInt(textField_Syringue_i.getText().toString());
 									double d1 =0.0054;
 									if(AB <= d1) {
-										time=532;
+										time=0.003;
 									}
 									else {
-										time=(0.532 + ((AB-d1)/1.667))*1000;
+										time=(0.003 + ((AB-d1)/1.667))*1000;
 									}
 									Syringue_Aspiration aspiration = new Syringue_Aspiration((Integer.parseInt(textField_Syringue_a.getText().toString())), (int)Math.round(time), arduino2);
 									data.add(aspiration);
+									Pause pause = new Pause((int)Math.round(time));
+									data.add(pause);
 									}
 									else {
 										btnNewButton_Syringue_a.setEnabled(true);

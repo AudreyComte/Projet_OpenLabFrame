@@ -1,6 +1,7 @@
 package centuri.test_maven;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.sql.rowset.serial.SerialException;
 
@@ -23,22 +24,31 @@ public class Syringue_Injection extends Event {
 		round = volum *1 ;
 
 		// command sent to arduino
-		String info = "G0X" + round + "\n";
 		
 		System.out.println(volum +" ml injected  \r\n");
 
+		// Data list
+		ArrayList data = new ArrayList();
+		data.add("$X\n");
+		data.add("G92X0\n");
+		data.add("G0X"+round+"\n");
+
+		System.out.println("Injection \r\n");
+
 		// send to arduino
-		try {
-			myArduino2.Go(info, time);
-		} catch (SerialException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		for (int i = 0; i < data.size(); i++) {
+			try {
+				myArduino2.Go(data.get(i).toString());
+			} catch (SerialException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
 		}
 		
 		// check $G test

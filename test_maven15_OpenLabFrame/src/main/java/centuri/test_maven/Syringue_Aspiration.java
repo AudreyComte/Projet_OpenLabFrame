@@ -1,6 +1,7 @@
 package centuri.test_maven;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.sql.rowset.serial.SerialException;
 
@@ -23,25 +24,32 @@ public class Syringue_Aspiration extends Event {
 		boolean ok = false;
 		
 		round = volum *1 ;
-
-		// command sent to arduino
-		String info = "G0X" + round + "\n";
 		
-		System.out.println(volum +" ml aspirated \r\n");
+		System.out.println(volum +" ml aspirated  \r\n");
 
-		// send to arduino
-		try {
-			myArduino2.Go(info,time);
-		} catch (SerialException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		// Data list
+				ArrayList data = new ArrayList();
+				data.add("$X\n");
+				data.add("G92X0\n");
+				data.add("G0X"+round+"\n");
+
+				System.out.println("Aspiration \r\n");
+
+				// send to arduino
+				for (int i = 0; i < data.size(); i++) {
+					try {
+						myArduino2.Go(data.get(i).toString());
+					} catch (SerialException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}	
+				}
 		
 		// check $G test
 		try {

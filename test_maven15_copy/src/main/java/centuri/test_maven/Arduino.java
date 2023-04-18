@@ -89,7 +89,8 @@ public class Arduino {
 	public boolean test_$G() throws SerialException, IOException, InterruptedException {
 
 		boolean test;
-
+		
+		Go("G4 P1");
 		Go("$G");
 		
 		InputStream input_stream = serial_port.getInputStream();

@@ -523,8 +523,17 @@ public class Interface_graphique2 extends JFrame {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
+			
+			try {
+				arduino.event_go(data);
+			} catch (SerialException | IOException | InterruptedException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
+			
+			arduino.Close();
 
-			Timer timer = new Timer();
+			/*Timer timer = new Timer();
 
 			TimerTask task = new TimerTask() {
 				int n = 0;
@@ -550,6 +559,7 @@ public class Interface_graphique2 extends JFrame {
 						Integer.parseInt(textField.getText().toString()) * 60000);
 			}
 
+		}*/
 		}
 	});
   }

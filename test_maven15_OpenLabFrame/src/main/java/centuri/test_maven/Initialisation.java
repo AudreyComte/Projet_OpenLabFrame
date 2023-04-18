@@ -30,7 +30,7 @@ public class Initialisation extends Event {
 		// send to arduino
 		for (int i = 0; i < data.size(); i++) {
 			try {
-				myArduino.Go(data.get(i).toString(),100);
+				myArduino.Go(data.get(i).toString());
 			} catch (SerialException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -89,7 +89,8 @@ public class Arduino {
 	public boolean test_$G() throws SerialException, IOException, InterruptedException {
 
 		boolean test;
-
+		
+		Go("G4 P1");
 		Go("$G");
 		
 		InputStream input_stream = serial_port.getInputStream();
@@ -107,10 +108,30 @@ public class Arduino {
 			}
 		} catch (Exception e) {
 		}
-		if (message.contains("[GC:")) {
+		/*if (message.contains("[GC:")) {
 			test = true;
 		} else {
-			test = false;
+			Thread.sleep(1000);
+			int availableBytes = input_stream.available();
+			byte[] bytes = new byte[availableBytes];
+			input_stream.read(bytes, 0, availableBytes);
+			message = new String(bytes);
+			System.out.println("Arduino : " + message);
+		}
+		if (message.contains("[GC:")) {
+			test = true;
+		}else {
+			Thread.sleep(1000);
+		int availableBytes = input_stream.available();
+		byte[] bytes = new byte[availableBytes];
+		input_stream.read(bytes, 0, availableBytes);
+		message = new String(bytes);
+		System.out.println("Arduino : " + message);
+		}*/
+		if (message.contains("[GC:")) {
+			test = true;
+		}else { 
+			test = false;    
 		}
 
 		return test;

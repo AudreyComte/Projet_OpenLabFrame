@@ -41,7 +41,7 @@ public class Mouvement extends Event {
 
 		// send to arduino
 		try {
-			myArduino.Go(info, time);
+			myArduino.Go(info);
 		} catch (SerialException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

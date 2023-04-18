@@ -36,45 +36,43 @@ public class Mouvement extends Event {
 		
 		System.out.println(coordinate_x + " mm movement in x and " + coordinate_y + " mm movement in y \r\n");
 
-		ArrayList data = new ArrayList();
-		data.add(type_of_coordinate + "G0X" + coordinate_x + "Y" + coordinate_y + "\n");
-		//data.add("G4 P1\n");
+		//ArrayList data = new ArrayList();
+		String Info = (type_of_coordinate + "G0X" + coordinate_x + "Y" + coordinate_y + "\n");
+		//data.add("G0\n");
 
 		System.out.println("Mouvement \r\n");
 
 		// send to arduino
-		for (int i = 0; i < data.size(); i++) {
-			try {
-				myArduino.Go(data.get(i).toString());
-			} catch (SerialException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}	
-		}
-		
-		// check $G test
-		try {
-			ok = myArduino.test_$G();
-		} catch (SerialException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+					try {
+						myArduino.Go(Info);
+					} catch (SerialException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}	
+				
+				
+				// check $G test
+						try {
+							myArduino.test_$G();
+						} catch (SerialException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 
-
-		return ok;
-	}
+				return true;
+			}
 
 	
 	@Override
