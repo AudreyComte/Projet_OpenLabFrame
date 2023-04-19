@@ -19,10 +19,10 @@ int pause;
 		
 		boolean pause_boolean = false;
 		
-		System.out.println((pause/1000) + " secondes break... \r\n");
+		System.out.println((pause) + " secondes break... \r\n");
 		
 		try {
-			Thread.sleep(pause); 
+			Thread.sleep(pause*1000); 
 			pause_boolean = true;	
 			}
 			catch (InterruptedException e)

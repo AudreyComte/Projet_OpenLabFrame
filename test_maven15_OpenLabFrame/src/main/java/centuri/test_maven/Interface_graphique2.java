@@ -440,6 +440,11 @@ public class Interface_graphique2 extends JFrame {
 
 		panel_7_1.add(btnNewButton_1_1);
 
+		
+		
+		// Syringue injection
+		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
 		JPanel panel_Syringe_injected = new JPanel();
 		panel_Syringe_injected.setBorder(new LineBorder(Color.GRAY));
 		panel_Parameter_contenu.add(panel_Syringe_injected);
@@ -497,6 +502,9 @@ public class Interface_graphique2 extends JFrame {
 			}
 		});
 		
+		
+		// Syringue aspiration
+		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		JPanel panel_Syringe_aspirated = new JPanel();
 		panel_Syringe_aspirated.setBorder(new LineBorder(Color.GRAY));
@@ -637,6 +645,10 @@ public class Interface_graphique2 extends JFrame {
 		JLabel label = new JLabel("                  ");
 		panel_10.add(label, BorderLayout.EAST);
 		panel_10.add(btnNewButton_3);
+		
+		
+		// Button start
+		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -11,7 +11,7 @@ public class Motor1 {
 		if (AB <= d1) {
 			time = (int) Math.round(acceleration_deceleration_time);
 		} else {
-			time = (int) Math.round((acceleration_deceleration_time + ((AB - d1) / x_y_axis_max_rate/60)));
+			time = (int) Math.round((acceleration_deceleration_time + ((AB - d1) / (x_y_axis_max_rate/60))));
 		}
 			return time;
 		
