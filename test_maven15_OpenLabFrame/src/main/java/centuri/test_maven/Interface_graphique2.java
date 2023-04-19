@@ -79,21 +79,23 @@ public class Interface_graphique2 extends JFrame {
 
 		Coordinate_Field coordinate = new Coordinate_Field(field);
 
-		Arduino arduino = new Arduino();
+		Arduino arduino1 = new Arduino("ttyAMA1");
 
-		Arduino2 arduino2 = new Arduino2();
+		Arduino arduino2 = new Arduino("ttyAMA0");
 
 		ArrayList<Event> initilization_homing = new ArrayList<Event>();
 
-		Initialisation initialization = new Initialisation(arduino);
+		Initialisation initialization = new Initialisation(arduino1);
 
 		initilization_homing.add(initialization);
 
 		ArrayList<Event> data = new ArrayList<Event>();
 
 		Camera camera = new Camera();
+
+		Motor motor2 = new Motor(100.0,1000.0);
 		
-		Motor2 motor2 = new Motor2();
+		Loading_protocol protocol = new Loading_protocol();
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -190,7 +192,7 @@ public class Interface_graphique2 extends JFrame {
 						} else {
 							time = (0.532 + ((AB - 70.91) / 133.3)) * 1000;
 						}
-						data.set(k, new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino));
+						data.set(k, new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino1));
 						l++;
 					}
 				}
@@ -223,25 +225,9 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_2.setVerticalAlignment(SwingConstants.BOTTOM);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Runnable stop = new Runnable() {
-					@Override
-					public void run() {
-						arduino.Close();
-						Camera camera = new Camera();
-						ProcessBuilder processBuilder = new ProcessBuilder();
-						processBuilder.command("bash", "-c", "kill -9 $(pidof raspistill raspivid)");
-						try {
-							camera.callBash(processBuilder);
-						} catch (Exception f) {
-							System.out.println("Camera: Error : " + f.getMessage());
-							// logError("Camera: Error while taking picture: " + e.getMessage());
-						}
-					}
-
-				};
-
-				Thread t1 = new Thread(stop);
-				t1.start();
+				Stop stop = new Stop();
+				stop.run();
+				arduino1.Close();
 			}
 		});
 
@@ -304,15 +290,7 @@ public class Interface_graphique2 extends JFrame {
 				double coordinate_y = (coordinate
 						.get_y_coordinate(coordinate.get_r(comboBox.getSelectedItem().toString())) * 10);
 				double coordinate_z = 35.0;
-				double AB = Math.sqrt((coordinate_x * coordinate_x) + (coordinate_y * coordinate_y));
-				double d1 = 70.91;
-				double time;
-				if (AB <= d1) {
-					time = 532;
-				} else {
-					time = (0.532 + ((AB - 70.91) / 133.3)) * 1000;
-				}
-				Mouvement well = new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino);
+				Mouvement well = new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino1);
 				data.add(well);
 			}
 		});
@@ -440,17 +418,15 @@ public class Interface_graphique2 extends JFrame {
 
 		panel_7_1.add(btnNewButton_1_1);
 
-		
-		
-		// Syringue injection
+		// Syringe injection
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		
+
 		JPanel panel_Syringe_injected = new JPanel();
 		panel_Syringe_injected.setBorder(new LineBorder(Color.GRAY));
 		panel_Parameter_contenu.add(panel_Syringe_injected);
 		panel_Syringe_injected.setLayout(new GridLayout(3, 1, 15, 15));
 
-		JLabel lblNewLabel_Syringue_i = new JLabel("Syringue injection");
+		JLabel lblNewLabel_Syringue_i = new JLabel("Syringe injection");
 		lblNewLabel_Syringue_i.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_Syringe_injected.add(lblNewLabel_Syringue_i);
 
@@ -477,7 +453,7 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_Syringue_i.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
-					listData.addElement("Syringue : " + textField_Syringue_i.getText() + " ml injected" + "\n");
+					listData.addElement("Syringe : " + textField_Syringue_i.getText() + " ml injected" + "\n");
 					listData.addElement("Pause : injection" + "\n");
 					Syringue_Injection injection = new Syringue_Injection(
 							(Integer.parseInt(textField_Syringue_i.getText().toString())), arduino2);
@@ -501,9 +477,8 @@ public class Interface_graphique2 extends JFrame {
 
 			}
 		});
-		
-		
-		// Syringue aspiration
+
+		// Syringe aspiration
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		JPanel panel_Syringe_aspirated = new JPanel();
@@ -511,7 +486,7 @@ public class Interface_graphique2 extends JFrame {
 		panel_Parameter_contenu.add(panel_Syringe_aspirated);
 		panel_Syringe_aspirated.setLayout(new GridLayout(3, 1, 15, 15));
 
-		JLabel lblNewLabel_Syringue_a = new JLabel("Syringue aspiration");
+		JLabel lblNewLabel_Syringue_a = new JLabel("Syringe aspiration");
 		lblNewLabel_Syringue_a.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_Syringe_aspirated.add(lblNewLabel_Syringue_a);
 
@@ -538,7 +513,7 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_Syringue_a.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_a.getText().isEmpty() == false) {
-					listData.addElement("Syringue : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
+					listData.addElement("Syringe : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
 					listData.addElement("Pause : aspiration" + "\n");
 					Syringue_Aspiration aspiration = new Syringue_Aspiration(
 							(Integer.parseInt(textField_Syringue_a.getText().toString())), arduino2);
@@ -551,8 +526,7 @@ public class Interface_graphique2 extends JFrame {
 			}
 		});
 		panel_7_1_2_1.add(btnNewButton_Syringue_a);
-		
-		
+
 		// Home
 		// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -577,7 +551,7 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_1_1_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				listData.addElement("Home" + "\n");
-				Initialisation home = new Initialisation(arduino);
+				Initialisation home = new Initialisation(arduino1);
 				data.add(home);
 			}
 		});
@@ -645,43 +619,27 @@ public class Interface_graphique2 extends JFrame {
 		JLabel label = new JLabel("                  ");
 		panel_10.add(label, BorderLayout.EAST);
 		panel_10.add(btnNewButton_3);
-		
-		
+
 		// Button start
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				arduino.Start();
+				arduino1.Start();
 				arduino2.Start();
-				arduino.event_go(initilization_homing);
-
-				Timer timer = new Timer();
-
-				TimerTask task = new TimerTask() {
-					int n = 0;
-
-					public void run() {
-
-						n++;
-						Start start = new Start();
-						start.event_go(data);
-
-						if (n == Integer.parseInt(comboBox_1.getSelectedItem().toString())) {
-							timer.cancel();
-							arduino.Close();
-							arduino2.Close();
-						}
-
-					}
-				};
+				
+				protocol.event_go(initilization_homing);
+				
 				if (!textField.getText().toString().isEmpty()) {
-					timer.scheduleAtFixedRate(task, 0, Integer.parseInt(textField.getText().toString()) * 60000);
-				} else {
-					timer.scheduleAtFixedRate(task, 0, 1);
+					protocol.timer(Integer.parseInt(comboBox_1.getSelectedItem().toString()), Integer.parseInt(textField.getText().toString()) * 60000, data);
+				}
+				else {
+					protocol.timer(Integer.parseInt(comboBox_1.getSelectedItem().toString()), 1, data);
 				}
 
+				arduino1.Close();
+				arduino2.Close();
 			}
 		});
 	}

@@ -8,66 +8,37 @@ import javax.sql.rowset.serial.SerialException;
 public class Syringue_Injection extends Event {
 
 	int volum;
-	int round;
-	Arduino2 myArduino2;
+	Arduino myArduino;
 
-	public Syringue_Injection(int volum, Arduino2 myArduino2) {
+	public Syringue_Injection(int volum, Arduino myArduino) {
 		this.volum = volum;
-		this.myArduino2 = myArduino2;
+		this.myArduino = myArduino;
 	}
 
 	@Override
 	public boolean Do() {
+		
 		boolean ok = false;
-		
-		round = volum *1 ;
-
-		// command sent to arduino
-		
-		System.out.println(volum +" ml injected  \r\n");
 
 		// Data list
 		ArrayList data = new ArrayList();
 		data.add("$X\n");
 		data.add("G92X0\n");
-		data.add("G0X"+round+"\n");
+		data.add("G0X" + volum + "\n");
+		data.add("G4 P1\n");
 
-		System.out.println("Injection \r\n");
+		System.out.println(volum + " ml injected  \r\n");
 
 		// send to arduino
 		for (int i = 0; i < data.size(); i++) {
-			try {
-				myArduino2.Go(data.get(i).toString());
-			} catch (SerialException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}	
-		}
-		
-		// check $G test
-		try {
-			ok = myArduino2.test_$G();
-		} catch (SerialException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			myArduino.Go(data.get(i).toString());
 		}
 
+		// check $G test
+		ok = myArduino.test_$G();
 
 		return ok;
 	}
-
 
 
 	@Override

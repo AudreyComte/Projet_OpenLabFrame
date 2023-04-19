@@ -8,74 +8,46 @@ import javax.sql.rowset.serial.SerialException;
 public class Syringue_Aspiration extends Event {
 
 	int volum;
-	int round;
-	Arduino2 myArduino2;
+	Arduino myArduino;
 
-	public Syringue_Aspiration(int volum, Arduino2 myArduino2) {
+	public Syringue_Aspiration(int volum, Arduino myArduino) {
 		this.volum = volum;
-		this.myArduino2 = myArduino2;
+		this.myArduino = myArduino;
 	}
-
+	
 	
 	@Override
 	public boolean Do() {
+		
 		boolean ok = false;
-		
-		round = volum *1 ;
-		
-		System.out.println(volum +" ml aspirated  \r\n");
 
 		// Data list
-				ArrayList data = new ArrayList();
-				data.add("$X\n");
-				data.add("G92X0\n");
-				data.add("G0X"+round+"\n");
+		ArrayList data = new ArrayList();
+		data.add("$X\n");
+		data.add("G92X0\n");
+		data.add("G0X" + volum + "\n");
+		data.add("G4 P1\n");
 
-				System.out.println("Aspiration \r\n");
+		System.out.println(volum + " ml aspirated  \r\n");
 
-				// send to arduino
-				for (int i = 0; i < data.size(); i++) {
-					try {
-						myArduino2.Go(data.get(i).toString());
-					} catch (SerialException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}	
-				}
-		
-		// check $G test
-		try {
-			ok = myArduino2.test_$G();
-		} catch (SerialException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		// send to arduino
+		for (int i = 0; i < data.size(); i++) {
+			myArduino.Go(data.get(i).toString());
 		}
 
+		// check $G test
+		ok = myArduino.test_$G();
 
 		return ok;
 	}
 
-
-
+	
 	@Override
 	public void Info(boolean ok) {
 		if (ok == true) {
-			System.out.println("OK : "+ volum + " ml aspirated \r\n\n");
-		}
-		else {
-			System.out.println("Error : no aspiration \r\n\n");	
+			System.out.println("OK : " + volum + " ml aspirated \r\n\n");
+		} else {
+			System.out.println("Error : no aspiration \r\n\n");
 		}
 	}
 

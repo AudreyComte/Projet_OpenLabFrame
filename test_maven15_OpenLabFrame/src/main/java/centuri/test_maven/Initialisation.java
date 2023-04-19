@@ -14,52 +14,35 @@ public class Initialisation extends Event {
 	Arduino myArduino;
 
 	public Initialisation(Arduino myArduino) {
-		this.myArduino = new Arduino();
+		this.myArduino = new Arduino("ttyAMA1");
 	}
 
 	@Override
 	public boolean Do() {
+		
+		boolean ok = false;
 
 		// Data list
 		ArrayList data = new ArrayList();
 		data.add("$H\n");
 		data.add("G92x0y0z0\n");
+		data.add("G4 P1\n");
 
 		System.out.println("Start inialization \r\n");
 
 		// send to arduino
-		for (int i = 0; i < data.size(); i++) {
-			try {
-				myArduino.Go(data.get(i).toString());
-			} catch (SerialException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}	
-		}
-		
-		// check $G test
-				try {
-					myArduino.test_$G();
-				} catch (SerialException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				for (int i = 0; i < data.size(); i++) {
+						myArduino.Go(data.get(i).toString());
 				}
-
-		return true;
+				
+		
+		// check $G test		
+		ok = myArduino.test_$G();
+				
+		
+		return ok;
 	}
-
+	
 	@Override
 	public void Info(boolean ok) {
 		if (ok == true) {

@@ -26,8 +26,16 @@ import com.fazecast.jSerialComm.SerialPortEvent;
 
 public class Arduino {
 
-	static SerialPort serial_port;
+	SerialPort serial_port;
 	String message;
+	String port;
+	DataOutputStream data_output;
+	OutputStream output_stream;
+	InputStream input_stream;
+	
+	public Arduino (String port) {
+		this.port = port;
+	}
 	
 	
 	// method Start
@@ -35,7 +43,7 @@ public class Arduino {
 		
 		boolean start;
 
-		serial_port = SerialPort.getCommPort("ttyAMA1"); //ttyAMA1
+		serial_port = SerialPort.getCommPort(port); //ttyAMA1 //ttyAMA0
 
 		if (serial_port.openPort()) {
 			System.out.println("Successfully open port! \r\n");
@@ -47,24 +55,30 @@ public class Arduino {
 
 		serial_port.setBaudRate(115200); // Attention au BaudRate : avec Grbl 115200 au lieu de 9600//
 		
+		output_stream = serial_port.getOutputStream();
+		
+		input_stream = serial_port.getInputStream();
+		
+		data_output= new DataOutputStream(output_stream);
+		
 		
 		return start;
 		
 	}
 
-
 	
 	// method Go
-	public void Go(String info) throws IOException, InterruptedException, SerialException {
+	public boolean Go (String info) {
 		
-		OutputStream output_stream = serial_port.getOutputStream();
-		DataOutputStream data_output = new DataOutputStream(output_stream);
+		boolean go = true;
+		
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		System.out.println("Commande : " + info + "\r");
+	
 		info = info + "\n";
 		try {
 			data_output.write(info.getBytes("UTF-8"));
@@ -76,23 +90,18 @@ public class Arduino {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		try {
-			output_stream.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+		
+		return go;
+		
 	}
 
 	
 	// method test_$G
-	public boolean test_$G() throws SerialException, IOException, InterruptedException {
+	public boolean test_$G(){
 
 		boolean test;
 
 		Go("$G");
-		
-		InputStream input_stream = serial_port.getInputStream();
 		
 		try {
 			while (input_stream.available() <= 0) {
@@ -118,23 +127,6 @@ public class Arduino {
 	}
 
 	
-	public boolean event_go(ArrayList<Event> data) {
-		
-		boolean ok = false;
-	
-		for (Event event : data) {
-			ok = event.Do();
-			if (!ok){
-				System.out.println("WARNING : ERROR !");
-				break;
-			}
-			event.Info(ok);
-		}
-		
-		return ok;
-		
-	}
-	
 	
 	// method Close
 	public boolean Close()  {
@@ -143,12 +135,26 @@ public class Arduino {
 		
 		if(serial_port.closePort()) {
 			System.out.println("Successfully close port!");
+			try {
+				output_stream.close();
+				input_stream.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			close = true;
 		}
 
 		return close;
 		
 	}
-
+	
+	public static void main(String[] args) {
+		Arduino arduino1 = new Arduino("ttyACM0");
+		arduino1.Start();
+		arduino1.Go("$H");
+		arduino1.test_$G();
+		arduino1.Close();
+		
+	}
 	
 }

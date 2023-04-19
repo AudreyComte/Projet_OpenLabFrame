@@ -23,7 +23,7 @@ public class Mouvement extends Event {
 		this.coordinate_x = coordinate_x;
 		this.coordinate_y = coordinate_y;
 		this.coordinate_z = coordinate_z;
-		this.myArduino = new Arduino();
+		this.myArduino = new Arduino("ttyAMA1");
 	}
 
 	
@@ -33,43 +33,31 @@ public class Mouvement extends Event {
 		boolean ok = false;
 
 		// command sent to arduino
-		String info = type_of_coordinate + "G0X" + coordinate_x + "Y" + coordinate_y + "Z-" + coordinate_z + "\n";
+		
+		ArrayList data = new ArrayList();
+		data.add(type_of_coordinate + "G0X" + coordinate_x + "Y" + coordinate_y + "Z-" + coordinate_z + "\n");
+		data.add("G4 P1\n");
 		
 		System.out.println(coordinate_x + " mm movement in x and " + coordinate_y + " mm movement in y \r\n");
 
+
 		// send to arduino
-		try {
-			myArduino.Go(info);
-		} catch (SerialException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		for (int i = 0; i < data.size(); i++) {
+				myArduino.Go(data.get(i).toString());
 		}
 		
+		
 		// check $G test
-		try {
-			ok = myArduino.test_$G();
-		} catch (SerialException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-
+		
+		ok = myArduino.test_$G();
+		
+		
 		return ok;
-	}
-
+		
+		}
 	
+	
+
 	@Override
 	public void Info(boolean ok) {
 		if (ok == true) {

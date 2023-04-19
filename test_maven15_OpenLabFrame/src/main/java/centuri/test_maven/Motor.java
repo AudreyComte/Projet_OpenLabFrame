@@ -1,8 +1,13 @@
 package centuri.test_maven;
 
-public class Motor1 {
-	double x_y_axis_max_rate= 8000.0;
-	double x_y_acceleration= 500.0;
+public class Motor {
+	double x_y_axis_max_rate;
+	double x_y_acceleration;
+	
+	public Motor (double x_y_axis_max_rate, double x_y_acceleration) {
+		this.x_y_axis_max_rate = x_y_axis_max_rate;
+		this.x_y_acceleration = x_y_acceleration;
+	}
 	
 	public int time (double AB) {
 		int time;
