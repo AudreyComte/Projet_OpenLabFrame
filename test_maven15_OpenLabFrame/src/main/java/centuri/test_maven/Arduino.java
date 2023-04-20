@@ -59,8 +59,7 @@ public class Arduino {
 		
 		input_stream = serial_port.getInputStream();
 		
-		data_output= new DataOutputStream(output_stream);
-		
+		data_output= new DataOutputStream(output_stream);	
 		
 		return start;
 		
@@ -149,12 +148,13 @@ public class Arduino {
 	}
 	
 	public static void main(String[] args) {
-		Arduino arduino1 = new Arduino("ttyACM0");
-		arduino1.Start();
-		arduino1.Go("$H");
-		arduino1.test_$G();
-		arduino1.Close();
-		
+		Arduino arduino = new Arduino ("ttyACM0");
+		arduino.Start();
+		Initialisation home = new Initialisation(arduino);
+		ArrayList<Event>homing = new ArrayList<Event>();
+		homing.add(home);
+		Loading_protocol protocol = new Loading_protocol();
+		protocol.event_go(homing);
 	}
 	
 }

@@ -14,7 +14,7 @@ public class Initialisation extends Event {
 	Arduino myArduino;
 
 	public Initialisation(Arduino myArduino) {
-		this.myArduino = new Arduino("ttyAMA1");
+		this.myArduino = myArduino;
 	}
 
 	@Override
