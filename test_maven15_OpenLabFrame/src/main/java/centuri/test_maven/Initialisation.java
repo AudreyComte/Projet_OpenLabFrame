@@ -26,7 +26,7 @@ public class Initialisation extends Event {
 		ArrayList data = new ArrayList();
 		data.add("$H\n");
 		data.add("G92x0y0z0\n");
-		data.add("G4 P1\n");
+		//data.add("G4 P1\n");
 
 		System.out.println("Start inialization \r\n");
 

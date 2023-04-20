@@ -23,7 +23,7 @@ public class Mouvement extends Event {
 		this.coordinate_x = coordinate_x;
 		this.coordinate_y = coordinate_y;
 		this.coordinate_z = coordinate_z;
-		this.myArduino = new Arduino("ttyAMA1");
+		this.myArduino = myArduino;
 	}
 
 	
@@ -36,7 +36,7 @@ public class Mouvement extends Event {
 		
 		ArrayList data = new ArrayList();
 		data.add(type_of_coordinate + "G0X" + coordinate_x + "Y" + coordinate_y + "Z-" + coordinate_z + "\n");
-		data.add("G4 P1\n");
+		//data.add("G4 P1\n");
 		
 		System.out.println(coordinate_x + " mm movement in x and " + coordinate_y + " mm movement in y \r\n");
 

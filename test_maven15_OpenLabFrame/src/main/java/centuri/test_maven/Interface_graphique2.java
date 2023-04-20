@@ -638,8 +638,8 @@ public class Interface_graphique2 extends JFrame {
 					protocol.timer(Integer.parseInt(comboBox_1.getSelectedItem().toString()), 1, data);
 				}
 
-				arduino1.Close();
-				arduino2.Close();
+				//arduino1.Close();
+				//arduino2.Close();
 			}
 		});
 	}
