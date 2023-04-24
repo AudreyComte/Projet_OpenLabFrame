@@ -27,23 +27,23 @@ import com.fazecast.jSerialComm.SerialPortEvent;
 public class Arduino {
 
 	SerialPort serial_port;
-	String message;
 	String port;
 	DataOutputStream data_output;
 	OutputStream output_stream;
 	InputStream input_stream;
-	
-	public Arduino (String port) {
+	String message;
+
+	public Arduino(String port) {
 		this.port = port;
 	}
-	
-	
-	// method Start
+
+	// method Start : ouverture du port donné en argument
+
 	public boolean Start() {
-		
+
 		boolean start;
 
-		serial_port = SerialPort.getCommPort(port); //ttyAMA1 //ttyAMA0
+		serial_port = SerialPort.getCommPort(port); // ttyAMA1 //ttyAMA0
 
 		if (serial_port.openPort()) {
 			System.out.println("Successfully open port! \r\n");
@@ -54,89 +54,97 @@ public class Arduino {
 		}
 
 		serial_port.setBaudRate(115200); // Attention au BaudRate : avec Grbl 115200 au lieu de 9600//
-		
+
 		output_stream = serial_port.getOutputStream();
-		
+
 		input_stream = serial_port.getInputStream();
-		
-		data_output= new DataOutputStream(output_stream);	
-		
+
+		data_output = new DataOutputStream(output_stream);
+
 		return start;
-		
+
 	}
 
-	
-	// method Go
-	public boolean Go (String info) {
-		
+	// method Go : pause 100 ms puis envoie le G-code à arduino puis pause 100 ms
+
+	public boolean Go(String info) {
+
 		boolean go = true;
-		
+
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			System.out.println("Error Thread_sleep" + e.getMessage());
+			go = false;
 		}
+
 		System.out.println("Commande : " + info + "\r");
-	
+
 		info = info + "\n";
+
 		try {
 			data_output.write(info.getBytes("UTF-8"));
 		} catch (IOException e1) {
-			e1.printStackTrace();
+			System.out.println("Error data_output" + e1.getMessage());
+			go = false;
 		}
-		try {
-			Thread.sleep(100);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
+
+		/*
+		 * try { Thread.sleep(100); } catch (InterruptedException e) {
+		 * System.out.println("Error Thread_sleep" + e.getMessage()); go = false; }
+		 */
+
 		return go;
-		
+
 	}
 
-	
-	// method test_$G
-	public boolean test_$G(){
+	// method test_$G : méthode Go() avec le code $G en argument puis attend
+	// qu'arduino renvoie une réponse : si la réponse est "[GC:" --> renvoie true si
+	// non la méthode renvoie false
 
-		boolean test;
+	public boolean test_$G() {
+
+		boolean test = false;
 
 		Go("$G");
-		
-		try {
-			while (input_stream.available() <= 0) {
-				Thread.sleep(100);
-			}
-			if (input_stream.available() > 0) {
-				int availableBytes = input_stream.available();
-				byte[] bytes = new byte[availableBytes];
-				input_stream.read(bytes, 0, availableBytes);
-				message = new String(bytes);
-				System.out.println("Arduino : " + message);
-			}
-		} catch (Exception e) {
-		}
-		if (message.contains("[GC:")) {
-			test = true;
-		} else {
-			test = false;
-		}
 
+		while (true) {
+
+			try {
+
+				if (input_stream.available() > 0) {
+					int availableBytes = input_stream.available();
+					byte[] bytes = new byte[availableBytes];
+					input_stream.read(bytes, 0, availableBytes);
+					message = new String(bytes);
+					System.out.println("Arduino : " + message);
+					if (message.contains("[GC:")) {
+						System.out.println("[GC: was detected !");
+						test = true;
+						break;
+					} else {
+						Thread.sleep(100);
+						test = false;
+					}
+				}
+			} catch (Exception e) {
+			}
+		}
 		return test;
-		
 	}
 
-	
-	
-	// method Close
-	public boolean Close()  {
-		
+	// method Close : ferme le port arduino et les output et input
+
+	public boolean close() {
+
 		boolean close = false;
-		
-		if(serial_port.closePort()) {
+
+		if (serial_port.closePort()) {
 			System.out.println("Successfully close port!");
 			try {
-				output_stream.close();
 				input_stream.close();
+				output_stream.close();
+
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -144,17 +152,16 @@ public class Arduino {
 		}
 
 		return close;
-		
+
 	}
-	
-	public static void main(String[] args) {
-		Arduino arduino = new Arduino ("ttyACM0");
-		arduino.Start();
-		Initialisation home = new Initialisation(arduino);
-		ArrayList<Event>homing = new ArrayList<Event>();
-		homing.add(home);
-		Loading_protocol protocol = new Loading_protocol();
-		protocol.event_go(homing);
-	}
-	
+
+	/*
+	 * public static void main(String[] args) { Arduino arduino = new Arduino
+	 * ("ttyACM0"); arduino.Start(); arduino.test$G(); //arduino.Go("$H");
+	 * //arduino.test_$G(); /*Initialisation home = new Initialisation(arduino);
+	 * ArrayList<Event>homing = new ArrayList<Event>(); homing.add(home);
+	 * Loading_protocol protocol = new Loading_protocol();
+	 * protocol.event_go(homing); }
+	 */
+
 }

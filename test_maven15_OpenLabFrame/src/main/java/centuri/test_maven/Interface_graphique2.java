@@ -21,6 +21,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.UIManager;
@@ -74,28 +75,27 @@ public class Interface_graphique2 extends JFrame {
 		contentPane.setLayout(new BorderLayout(10, 0));
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-		Field field = new Field(12.0, 8.0, 3, 2);
-
-		Coordinate_Field coordinate = new Coordinate_Field(field);
-
-		Arduino arduino1 = new Arduino("ttyAMA1");
-
-		Arduino arduino2 = new Arduino("ttyAMA0");
-
-		ArrayList<Event> initilization_homing = new ArrayList<Event>();
-
+		
+		// Dimension de de la plaque avec le nombre de colonne et de ligne
+		Field field = new Field(12.0, 8.0, 3, 2); 
+		
+		// Calcul des coordonnées de chaque puits de la plaque
+		Coordinate_Field coordinate = new Coordinate_Field(field); 
+		
+		Arduino arduino1 = new Arduino("ttyACM0"); // "ttyAMA1"
+		
+		//Arduino arduino2 = new Arduino("ttyAMA0"); 
+		
+		ArrayList<Event> data = new ArrayList<Event>(); 
+		
 		Initialisation initialization = new Initialisation(arduino1);
 
-		initilization_homing.add(initialization);
-
-		ArrayList<Event> data = new ArrayList<Event>();
-
-		Camera camera = new Camera();
-
-		Motor motor2 = new Motor(100.0,1000.0);
+		data.add(initialization); 
 		
-		Loading_protocol protocol = new Loading_protocol();
+		Camera camera = new Camera(); 
+
+		Motor motor2 = new Motor(100.0,1000.0); 
+	
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -118,9 +118,11 @@ public class Interface_graphique2 extends JFrame {
 		panel_List.add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new BorderLayout(0, 0));
 
-		DefaultListModel<String> listData = new DefaultListModel();
+		// listData est une instance de la classe DefaultListModel qui stocke des éléments sous forme de chaînes de caractères.
+		DefaultListModel<String> listData = new DefaultListModel();  
 
-		JList<String> list = new JList(listData);
+		// Instanciation d'une liste de string de la classe JList qui prend en argument l'object listData
+		JList<String> list = new JList(listData); 
 
 		panel_1.add(list);
 
@@ -139,7 +141,8 @@ public class Interface_graphique2 extends JFrame {
 		FlowLayout flowLayout_1 = (FlowLayout) panel_5.getLayout();
 		panel_3.add(panel_5);
 
-		JButton btnNewButton_1 = new JButton("Remove");
+		// Bouton "Remouve"
+		JButton btnNewButton_1 = new JButton("Remove"); 
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int selectedIndex = list.getSelectedIndex();
@@ -163,7 +166,7 @@ public class Interface_graphique2 extends JFrame {
 		wellName.add("B2");
 		wellName.add("B3");
 
-		JButton btnNewButton_4 = new JButton("Apply to all well");
+		JButton btnNewButton_4 = new JButton("Apply to all well"); // Button 
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int count = 5;
@@ -184,14 +187,6 @@ public class Interface_graphique2 extends JFrame {
 						double coordinate_y = (coordinate.get_y_coordinate(coordinate.get_r(wellName.get(l).toString()))
 								* 10);
 						double coordinate_z = 35.0;
-						double AB = Math.sqrt((coordinate_x * coordinate_x) + (coordinate_y * coordinate_y));
-						double d1 = 70.91;
-						double time;
-						if (AB <= d1) {
-							time = 532;
-						} else {
-							time = (0.532 + ((AB - 70.91) / 133.3)) * 1000;
-						}
 						data.set(k, new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino1));
 						l++;
 					}
@@ -211,6 +206,7 @@ public class Interface_graphique2 extends JFrame {
 
 		panel_9.add(lblNewLabel_3);
 
+		
 		// Start
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -220,6 +216,10 @@ public class Interface_graphique2 extends JFrame {
 		JPanel panel_8 = new JPanel();
 		FlowLayout flowLayout = (FlowLayout) panel_8.getLayout();
 		panel_3.add(panel_8);
+		
+		
+		// Stop
+		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		JButton btnNewButton_2 = new JButton("Stop");
 		btnNewButton_2.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -227,11 +227,15 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Stop stop = new Stop();
 				stop.run();
-				arduino1.Close();
+				arduino1.close();
 			}
 		});
 
 		panel_8.add(btnNewButton_2);
+		
+		
+		// Parameter 
+		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		JPanel panel_parameter = new JPanel();
 		contentPane.add(panel_parameter, BorderLayout.CENTER);
@@ -254,6 +258,7 @@ public class Interface_graphique2 extends JFrame {
 		panel_Parameter_contenu.add(panel_Mouvement);
 		panel_Mouvement.setLayout(new GridLayout(3, 1, 15, 15));
 
+		
 		// Mouvement
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -296,6 +301,7 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_1_1.add(btnNewButton_1_1_1_1);
 
+		
 		// Break
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -341,6 +347,7 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7.add(btnNewButton_Add_Break);
 
+		
 		// Picture
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -371,6 +378,7 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_1.add(btnNewButton_1_1_1);
 
+		
 		// Video
 		// /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -418,6 +426,7 @@ public class Interface_graphique2 extends JFrame {
 
 		panel_7_1.add(btnNewButton_1_1);
 
+		
 		// Syringe injection
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -453,13 +462,13 @@ public class Interface_graphique2 extends JFrame {
 		btnNewButton_Syringue_i.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
-					listData.addElement("Syringe : " + textField_Syringue_i.getText() + " ml injected" + "\n");
-					listData.addElement("Pause : injection" + "\n");
-					Syringue_Injection injection = new Syringue_Injection(
-							(Integer.parseInt(textField_Syringue_i.getText().toString())), arduino2);
+					listData.addElement("Syringe : " + textField_Syringue_i.getText() + " ml injected " + "\n");
+					//listData.addElement("Pause : injection" + "\n");
+					Syringue injection = new Syringue(
+							(Integer.parseInt(textField_Syringue_i.getText().toString())), arduino1);
 					data.add(injection);
-					Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_i.getText().toString()))));
-					data.add(pause);
+					//Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_i.getText().toString()))));
+					//data.add(pause);
 				} else {
 					btnNewButton_Syringue_i.setEnabled(true);
 				}
@@ -478,6 +487,7 @@ public class Interface_graphique2 extends JFrame {
 			}
 		});
 
+		
 		// Syringe aspiration
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -514,12 +524,12 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_a.getText().isEmpty() == false) {
 					listData.addElement("Syringe : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
-					listData.addElement("Pause : aspiration" + "\n");
-					Syringue_Aspiration aspiration = new Syringue_Aspiration(
-							(Integer.parseInt(textField_Syringue_a.getText().toString())), arduino2);
+					//listData.addElement("Pause : aspiration" + "\n");
+					Syringue aspiration = new Syringue(
+							(Integer.parseInt(textField_Syringue_a.getText().toString())), arduino1);
 					data.add(aspiration);
-					Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_a.getText().toString()))));
-					data.add(pause);
+					//Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_a.getText().toString()))));
+					//data.add(pause);
 				} else {
 					btnNewButton_Syringue_a.setEnabled(true);
 				}
@@ -527,6 +537,7 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_2_1.add(btnNewButton_Syringue_a);
 
+		
 		// Home
 		// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -620,26 +631,23 @@ public class Interface_graphique2 extends JFrame {
 		panel_10.add(label, BorderLayout.EAST);
 		panel_10.add(btnNewButton_3);
 
+		
 		// Button start
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+		
 				arduino1.Start();
-				arduino2.Start();
+				//arduino2.Start();
 				
-				protocol.event_go(initilization_homing);
+				Loading_protocol protocol = new Loading_protocol(Integer.parseInt(comboBox_1.getSelectedItem().toString()), Integer.parseInt(textField.getText().toString()) * 60000, data);
 				
-				if (!textField.getText().toString().isEmpty()) {
-					protocol.timer(Integer.parseInt(comboBox_1.getSelectedItem().toString()), Integer.parseInt(textField.getText().toString()) * 60000, data);
-				}
-				else {
-					protocol.timer(Integer.parseInt(comboBox_1.getSelectedItem().toString()), 1, data);
-				}
-
-				//arduino1.Close();
+				protocol.timer();
+				
+				arduino1.close();
 				//arduino2.Close();
+						
 			}
 		});
 	}

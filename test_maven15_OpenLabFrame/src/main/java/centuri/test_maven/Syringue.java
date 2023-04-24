@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 import javax.sql.rowset.serial.SerialException;
 
-public class Syringue_Injection extends Event {
+public class Syringue extends Event {
 
 	int volum;
 	Arduino myArduino;
 
-	public Syringue_Injection(int volum, Arduino myArduino) {
+	public Syringue(int volum, Arduino myArduino) {
 		this.volum = volum;
 		this.myArduino = myArduino;
 	}
@@ -27,7 +27,7 @@ public class Syringue_Injection extends Event {
 		data.add("G0X" + volum + "\n");
 		data.add("G4 P1\n");
 
-		System.out.println(volum + " ml injected  \r\n");
+		System.out.println(volum + " ml \r\n");
 
 		// send to arduino
 		for (int i = 0; i < data.size(); i++) {
@@ -44,10 +44,10 @@ public class Syringue_Injection extends Event {
 	@Override
 	public void Info(boolean ok) {
 		if (ok == true) {
-			System.out.println("OK : "+ volum + " ml injected \r\n\n");
+			System.out.println("OK : "+ volum + " ml \r\n\n");
 		}
 		else {
-			System.out.println("Error : no injection \r\n\n");	
+			System.out.println("Error : no injection or aspiration \r\n\n");	
 		}
 	}
 
