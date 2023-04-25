@@ -67,7 +67,7 @@ public class Interface_graphique2 extends JFrame {
 	 */
 	public Interface_graphique2() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 850, 700);
+		setBounds(0, 0, 850, 700);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -147,7 +147,7 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				int selectedIndex = list.getSelectedIndex();
 				listData.remove(selectedIndex);
-				data.remove(selectedIndex);
+				data.remove(selectedIndex+1);
 				// }
 				/*
 				 * String text = listData.lastElement().toString(); if (!text.isEmpty()) { text
@@ -172,7 +172,7 @@ public class Interface_graphique2 extends JFrame {
 				int count = 5;
 				int size = listData.getSize();
 				for (int i = 0; i < count; i++) {
-					for (int j = 0; j < size; j++) {
+					for (int j = 1; j < size; j++) {
 						listData.addElement(listData.getElementAt(j));
 						data.add(data.get(j));
 					}
@@ -228,6 +228,7 @@ public class Interface_graphique2 extends JFrame {
 				Stop stop = new Stop();
 				stop.run();
 				arduino1.close();
+				//arduino2.close();
 			}
 		});
 
@@ -463,12 +464,9 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
 					listData.addElement("Syringe : " + textField_Syringue_i.getText() + " ml injected " + "\n");
-					//listData.addElement("Pause : injection" + "\n");
 					Syringue injection = new Syringue(
 							(Integer.parseInt(textField_Syringue_i.getText().toString())), arduino1);
 					data.add(injection);
-					//Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_i.getText().toString()))));
-					//data.add(pause);
 				} else {
 					btnNewButton_Syringue_i.setEnabled(true);
 				}
@@ -477,7 +475,7 @@ public class Interface_graphique2 extends JFrame {
 		panel_7_1_2.add(btnNewButton_Syringue_i);
 
 		textField = new JTextField();
-		textField.setHorizontalAlignment(SwingConstants.CENTER);
+		textField.setHorizontalAlignment(SwingConstants.RIGHT);
 
 		JComboBox comboBox_1 = new JComboBox(rep);
 
@@ -524,12 +522,9 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_a.getText().isEmpty() == false) {
 					listData.addElement("Syringe : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
-					//listData.addElement("Pause : aspiration" + "\n");
 					Syringue aspiration = new Syringue(
 							(Integer.parseInt(textField_Syringue_a.getText().toString())), arduino1);
 					data.add(aspiration);
-					//Pause pause = new Pause((motor2.time(Double.valueOf(textField_Syringue_a.getText().toString()))));
-					//data.add(pause);
 				} else {
 					btnNewButton_Syringue_a.setEnabled(true);
 				}
@@ -568,6 +563,7 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_1_2.add(btnNewButton_1_1_1_2);
 
+		
 		// Repetitions
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -599,7 +595,7 @@ public class Interface_graphique2 extends JFrame {
 		panel_Timer.add(panel_6_1_1_2);
 		panel_6_1_1_2.setLayout(new GridLayout(0, 2, 0, 0));
 
-		JLabel lblNewLabel_Time_Video_1 = new JLabel("<html>Time between repetitions(min)</html>");
+		JLabel lblNewLabel_Time_Video_1 = new JLabel("Time (min)");
 		lblNewLabel_Time_Video_1.setFont(new Font("Dialog", Font.BOLD, 11));
 		lblNewLabel_Time_Video_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_6_1_1_2.add(lblNewLabel_Time_Video_1);
@@ -641,9 +637,9 @@ public class Interface_graphique2 extends JFrame {
 				arduino1.Start();
 				//arduino2.Start();
 				
-				Loading_protocol protocol = new Loading_protocol(Integer.parseInt(comboBox_1.getSelectedItem().toString()), Integer.parseInt(textField.getText().toString()) * 60000, data);
+				Loading_protocol protocol = new Loading_protocol(Integer.parseInt(comboBox_1.getSelectedItem().toString()), Integer.parseInt(textField.getText().toString()), data);
 				
-				protocol.timer();
+				protocol.run();
 				
 				arduino1.close();
 				//arduino2.Close();

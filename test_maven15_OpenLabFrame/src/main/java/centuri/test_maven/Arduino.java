@@ -144,7 +144,7 @@ public class Arduino {
 			try {
 				input_stream.close();
 				output_stream.close();
-
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
