@@ -42,7 +42,7 @@ public class Interface_graphique2 extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField_break;
 	private JTextField textField_Time_Video;
-	private JTextField textField;
+	private JTextField textField_rep;
 	private JTextField textField_Syringue_i;
 	private JTextField textField_Syringue_a;
 
@@ -75,27 +75,26 @@ public class Interface_graphique2 extends JFrame {
 		contentPane.setLayout(new BorderLayout(10, 0));
 
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		
+
 		// Dimension de de la plaque avec le nombre de colonne et de ligne
-		Field field = new Field(12.0, 8.0, 3, 2); 
-		
+		Field field = new Field(12.0, 8.0, 3, 2);
+
 		// Calcul des coordonnées de chaque puits de la plaque
-		Coordinate_Field coordinate = new Coordinate_Field(field); 
-		
+		Coordinate_Field coordinate = new Coordinate_Field(field);
+
 		Arduino arduino1 = new Arduino("ttyACM0"); // "ttyAMA1"
-		
-		//Arduino arduino2 = new Arduino("ttyAMA0"); 
-		
-		ArrayList<Event> data = new ArrayList<Event>(); 
-		
+
+		// Arduino arduino2 = new Arduino("ttyAMA0");
+
+		ArrayList<Event> data = new ArrayList<Event>();
+
 		Initialisation initialization = new Initialisation(arduino1);
 
-		data.add(initialization); 
-		
-		Camera camera = new Camera(); 
+		data.add(initialization);
 
-		Motor motor2 = new Motor(100.0,1000.0); 
-	
+		Camera camera = new Camera();
+
+		Motor motor2 = new Motor(100.0, 1000.0);
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -118,11 +117,13 @@ public class Interface_graphique2 extends JFrame {
 		panel_List.add(panel_1, BorderLayout.CENTER);
 		panel_1.setLayout(new BorderLayout(0, 0));
 
-		// listData est une instance de la classe DefaultListModel qui stocke des éléments sous forme de chaînes de caractères.
-		DefaultListModel<String> listData = new DefaultListModel();  
+		// listData est une instance de la classe DefaultListModel qui stocke des
+		// éléments sous forme de chaînes de caractères.
+		DefaultListModel<String> listData = new DefaultListModel();
 
-		// Instanciation d'une liste de string de la classe JList qui prend en argument l'object listData
-		JList<String> list = new JList(listData); 
+		// Instanciation d'une liste de string de la classe JList qui prend en argument
+		// l'object listData
+		JList<String> list = new JList(listData);
 
 		panel_1.add(list);
 
@@ -142,12 +143,12 @@ public class Interface_graphique2 extends JFrame {
 		panel_3.add(panel_5);
 
 		// Bouton "Remouve"
-		JButton btnNewButton_1 = new JButton("Remove"); 
+		JButton btnNewButton_1 = new JButton("Remove");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int selectedIndex = list.getSelectedIndex();
 				listData.remove(selectedIndex);
-				data.remove(selectedIndex+1);
+				data.remove(selectedIndex + 1);
 				// }
 				/*
 				 * String text = listData.lastElement().toString(); if (!text.isEmpty()) { text
@@ -166,7 +167,7 @@ public class Interface_graphique2 extends JFrame {
 		wellName.add("B2");
 		wellName.add("B3");
 
-		JButton btnNewButton_4 = new JButton("Apply to all well"); // Button 
+		JButton btnNewButton_4 = new JButton("Apply to all well"); // Button
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int count = 5;
@@ -206,7 +207,6 @@ public class Interface_graphique2 extends JFrame {
 
 		panel_9.add(lblNewLabel_3);
 
-		
 		// Start
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -216,8 +216,7 @@ public class Interface_graphique2 extends JFrame {
 		JPanel panel_8 = new JPanel();
 		FlowLayout flowLayout = (FlowLayout) panel_8.getLayout();
 		panel_3.add(panel_8);
-		
-		
+
 		// Stop
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -228,14 +227,13 @@ public class Interface_graphique2 extends JFrame {
 				Stop stop = new Stop();
 				stop.run();
 				arduino1.close();
-				//arduino2.close();
+				// arduino2.close();
 			}
 		});
 
 		panel_8.add(btnNewButton_2);
-		
-		
-		// Parameter 
+
+		// Parameter
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		JPanel panel_parameter = new JPanel();
@@ -259,7 +257,6 @@ public class Interface_graphique2 extends JFrame {
 		panel_Parameter_contenu.add(panel_Mouvement);
 		panel_Mouvement.setLayout(new GridLayout(3, 1, 15, 15));
 
-		
 		// Mouvement
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -302,7 +299,6 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_1_1.add(btnNewButton_1_1_1_1);
 
-		
 		// Break
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -348,7 +344,6 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7.add(btnNewButton_Add_Break);
 
-		
 		// Picture
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -379,7 +374,6 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_1.add(btnNewButton_1_1_1);
 
-		
 		// Video
 		// /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -427,7 +421,6 @@ public class Interface_graphique2 extends JFrame {
 
 		panel_7_1.add(btnNewButton_1_1);
 
-		
 		// Syringe injection
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -464,8 +457,8 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
 					listData.addElement("Syringe : " + textField_Syringue_i.getText() + " ml injected " + "\n");
-					Syringue injection = new Syringue(
-							(Integer.parseInt(textField_Syringue_i.getText().toString())), arduino1);
+					Syringue injection = new Syringue((Integer.parseInt(textField_Syringue_i.getText().toString())),
+							arduino1);
 					data.add(injection);
 				} else {
 					btnNewButton_Syringue_i.setEnabled(true);
@@ -474,18 +467,8 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_2.add(btnNewButton_Syringue_i);
 
-		textField = new JTextField();
-		textField.setHorizontalAlignment(SwingConstants.RIGHT);
-
-		JComboBox comboBox_1 = new JComboBox(rep);
-
-		textField.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
-
 		
+
 		// Syringe aspiration
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -522,8 +505,8 @@ public class Interface_graphique2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Syringue_a.getText().isEmpty() == false) {
 					listData.addElement("Syringe : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
-					Syringue aspiration = new Syringue(
-							(Integer.parseInt(textField_Syringue_a.getText().toString())), arduino1);
+					Syringue aspiration = new Syringue((Integer.parseInt(textField_Syringue_a.getText().toString())),
+							arduino1);
 					data.add(aspiration);
 				} else {
 					btnNewButton_Syringue_a.setEnabled(true);
@@ -532,7 +515,6 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_2_1.add(btnNewButton_Syringue_a);
 
-		
 		// Home
 		// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -563,7 +545,6 @@ public class Interface_graphique2 extends JFrame {
 		});
 		panel_7_1_1_2.add(btnNewButton_1_1_1_2);
 
-		
 		// Repetitions
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -572,36 +553,47 @@ public class Interface_graphique2 extends JFrame {
 		panel_Timer.setBorder(new LineBorder(Color.GRAY));
 		panel_Timer.setLayout(new GridLayout(4, 1, 10, 10));
 
-		JLabel lblNewLabel_3_1_1 = new JLabel("Repetition");
-		lblNewLabel_3_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_Timer.add(lblNewLabel_3_1_1);
+		JLabel lblNewLabel_rep = new JLabel("Repetition");
+		lblNewLabel_rep.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_Timer.add(lblNewLabel_rep);
 
 		JPanel panel_4 = new JPanel();
 		panel_Timer.add(panel_4);
 		panel_4.setLayout(new BorderLayout(0, 0));
 
-		JLabel lblNewLabel_2 = new JLabel("<html>Number of repetition of the list</html>");
-		lblNewLabel_2.setFont(new Font("Dialog", Font.BOLD, 11));
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.LEFT);
-		panel_4.add(lblNewLabel_2);
+		JLabel lblNewLabel_nub_rep = new JLabel("Number of repetition of the list");
+		lblNewLabel_nub_rep.setFont(new Font("Dialog", Font.BOLD, 11));
+		lblNewLabel_nub_rep.setHorizontalAlignment(SwingConstants.LEFT);
+		panel_4.add(lblNewLabel_nub_rep);
+		
+		textField_rep = new JTextField();
+		textField_rep.setHorizontalAlignment(SwingConstants.RIGHT);
 
-		comboBox_1.addActionListener(new ActionListener() {
+		JComboBox comboBox_rep = new JComboBox(rep);
+
+		textField_rep.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+
+		comboBox_rep.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		panel_4.add(comboBox_1, BorderLayout.EAST);
+		panel_4.add(comboBox_rep, BorderLayout.EAST);
 
 		JPanel panel_6_1_1_2 = new JPanel();
 		panel_Timer.add(panel_6_1_1_2);
 		panel_6_1_1_2.setLayout(new GridLayout(0, 2, 0, 0));
 
-		JLabel lblNewLabel_Time_Video_1 = new JLabel("Time (min)");
-		lblNewLabel_Time_Video_1.setFont(new Font("Dialog", Font.BOLD, 11));
-		lblNewLabel_Time_Video_1.setHorizontalAlignment(SwingConstants.CENTER);
-		panel_6_1_1_2.add(lblNewLabel_Time_Video_1);
+		JLabel lblNewLabel_Time_Rep = new JLabel("Time (min)");
+		lblNewLabel_Time_Rep.setFont(new Font("Dialog", Font.BOLD, 11));
+		lblNewLabel_Time_Rep.setHorizontalAlignment(SwingConstants.LEFT);
+		panel_6_1_1_2.add(lblNewLabel_Time_Rep);
 
-		textField.setColumns(10);
-		panel_6_1_1_2.add(textField);
+		textField_rep.setColumns(10);
+		panel_6_1_1_2.add(textField_rep);
 
 		JPanel panel_10 = new JPanel();
 		panel_Timer.add(panel_10);
@@ -609,12 +601,11 @@ public class Interface_graphique2 extends JFrame {
 		JButton btnNewButton_3 = new JButton("Validate");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (!textField.getText().toString().isEmpty()) {
+				if (!textField_rep.getText().toString().isEmpty()) {
 					lblNewLabel_3
 							.setText(
 									"Total time (approximate) : "
-											+ (Integer.parseInt(textField.getText().toString())
-													* Integer.parseInt(comboBox_1.getSelectedItem().toString()))
+											+ (Integer.parseInt(textField_rep.getText().toString()) * Integer.parseInt(comboBox_rep.getSelectedItem().toString()))
 											+ " min.");
 				} else {
 					lblNewLabel_3.setText("Total time : less than 1 min.");
@@ -627,23 +618,28 @@ public class Interface_graphique2 extends JFrame {
 		panel_10.add(label, BorderLayout.EAST);
 		panel_10.add(btnNewButton_3);
 
-		
 		// Button start
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-		
+
 				arduino1.Start();
-				//arduino2.Start();
+				// arduino2.Start();
 				
-				Loading_protocol protocol = new Loading_protocol(Integer.parseInt(comboBox_1.getSelectedItem().toString()), Integer.parseInt(textField.getText().toString()), data);
-				
+				if(textField_rep.getText().toString().isEmpty()) {
+					Loading_protocol protocol = new Loading_protocol(Integer.parseInt(comboBox_rep.getSelectedItem().toString()),1, data);
+					protocol.run();
+					
+				}else {
+				Loading_protocol protocol = new Loading_protocol(Integer.parseInt(comboBox_rep.getSelectedItem().toString()),Integer.parseInt(textField_rep.getText().toString()), data);
 				protocol.run();
-				
+				}
+
+			
 				arduino1.close();
-				//arduino2.Close();
-						
+				// arduino2.Close();
+
 			}
 		});
 	}

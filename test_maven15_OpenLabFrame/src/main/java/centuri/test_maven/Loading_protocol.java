@@ -72,6 +72,8 @@ public class Loading_protocol implements Runnable {
 			int duration_sec_int = (int) duration_sec;
 
 			int delay = (time * 60) - duration_sec_int;
+			
+			if(counter < number_repetition-1) {
 
 			try {
 				Thread.sleep(delay);
@@ -79,7 +81,9 @@ public class Loading_protocol implements Runnable {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+			
+			}
+			
 			counter++;
 
 			if (counter == number_repetition) {
