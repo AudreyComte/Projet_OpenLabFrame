@@ -71,7 +71,7 @@ public class Loading_protocol  {
 
 			int duration_sec_int = (int) duration_sec;
 
-			int delay = (time * 60) - duration_sec_int;
+			int delay = ((time * 60) - duration_sec_int)*1000;
 			
 			if(counter < number_repetition-1) {
 
