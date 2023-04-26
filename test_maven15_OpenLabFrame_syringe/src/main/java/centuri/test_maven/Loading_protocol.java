@@ -80,7 +80,9 @@ public class Loading_protocol implements Runnable {
 
 		int counter = 0;
 
-		while (!timer) {
+		while (!Thread.currentThread().isInterrupted()) {
+			
+			while(!timer) {
 
 			LocalTime time0 = LocalTime.now();
 
@@ -109,10 +111,13 @@ public class Loading_protocol implements Runnable {
 
 			if (counter == number_repetition) {
 				timer = true;
+				System.out.println("End !!");
 			}
 
 		}
 		
+	}
+		System.out.println("Interrupted");
 	}
 	
 	
