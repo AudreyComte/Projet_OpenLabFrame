@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import javax.swing.DefaultListModel;
+
 
 
 public class Coordinate_Field {
@@ -96,6 +98,42 @@ public class Coordinate_Field {
 		int r = this.get_r(well);
 		Double y = this.ty[r];
 		return y;
+	}
+	
+	public void apply_all(DefaultListModel<String> listData, ArrayList<Event> data, Arduino myArduino ) {
+		
+		ArrayList wellName = new ArrayList();
+		wellName.add("A1");
+		wellName.add("A2");
+		wellName.add("A3");
+		wellName.add("B1");
+		wellName.add("B2");
+		wellName.add("B3");
+		
+		int count = 5;
+		int size = listData.getSize();
+		for (int i = 0; i < count; i++) {
+			for (int j = 0; j < size; j++) {
+				listData.addElement(listData.getElementAt(j));
+				data.add(data.get(j + 1));
+			}
+		}
+
+		int l = 0;
+		for (int k = 0; k < listData.getSize(); k++) {
+			if (listData.getElementAt(k).toString().contains("A1") == true) {
+				listData.remove(k);
+				listData.add(k, wellName.get(l).toString());
+				double coordinate_x = (get_x_coordinate(get_c(wellName.get(l).toString()))
+						* 10);
+				double coordinate_y = (get_y_coordinate(get_r(wellName.get(l).toString()))
+						* 10);
+				double coordinate_z = 35.0;
+				data.set(k + 1, new Mouvement(coordinate_x, coordinate_y, coordinate_z, myArduino));
+				l++;
+			}
+		}
+
 	}
 	
 	

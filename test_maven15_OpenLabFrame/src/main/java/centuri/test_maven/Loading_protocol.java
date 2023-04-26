@@ -9,7 +9,7 @@ import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Loading_protocol implements Runnable {
+public class Loading_protocol  {
 
 	ArrayList<Event> data;
 	int number_repetition;
@@ -50,8 +50,8 @@ public class Loading_protocol implements Runnable {
 
 	}
 
-	@Override
-	public void run() {
+
+	public boolean timer() {
 
 		boolean timer = false;
 
@@ -91,6 +91,7 @@ public class Loading_protocol implements Runnable {
 			}
 
 		}
+		return timer;
 
 	}
 
