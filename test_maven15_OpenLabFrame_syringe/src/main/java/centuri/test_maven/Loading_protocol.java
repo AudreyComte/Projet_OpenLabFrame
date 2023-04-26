@@ -16,11 +16,32 @@ public class Loading_protocol implements Runnable {
 	long time;
 	boolean timer;
 
-	public Loading_protocol(int number_repetition, long time, ArrayList<Event> data) {
-		this.number_repetition = number_repetition;
-		this.time = time;
-		this.data = data;
+	public Loading_protocol() {
 
+	}
+	
+	public void set_number_repetition (int number_repetition) {
+		this.number_repetition = number_repetition;
+	}
+	    
+	public int get_number_repetition () {
+		return this.number_repetition;
+	}
+	
+	public void set_time (long time) {
+		this.time = time;
+	}
+	    
+	public long get_time () {
+		return this.time;
+	}
+	
+	public void set_data (ArrayList<Event> data) {
+		this.data = data;
+	}
+	    
+	public ArrayList<Event> get_data (ArrayList<Event> data) {
+		return this.data;
 	}
 
 	// méthode event_go (ArrayList<Event> data) :
@@ -52,7 +73,8 @@ public class Loading_protocol implements Runnable {
 	}
 
 
-	public boolean timer() {
+	@Override
+	public void run() {
 
 		timer = false;
 
@@ -90,16 +112,17 @@ public class Loading_protocol implements Runnable {
 			}
 
 		}
-		return timer;
-
+		
 	}
 	
-	@Override
-	public void run() {
+	
+	public void stop(){
 		
-		timer=true;
+		timer = true;
 		
 	}
+	
+	
 		
 	
 	

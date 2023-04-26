@@ -549,13 +549,8 @@ public class Interface_graphique3 extends JFrame {
 		panel_7.add(panel_10, BorderLayout.EAST);
 		panel_10.setLayout(new GridLayout(2, 2, 10, 10));
 
-		if (textField_rep.getText().isEmpty()) {
-			textField_rep.setText("1");
-		}
 		
-		Loading_protocol protocol = new Loading_protocol(
-				Integer.parseInt(comboBox_rep.getSelectedItem().toString()),
-				Long.parseLong(textField_rep.getText().toString()), data);
+		Loading_protocol protocol = new Loading_protocol();
 
 		
 		// Button start
@@ -567,9 +562,18 @@ public class Interface_graphique3 extends JFrame {
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if (textField_rep.getText().isEmpty()) {
+					textField_rep.setText("1");
+				}
 				
-				protocol.timer();
-
+				protocol.set_number_repetition(Integer.parseInt(comboBox_rep.getSelectedItem().toString()));
+				protocol.set_time(Long.parseLong(textField_rep.getText().toString()));
+				protocol.set_data(data);
+				
+				
+				Thread t1 = new Thread(protocol);
+				t1.start();
+				
 			}
 		});
 		
@@ -585,10 +589,7 @@ public class Interface_graphique3 extends JFrame {
 				panel_10.add(btnNewButton_2);
 				btnNewButton_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						Thread t1 = new Thread(protocol);
-						t1.start();
-						//arduino1.close();
-						//arduino2.close();
+						protocol.stop();
 					}
 				});
 	}
