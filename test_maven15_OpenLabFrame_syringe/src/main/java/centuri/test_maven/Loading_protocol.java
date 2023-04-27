@@ -16,7 +16,7 @@ public class Loading_protocol implements Runnable {
 	long time;
 	volatile boolean timer;
 	volatile boolean ok = false;
-	volatile boolean pause = false;
+	volatile boolean stop;
 
 	public Loading_protocol() {
 
@@ -46,8 +46,8 @@ public class Loading_protocol implements Runnable {
 		return this.data;
 	}
 
-	public void set_pause(boolean pause) {
-		this.pause = pause;
+	public void set_pause(boolean stop) {
+		this.stop = stop;
 	}
 
 	// méthode event_go (ArrayList<Event> data) :
@@ -63,19 +63,26 @@ public class Loading_protocol implements Runnable {
 
 	public boolean event_go(ArrayList<Event> data) {
 		
-		for (Event event : data) {
-			ok = event.Do();
-			if (!ok) {
-				System.out.println("WARNING : ERROR !");
-				break;
-			}
-			event.Info(ok);
+		stop = false;
+		
+		while(!stop) {
+			
+			for (Event event : data) {
+				ok = event.Do();
+				if(stop==true) {
+					System.out.println("Stop !");
+					break;
+				}
+				if (!ok) {
+					System.out.println("WARNING : ERROR !");
+					break;
+				}
+				event.Info(ok);
 
-			if (Thread.interrupted()) {
-				System.out.println("Thread was interrupted, stopping execution...");
-				break;
 			}
+			stop=true;
 		}
+		
 	
 	return ok;
 
@@ -129,11 +136,11 @@ public class Loading_protocol implements Runnable {
 		ok = false;
 
 		timer = true;
+		
+		stop = true;
 
 		System.out.println("Interrupt");
-
-		
-
+	
 	}
 
 }

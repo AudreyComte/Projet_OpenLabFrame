@@ -551,8 +551,6 @@ public class Interface_graphique3 extends JFrame {
 
 		
 		Loading_protocol protocol = new Loading_protocol();
-		
-		Thread t1 = new Thread(protocol);
 
 		
 		// Button start
@@ -568,12 +566,14 @@ public class Interface_graphique3 extends JFrame {
 					textField_rep.setText("1");
 				}
 				
+				
+				Thread t1 = new Thread(protocol);
+				
 				protocol.set_number_repetition(Integer.parseInt(comboBox_rep.getSelectedItem().toString()));
 				protocol.set_time(Long.parseLong(textField_rep.getText().toString()));
 				protocol.set_data(data);
-				
 				t1.start();
-				
+						
 			}
 		});
 		
@@ -591,8 +591,8 @@ public class Interface_graphique3 extends JFrame {
 				panel_10.add(btnNewButton_2);
 				btnNewButton_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						t1.interrupt();
-						//protocol.stop();
+						//t1.interrupt();
+						protocol.stop();
 						//thread_pause.start();
 					
 					}
