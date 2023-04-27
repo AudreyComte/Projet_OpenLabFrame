@@ -542,6 +542,15 @@ public class Interface_graphique3 extends JFrame {
 		panel_10_1.setLayout(new GridLayout(0, 1, 0, 0));
 
 		JButton btnNewButton_3_1 = new JButton("Validate");
+		btnNewButton_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!textField_rep.getText().isEmpty()) {
+				lblNewLabel_3.setText("Total time : " + (Long.parseLong(textField_rep.getText().toString())*Integer.parseInt(comboBox_rep.getSelectedItem().toString())) + " minutes");
+			}else {
+				lblNewLabel_3.setText("Total time : " + (1 *Integer.parseInt(comboBox_rep.getSelectedItem().toString())) + " minutes");
+			}
+		 }
+		});
 		btnNewButton_3_1.setBackground(new Color(135, 206, 250));
 		panel_10_1.add(btnNewButton_3_1);
 
@@ -550,11 +559,11 @@ public class Interface_graphique3 extends JFrame {
 		panel_10.setLayout(new GridLayout(2, 2, 10, 10));
 
 		
-		Loading_protocol protocol = new Loading_protocol();
-
 		
 		// Button start
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		Loading_protocol protocol = new Loading_protocol();
 		
 		JButton btnNewButton = new JButton("Start");
 		btnNewButton.setBackground(Color.GREEN);
@@ -566,19 +575,17 @@ public class Interface_graphique3 extends JFrame {
 					textField_rep.setText("1");
 				}
 				
-				
 				Thread t1 = new Thread(protocol);
 				
 				protocol.set_number_repetition(Integer.parseInt(comboBox_rep.getSelectedItem().toString()));
 				protocol.set_time(Long.parseLong(textField_rep.getText().toString()));
 				protocol.set_data(data);
+				
 				t1.start();
 						
 			}
 		});
 		
-		Pause_System pause_system= new Pause_System();
-		Thread thread_pause = new Thread(pause_system);
 		
 		// Stop
 				// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -591,10 +598,7 @@ public class Interface_graphique3 extends JFrame {
 				panel_10.add(btnNewButton_2);
 				btnNewButton_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						//t1.interrupt();
 						protocol.stop();
-						//thread_pause.start();
-					
 					}
 				});
 	}

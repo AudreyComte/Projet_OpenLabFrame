@@ -15,7 +15,7 @@ public class Loading_protocol implements Runnable {
 	int number_repetition;
 	long time;
 	volatile boolean timer;
-	volatile boolean ok = false;
+	volatile boolean ok;
 	volatile boolean stop;
 
 	public Loading_protocol() {
@@ -65,14 +65,19 @@ public class Loading_protocol implements Runnable {
 		
 		stop = false;
 		
+		ok = false;
+		
 		while(!stop) {
 			
 			for (Event event : data) {
+				
 				ok = event.Do();
+				
 				if(stop==true) {
 					System.out.println("Stop !");
 					break;
 				}
+				
 				if (!ok) {
 					System.out.println("WARNING : ERROR !");
 					break;
@@ -80,6 +85,7 @@ public class Loading_protocol implements Runnable {
 				event.Info(ok);
 
 			}
+			
 			stop=true;
 		}
 		
