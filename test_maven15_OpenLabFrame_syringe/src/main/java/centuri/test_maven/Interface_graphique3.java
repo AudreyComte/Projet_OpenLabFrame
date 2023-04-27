@@ -565,7 +565,7 @@ public class Interface_graphique3 extends JFrame {
 		
 		Loading_protocol protocol = new Loading_protocol();
 		
-		JButton btnNewButton = new JButton("Start");
+		JButton btnNewButton = new JButton("                Start                ");
 		btnNewButton.setBackground(Color.GREEN);
 		panel_10.add(btnNewButton);
 
@@ -590,15 +590,30 @@ public class Interface_graphique3 extends JFrame {
 		// Stop
 				// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-				JButton btnNewButton_2 = new JButton("                Stop                ");
+				JButton btnNewButton_2 = new JButton("Stop");
 				btnNewButton_2.setForeground(Color.BLACK);
 				btnNewButton_2.setBackground(Color.PINK);
-				btnNewButton_2.setHorizontalAlignment(SwingConstants.RIGHT);
-				btnNewButton_2.setVerticalAlignment(SwingConstants.TOP);
 				panel_10.add(btnNewButton_2);
+				
+				Counter counter = new Counter();
+				
 				btnNewButton_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						protocol.stop();
+						int click = counter.get_number();
+						if(click == 0) {
+						btnNewButton_2.setText("Are you sure to stop ? If yes, click again");
+						btnNewButton_2.setBackground(Color.RED);
+						btnNewButton_2.setForeground(Color.WHITE);
+						counter.set_number(1);
+						}
+						if(click == 1) {
+							btnNewButton_2.setText("Stop");
+							btnNewButton_2.setForeground(Color.BLACK);
+							btnNewButton_2.setBackground(Color.PINK);
+							protocol.stop();
+							counter.set_number(0);
+						}
+						
 					}
 				});
 	}
