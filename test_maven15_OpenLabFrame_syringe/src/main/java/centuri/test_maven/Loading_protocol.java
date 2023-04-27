@@ -15,33 +15,39 @@ public class Loading_protocol implements Runnable {
 	int number_repetition;
 	long time;
 	volatile boolean timer;
+	volatile boolean ok = false;
+	volatile boolean pause = false;
 
 	public Loading_protocol() {
 
 	}
-	
-	public void set_number_repetition (int number_repetition) {
+
+	public void set_number_repetition(int number_repetition) {
 		this.number_repetition = number_repetition;
 	}
-	    
-	public int get_number_repetition () {
+
+	public int get_number_repetition() {
 		return this.number_repetition;
 	}
-	
-	public void set_time (long time) {
+
+	public void set_time(long time) {
 		this.time = time;
 	}
-	    
-	public long get_time () {
+
+	public long get_time() {
 		return this.time;
 	}
-	
-	public void set_data (ArrayList<Event> data) {
+
+	public void set_data(ArrayList<Event> data) {
 		this.data = data;
 	}
-	    
-	public ArrayList<Event> get_data (ArrayList<Event> data) {
+
+	public ArrayList<Event> get_data(ArrayList<Event> data) {
 		return this.data;
+	}
+
+	public void set_pause(boolean pause) {
+		this.pause = pause;
 	}
 
 	// méthode event_go (ArrayList<Event> data) :
@@ -56,9 +62,7 @@ public class Loading_protocol implements Runnable {
 	// argument la valeur du boolean ok et la boucle continue
 
 	public boolean event_go(ArrayList<Event> data) {
-
-		boolean ok = false;
-
+		
 		for (Event event : data) {
 			ok = event.Do();
 			if (!ok) {
@@ -66,12 +70,16 @@ public class Loading_protocol implements Runnable {
 				break;
 			}
 			event.Info(ok);
-		}
 
-		return ok;
+			if (Thread.interrupted()) {
+				System.out.println("Thread was interrupted, stopping execution...");
+				break;
+			}
+		}
+	
+	return ok;
 
 	}
-
 
 	@Override
 	public void run() {
@@ -80,9 +88,7 @@ public class Loading_protocol implements Runnable {
 
 		int counter = 0;
 
-		while(!Thread.interrupted()) {
-			
-			while(!timer) {
+		while (!timer) {
 
 			LocalTime time0 = LocalTime.now();
 
@@ -94,19 +100,19 @@ public class Loading_protocol implements Runnable {
 
 			long duration_sec = duration.getSeconds();
 
-			long delay = ((time * 60) - duration_sec)*1000;
-			
-			if(counter < number_repetition-1) {
+			long delay = ((time * 60) - duration_sec) * 1000;
 
-			try {
-				Thread.sleep(delay);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if (counter < number_repetition - 1) {
+
+				try {
+					Thread.sleep(delay);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
 			}
-			
-			}
-			
+
 			counter++;
 
 			if (counter == number_repetition) {
@@ -115,20 +121,19 @@ public class Loading_protocol implements Runnable {
 			}
 
 		}
-		}
-		
+
 	}
-		
-	
-	
-	public void stop(){
-		Thread.currentThread().interrupt();
-		
+
+	public void stop() {
+
+		ok = false;
+
 		timer = true;
+
 		System.out.println("Interrupt");
+
 		
+
 	}
-	
-	
 
 }

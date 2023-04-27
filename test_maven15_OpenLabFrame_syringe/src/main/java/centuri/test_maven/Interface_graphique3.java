@@ -577,6 +577,8 @@ public class Interface_graphique3 extends JFrame {
 			}
 		});
 		
+		Pause_System pause_system= new Pause_System();
+		Thread thread_pause = new Thread(pause_system);
 		
 		// Stop
 				// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -589,9 +591,10 @@ public class Interface_graphique3 extends JFrame {
 				panel_10.add(btnNewButton_2);
 				btnNewButton_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						//t1.interrupt();
-						protocol.stop();
-						
+						t1.interrupt();
+						//protocol.stop();
+						//thread_pause.start();
+					
 					}
 				});
 	}
