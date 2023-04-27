@@ -14,7 +14,7 @@ public class Loading_protocol implements Runnable {
 	ArrayList<Event> data;
 	int number_repetition;
 	long time;
-	boolean timer;
+	volatile boolean timer;
 
 	public Loading_protocol() {
 
@@ -80,7 +80,7 @@ public class Loading_protocol implements Runnable {
 
 		int counter = 0;
 
-		while (!Thread.currentThread().isInterrupted()) {
+		while(!Thread.interrupted()) {
 			
 			while(!timer) {
 
@@ -115,20 +115,19 @@ public class Loading_protocol implements Runnable {
 			}
 
 		}
+		}
 		
 	}
-		System.out.println("Interrupted");
-	}
+		
 	
 	
 	public void stop(){
+		Thread.currentThread().interrupt();
 		
 		timer = true;
+		System.out.println("Interrupt");
 		
 	}
-	
-	
-		
 	
 	
 

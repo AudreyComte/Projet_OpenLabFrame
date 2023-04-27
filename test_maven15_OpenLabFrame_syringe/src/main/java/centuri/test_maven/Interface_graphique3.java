@@ -84,11 +84,11 @@ public class Interface_graphique3 extends JFrame {
 		// Calcul des coordonnées de chaque puits de la plaque
 		Coordinate_Field coordinate = new Coordinate_Field(field);
 
-		Arduino arduino1 = new Arduino("ttyAMA1");
+		Arduino arduino1 = new Arduino("ttyACM0"); // "ttyAMA1"
 		arduino1.Start();
 
-		Arduino arduino2 = new Arduino("ttyAMA0");
-		arduino2.Start();
+		//Arduino arduino2 = new Arduino("ttyAMA0");
+		//arduino2.Start();
 
 		ArrayList<Event> data = new ArrayList<Event>();
 
@@ -404,7 +404,7 @@ public class Interface_graphique3 extends JFrame {
 				if (textField_Syringue_i.getText().isEmpty() == false) {
 					listData.addElement("Syringe : " + textField_Syringue_i.getText() + " ml injected " + "\n");
 					Syringue injection = new Syringue((Integer.parseInt(textField_Syringue_i.getText().toString())),
-							arduino2);
+							arduino1);
 					data.add(injection);
 				} else {
 					btnNewButton_Syringue_i.setEnabled(true);
@@ -449,7 +449,7 @@ public class Interface_graphique3 extends JFrame {
 				if (textField_Syringue_a.getText().isEmpty() == false) {
 					listData.addElement("Syringe : " + textField_Syringue_a.getText() + " ml aspirated" + "\n");
 					Syringue aspiration = new Syringue((Integer.parseInt(textField_Syringue_a.getText().toString())),
-							arduino2);
+							arduino1);
 					data.add(aspiration);
 				} else {
 					btnNewButton_Syringue_a.setEnabled(true);
@@ -589,7 +589,9 @@ public class Interface_graphique3 extends JFrame {
 				panel_10.add(btnNewButton_2);
 				btnNewButton_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						t1.interrupt();
+						//t1.interrupt();
+						protocol.stop();
+						
 					}
 				});
 	}
