@@ -278,17 +278,17 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel_Moving.add(panel, BorderLayout.CENTER);
-		panel.setLayout(new GridLayout(1, 1, 0, 0));
+				panel.setLayout(new BorderLayout(0, 0));
 				
 				JPanel panel_71 = new JPanel();
-				panel.add(panel_71);
+				panel.add(panel_71, BorderLayout.CENTER);
 				panel_71.setLayout(new GridLayout(5, 4, 15, 15));
 				
 				JPanel panel_18_1 = new JPanel();
 				panel_71.add(panel_18_1);
 				panel_18_1.setLayout(new GridLayout(1, 1, 0, 0));
 				
-				JLabel lblNewLabel_1_2 = new JLabel("Relative coordinate");
+				JLabel lblNewLabel_1_2 = new JLabel("Relative");
 				lblNewLabel_1_2.setVerticalAlignment(SwingConstants.BOTTOM);
 				lblNewLabel_1_2.setForeground(Color.BLUE);
 				lblNewLabel_1_2.setFont(new Font("Dialog", Font.BOLD, 14));
@@ -302,8 +302,11 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 				btnNewButton_6.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						coordinate.set_A1_x(counter_x.get_Counter());
+						System.out.println("A1 X = " + counter_x.get_Counter());
 						coordinate.set_A1_y(counter_y.get_Counter());
+						System.out.println("A1 Y = " + counter_y.get_Counter());
 						coordinate.set_A1_z(counter_z.get_Counter());
+						System.out.println("A1 Z = " + counter_z.get_Counter());
 					}
 				});
 				btnNewButton_6.setForeground(Color.WHITE);
@@ -340,7 +343,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 					}
 				});
 				btn_Origine.setBackground(Color.YELLOW);
-				btn_Origine.setFont(new Font("Dialog", Font.BOLD, 12));
+				btn_Origine.setFont(new Font("Dialog", Font.BOLD, 11));
 				
 				JPanel panel_23 = new JPanel();
 				panel_71.add(panel_23);
@@ -350,9 +353,12 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 				ArrayList valeur = new ArrayList();
 				
 				
-				JButton btnNewButton = new JButton("Step of 0.1 mm");
-				JButton btnNewButton_4 = new JButton("Step of 1 mm");
-				JButton btnNewButton_5 = new JButton("Step of 10 mm");
+				JButton btnNewButton = new JButton("Step 0.1 mm");
+				btnNewButton.setFont(new Font("Dialog", Font.BOLD, 12));
+				JButton btnNewButton_4 = new JButton("Step 1 mm");
+				btnNewButton_4.setFont(new Font("Dialog", Font.BOLD, 12));
+				JButton btnNewButton_5 = new JButton("Step 10 mm");
+				btnNewButton_5.setFont(new Font("Dialog", Font.BOLD, 12));
 				
 				
 			
@@ -635,6 +641,14 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 						});
 						btn_moins_Z.setBackground(Color.CYAN);
 						
+						JPanel panel_18 = new JPanel();
+						panel.add(panel_18, BorderLayout.EAST);
+						panel_18.setLayout(new GridLayout(1, 1, 0, 0));
+						
+						JLabel lblNewLabel = new JLabel("                                                              ");
+						lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+						panel_18.add(lblNewLabel);
+						
 						
 						btn_moins_X.addActionListener(new ActionListener() {
 							public void actionPerformed(ActionEvent e) {
@@ -730,7 +744,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		panel_4.add(panel_19, BorderLayout.CENTER);
 		panel_19.setLayout(new GridLayout(3, 3, 30, 0));
 		
-		JLabel lblNewLabel_1 = new JLabel("Absolute coordinate");
+		JLabel lblNewLabel_1 = new JLabel("Absolute");
 		panel_19.add(lblNewLabel_1);
 		lblNewLabel_1.setFont(new Font("Dialog", Font.BOLD, 14));
 		lblNewLabel_1.setForeground(Color.BLUE);
