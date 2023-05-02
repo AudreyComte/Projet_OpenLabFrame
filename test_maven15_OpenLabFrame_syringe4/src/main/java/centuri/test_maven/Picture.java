@@ -22,7 +22,7 @@ public class Picture extends Event {
 	
 
 	@Override
-	public boolean Do() {
+	public boolean toDo() {
 		
 		boolean ok = false;
 		
@@ -44,7 +44,7 @@ public class Picture extends Event {
 
 
 	@Override
-	public void Info(boolean ok) {
+	public void info(boolean ok) {
 		if(ok == true) {
 			System.out.println("OK : the picture was taken\r\n\n");	
 		}

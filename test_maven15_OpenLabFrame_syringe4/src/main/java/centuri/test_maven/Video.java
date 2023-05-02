@@ -18,7 +18,7 @@ public class Video extends Event {
 	}
 
 	@Override
-	public boolean Do() {
+	public boolean toDo() {
 		
 		var vidconfig = Camera.VidConfig.Builder.newInstance()
 		         .outputPath(path)
@@ -30,7 +30,7 @@ public class Video extends Event {
 	}
 
 	@Override
-	public void Info(boolean ok) {
+	public void info(boolean ok) {
 		if (ok == true) {
 			System.out.println("OK : the video was taken\r\n\n");
 		} else {

@@ -15,7 +15,7 @@ int pause;
 	
 	
 	@Override
-	public boolean Do() {
+	public boolean toDo() {
 		
 		boolean pause_boolean = false;
 		
@@ -36,7 +36,7 @@ int pause;
 
 
 	@Override
-	public void Info(boolean ok) {
+	public void info(boolean ok) {
 		if (ok == true) {
 			System.out.println("OK : end of the " + (pause/1000) +" secondes break \r\n\n");
 		}

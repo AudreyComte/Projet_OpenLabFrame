@@ -86,7 +86,7 @@ public class Interface_Graphique extends JFrame {
 		Coordinate_Field coordinate = new Coordinate_Field(field);
 
 		Arduino arduino1 = new Arduino("ttyACM0"); // "ttyAMA1"
-		arduino1.Start();
+		arduino1.start();
 
 		// Arduino arduino2 = new Arduino("ttyAMA0");
 		// arduino2.Start();

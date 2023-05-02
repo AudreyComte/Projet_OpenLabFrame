@@ -16,7 +16,7 @@ public class Syringe extends Event {
 	}
 
 	@Override
-	public boolean Do() {
+	public boolean toDo() {
 		
 		boolean ok = false;
 
@@ -42,7 +42,7 @@ public class Syringe extends Event {
 
 
 	@Override
-	public void Info(boolean ok) {
+	public void info(boolean ok) {
 		if (ok == true) {
 			System.out.println("OK : "+ volum + " ml \r\n\n");
 		}

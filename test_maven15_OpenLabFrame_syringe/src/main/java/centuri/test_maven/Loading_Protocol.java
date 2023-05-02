@@ -71,7 +71,7 @@ public class Loading_Protocol implements Runnable {
 			
 			for (Event event : data) {
 				
-				ok = event.Do();
+				ok = event.toDo();
 				
 				if(stop==true) {
 					System.out.println("Stop !");
@@ -82,7 +82,7 @@ public class Loading_Protocol implements Runnable {
 					System.out.println("WARNING : ERROR !");
 					break;
 				}
-				event.Info(ok);
+				event.info(ok);
 
 			}
 			

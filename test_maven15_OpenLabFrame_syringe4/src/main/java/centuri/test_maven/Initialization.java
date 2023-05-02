@@ -24,7 +24,7 @@ public class Initialization extends Event {
 	// La méthode Do() renvoie le boolean de la méthode test_$G().
 	
 	@Override
-	public boolean Do() {
+	public boolean toDo() {
 		
 		boolean ok = false;
 
@@ -54,7 +54,7 @@ public class Initialization extends Event {
 	// Si ce boolean est égal à true alors la méthode Info(boolean ok) écrit "Ok" aussi non le méthode écrit "Error"
 	
 	@Override
-	public void Info(boolean ok) {
+	public void info(boolean ok) {
 		if (ok == true) {
 			System.out.println("OK : end of the inialization \r\n\n");
 		} else {

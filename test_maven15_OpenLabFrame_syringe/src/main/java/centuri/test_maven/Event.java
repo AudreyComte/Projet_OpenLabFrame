@@ -10,9 +10,9 @@ public abstract class Event {
 	
 	protected char[] toString;
 
-	public abstract boolean Do();
+	public abstract boolean toDo();
 	
-	public abstract void Info(boolean ok);
+	public abstract void info(boolean ok);
 	
 	
 	

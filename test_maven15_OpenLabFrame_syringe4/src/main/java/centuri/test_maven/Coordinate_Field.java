@@ -155,7 +155,7 @@ public class Coordinate_Field {
 						* 10);
 				double coordinate_y = (get_y_coordinate(get_r(wellName.get(l).toString()))
 						* 10);
-				double coordinate_z = 35.0;
+				double coordinate_z = this.get_A1_z();
 				data.set(k + 1, new Mouvement(coordinate_x, coordinate_y, coordinate_z, myArduino));
 				l++;
 			}

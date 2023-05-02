@@ -39,7 +39,7 @@ public class Arduino {
 
 	// method Start : ouverture du port donné en argument
 
-	public boolean Start() {
+	public boolean start() {
 
 		boolean start;
 
@@ -67,7 +67,7 @@ public class Arduino {
 
 	// method Go : pause 100 ms puis envoie le G-code à arduino puis pause 100 ms
 
-	public boolean Go(String info) {
+	public boolean go(String info) {
 
 		boolean go = true;
 
@@ -106,7 +106,7 @@ public class Arduino {
 
 		boolean test = false;
 
-		Go("$G");
+		go("$G");
 
 		while (true) {
 

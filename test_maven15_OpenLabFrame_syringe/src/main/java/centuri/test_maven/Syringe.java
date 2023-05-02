@@ -16,7 +16,7 @@ public class Syringe extends Event {
 	}
 
 	@Override
-	public boolean Do() {
+	public boolean toDo() {
 		
 		boolean ok = false;
 
@@ -31,7 +31,7 @@ public class Syringe extends Event {
 
 		// send to arduino
 		for (int i = 0; i < data.size(); i++) {
-			myArduino.Go(data.get(i).toString());
+			myArduino.go(data.get(i).toString());
 		}
 
 		// check $G test
@@ -42,7 +42,7 @@ public class Syringe extends Event {
 
 
 	@Override
-	public void Info(boolean ok) {
+	public void info(boolean ok) {
 		if (ok == true) {
 			System.out.println("OK : "+ volum + " ml \r\n\n");
 		}
