@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_ZrYngOnLEe2_D9yemFIa2A">
+  <modelElement href="test_maven12.uml#_ZoPz8OnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_f--FcOnLEe2_D9yemFIa2A" source="_gBTnwOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEww2unLEe2_D9yemFIa2A"/>
+    <stereotypes xmi:id="_f--sgOnLEe2_D9yemFIa2A" name="Reference">
+      <modelElement href="test_maven12.uml#_aEww3OnLEe2_D9yemFIa2A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_f--sgenLEe2_D9yemFIa2A" text=""/>
+    <sourceRole xmi:id="_f--sgunLEe2_D9yemFIa2A" aggregationKind="NONE" name="">
+      <modelElement href="test_maven12.uml#_aEww2-nLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_f--sg-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_f--shOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_f--shenLEe2_D9yemFIa2A" aggregationKind="NONE" name="serial_port" navigable="true">
+      <modelElement href="test_maven12.uml#_aEhgQOnLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_9A8bEOp0Ee2mDopOY56dWw" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEhgQenLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_f--shunLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_f--sh-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_gBZuYOnLEe2_D9yemFIa2A" targetItem="_gB754OnLEe2_D9yemFIa2A" sourceItem="_gBZHUOnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_gBcKoOnLEe2_D9yemFIa2A" targetItem="_gB755OnLEe2_D9yemFIa2A" sourceItem="_gBa8gOnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_gBrbMOnLEe2_D9yemFIa2A" targetItem="_gB756unLEe2_D9yemFIa2A" sourceItem="_gBjfYOnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_gBvsoOnLEe2_D9yemFIa2A" targetItem="_gB757enLEe2_D9yemFIa2A" sourceItem="_gBtQYOnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_gB3BYOnLEe2_D9yemFIa2A" targetItem="_gB758OnLEe2_D9yemFIa2A" sourceItem="_gByv8OnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_gB5doOnLEe2_D9yemFIa2A" targetItem="_gB758-nLEe2_D9yemFIa2A" sourceItem="_gB4PgOnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_gB6rwOnLEe2_D9yemFIa2A" targetItem="_gB75--nLEe2_D9yemFIa2A" sourceItem="_gB6EsOnLEe2_D9yemFIa2A"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_gCPb4OnLEe2_D9yemFIa2A" sourceAnchor="196.0,97.0" targetAnchor="0.0,102.0" target="_gBTnwOnLEe2_D9yemFIa2A" source="_gChIsOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEu7oOnLEe2_D9yemFIa2A"/>
+    <bendpoints xmi:id="_gV6l0OnLEe2_D9yemFIa2A" sourceY="329" targetX="-450"/>
+    <stereotypes xmi:id="_gCfTgenLEe2_D9yemFIa2A" name="Reference">
+      <modelElement href="test_maven12.uml#_aEvisOnLEe2_D9yemFIa2A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_gCescOnLEe2_D9yemFIa2A" text="">
+      <visualProperties xmi:id="_gV7M4OnLEe2_D9yemFIa2A" position="44.0,-9.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_gCescenLEe2_D9yemFIa2A" aggregationKind="NONE" name="">
+      <modelElement href="test_maven12.uml#_aEu7oenLEe2_D9yemFIa2A"/>
+      <visualProperties xmi:id="_gV6l2enLEe2_D9yemFIa2A" position="5.0,5.5"/>
+      <visibility xmi:id="_gCghoenLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gCghoOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_gCfTgOnLEe2_D9yemFIa2A" aggregationKind="NONE" name="myArduino" navigable="true">
+      <modelElement href="test_maven12.uml#_aEdO0OnLEe2_D9yemFIa2A"/>
+      <visualProperties xmi:id="_gV7M4enLEe2_D9yemFIa2A" position="-93.5,1.5"/>
+      <stereotypes xmi:id="_9BAFcOp0Ee2mDopOY56dWw" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEdO0enLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gCgho-nLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gCghounLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_gCc3QOnLEe2_D9yemFIa2A" sourceAnchor="196.0,0.0" targetAnchor="93.0,76.0" superClass="_gCD1sOnLEe2_D9yemFIa2A" subClass="_gChIsOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEE0WOnLEe2_D9yemFIa2A"/>
+    <bendpoints xmi:id="_gV6l0enLEe2_D9yemFIa2A" sourceY="-68" targetX="-598" targetY="27"/>
+    <bendpoints xmi:id="_gV6l0unLEe2_D9yemFIa2A" sourceX="598" sourceY="-68" targetY="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_gCxnYOnLEe2_D9yemFIa2A" sourceAnchor="348.0,164.0" targetAnchor="122.0,0.0" target="_gBTnwOnLEe2_D9yemFIa2A" source="_gC7_cOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEvisenLEe2_D9yemFIa2A"/>
+    <stereotypes xmi:id="_gC3uA-nLEe2_D9yemFIa2A" name="Reference">
+      <modelElement href="test_maven12.uml#_aEvis-nLEe2_D9yemFIa2A"/>
+    </stereotypes>
+    <nameVisual xmi:id="_gC3uAOnLEe2_D9yemFIa2A" text="">
+      <visualProperties xmi:id="_gV7M4-nLEe2_D9yemFIa2A" position="-21.0,-5.5"/>
+    </nameVisual>
+    <sourceRole xmi:id="_gC3uAenLEe2_D9yemFIa2A" aggregationKind="NONE" name="">
+      <modelElement href="test_maven12.uml#_aEvisunLEe2_D9yemFIa2A"/>
+      <visualProperties xmi:id="_gV7M4unLEe2_D9yemFIa2A" position="5.0,5.0"/>
+      <visibility xmi:id="_gC6xUenLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gC6xUOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_gC3uAunLEe2_D9yemFIa2A" aggregationKind="NONE" name="myArduino" navigable="true">
+      <modelElement href="test_maven12.uml#_aEd15enLEe2_D9yemFIa2A"/>
+      <visualProperties xmi:id="_gV7M5OnLEe2_D9yemFIa2A" position="-96.5,-54.0"/>
+      <stereotypes xmi:id="_9BAsgOp0Ee2mDopOY56dWw" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEd15unLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gC7YYenLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gC7YYOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_gC0qsOnLEe2_D9yemFIa2A" sourceAnchor="348.0,0.0" targetAnchor="93.0,76.0" superClass="_gCD1sOnLEe2_D9yemFIa2A" subClass="_gC7_cOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEFbZ-nLEe2_D9yemFIa2A"/>
+    <bendpoints xmi:id="_gV6l0-nLEe2_D9yemFIa2A" sourceY="-35" targetX="-26" targetY="27"/>
+    <bendpoints xmi:id="_gV6l1OnLEe2_D9yemFIa2A" sourceX="26" sourceY="-35" targetY="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_gDW2MOnLEe2_D9yemFIa2A" sourceAnchor="118.0,0.0" targetAnchor="93.0,76.0" superClass="_gCD1sOnLEe2_D9yemFIa2A" subClass="_gDeK8OnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEFbaOnLEe2_D9yemFIa2A"/>
+    <bendpoints xmi:id="_gV6l1enLEe2_D9yemFIa2A" sourceY="-16" targetX="468" targetY="27"/>
+    <bendpoints xmi:id="_gV6l1unLEe2_D9yemFIa2A" sourceX="-468" sourceY="-16" targetY="27"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_gDsNYOnLEe2_D9yemFIa2A" sourceAnchor="202.0,0.0" targetAnchor="93.0,76.0" superClass="_gCD1sOnLEe2_D9yemFIa2A" subClass="_gEL8oOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEGCcOnLEe2_D9yemFIa2A"/>
+    <bendpoints xmi:id="_gV6l1-nLEe2_D9yemFIa2A" sourceY="-18" targetX="819" targetY="27"/>
+    <bendpoints xmi:id="_gV6l2OnLEe2_D9yemFIa2A" sourceX="-819" sourceY="-18" targetY="27"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_gBZHUOnLEe2_D9yemFIa2A" sourceConnectionVisual="_gBZuYOnLEe2_D9yemFIa2A" text="FHNW implementation of a camera, works with the raspberry-pi v2 camera module and&#xA;&#x9; * the crowpi-image on the raspberry-pi.&#xA;&#x9; * maybe works on other camera-modules too, but is not yet tested.&#xA;&#x9; *&#xA;&#x9; * It uses the libcamera-still and libcamera-vid bash commands. those are pre-installed&#xA;&#x9; * on all raspbian-versions after Buster. (Crowpi is raspbian Version Bullseye)" item="_gB754OnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEqDIOnLEe2_D9yemFIa2A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_gBa8gOnLEe2_D9yemFIa2A" sourceConnectionVisual="_gBcKoOnLEe2_D9yemFIa2A" text="Constructor for using the picture and video functionality&#xA;&#x9;     * calling the init function to test if a camera is active" item="_gB755OnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEqDIenLEe2_D9yemFIa2A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_gBjfYOnLEe2_D9yemFIa2A" sourceConnectionVisual="_gBrbMOnLEe2_D9yemFIa2A" text="Takes a picture and saves it to the default Pictures folder&#xA;&#x9;     *&#xA;&#x9;     * If a file already exists, the code will break. better use useDate while taking pictures" item="_gB756unLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEqDIunLEe2_D9yemFIa2A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_gBtQYOnLEe2_D9yemFIa2A" sourceConnectionVisual="_gBvsoOnLEe2_D9yemFIa2A" text="Takes a video and saves it to the default Videos folder&#xA;&#x9;     *&#xA;&#x9;     * If a file already exists, the code will break. better use useDate while taking videos" item="_gB757enLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEqDJOnLEe2_D9yemFIa2A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_gByv8OnLEe2_D9yemFIa2A" sourceConnectionVisual="_gB3BYOnLEe2_D9yemFIa2A" text="testing, if camera is installed on raspberrypi, and if the bash commands&#xA;&#x9;     * will work" item="_gB758OnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEqqMOnLEe2_D9yemFIa2A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_gB4PgOnLEe2_D9yemFIa2A" sourceConnectionVisual="_gB5doOnLEe2_D9yemFIa2A" text="Takes a picture using the bash commands&#xA;&#x9;     *&#xA;&#x9;     * @param config Use the ConfigBuilder of the CameraConfig to create the desired parameters" item="_gB758-nLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEqDI-nLEe2_D9yemFIa2A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_gB6EsOnLEe2_D9yemFIa2A" sourceConnectionVisual="_gB6rwOnLEe2_D9yemFIa2A" text="Takes a video with the configuration and saves it to the output path&#xA;&#x9;     *&#xA;&#x9;     * @param config path to the .h264 file" item="_gB75--nLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aEqDJenLEe2_D9yemFIa2A"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gB754OnLEe2_D9yemFIa2A" comments="_gBZHUOnLEe2_D9yemFIa2A" targetConnectionVisual="_gBZuYOnLEe2_D9yemFIa2A" name="Camera">
+    <modelElement href="test_maven12.uml#_Z_7UIOnLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gB754enLEe2_D9yemFIa2A" position="10.0,803.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_gB754unLEe2_D9yemFIa2A" name="Patch">
+      <modelElement href="test_maven12.uml#_bICLsOnLEe2_D9yemFIa2A"/>
+    </stereotypes>
+    <visibility xmi:id="_gB754-nLEe2_D9yemFIa2A" label="+"/>
+    <operations xmi:id="_gB755OnLEe2_D9yemFIa2A" comments="_gBa8gOnLEe2_D9yemFIa2A" targetConnectionVisual="_gBcKoOnLEe2_D9yemFIa2A" name="Camera">
+      <modelElement href="test_maven12.uml#_Z_8iQOnLEe2_D9yemFIa2A"/>
+      <keywords xmi:id="_gB755enLEe2_D9yemFIa2A" keyword="create"/>
+      <visibility xmi:id="_gB755unLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gB755-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gB756OnLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_Z_9JUenLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gB756enLEe2_D9yemFIa2A" name="Camera">
+          <modelElement href="test_maven12.uml#_Z_7UIOnLEe2_D9yemFIa2A"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gB756unLEe2_D9yemFIa2A" comments="_gBjfYOnLEe2_D9yemFIa2A" targetConnectionVisual="_gBrbMOnLEe2_D9yemFIa2A" name="takeStill">
+      <modelElement href="test_maven12.uml#_Z_9JUunLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gB756-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gB757OnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_gB757enLEe2_D9yemFIa2A" comments="_gBtQYOnLEe2_D9yemFIa2A" targetConnectionVisual="_gBvsoOnLEe2_D9yemFIa2A" name="takeVid">
+      <modelElement href="test_maven12.uml#_Z_9wYOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gB757unLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gB757-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_gB758OnLEe2_D9yemFIa2A" comments="_gByv8OnLEe2_D9yemFIa2A" targetConnectionVisual="_gB3BYOnLEe2_D9yemFIa2A" name="init">
+      <modelElement href="test_maven12.uml#_Z_-XcOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gB758enLEe2_D9yemFIa2A" label="-"/>
+      <cardinality xmi:id="_gB758unLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_gB758-nLEe2_D9yemFIa2A" comments="_gB4PgOnLEe2_D9yemFIa2A" targetConnectionVisual="_gB5doOnLEe2_D9yemFIa2A" name="takeStill">
+      <modelElement href="test_maven12.uml#_aD_UxenLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gB759OnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gB759enLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gB759unLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aD_70OnLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gB759-nLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_gB75-OnLEe2_D9yemFIa2A" name="config">
+        <modelElement href="test_maven12.uml#_aD_UxunLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gB75-enLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gB75-unLEe2_D9yemFIa2A" name="PicConfig">
+          <modelElement href="test_maven12.uml#_aAJ9oOnLEe2_D9yemFIa2A"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_gB75--nLEe2_D9yemFIa2A" comments="_gB6EsOnLEe2_D9yemFIa2A" targetConnectionVisual="_gB6rwOnLEe2_D9yemFIa2A" name="takeVid">
+      <modelElement href="test_maven12.uml#_aD_70enLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gB75_OnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gB75_enLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gB75_unLEe2_D9yemFIa2A" name="config">
+        <modelElement href="test_maven12.uml#_aD_70unLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gB75_-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gB76AOnLEe2_D9yemFIa2A" name="VidConfig">
+          <modelElement href="test_maven12.uml#_aAZOMOnLEe2_D9yemFIa2A"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_gB76AenLEe2_D9yemFIa2A" name="callBash">
+      <modelElement href="test_maven12.uml#_aESPtOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gB76AunLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gB76A-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gB76BOnLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aESPtunLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gB76BenLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_gB76BunLEe2_D9yemFIa2A" name="processBuilder">
+        <modelElement href="test_maven12.uml#_aESPtenLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gB76B-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gB76COnLEe2_D9yemFIa2A" name="ProcessBuilder">
+          <modelElement href="test_maven12.uml#_aESPsOnLEe2_D9yemFIa2A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gCD1sOnLEe2_D9yemFIa2A" name="Event" abstractClass="true" subclassedBy="_gCc3QOnLEe2_D9yemFIa2A _gC0qsOnLEe2_D9yemFIa2A _gDW2MOnLEe2_D9yemFIa2A _gDsNYOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aAxBoOnLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gCD1senLEe2_D9yemFIa2A" position="720.0,31.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_gCD1sunLEe2_D9yemFIa2A" label="+"/>
+    <operations xmi:id="_gCD1s-nLEe2_D9yemFIa2A" abstractOperation="true" name="Do">
+      <modelElement href="test_maven12.uml#_aAyPwOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gCD1tOnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gCD1tenLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gCD1tunLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aAyPwenLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gCD1t-nLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gCD1uOnLEe2_D9yemFIa2A" abstractOperation="true" name="Info">
+      <modelElement href="test_maven12.uml#_aAyPwunLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gCD1uenLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gCD1uunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gCD1u-nLEe2_D9yemFIa2A" name="ok">
+        <modelElement href="test_maven12.uml#_aAy20OnLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gCD1vOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gCD1venLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gChIsOnLEe2_D9yemFIa2A" name="Initialisation" associationsOut="_gCPb4OnLEe2_D9yemFIa2A" generalizations="_gCc3QOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aAy20enLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gChIsenLEe2_D9yemFIa2A" position="19.0,202.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_gChIsunLEe2_D9yemFIa2A" label="+"/>
+    <attributes xmi:id="_gChIs-nLEe2_D9yemFIa2A" name="myArduino">
+      <modelElement href="test_maven12.uml#_aEdO0OnLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_9BbjQOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_9BcKUOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_9BdYcOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <visibility xmi:id="_gChItenLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gChItunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gChIt-nLEe2_D9yemFIa2A" name="Arduino">
+        <modelElement href="test_maven12.uml#_aCDbEOnLEe2_D9yemFIa2A"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_gChIuOnLEe2_D9yemFIa2A" name="Do">
+      <modelElement href="test_maven12.uml#_aA0E8OnLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gChIuenLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aA0sAOnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gChIuunLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aA1TEOnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gChIu-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gChIvOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gChIvenLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aA0E8enLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gChIvunLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gChIv-nLEe2_D9yemFIa2A" name="Info">
+      <modelElement href="test_maven12.uml#_aA1TEunLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gChIwOnLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aA16IOnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gChIwenLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aA16IenLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gChIwunLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gChIw-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gChIxOnLEe2_D9yemFIa2A" name="ok">
+        <modelElement href="test_maven12.uml#_aA1TE-nLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gChIxenLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gChIxunLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_gChIx-nLEe2_D9yemFIa2A" name="Initialisation">
+      <modelElement href="test_maven12.uml#_aEE0U-nLEe2_D9yemFIa2A"/>
+      <keywords xmi:id="_gChIyOnLEe2_D9yemFIa2A" keyword="create"/>
+      <visibility xmi:id="_gChIyenLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gChIyunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gChIy-nLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aEE0V-nLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gChIzOnLEe2_D9yemFIa2A" name="Initialisation">
+          <modelElement href="test_maven12.uml#_aAy20enLEe2_D9yemFIa2A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_gChIzenLEe2_D9yemFIa2A" name="myArduino">
+        <modelElement href="test_maven12.uml#_aEE0VOnLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gChIzunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gChIz-nLEe2_D9yemFIa2A" name="Arduino">
+          <modelElement href="test_maven12.uml#_aCDbEOnLEe2_D9yemFIa2A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gC7_cOnLEe2_D9yemFIa2A" name="Mouvement" associationsOut="_gCxnYOnLEe2_D9yemFIa2A" generalizations="_gC0qsOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aA49cOnLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gC7_cenLEe2_D9yemFIa2A" position="439.0,169.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_gC7_cunLEe2_D9yemFIa2A" label="+"/>
+    <attributes xmi:id="_gC7_c-nLEe2_D9yemFIa2A" name="coordinate_x">
+      <modelElement href="test_maven12.uml#_aEdO0unLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gC7_dOnLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEd14OnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gC7_denLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gC7_dunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gC7_d-nLEe2_D9yemFIa2A" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gC7_eOnLEe2_D9yemFIa2A" name="coordinate_y">
+      <modelElement href="test_maven12.uml#_aEd14enLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gC7_eenLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEd14unLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gC7_eunLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gC7_e-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gC7_fOnLEe2_D9yemFIa2A" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gC7_fenLEe2_D9yemFIa2A" defaultValue="&quot;G90&quot;" name="type_of_coordinate" staticAttribute="true">
+      <modelElement href="test_maven12.uml#_aEd14-nLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gC7_funLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gC7_f-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gC7_gOnLEe2_D9yemFIa2A" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gC7_genLEe2_D9yemFIa2A" name="myArduino">
+      <modelElement href="test_maven12.uml#_aEd15enLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_9BcxYOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_9BcxYep0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_9Bd_gOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <visibility xmi:id="_gC7_g-nLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gC7_hOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gC7_henLEe2_D9yemFIa2A" name="Arduino">
+        <modelElement href="test_maven12.uml#_aCDbEOnLEe2_D9yemFIa2A"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_gC7_hunLEe2_D9yemFIa2A" name="Do">
+      <modelElement href="test_maven12.uml#_aA6LkOnLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gC7_h-nLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aA6yoOnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gC7_iOnLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aA6yoenLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gC7_ienLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gC7_iunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gC7_i-nLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aA6LkenLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gC7_jOnLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gC7_jenLEe2_D9yemFIa2A" name="Info">
+      <modelElement href="test_maven12.uml#_aA6yo-nLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gC7_junLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aA7ZsenLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gC7_j-nLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aA7ZsunLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gC7_kOnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gC7_kenLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gC7_kunLEe2_D9yemFIa2A" name="ok">
+        <modelElement href="test_maven12.uml#_aA7ZsOnLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gC7_k-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gC7_lOnLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_gC7_lenLEe2_D9yemFIa2A" name="Mouvement">
+      <modelElement href="test_maven12.uml#_aEFbYOnLEe2_D9yemFIa2A"/>
+      <keywords xmi:id="_gC7_lunLEe2_D9yemFIa2A" keyword="create"/>
+      <visibility xmi:id="_gC7_l-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gC7_mOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gC7_menLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aEFbZunLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gC7_munLEe2_D9yemFIa2A" name="Mouvement">
+          <modelElement href="test_maven12.uml#_aA49cOnLEe2_D9yemFIa2A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_gC7_m-nLEe2_D9yemFIa2A" name="coordinate_x">
+        <modelElement href="test_maven12.uml#_aEFbYenLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gC7_nOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gC7_nenLEe2_D9yemFIa2A" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_gC7_nunLEe2_D9yemFIa2A" name="coordinate_y">
+        <modelElement href="test_maven12.uml#_aEFbYunLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gC7_n-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gC7_oOnLEe2_D9yemFIa2A" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_gC7_oenLEe2_D9yemFIa2A" name="myArduino">
+        <modelElement href="test_maven12.uml#_aEFbY-nLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gC8mgOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gC8mgenLEe2_D9yemFIa2A" name="Arduino">
+          <modelElement href="test_maven12.uml#_aCDbEOnLEe2_D9yemFIa2A"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gDeK8OnLEe2_D9yemFIa2A" name="Pause" generalizations="_gDW2MOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aA918OnLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gDeK8enLEe2_D9yemFIa2A" position="1163.0,150.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_gDeK8unLEe2_D9yemFIa2A" label="+"/>
+    <attributes xmi:id="_gDeK8-nLEe2_D9yemFIa2A" name="pause">
+      <modelElement href="test_maven12.uml#_aEd15-nLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gDeK9OnLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEd16OnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gDeK9enLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gDeK9unLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gDeK9-nLEe2_D9yemFIa2A" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_gDeK-OnLEe2_D9yemFIa2A" name="Pause">
+      <modelElement href="test_maven12.uml#_aA-dAOnLEe2_D9yemFIa2A"/>
+      <keywords xmi:id="_gDeK-enLEe2_D9yemFIa2A" keyword="create"/>
+      <visibility xmi:id="_gDeK-unLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gDeK--nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gDeK_OnLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aA_EEOnLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gDeK_enLEe2_D9yemFIa2A" name="Pause">
+          <modelElement href="test_maven12.uml#_aA918OnLEe2_D9yemFIa2A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_gDeK_unLEe2_D9yemFIa2A" name="pause">
+        <modelElement href="test_maven12.uml#_aA-dAenLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gDeK_-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gDeLAOnLEe2_D9yemFIa2A" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_gDeLAenLEe2_D9yemFIa2A" name="Do">
+      <modelElement href="test_maven12.uml#_aA_EEenLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gDeLAunLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aA_rIOnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gDeLA-nLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aA_rIenLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gDeLBOnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gDeLBenLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gDeLBunLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aA_EEunLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gDeLB-nLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gDeLCOnLEe2_D9yemFIa2A" name="Info">
+      <modelElement href="test_maven12.uml#_aBASMOnLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gDeLCenLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aBASMunLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gDeLCunLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aBA5QOnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gDeLC-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gDeLDOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gDeLDenLEe2_D9yemFIa2A" name="ok">
+        <modelElement href="test_maven12.uml#_aBASMenLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gDeLDunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gDeLD-nLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gEL8oOnLEe2_D9yemFIa2A" name="Picture" generalizations="_gDsNYOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aBCHYOnLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gEL8oenLEe2_D9yemFIa2A" position="1430.0,152.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_gEL8ounLEe2_D9yemFIa2A" label="+"/>
+    <attributes xmi:id="_gEL8o-nLEe2_D9yemFIa2A" name="delay">
+      <modelElement href="test_maven12.uml#_aEd16enLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gEL8pOnLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEd16unLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gEL8penLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gEL8punLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gEL8p-nLEe2_D9yemFIa2A" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gEL8qOnLEe2_D9yemFIa2A" name="width">
+      <modelElement href="test_maven12.uml#_aEec8OnLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gEL8qenLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEec8enLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gEL8qunLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gEL8q-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gEL8rOnLEe2_D9yemFIa2A" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gEL8renLEe2_D9yemFIa2A" name="heigth">
+      <modelElement href="test_maven12.uml#_aEec8unLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gEL8runLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEec8-nLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gEL8r-nLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gEL8sOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gEL8senLEe2_D9yemFIa2A" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gEL8sunLEe2_D9yemFIa2A" defaultValue="100" name="quality" staticAttribute="true">
+      <modelElement href="test_maven12.uml#_aEec9OnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gEL8s-nLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gEL8tOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gEL8tenLEe2_D9yemFIa2A" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gEL8tunLEe2_D9yemFIa2A" defaultValue="&quot;JPG&quot;" name="encoding" staticAttribute="true">
+      <modelElement href="test_maven12.uml#_aEec9unLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gEL8t-nLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gEL8uOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gEL8uenLEe2_D9yemFIa2A" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gEL8uunLEe2_D9yemFIa2A" defaultValue="&quot;/home/audrey/Images/&quot;" name="path" staticAttribute="true">
+      <modelElement href="test_maven12.uml#_aEec-OnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gEL8u-nLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gEL8vOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gEL8venLEe2_D9yemFIa2A" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_gEL8vunLEe2_D9yemFIa2A" name="Picture">
+      <modelElement href="test_maven12.uml#_aBDVgOnLEe2_D9yemFIa2A"/>
+      <keywords xmi:id="_gEL8v-nLEe2_D9yemFIa2A" keyword="create"/>
+      <visibility xmi:id="_gEL8wOnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gEL8wenLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gEL8wunLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aBD8kunLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gEL8w-nLEe2_D9yemFIa2A" name="Picture">
+          <modelElement href="test_maven12.uml#_aBCHYOnLEe2_D9yemFIa2A"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_gEL8xOnLEe2_D9yemFIa2A" name="delay">
+        <modelElement href="test_maven12.uml#_aBDVgenLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gEL8xenLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gEL8xunLEe2_D9yemFIa2A" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_gEL8x-nLEe2_D9yemFIa2A" name="width">
+        <modelElement href="test_maven12.uml#_aBDVgunLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gEL8yOnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gEL8yenLEe2_D9yemFIa2A" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_gEL8yunLEe2_D9yemFIa2A" name="heigth">
+        <modelElement href="test_maven12.uml#_aBDVg-nLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gEL8y-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gEL8zOnLEe2_D9yemFIa2A" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_gEL8zenLEe2_D9yemFIa2A" name="Do">
+      <modelElement href="test_maven12.uml#_aBD8k-nLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gEL8zunLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aBEjoOnLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gEL8z-nLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aBEjoenLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gEL80OnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gEL80enLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gEL80unLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aBD8lOnLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gEL80-nLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gEL81OnLEe2_D9yemFIa2A" name="Info">
+      <modelElement href="test_maven12.uml#_aBEjo-nLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gEL81enLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aBFKsenLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <stereotypes xmi:id="_gEL81unLEe2_D9yemFIa2A" name="Annotations">
+        <modelElement href="test_maven12.uml#_aBFKsunLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gEL81-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gEL82OnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gEL82enLEe2_D9yemFIa2A" name="ok">
+        <modelElement href="test_maven12.uml#_aBFKsOnLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gEL82unLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gEL82-nLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gEp2sOnLEe2_D9yemFIa2A" name="Main">
+    <modelElement href="test_maven12.uml#_aA3vUOnLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gEp2senLEe2_D9yemFIa2A" position="493.0,794.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_gEp2sunLEe2_D9yemFIa2A" label="+"/>
+    <operations xmi:id="_gEp2s-nLEe2_D9yemFIa2A" name="main" staticOperation="true">
+      <modelElement href="test_maven12.uml#_aA4WYOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gEp2tOnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gEp2tenLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gEp2tunLEe2_D9yemFIa2A" name="args">
+        <modelElement href="test_maven12.uml#_aA4WYenLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gEp2t-nLEe2_D9yemFIa2A" label="1..*" max="-1" min="1"/>
+        <type xmi:id="_gEp2uOnLEe2_D9yemFIa2A" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_gBTnwOnLEe2_D9yemFIa2A" name="Arduino" associationsIn="_gCPb4OnLEe2_D9yemFIa2A _gCxnYOnLEe2_D9yemFIa2A" associationsOut="_f--FcOnLEe2_D9yemFIa2A">
+    <modelElement href="test_maven12.uml#_aCDbEOnLEe2_D9yemFIa2A"/>
+    <visualProperties xmi:id="_gBTnwenLEe2_D9yemFIa2A" position="665.0,526.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_gBTnwunLEe2_D9yemFIa2A" label="+"/>
+    <attributes xmi:id="_gBTnw-nLEe2_D9yemFIa2A" name="serial_port" staticAttribute="true">
+      <modelElement href="test_maven12.uml#_aEhgQOnLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_9BZHAOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_9Ba8MOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_9BemkOp0Ee2mDopOY56dWw" name="LegacyStyledElement"/>
+      <visibility xmi:id="_gBTnxenLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gBTnxunLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gBTnx-nLEe2_D9yemFIa2A" name="SerialPort">
+        <modelElement href="test_maven12.uml#_aEENQenLEe2_D9yemFIa2A"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_gBTnyOnLEe2_D9yemFIa2A" name="message">
+      <modelElement href="test_maven12.uml#_aEhgQunLEe2_D9yemFIa2A"/>
+      <stereotypes xmi:id="_gBTnyenLEe2_D9yemFIa2A" name="LegacyStyledElement">
+        <modelElement href="test_maven12.uml#_aEhgQ-nLEe2_D9yemFIa2A"/>
+      </stereotypes>
+      <visibility xmi:id="_gBTnyunLEe2_D9yemFIa2A" label="~"/>
+      <cardinality xmi:id="_gBTny-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <type xmi:id="_gBTnzOnLEe2_D9yemFIa2A" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_gBTnzenLEe2_D9yemFIa2A" name="Start">
+      <modelElement href="test_maven12.uml#_aCECIOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gBTnzunLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gBTnz-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gBTn0OnLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aCECIenLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gBTn0enLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gBTn0unLEe2_D9yemFIa2A" name="getSerialPort">
+      <modelElement href="test_maven12.uml#_aCECIunLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gBTn0-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gBTn1OnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gBTn1enLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aEXIMOnLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gBTn1unLEe2_D9yemFIa2A" name="SerialPort">
+          <modelElement href="test_maven12.uml#_aEENQenLEe2_D9yemFIa2A"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gBTn1-nLEe2_D9yemFIa2A" name="Go">
+      <modelElement href="test_maven12.uml#_aCEpMOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gBTn2OnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gBTn2enLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <parameters xmi:id="_gBTn2unLEe2_D9yemFIa2A" name="info">
+        <modelElement href="test_maven12.uml#_aCEpMenLEe2_D9yemFIa2A"/>
+        <cardinality xmi:id="_gBTn2-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+        <type xmi:id="_gBTn3OnLEe2_D9yemFIa2A" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_gBTn3enLEe2_D9yemFIa2A" name="test_$G">
+      <modelElement href="test_maven12.uml#_aCFQQOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gBTn3unLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gBTn3-nLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gBTn4OnLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aCFQQenLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gBTn4enLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gBTn4unLEe2_D9yemFIa2A" name="getMessage">
+      <modelElement href="test_maven12.uml#_aCF3UOnLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gBTn4-nLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gBTn5OnLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gBTn5enLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aCF3UenLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gBTn5unLEe2_D9yemFIa2A" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_gBTn5-nLEe2_D9yemFIa2A" name="Close">
+      <modelElement href="test_maven12.uml#_aCF3UunLEe2_D9yemFIa2A"/>
+      <visibility xmi:id="_gBTn6OnLEe2_D9yemFIa2A" label="+"/>
+      <cardinality xmi:id="_gBTn6enLEe2_D9yemFIa2A" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_gBTn6unLEe2_D9yemFIa2A">
+        <modelElement href="test_maven12.uml#_aCGeYOnLEe2_D9yemFIa2A"/>
+        <type xmi:id="_gBTn6-nLEe2_D9yemFIa2A" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

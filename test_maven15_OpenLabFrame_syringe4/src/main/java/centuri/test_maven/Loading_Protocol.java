@@ -73,7 +73,7 @@ public class Loading_Protocol implements Runnable {
 				
 				ok = event.toDo();
 				
-				if(stop==true) {
+				if(stop) {
 					System.out.println("Stop !");
 					break;
 				}
