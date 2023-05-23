@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_TWV7gOqQEe2dZbaZEpXSag" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_TWV7geqQEe2dZbaZEpXSag" source="codegen">
         <details xmi:id="_TWV7guqQEe2dZbaZEpXSag" key="codegenDirectory" value="/test_maven15_OpenLabFrame_syringe/src/main/java"/>
-        <details xmi:id="_Up5OEOqQEe2dZbaZEpXSag" key="AssociatedSourceCode" value="/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Arduino.java;1446169273/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/exceptions/FailedToRunRaspistillException.java;2629867810/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Coordinate_Field.java;1551490703/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Counter.java;1339073360/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Event.java;3369121910/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Field.java;1365033676/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Initialization.java;3167301201/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Interface_Graphique.java;4125364782/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Loading_Protocol.java;1531964603/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Motor.java;1892469813/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Mouvement.java;2541487603/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Pause.java;1537147008/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Picture.java;4198943597/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Stop.java;153670765/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Syringe.java;3377033421/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Video.java;1736227401/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/RPiCamera.java;540501583/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/AWB.java;1841398684/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/DRC.java;1853036265/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Encoding.java;4066611392/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Exposure.java;1349367668/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/ImageEffect.java;2433111711/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/MeteringMode.java;870151419/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/DemoView.java;2222290086/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootBufferedStill.java;71888535/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootStill.java;3241299486/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootTimelapse.java;3747622905/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Camera.java;2118600825/1;"/>
+        <details xmi:id="_Up5OEOqQEe2dZbaZEpXSag" key="AssociatedSourceCode" value="/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Arduino.java;1446169273/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/exceptions/FailedToRunRaspistillException.java;2629867810/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Coordinate_Field.java;1551490703/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Counter.java;1339073360/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Event.java;3369121910/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Field.java;1365033676/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Initialization.java;3167301201/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Interface_Graphique.java;4125364782/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Loading_Protocol.java;3879702575/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Motor.java;1892469813/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Mouvement.java;2541487603/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Pause.java;1537147008/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Picture.java;4198943597/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Stop.java;153670765/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Syringe.java;3377033421/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Video.java;1736227401/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/RPiCamera.java;540501583/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/AWB.java;1841398684/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/DRC.java;1853036265/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Encoding.java;4066611392/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Exposure.java;1349367668/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/ImageEffect.java;2433111711/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/MeteringMode.java;870151419/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/DemoView.java;2222290086/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootBufferedStill.java;71888535/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootStill.java;3241299486/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootTimelapse.java;3747622905/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Camera.java;2118600825/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_NC6RwOqUEe2dZbaZEpXSag" source="dangling-refs">
         <contents xmi:type="uml:Operation" xmi:id="_TsXO0OqQEe2dZbaZEpXSag" name="getEncoding" method="_TskDOOqQEe2dZbaZEpXSag">
@@ -16,6 +16,13 @@
           <ownedParameter xmi:id="_TsX14eqQEe2dZbaZEpXSag" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+        </contents>
+      </contents>
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_hW538PlREe2Zkbv89_xNuQ" source="preferences">
+        <contents xmi:type="ecore:EAnnotation" xmi:id="_hW538flREe2Zkbv89_xNuQ" source="com.yattasolutions.codegen.reverse">
+          <details xmi:id="_hW538vlREe2Zkbv89_xNuQ" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerNewFiles" value="true"/>
+          <details xmi:id="_hW538_lREe2Zkbv89_xNuQ" key="com.yattasolutions.codegen.reverse.roundtrip.RemoveDeletedFiles" value="true"/>
+          <details xmi:id="_hW6fAPlREe2Zkbv89_xNuQ" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerChangedFiles" value="true"/>
         </contents>
       </contents>
     </eAnnotations>
@@ -1369,6 +1376,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejouqQEe2dZbaZEpXSag" name="get_number_repetition" specification="_ToyWZ-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_Tsejo-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <language>java</language>
@@ -1385,6 +1393,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejpuqQEe2dZbaZEpXSag" name="get_time" specification="_ToyWa-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_Tsejp-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
             </ownedParameter>
             <language>java</language>
@@ -1399,7 +1408,9 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfKoOqQEe2dZbaZEpXSag" name="get_data" specification="_Tr8_I-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfKoeqQEe2dZbaZEpXSag" name="data" type="_TrZlgeqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsfKouqQEe2dZbaZEpXSag" type="_TrZlgeqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfKouqQEe2dZbaZEpXSag" type="_TrZlgeqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>return this.data;
 	</body>
@@ -1415,6 +1426,7 @@
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfKpeqQEe2dZbaZEpXSag" name="event_go" specification="_Tr9mM-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfKpuqQEe2dZbaZEpXSag" name="data" type="_TrZlgeqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_TsfKp-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -1488,7 +1500,7 @@
 			}
 
 		}
-
+                                                                                                                                                                                                                                    
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfKqeqQEe2dZbaZEpXSag" name="stop" specification="_Toy9dOqQEe2dZbaZEpXSag">

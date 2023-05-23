@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_TWV7gOqQEe2dZbaZEpXSag" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_TWV7geqQEe2dZbaZEpXSag" source="codegen">
         <details xmi:id="_TWV7guqQEe2dZbaZEpXSag" key="codegenDirectory" value="/test_maven15_OpenLabFrame_syringe/src/main/java"/>
-        <details xmi:id="_Up5OEOqQEe2dZbaZEpXSag" key="AssociatedSourceCode" value="/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Arduino.java;1446169273/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/exceptions/FailedToRunRaspistillException.java;2629867810/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Coordinate_Field.java;1551490703/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Counter.java;1339073360/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Event.java;3369121910/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Field.java;1365033676/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Initialization.java;3167301201/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Interface_Graphique.java;4125364782/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Loading_Protocol.java;1531964603/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Motor.java;1892469813/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Mouvement.java;2541487603/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Pause.java;1537147008/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Picture.java;4198943597/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Stop.java;153670765/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Syringe.java;3377033421/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Video.java;1736227401/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/RPiCamera.java;540501583/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/AWB.java;1841398684/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/DRC.java;1853036265/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Encoding.java;4066611392/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Exposure.java;1349367668/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/ImageEffect.java;2433111711/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/MeteringMode.java;870151419/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/DemoView.java;2222290086/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootBufferedStill.java;71888535/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootStill.java;3241299486/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootTimelapse.java;3747622905/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Camera.java;2118600825/1;"/>
+        <details xmi:id="_Up5OEOqQEe2dZbaZEpXSag" key="AssociatedSourceCode" value="/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Arduino.java;1446169273/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/exceptions/FailedToRunRaspistillException.java;2629867810/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Coordinate_Field.java;1551490703/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Counter.java;1339073360/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Event.java;3369121910/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Field.java;1365033676/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Initialization.java;3167301201/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Interface_Graphique.java;4125364782/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Loading_Protocol.java;3879702575/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Motor.java;1892469813/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Mouvement.java;2541487603/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Pause.java;1537147008/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Picture.java;4198943597/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Stop.java;153670765/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Syringe.java;3377033421/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Video.java;1736227401/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/RPiCamera.java;540501583/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/AWB.java;1841398684/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/DRC.java;1853036265/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Encoding.java;4066611392/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/Exposure.java;1349367668/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/ImageEffect.java;2433111711/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/enums/MeteringMode.java;870151419/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/DemoView.java;2222290086/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootBufferedStill.java;71888535/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootStill.java;3241299486/1;/test_maven15_OpenLabFrame_syringe/src/main/java/com/hopding/jrpicam/examples/ShootTimelapse.java;3747622905/1;/test_maven15_OpenLabFrame_syringe/src/main/java/centuri/test_maven/Camera.java;2118600825/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_NC6RwOqUEe2dZbaZEpXSag" source="dangling-refs">
         <contents xmi:type="uml:Operation" xmi:id="_TsXO0OqQEe2dZbaZEpXSag" name="getEncoding" method="_TskDOOqQEe2dZbaZEpXSag">
@@ -16,6 +16,23 @@
           <ownedParameter xmi:id="_TsX14eqQEe2dZbaZEpXSag" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+        </contents>
+        <contents xmi:type="uml:Operation" xmi:id="_qQpf0PlREe2Zkbv89_xNuQ" name="getEncoding" method="_qQ7zsPlREe2Zkbv89_xNuQ">
+          <ownedParameter xmi:id="_qQxboPlREe2Zkbv89_xNuQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </contents>
+        <contents xmi:type="uml:Operation" xmi:id="_qQpf0flREe2Zkbv89_xNuQ" name="getEncoding" method="_qQ8awflREe2Zkbv89_xNuQ">
+          <ownedParameter xmi:id="_qQxboflREe2Zkbv89_xNuQ" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </contents>
+      </contents>
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_hfmg8PlREe2Zkbv89_xNuQ" source="preferences">
+        <contents xmi:type="ecore:EAnnotation" xmi:id="_hfmg8flREe2Zkbv89_xNuQ" source="com.yattasolutions.codegen.reverse">
+          <details xmi:id="_hfmg8vlREe2Zkbv89_xNuQ" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerNewFiles" value="true"/>
+          <details xmi:id="_hfmg8_lREe2Zkbv89_xNuQ" key="com.yattasolutions.codegen.reverse.roundtrip.RemoveDeletedFiles" value="true"/>
+          <details xmi:id="_hfmg9PlREe2Zkbv89_xNuQ" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerChangedFiles" value="true"/>
         </contents>
       </contents>
     </eAnnotations>
@@ -63,13 +80,16 @@
             <ownedParameter xmi:id="_TscHUeqQEe2dZbaZEpXSag" name="port">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_TscHUuqQEe2dZbaZEpXSag" type="_TomJIOqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TscHUuqQEe2dZbaZEpXSag" type="_TomJIOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.port = port;
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TscuYOqQEe2dZbaZEpXSag" name="start" specification="_Ton-VeqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TscuYeqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -102,6 +122,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
             <ownedParameter xmi:id="_TscuZOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -136,6 +157,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TscuZeqQEe2dZbaZEpXSag" name="test_$G" specification="_ToolZOqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TscuZuqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -170,6 +192,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TscuZ-qQEe2dZbaZEpXSag" name="close" specification="_ToolZuqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TscuaOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -234,7 +257,9 @@
           </ownedAttribute>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TscubOqQEe2dZbaZEpXSag" name="Coordinate_Field" specification="_TrbaseqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TscubeqQEe2dZbaZEpXSag" name="myField" type="_TouE8uqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TscubuqQEe2dZbaZEpXSag" type="_TopzheqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TscubuqQEe2dZbaZEpXSag" type="_TopzheqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.myField = myField;
 		this.tx = new Double[myField.getColumn()+1];
@@ -249,7 +274,9 @@
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TscuceqQEe2dZbaZEpXSag" name="get_myField" specification="_ToqakOqQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_TscucuqQEe2dZbaZEpXSag" type="_TouE8uqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TscucuqQEe2dZbaZEpXSag" type="_TouE8uqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>return this.myField;
 	</body>
@@ -286,6 +313,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
             <ownedParameter xmi:id="_TsdVc-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <language>java</language>
@@ -300,6 +328,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
             <ownedParameter xmi:id="_TsdVduqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <language>java</language>
@@ -311,6 +340,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsdVd-qQEe2dZbaZEpXSag" name="get_tx" specification="_TorBo-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsdVeOqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TsdVeeqQEe2dZbaZEpXSag" value="*"/>
             </ownedParameter>
             <language>java</language>
@@ -319,6 +349,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsdVeuqQEe2dZbaZEpXSag" name="get_ty" specification="_TorBp-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsdVe-qQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TsdVfOqQEe2dZbaZEpXSag" value="*"/>
             </ownedParameter>
             <language>java</language>
@@ -329,7 +360,9 @@
             <ownedParameter xmi:id="_TsdVfuqQEe2dZbaZEpXSag" name="c">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_TsdVf-qQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsdVf-qQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>Double x = this.tx[c];
 		return x;
@@ -339,7 +372,9 @@
             <ownedParameter xmi:id="_TsdVgeqQEe2dZbaZEpXSag" name="r">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_TsdVguqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsdVguqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>Double y = this.ty[r];
 		return y;
@@ -349,7 +384,9 @@
             <ownedParameter xmi:id="_TsdVhOqQEe2dZbaZEpXSag" name="well">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_TsdVheqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsdVheqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>int c = this.get_c(well);
 		Double x = this.tx[c];
@@ -360,7 +397,9 @@
             <ownedParameter xmi:id="_TsdVh-qQEe2dZbaZEpXSag" name="well">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_TsdViOqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsdViOqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>int r = this.get_r(well);
 		Double y = this.ty[r];
@@ -491,6 +530,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsd8guqQEe2dZbaZEpXSag" name="get_number" specification="_Totd4OqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_Tsd8g-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <language>java</language>
@@ -551,7 +591,9 @@
             <ownedParameter xmi:id="_Tsd8iOqQEe2dZbaZEpXSag" name="row">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_Tsd8ieqQEe2dZbaZEpXSag" type="_TouE8uqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_Tsd8ieqQEe2dZbaZEpXSag" type="_TouE8uqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.xField = xField;
 		this.yField = yField;
@@ -561,13 +603,17 @@
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsd8iuqQEe2dZbaZEpXSag" name="getxField" specification="_TouE8-qQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_Tsd8i-qQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_Tsd8i-qQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>return this.xField;
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsd8jOqQEe2dZbaZEpXSag" name="getyField" specification="_TouE9OqQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_Tsd8jeqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_Tsd8jeqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>return this.yField;
 	</body>
@@ -588,6 +634,7 @@
             <ownedParameter xmi:id="_Tsd8k-qQEe2dZbaZEpXSag" name="xField" type="_Tr4GouqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_Tsd8lOqQEe2dZbaZEpXSag" name="yField" type="_Tr4GouqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_Tsd8leqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tsd8luqQEe2dZbaZEpXSag" value="*"/>
             </ownedParameter>
             <language>java</language>
@@ -600,7 +647,9 @@
             <ownedParameter xmi:id="_Tsd8mOqQEe2dZbaZEpXSag" name="well">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_Tsd8meqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_Tsd8meqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>Double aera = xField * yField;
 		Double aera_well= aera/well;
@@ -608,14 +657,18 @@
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejkOqQEe2dZbaZEpXSag" name="xField_6well" specification="_TousAuqQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_TsejkeqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsejkeqQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>Double xField_6well = this.xField/3;
 		return xField_6well;
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejkuqQEe2dZbaZEpXSag" name="yField_6well" specification="_TousA-qQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_Tsejk-qQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_Tsejk-qQEe2dZbaZEpXSag" type="_Tr4GouqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>Double yField_6well = this.yField/2;
 		return yField_6well;
@@ -672,13 +725,16 @@
           <ownedAttribute xmi:id="_TsMPsOqQEe2dZbaZEpXSag" name="myArduino" visibility="package" type="_TomJIOqQEe2dZbaZEpXSag" association="_TstNGuqQEe2dZbaZEpXSag"/>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejlOqQEe2dZbaZEpXSag" name="Initialization" specification="_Trco0OqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsejleqQEe2dZbaZEpXSag" name="myArduino" type="_TomJIOqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsejluqQEe2dZbaZEpXSag" type="_TovTEOqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsejluqQEe2dZbaZEpXSag" type="_TovTEOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.myArduino = myArduino;
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsejl-qQEe2dZbaZEpXSag" name="toDo" specification="_Tov6IOqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsejmOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -762,7 +818,9 @@
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejnuqQEe2dZbaZEpXSag" name="Interface_Graphique" specification="_ToxIROqQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_Tsejn-qQEe2dZbaZEpXSag" type="_TowhNeqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_Tsejn-qQEe2dZbaZEpXSag" type="_TowhNeqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 800, 445);
@@ -1314,7 +1372,7 @@
 	</body>
           </ownedBehavior>
           <ownedOperation xmi:id="_ToxIQOqQEe2dZbaZEpXSag" name="main" isStatic="true" method="_Tsejm-qQEe2dZbaZEpXSag">
-            <ownedComment xmi:id="_TsnGcOqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qQ-3APlREe2Zkbv89_xNuQ">
               <body>Launch the application.</body>
             </ownedComment>
             <ownedParameter xmi:id="_ToxIQeqQEe2dZbaZEpXSag" name="args">
@@ -1326,7 +1384,7 @@
             <eAnnotations xmi:id="_ToxIReqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
               <details xmi:id="_ToxIRuqQEe2dZbaZEpXSag" key="create"/>
             </eAnnotations>
-            <ownedComment xmi:id="_TsnGceqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qQ-3AflREe2Zkbv89_xNuQ">
               <body>Create the frame.</body>
             </ownedComment>
             <ownedParameter xmi:id="_ToxIR-qQEe2dZbaZEpXSag" type="_TowhNeqQEe2dZbaZEpXSag" direction="return"/>
@@ -1369,6 +1427,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejouqQEe2dZbaZEpXSag" name="get_number_repetition" specification="_ToyWZ-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_Tsejo-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <language>java</language>
@@ -1385,6 +1444,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsejpuqQEe2dZbaZEpXSag" name="get_time" specification="_ToyWa-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_Tsejp-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
             </ownedParameter>
             <language>java</language>
@@ -1399,7 +1459,9 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfKoOqQEe2dZbaZEpXSag" name="get_data" specification="_Tr8_I-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfKoeqQEe2dZbaZEpXSag" name="data" type="_TrZlgeqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsfKouqQEe2dZbaZEpXSag" type="_TrZlgeqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfKouqQEe2dZbaZEpXSag" type="_TrZlgeqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>return this.data;
 	</body>
@@ -1415,6 +1477,7 @@
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfKpeqQEe2dZbaZEpXSag" name="event_go" specification="_Tr9mM-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfKpuqQEe2dZbaZEpXSag" name="data" type="_TrZlgeqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_TsfKp-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -1488,7 +1551,7 @@
 			}
 
 		}
-
+                                                                                                                                                                                                                                    
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfKqeqQEe2dZbaZEpXSag" name="stop" specification="_Toy9dOqQEe2dZbaZEpXSag">
@@ -1564,7 +1627,9 @@
             <ownedParameter xmi:id="_TsfKrOqQEe2dZbaZEpXSag" name="x_y_acceleration">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_TsfKreqQEe2dZbaZEpXSag" type="_TozkgOqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfKreqQEe2dZbaZEpXSag" type="_TozkgOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.x_y_axis_max_rate = x_y_axis_max_rate;
 		this.x_y_acceleration = x_y_acceleration;
@@ -1575,6 +1640,7 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
             </ownedParameter>
             <ownedParameter xmi:id="_TsfKsOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <language>java</language>
@@ -1638,7 +1704,9 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
             </ownedParameter>
             <ownedParameter xmi:id="_TsfKteqQEe2dZbaZEpXSag" name="myArduino" type="_TomJIOqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsfKtuqQEe2dZbaZEpXSag" type="_To0LkOqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfKtuqQEe2dZbaZEpXSag" type="_To0LkOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.coordinate_x = coordinate_x;
 		this.coordinate_y = coordinate_y;
@@ -1648,6 +1716,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfKt-qQEe2dZbaZEpXSag" name="toDo" specification="_To0LkeqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfKuOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -1726,13 +1795,16 @@
             <ownedParameter xmi:id="_TsfKvOqQEe2dZbaZEpXSag" name="pause">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
-            <ownedParameter xmi:id="_TsfKveqQEe2dZbaZEpXSag" type="_To1ZsOqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfKveqQEe2dZbaZEpXSag" type="_To1ZsOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.pause = pause;
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfxsOqQEe2dZbaZEpXSag" name="toDo" specification="_To1ZtuqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfxseqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -1815,13 +1887,16 @@
           </ownedAttribute>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsfxtOqQEe2dZbaZEpXSag" name="Picture" specification="_TrnA4eqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfxteqQEe2dZbaZEpXSag" name="myCamera" type="_TpHGgeqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsfxtuqQEe2dZbaZEpXSag" type="_To2Aw-qQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfxtuqQEe2dZbaZEpXSag" type="_To2Aw-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.myCamera = myCamera;;
 	</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsfxt-qQEe2dZbaZEpXSag" name="toDo" specification="_To2AxOqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfxuOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -1880,7 +1955,9 @@
           <interfaceRealization xmi:id="_Tr-0UOqQEe2dZbaZEpXSag" client="_To3O4OqQEe2dZbaZEpXSag" supplier="_Tr7xAeqQEe2dZbaZEpXSag" contract="_Tr7xAeqQEe2dZbaZEpXSag"/>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsfxu-qQEe2dZbaZEpXSag" name="Stop" specification="_Trnn8OqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfxvOqQEe2dZbaZEpXSag" name="myCamera" type="_TpHGgeqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsfxveqQEe2dZbaZEpXSag" type="_To3O4OqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfxveqQEe2dZbaZEpXSag" type="_To3O4OqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.myCamera = myCamera;
 	</body>
@@ -1917,7 +1994,9 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <ownedParameter xmi:id="_TsfxweqQEe2dZbaZEpXSag" name="myArduino" type="_TomJIOqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsfxwuqQEe2dZbaZEpXSag" type="_To318OqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfxwuqQEe2dZbaZEpXSag" type="_To318OqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.volum = volum;
 		this.myArduino = myArduino;
@@ -1925,6 +2004,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsfxw-qQEe2dZbaZEpXSag" name="toDo" specification="_To318eqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsfxxOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -1999,7 +2079,9 @@
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
             </ownedParameter>
             <ownedParameter xmi:id="_TsfxyeqQEe2dZbaZEpXSag" name="myCamera" type="_TpHGgeqQEe2dZbaZEpXSag"/>
-            <ownedParameter xmi:id="_TsfxyuqQEe2dZbaZEpXSag" type="_To4dAuqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TsfxyuqQEe2dZbaZEpXSag" type="_To4dAuqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>this.record_Time = record_Time;
 		this.myCamera = myCamera;
@@ -2007,6 +2089,7 @@
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsgYwOqQEe2dZbaZEpXSag" name="toDo" specification="_To4dA-qQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TsgYweqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -2054,7 +2137,7 @@
           </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_TpHGgeqQEe2dZbaZEpXSag" name="Camera">
-          <ownedComment xmi:id="_TsoUneqQEe2dZbaZEpXSag">
+          <ownedComment xmi:id="_qRAsNflREe2Zkbv89_xNuQ">
             <body>FHNW implementation of a camera, works with the raspberry-pi v2 camera module and
 	 * the crowpi-image on the raspberry-pi.
 	 * maybe works on other camera-modules too, but is not yet tested.
@@ -2064,7 +2147,9 @@
           </ownedComment>
           <generalization xmi:id="_TsDs0OqQEe2dZbaZEpXSag" general="_TrwK1OqQEe2dZbaZEpXSag"/>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskDJ-qQEe2dZbaZEpXSag" name="Camera" specification="_TpHGguqQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_TskDKOqQEe2dZbaZEpXSag" type="_TpHGgeqQEe2dZbaZEpXSag" direction="return"/>
+            <ownedParameter xmi:id="_TskDKOqQEe2dZbaZEpXSag" type="_TpHGgeqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>//init();
 	    </body>
@@ -2077,6 +2162,7 @@
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskDKuqQEe2dZbaZEpXSag" name="takeStill" specification="_Trwx4eqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TskDK-qQEe2dZbaZEpXSag" name="config" type="_TpJiwOqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_TskDLOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -2103,6 +2189,7 @@
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskDLuqQEe2dZbaZEpXSag" name="takeVid" specification="_Trwx5OqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TskDL-qQEe2dZbaZEpXSag" name="config" type="_TpL_AOqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_TskDMOqQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -2125,6 +2212,7 @@
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskDMeqQEe2dZbaZEpXSag" name="callBash" specification="_TsCesOqQEe2dZbaZEpXSag">
             <ownedParameter xmi:id="_TskDMuqQEe2dZbaZEpXSag" name="processBuilder" type="_Tr_bYuqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_TskDM-qQEe2dZbaZEpXSag" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
             <language>java</language>
@@ -2169,34 +2257,34 @@
             <eAnnotations xmi:id="_TpHGg-qQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
               <details xmi:id="_TpHGhOqQEe2dZbaZEpXSag" key="create"/>
             </eAnnotations>
-            <ownedComment xmi:id="_TsoUnuqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsNvlREe2Zkbv89_xNuQ">
               <body>Constructor for using the picture and video functionality
 	     * calling the init function to test if a camera is active</body>
             </ownedComment>
             <ownedParameter xmi:id="_TpHGheqQEe2dZbaZEpXSag" type="_TpHGgeqQEe2dZbaZEpXSag" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:id="_TpHGhuqQEe2dZbaZEpXSag" name="takeStill" method="_TskDKeqQEe2dZbaZEpXSag">
-            <ownedComment xmi:id="_TsoUn-qQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsN_lREe2Zkbv89_xNuQ">
               <body>Takes a picture and saves it to the default Pictures folder
 	     *
 	     * If a file already exists, the code will break. better use useDate while taking pictures</body>
             </ownedComment>
           </ownedOperation>
           <ownedOperation xmi:id="_TpHGh-qQEe2dZbaZEpXSag" name="takeVid" method="_TskDLeqQEe2dZbaZEpXSag">
-            <ownedComment xmi:id="_TsoUoeqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsOflREe2Zkbv89_xNuQ">
               <body>Takes a video and saves it to the default Videos folder
 	     *
 	     * If a file already exists, the code will break. better use useDate while taking videos</body>
             </ownedComment>
           </ownedOperation>
           <ownedOperation xmi:id="_TpHGiOqQEe2dZbaZEpXSag" name="init" visibility="private" method="_TskDNOqQEe2dZbaZEpXSag">
-            <ownedComment xmi:id="_TsoUo-qQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsO_lREe2Zkbv89_xNuQ">
               <body>testing, if camera is installed on raspberrypi, and if the bash commands
 	     * will work</body>
             </ownedComment>
           </ownedOperation>
           <ownedOperation xmi:id="_Trwx4eqQEe2dZbaZEpXSag" name="takeStill" method="_TskDKuqQEe2dZbaZEpXSag">
-            <ownedComment xmi:id="_TsoUoOqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsOPlREe2Zkbv89_xNuQ">
               <body>Takes a picture using the bash commands
 	     *
 	     * @param config Use the ConfigBuilder of the CameraConfig to create the desired parameters</body>
@@ -2207,7 +2295,7 @@
             </ownedParameter>
           </ownedOperation>
           <ownedOperation xmi:id="_Trwx5OqQEe2dZbaZEpXSag" name="takeVid" method="_TskDLuqQEe2dZbaZEpXSag">
-            <ownedComment xmi:id="_TsoUouqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsOvlREe2Zkbv89_xNuQ">
               <body>Takes a video with the configuration and saves it to the output path
 	     *
 	     * @param config path to the .h264 file</body>
@@ -2224,7 +2312,7 @@
             </ownedParameter>
           </ownedOperation>
           <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_TpHtkOqQEe2dZbaZEpXSag" name="PicEncoding">
-            <ownedComment xmi:id="_TsoUpOqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsPPlREe2Zkbv89_xNuQ">
               <body>Output Format of pictures
 	     * These modes determine the output of the picture-file
 	     * &lt;p>
@@ -2235,7 +2323,9 @@
 	     * {@link #BMP}
 	     * {@link #YUV420}</body>
             </ownedComment>
-            <ownedAttribute xmi:id="_TsWnweqQEe2dZbaZEpXSag" name="encoding" visibility="public" type="_TpHtkOqQEe2dZbaZEpXSag" isReadOnly="true"/>
+            <ownedAttribute xmi:id="_TsWnweqQEe2dZbaZEpXSag" name="encoding" visibility="public" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
             <ownedOperation xmi:id="_TpIUoOqQEe2dZbaZEpXSag" name="PicEncoding" visibility="package" method="_TskDNeqQEe2dZbaZEpXSag">
               <eAnnotations xmi:id="_TpIUouqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_TpIUo-qQEe2dZbaZEpXSag" key="create"/>
@@ -2246,33 +2336,33 @@
               <ownedParameter xmi:id="_TpIUpOqQEe2dZbaZEpXSag" type="_TpHtkOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedLiteral xmi:id="_TpHtkeqQEe2dZbaZEpXSag" name="PNG">
-              <specification xmi:type="uml:Expression" xmi:id="_TpHtkuqQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUpeqQEe2dZbaZEpXSag" value="&quot;png&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQcrgPlREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsPflREe2Zkbv89_xNuQ" value="&quot;png&quot;"/>
               </specification>
             </ownedLiteral>
             <ownedLiteral xmi:id="_TpHtk-qQEe2dZbaZEpXSag" name="JPG">
-              <specification xmi:type="uml:Expression" xmi:id="_TpHtlOqQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUpuqQEe2dZbaZEpXSag" value="&quot;jpg&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQcrgflREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsPvlREe2Zkbv89_xNuQ" value="&quot;jpg&quot;"/>
               </specification>
             </ownedLiteral>
             <ownedLiteral xmi:id="_TpHtleqQEe2dZbaZEpXSag" name="RGB">
-              <specification xmi:type="uml:Expression" xmi:id="_TpHtluqQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUp-qQEe2dZbaZEpXSag" value="&quot;rgb&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQcrgvlREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsP_lREe2Zkbv89_xNuQ" value="&quot;rgb&quot;"/>
               </specification>
             </ownedLiteral>
             <ownedLiteral xmi:id="_TpHtl-qQEe2dZbaZEpXSag" name="BMP">
-              <specification xmi:type="uml:Expression" xmi:id="_TpHtmOqQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUqOqQEe2dZbaZEpXSag" value="&quot;bmp&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQcrg_lREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsQPlREe2Zkbv89_xNuQ" value="&quot;bmp&quot;"/>
               </specification>
             </ownedLiteral>
             <ownedLiteral xmi:id="_TpHtmeqQEe2dZbaZEpXSag" name="YUV420">
-              <specification xmi:type="uml:Expression" xmi:id="_TpHtmuqQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUqeqQEe2dZbaZEpXSag" value="&quot;yuv420&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQcrhPlREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsQflREe2Zkbv89_xNuQ" value="&quot;yuv420&quot;"/>
               </specification>
             </ownedLiteral>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_TpIUpeqQEe2dZbaZEpXSag" name="VidEncoding">
-            <ownedComment xmi:id="_TsoUquqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsQvlREe2Zkbv89_xNuQ">
               <body>Output Format of videos
 	     * These modes determine the output of the video-file
 	     * &lt;p>
@@ -2281,7 +2371,9 @@
 	     * {@link #MJPEG}
 	     * {@link #YUV420}</body>
             </ownedComment>
-            <ownedAttribute xmi:id="_TsXO0uqQEe2dZbaZEpXSag" name="encoding" visibility="public" type="_TpIUpeqQEe2dZbaZEpXSag" isReadOnly="true"/>
+            <ownedAttribute xmi:id="_TsXO0uqQEe2dZbaZEpXSag" name="encoding" visibility="public" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
             <ownedOperation xmi:id="_TpI7tuqQEe2dZbaZEpXSag" name="VidEncoding" visibility="package" method="_TskqMOqQEe2dZbaZEpXSag">
               <eAnnotations xmi:id="_TpI7uOqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_TpI7ueqQEe2dZbaZEpXSag" key="create"/>
@@ -2292,18 +2384,18 @@
               <ownedParameter xmi:id="_TpI7uuqQEe2dZbaZEpXSag" type="_TpIUpeqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedLiteral xmi:id="_TpI7sOqQEe2dZbaZEpXSag" name="H264">
-              <specification xmi:type="uml:Expression" xmi:id="_TpI7seqQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUq-qQEe2dZbaZEpXSag" value="&quot;h264&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQdSkPlREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsQ_lREe2Zkbv89_xNuQ" value="&quot;h264&quot;"/>
               </specification>
             </ownedLiteral>
             <ownedLiteral xmi:id="_TpI7suqQEe2dZbaZEpXSag" name="MJPEG">
-              <specification xmi:type="uml:Expression" xmi:id="_TpI7s-qQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUrOqQEe2dZbaZEpXSag" value="&quot;mjpeg&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQdSkflREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsRPlREe2Zkbv89_xNuQ" value="&quot;mjpeg&quot;"/>
               </specification>
             </ownedLiteral>
             <ownedLiteral xmi:id="_TpI7tOqQEe2dZbaZEpXSag" name="YUV420">
-              <specification xmi:type="uml:Expression" xmi:id="_TpI7teqQEe2dZbaZEpXSag">
-                <operand xmi:type="uml:LiteralString" xmi:id="_TsoUreqQEe2dZbaZEpXSag" value="&quot;yuv420&quot;"/>
+              <specification xmi:type="uml:Expression" xmi:id="_qQd5oPlREe2Zkbv89_xNuQ">
+                <operand xmi:type="uml:LiteralString" xmi:id="_qRAsRflREe2Zkbv89_xNuQ" value="&quot;yuv420&quot;"/>
               </specification>
             </ownedLiteral>
           </nestedClassifier>
@@ -2311,7 +2403,7 @@
             <eAnnotations xmi:id="_TpJiweqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
               <details xmi:id="_TpJiwuqQEe2dZbaZEpXSag" key="static"/>
             </eAnnotations>
-            <ownedComment xmi:id="_TsoUruqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsRvlREe2Zkbv89_xNuQ">
               <body>Builder Pattern to create a config for a single Picture</body>
             </ownedComment>
             <ownedAttribute xmi:id="_TsX14uqQEe2dZbaZEpXSag" name="outputPath" isLeaf="true" isReadOnly="true">
@@ -2341,7 +2433,9 @@
             </ownedAttribute>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskqNeqQEe2dZbaZEpXSag" name="PicConfig" specification="_TryAAOqQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_TskqNuqQEe2dZbaZEpXSag" name="builder" type="_TpJixeqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_TskqN-qQEe2dZbaZEpXSag" type="_TpJiwOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TskqN-qQEe2dZbaZEpXSag" type="_TpJiwOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>this.outputPath = builder.outputPath;
 	            this.useDate = builder.useDate;
@@ -2356,6 +2450,7 @@
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskqOOqQEe2dZbaZEpXSag" name="asCommand" specification="_TpJiw-qQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_TskqOeqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -2380,7 +2475,7 @@
 	        </body>
             </ownedBehavior>
             <ownedOperation xmi:id="_TpJiw-qQEe2dZbaZEpXSag" name="asCommand" method="_TskqOOqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsoUsOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAsSPlREe2Zkbv89_xNuQ">
                 <body>Creates a callable bash command with the defined options.
 	         *
 	         * @return a string that can be called from the bash</body>
@@ -2393,7 +2488,7 @@
               <eAnnotations xmi:id="_TryAAuqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_TryAA-qQEe2dZbaZEpXSag" key="create"/>
               </eAnnotations>
-              <ownedComment xmi:id="_TsoUr-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAsR_lREe2Zkbv89_xNuQ">
                 <body>constructor for the config
 	         *
 	         * @param builder builder with the defined options</body>
@@ -2405,7 +2500,7 @@
               <eAnnotations xmi:id="_TpJixuqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_TpJix-qQEe2dZbaZEpXSag" key="static"/>
               </eAnnotations>
-              <ownedComment xmi:id="_TsoUseqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAsSflREe2Zkbv89_xNuQ">
                 <body>Builder Pattern, to create a config for a single picture
 	         *
 	         * A Config is buildable like this:
@@ -2447,7 +2542,9 @@
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
               </ownedAttribute>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskqOuqQEe2dZbaZEpXSag" name="newInstance" specification="_TpKJ0OqQEe2dZbaZEpXSag">
-                <ownedParameter xmi:id="_TskqO-qQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqO-qQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>return new Builder();
 	            </body>
@@ -2456,7 +2553,9 @@
                 <ownedParameter xmi:id="_TskqPeqQEe2dZbaZEpXSag" name="outputPath">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TskqPuqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqPuqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.outputPath = outputPath;
 	                return this;
@@ -2466,7 +2565,9 @@
                 <ownedParameter xmi:id="_TskqQOqQEe2dZbaZEpXSag" name="useDate">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TskqQeqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqQeqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.useDate = useDate;
 	                return this;
@@ -2476,7 +2577,9 @@
                 <ownedParameter xmi:id="_TskqQ-qQEe2dZbaZEpXSag" name="delay">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TskqROqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqROqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.delay = delay;
 	                return this;
@@ -2486,7 +2589,9 @@
                 <ownedParameter xmi:id="_TskqRuqQEe2dZbaZEpXSag" name="width">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TskqR-qQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqR-qQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.width = width;
 	                return this;
@@ -2496,7 +2601,9 @@
                 <ownedParameter xmi:id="_TskqSeqQEe2dZbaZEpXSag" name="height">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TskqSuqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqSuqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.height = height;
 	                return this;
@@ -2506,7 +2613,9 @@
                 <ownedParameter xmi:id="_TskqTOqQEe2dZbaZEpXSag" name="quality">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TskqTeqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqTeqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>if(quality &lt; 0 || quality > 100){
 	                    throw new IllegalArgumentException(&quot;quality must be between 0 and 100&quot;);
@@ -2517,7 +2626,9 @@
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TskqTuqQEe2dZbaZEpXSag" name="encoding" specification="_TryADOqQEe2dZbaZEpXSag">
                 <ownedParameter xmi:id="_TskqT-qQEe2dZbaZEpXSag" name="encoding" type="_TpHtkOqQEe2dZbaZEpXSag"/>
-                <ownedParameter xmi:id="_TskqUOqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqUOqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.encoding = encoding;
 	                return this;
@@ -2527,7 +2638,9 @@
                 <ownedParameter xmi:id="_TskqUuqQEe2dZbaZEpXSag" name="disablePreview">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TskqU-qQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TskqU-qQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.disablePreview = disablePreview;
 	                return this;
@@ -2537,14 +2650,18 @@
                 <ownedParameter xmi:id="_TslRQeqQEe2dZbaZEpXSag" name="allowFullscreenPreview">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TslRQuqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRQuqQEe2dZbaZEpXSag" type="_TpJixeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.allowFullscreenPreview = allowFullscreenPreview;
 	                return this;
 	            </body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TslRQ-qQEe2dZbaZEpXSag" name="build" specification="_TpKw6uqQEe2dZbaZEpXSag">
-                <ownedParameter xmi:id="_TslRROqQEe2dZbaZEpXSag" type="_TpJiwOqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRROqQEe2dZbaZEpXSag" type="_TpJiwOqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>return new PicConfig(this);
 	            </body>
@@ -2613,7 +2730,7 @@
             <eAnnotations xmi:id="_TpL_AeqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
               <details xmi:id="_TpL_AuqQEe2dZbaZEpXSag" key="static"/>
             </eAnnotations>
-            <ownedComment xmi:id="_Tso7oOqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qRAsSvlREe2Zkbv89_xNuQ">
               <body>Builder Pattern to create a config for a video</body>
             </ownedComment>
             <ownedAttribute xmi:id="_TsaSIOqQEe2dZbaZEpXSag" name="outputPath" isLeaf="true" isReadOnly="true">
@@ -2628,7 +2745,9 @@
             <ownedAttribute xmi:id="_TsaSJuqQEe2dZbaZEpXSag" name="encoding" isLeaf="true" type="_TpIUpeqQEe2dZbaZEpXSag" isReadOnly="true"/>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TslRReqQEe2dZbaZEpXSag" name="VidConfig" specification="_TrzOIOqQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_TslRRuqQEe2dZbaZEpXSag" name="builder" type="_TpL_BeqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_TslRR-qQEe2dZbaZEpXSag" type="_TpL_AOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TslRR-qQEe2dZbaZEpXSag" type="_TpL_AOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>this.outputPath = builder.outputPath;
 	            this.recordTime = builder.recordTime;
@@ -2638,6 +2757,7 @@
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TslRSOqQEe2dZbaZEpXSag" name="asCommand" specification="_TpL_A-qQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_TslRSeqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
               <language>java</language>
@@ -2652,7 +2772,7 @@
 	        </body>
             </ownedBehavior>
             <ownedOperation xmi:id="_TpL_A-qQEe2dZbaZEpXSag" name="asCommand" method="_TslRSOqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tso7ouqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRBTQPlREe2Zkbv89_xNuQ">
                 <body>Creates a callable bash command with the defined options.
 	         *
 	         * @return a string that can be called from the bash</body>
@@ -2665,7 +2785,7 @@
               <eAnnotations xmi:id="_TrzOIuqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_TrzOI-qQEe2dZbaZEpXSag" key="create"/>
               </eAnnotations>
-              <ownedComment xmi:id="_Tso7oeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAsS_lREe2Zkbv89_xNuQ">
                 <body>constructor for the config
 	         *
 	         * @param builder builder with the defined options</body>
@@ -2677,7 +2797,7 @@
               <eAnnotations xmi:id="_TpL_BuqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_TpL_B-qQEe2dZbaZEpXSag" key="static"/>
               </eAnnotations>
-              <ownedComment xmi:id="_Tso7o-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRBTQflREe2Zkbv89_xNuQ">
                 <body>Builder Pattern, to create a config for a video
 	         *
 	         * A Config is buildable like this:
@@ -2699,7 +2819,9 @@
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
               </ownedAttribute>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TslRSuqQEe2dZbaZEpXSag" name="newInstance" specification="_TpMmEOqQEe2dZbaZEpXSag">
-                <ownedParameter xmi:id="_TslRS-qQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRS-qQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>return new Builder();
 	            </body>
@@ -2708,7 +2830,9 @@
                 <ownedParameter xmi:id="_TslRTeqQEe2dZbaZEpXSag" name="outputPath">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TslRTuqQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRTuqQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.outputPath = outputPath;
 	                return this;
@@ -2718,7 +2842,9 @@
                 <ownedParameter xmi:id="_TslRUOqQEe2dZbaZEpXSag" name="recordTime">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TslRUeqQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRUeqQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.recordTime = recordTime;
 	                return this;
@@ -2726,7 +2852,9 @@
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TslRUuqQEe2dZbaZEpXSag" name="encoding" specification="_TrzOKOqQEe2dZbaZEpXSag">
                 <ownedParameter xmi:id="_TslRU-qQEe2dZbaZEpXSag" name="encoding" type="_TpIUpeqQEe2dZbaZEpXSag"/>
-                <ownedParameter xmi:id="_TslRVOqQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRVOqQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.encoding = encoding;
 	                return this;
@@ -2736,14 +2864,18 @@
                 <ownedParameter xmi:id="_TslRVuqQEe2dZbaZEpXSag" name="useDate">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_TslRV-qQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRV-qQEe2dZbaZEpXSag" type="_TpL_BeqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>this.useDate = useDate;
 	                return this;
 	            </body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TslRWOqQEe2dZbaZEpXSag" name="build" specification="_TpMmF-qQEe2dZbaZEpXSag">
-                <ownedParameter xmi:id="_TslRWeqQEe2dZbaZEpXSag" type="_TpL_AOqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TslRWeqQEe2dZbaZEpXSag" type="_TpL_AOqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>return new VidConfig(this);
 	            </body>
@@ -2949,7 +3081,9 @@
                 <ownedParameter xmi:id="_TscuauqQEe2dZbaZEpXSag" name="msg">
                   <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
                 </ownedParameter>
-                <ownedParameter xmi:id="_Tscua-qQEe2dZbaZEpXSag" type="_TopMcOqQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_Tscua-qQEe2dZbaZEpXSag" type="_TopMcOqQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>super(msg);</body>
               </ownedBehavior>
@@ -2966,7 +3100,7 @@
           </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="_ToI2IeqQEe2dZbaZEpXSag" name="enums">
             <packagedElement xmi:type="uml:Enumeration" xmi:id="_TpCOAOqQEe2dZbaZEpXSag" name="AWB">
-              <ownedComment xmi:id="_TsoUkeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFOflREe2Zkbv89_xNuQ">
                 <body>AWB setting options.
 &lt;ul>
 &lt;li>{@link #OFF}&lt;/li>
@@ -3000,7 +3134,7 @@
               <ownedLiteral xmi:id="_TpC1GeqQEe2dZbaZEpXSag" name="HORIZON"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Enumeration" xmi:id="_TpC1HOqQEe2dZbaZEpXSag" name="DRC">
-              <ownedComment xmi:id="_TsoUkuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFOvlREe2Zkbv89_xNuQ">
                 <body>DRC mode options.
 &lt;ul>
 &lt;li>{@link #OFF}&lt;/li>
@@ -3021,7 +3155,7 @@
               <ownedLiteral xmi:id="_TpC1IOqQEe2dZbaZEpXSag" name="HIGH"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Enumeration" xmi:id="_TpDcIeqQEe2dZbaZEpXSag" name="Encoding">
-              <ownedComment xmi:id="_TsoUk-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFO_lREe2Zkbv89_xNuQ">
                 <body>Encoding type options.
 &lt;ul>
 &lt;li>{@link #JPG}&lt;/li>
@@ -3043,7 +3177,7 @@
               <ownedLiteral xmi:id="_TpDcJeqQEe2dZbaZEpXSag" name="PNG"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Enumeration" xmi:id="_TpDcKOqQEe2dZbaZEpXSag" name="Exposure">
-              <ownedComment xmi:id="_TsoUlOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFPPlREe2Zkbv89_xNuQ">
                 <body>Exposure option modes.
 &lt;ul>
 &lt;li>{@link #AUTO}&lt;/li>
@@ -3080,7 +3214,7 @@
               <ownedLiteral xmi:id="_TpDcNOqQEe2dZbaZEpXSag" name="FIREWORKS"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Enumeration" xmi:id="_TpEDMeqQEe2dZbaZEpXSag" name="ImageEffect">
-              <ownedComment xmi:id="_TsoUleqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFPflREe2Zkbv89_xNuQ">
                 <body>Image effect option settings.
  *
 &lt;ul>
@@ -3138,7 +3272,7 @@
               <ownedLiteral xmi:id="_TpEDR-qQEe2dZbaZEpXSag" name="CARTOON"/>
             </packagedElement>
             <packagedElement xmi:type="uml:Enumeration" xmi:id="_TpEqQOqQEe2dZbaZEpXSag" name="MeteringMode">
-              <ownedComment xmi:id="_TsoUluqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFPvlREe2Zkbv89_xNuQ">
                 <body>Metering mode options.
 &lt;ul>
 &lt;li>{@link #AVERAGE}&lt;/li>
@@ -3187,7 +3321,9 @@
 	</body>
               </ownedBehavior>
               <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsjcHuqQEe2dZbaZEpXSag" name="DemoView" specification="_TpFRVOqQEe2dZbaZEpXSag">
-                <ownedParameter xmi:id="_TsjcH-qQEe2dZbaZEpXSag" type="_TpEqR-qQEe2dZbaZEpXSag" direction="return"/>
+                <ownedParameter xmi:id="_TsjcH-qQEe2dZbaZEpXSag" type="_TpEqR-qQEe2dZbaZEpXSag" direction="return">
+                  <name xsi:nil="true"/>
+                </ownedParameter>
                 <language>java</language>
                 <body>try {
 			piCamera = new RPiCamera(&quot;/home/pi/Pictures&quot;);
@@ -3340,7 +3476,7 @@
 	</body>
               </ownedBehavior>
               <ownedOperation xmi:id="_TpFRUOqQEe2dZbaZEpXSag" name="main" isStatic="true" method="_TsjcG-qQEe2dZbaZEpXSag">
-                <ownedComment xmi:id="_TsoUl-qQEe2dZbaZEpXSag">
+                <ownedComment xmi:id="_qRAFP_lREe2Zkbv89_xNuQ">
                   <body>Launch the application.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_TpFRUeqQEe2dZbaZEpXSag" name="args">
@@ -3352,19 +3488,19 @@
                 <eAnnotations xmi:id="_TpFRVeqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                   <details xmi:id="_TpFRVuqQEe2dZbaZEpXSag" key="create"/>
                 </eAnnotations>
-                <ownedComment xmi:id="_TsoUmOqQEe2dZbaZEpXSag">
+                <ownedComment xmi:id="_qRAsMPlREe2Zkbv89_xNuQ">
                   <body>Create the application.</body>
                 </ownedComment>
                 <ownedParameter xmi:id="_TpFRV-qQEe2dZbaZEpXSag" type="_TpEqR-qQEe2dZbaZEpXSag" direction="return"/>
               </ownedOperation>
               <ownedOperation xmi:id="_TpFRWOqQEe2dZbaZEpXSag" name="initialize" visibility="private" method="_TsjcIOqQEe2dZbaZEpXSag">
-                <ownedComment xmi:id="_TsoUmeqQEe2dZbaZEpXSag">
+                <ownedComment xmi:id="_qRAsMflREe2Zkbv89_xNuQ">
                   <body>Initialize the contents of the frame.</body>
                 </ownedComment>
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_TpF4YOqQEe2dZbaZEpXSag" name="ShootBufferedStill">
-              <ownedComment xmi:id="_TsoUmuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAsMvlREe2Zkbv89_xNuQ">
                 <body>ShootBufferedStill is an example of how to take and buffer a still image using JRPiCam.
 
 @author Andrew Dillon</body>
@@ -3423,7 +3559,7 @@
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_TpGfcOqQEe2dZbaZEpXSag" name="ShootStill">
-              <ownedComment xmi:id="_TsoUm-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAsM_lREe2Zkbv89_xNuQ">
                 <body>ShootStill is an example of how to take a still image using JRPiCam.
 
 @author Andrew Dillon</body>
@@ -3480,7 +3616,7 @@
               </ownedOperation>
             </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="_TpGfdOqQEe2dZbaZEpXSag" name="ShootTimelapse">
-              <ownedComment xmi:id="_TsoUnOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAsNPlREe2Zkbv89_xNuQ">
                 <body>ShootTimelapse is an example of how to take and save a 
 series of images with JRPiCam.
 
@@ -3564,7 +3700,7 @@ series of images with JRPiCam.
             </packagedElement>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_To5EGOqQEe2dZbaZEpXSag" name="RPiCamera">
-            <ownedComment xmi:id="_TsnGcuqQEe2dZbaZEpXSag">
+            <ownedComment xmi:id="_qQ-3AvlREe2Zkbv89_xNuQ">
               <body>RPiCamera is used to access the Raspberry Pi Camera and take still photos.
 There are a variety of different settings that may be changed to modify images
 taken by an RPiCamera instance, such as width, height, AWB, DRC, and the resulting 
@@ -3613,7 +3749,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <defaultValue xmi:type="uml:LiteralString" xmi:id="_TsUymuqQEe2dZbaZEpXSag" value="500"/>
             </ownedAttribute>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsgYxuqQEe2dZbaZEpXSag" name="RPiCamera" specification="_To5rIOqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_TsgYx-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsgYx-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>this(&quot;/home/pi/Pictures&quot;);
 	</body>
@@ -3622,7 +3760,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsgYyeqQEe2dZbaZEpXSag" name="saveDir">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsgYyuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsgYyuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>this.saveDir = saveDir;
 		try {
@@ -3652,7 +3792,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsgYzuqQEe2dZbaZEpXSag" name="height">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsgYz-qQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsgYz-qQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>List&lt;String> command = new ArrayList&lt;>();
 		command.add(&quot;raspistill&quot;);
@@ -3687,7 +3829,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsgY0eqQEe2dZbaZEpXSag" name="pictureName">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsgY0uqQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsgY0uqQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>return takeStill(pictureName,
 				Integer.parseInt(options.get(&quot;width&quot;)[1]),
@@ -3701,7 +3845,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsgY1eqQEe2dZbaZEpXSag" name="height">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsgY1uqQEe2dZbaZEpXSag" type="_Tro2EOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsgY1uqQEe2dZbaZEpXSag" type="_Tro2EOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>List&lt;String> command = new ArrayList&lt;>();
 		command.add(&quot;raspistill&quot;);
@@ -3745,7 +3891,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsgY1-qQEe2dZbaZEpXSag" name="takeBufferedStill" specification="_To65QuqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_TsgY2OqQEe2dZbaZEpXSag" type="_Tro2EOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsgY2OqQEe2dZbaZEpXSag" type="_Tro2EOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>return takeBufferedStill(
 				Integer.parseInt(options.get(&quot;width&quot;)[1]),
@@ -3763,6 +3911,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
               </ownedParameter>
               <ownedParameter xmi:id="_TsgY3eqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TsgY3uqQEe2dZbaZEpXSag" value="*"/>
               </ownedParameter>
@@ -3853,6 +4002,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
               </ownedParameter>
               <ownedParameter xmi:id="_Tsg_0uqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
                 <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tsg_0-qQEe2dZbaZEpXSag" value="*"/>
               </ownedParameter>
@@ -3873,7 +4023,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsg_1-qQEe2dZbaZEpXSag" name="time">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsg_2OqQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_2OqQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (!pictureName.contains(&quot;%04d&quot;))
 			pictureName = &quot;%04d&quot; + pictureName;
@@ -3920,14 +4072,18 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsg_2-qQEe2dZbaZEpXSag" name="saveDir">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsg_3OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_3OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>this.saveDir = saveDir;
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsg_3eqQEe2dZbaZEpXSag" name="setToDefaults" specification="_To8HYOqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsg_3uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_3uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>saveDir = &quot;/home/pi/Pictures&quot;;
 		for (Map.Entry&lt;String, String[]> entry : options.entrySet()) {
@@ -3937,28 +4093,36 @@ camera.takeStill(&quot;APicture.jpg&quot;);
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsg_3-qQEe2dZbaZEpXSag" name="turnOffPreview" specification="_To8HYeqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsg_4OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_4OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;preview&quot;, new String[] { &quot;-n&quot; });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsg_4eqQEe2dZbaZEpXSag" name="turnOnPreview" specification="_To8HYuqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsg_4uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_4uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;preview&quot;, null);
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsg_4-qQEe2dZbaZEpXSag" name="setFullPreviewOn" specification="_To8HY-qQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsg_5OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_5OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;fullpreview&quot;, new String[] { &quot;-fp&quot; });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsg_5eqQEe2dZbaZEpXSag" name="setFullPreviewOff" specification="_To8HZOqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsg_5uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_5uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;fullpreview&quot;, null);
 		return this;
@@ -3977,7 +4141,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsg_6-qQEe2dZbaZEpXSag" name="h">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsg_7OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_7OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;preview&quot;, new String[] { &quot;-p&quot;, &quot;&quot; + x + &quot;,&quot; + y + &quot;,&quot; + w + &quot;,&quot; + h });
 		return this;
@@ -3987,7 +4153,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsg_7uqQEe2dZbaZEpXSag" name="fullscreen">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsg_7-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_7-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (fullscreen)
 			options.put(&quot;fullscreen&quot;, new String[] { &quot;-f&quot; });
@@ -4000,7 +4168,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsg_8eqQEe2dZbaZEpXSag" name="opacity">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsg_8uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_8uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (opacity > 255)
 			opacity = 255;
@@ -4014,7 +4184,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsg_9OqQEe2dZbaZEpXSag" name="sharpness">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsg_9eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_9eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (sharpness > 100)
 			sharpness = 100;
@@ -4028,7 +4200,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsg_9-qQEe2dZbaZEpXSag" name="contrast">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsg_-OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsg_-OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (contrast > 100)
 			contrast = 100;
@@ -4042,7 +4216,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tshm4eqQEe2dZbaZEpXSag" name="brightness">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tshm4uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm4uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (brightness > 100)
 			brightness = 100;
@@ -4056,7 +4232,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tshm5OqQEe2dZbaZEpXSag" name="saturation">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tshm5eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm5eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (saturation > 100)
 			saturation = 100;
@@ -4070,7 +4248,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tshm5-qQEe2dZbaZEpXSag" name="iso">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tshm6OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm6OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;ISO&quot;, new String[] { &quot;-ISO&quot;, &quot;&quot; + iso });
 		return this;
@@ -4078,7 +4258,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tshm6eqQEe2dZbaZEpXSag" name="setExposure" specification="_TrqrQuqQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_Tshm6uqQEe2dZbaZEpXSag" name="exposure" type="_TpDcKOqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_Tshm6-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm6-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;exposure&quot;, new String[] { &quot;-ex&quot;, exposure.toString() });
 		return this;
@@ -4086,7 +4268,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tshm7OqQEe2dZbaZEpXSag" name="setAWB" specification="_TrqrReqQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_Tshm7eqQEe2dZbaZEpXSag" name="awb" type="_TpCOAOqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_Tshm7uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm7uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;awb&quot;, new String[] { &quot;-awb&quot;, awb.toString() });
 		return this;
@@ -4094,7 +4278,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tshm7-qQEe2dZbaZEpXSag" name="setImageEffect" specification="_TrqrSOqQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_Tshm8OqQEe2dZbaZEpXSag" name="imageEffect" type="_TpEDMeqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_Tshm8eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm8eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;imxfx&quot;, new String[] { &quot;-ifx&quot;, imageEffect.toString() });
 		return this;
@@ -4107,7 +4293,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tshm9OqQEe2dZbaZEpXSag" name="V">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tshm9eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm9eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (U > 255)
 			U = 255;
@@ -4123,7 +4311,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tshm9uqQEe2dZbaZEpXSag" name="setMeteringMode" specification="_TrqrTOqQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_Tshm9-qQEe2dZbaZEpXSag" name="meteringMode" type="_TpEqQOqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_Tshm-OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm-OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;metering&quot;, new String[] { &quot;-mm&quot;, meteringMode.toString() });
 		return this;
@@ -4133,7 +4323,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tshm-uqQEe2dZbaZEpXSag" name="rotation">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tshm--qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm--qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (rotation > 359)
 			while (rotation > 359)
@@ -4146,28 +4338,36 @@ camera.takeStill(&quot;APicture.jpg&quot;);
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tshm_OqQEe2dZbaZEpXSag" name="setHorizontalFlipOn" specification="_To9VheqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tshm_eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm_eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;hflip&quot;, new String[] { &quot;-hf&quot; });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tshm_uqQEe2dZbaZEpXSag" name="setHorizontalFlipOff" specification="_To9VhuqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tshm_-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tshm_-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;hflip&quot;, null);
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TshnAOqQEe2dZbaZEpXSag" name="setVerticalFlipOn" specification="_To9Vh-qQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_TshnAeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TshnAeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;vflip&quot;, new String[] { &quot;-vf&quot; });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TshnAuqQEe2dZbaZEpXSag" name="setVerticalFlipOff" specification="_To9ViOqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_TshnA-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TshnA-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;vflip&quot;, null);
 		return this;
@@ -4186,7 +4386,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiN9OqQEe2dZbaZEpXSag" name="d">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiN9eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiN9eqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (x > 1.0)
 			x = 1.0;
@@ -4212,7 +4414,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiN9-qQEe2dZbaZEpXSag" name="speed">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiN-OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiN-OqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (speed > 6000000)
 			speed = 6000000;
@@ -4224,7 +4428,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsiN-eqQEe2dZbaZEpXSag" name="setDRC" specification="_TrrSV-qQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_TsiN-uqQEe2dZbaZEpXSag" name="drc" type="_TpC1HOqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_TsiN--qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiN--qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;drc&quot;, new String[] { &quot;-drc&quot;, drc.toString() });
 		return this;
@@ -4234,7 +4440,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiN_eqQEe2dZbaZEpXSag" name="width">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiN_uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiN_uqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;width&quot;, new String[] { &quot;-w&quot;, &quot;&quot; + width });
 		return this;
@@ -4244,7 +4452,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiOAOqQEe2dZbaZEpXSag" name="height">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiOAeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiOAeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;height&quot;, new String[] { &quot;-h&quot;, &quot;&quot; + height });
 		return this;
@@ -4254,7 +4464,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiOA-qQEe2dZbaZEpXSag" name="quality">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiOBOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiOBOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (quality > 100)
 			quality = 100;
@@ -4268,7 +4480,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiOBuqQEe2dZbaZEpXSag" name="add">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiOB-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiOB-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (add)
 			options.put(&quot;raw&quot;, new String[] { &quot;-r&quot; });
@@ -4284,7 +4498,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiOCuqQEe2dZbaZEpXSag" name="fileName">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiOC-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiOC-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (link)
 			options.put(&quot;latest&quot;, new String[] { &quot;-l&quot;, &quot;&quot; + fileName });
@@ -4297,7 +4513,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiODeqQEe2dZbaZEpXSag" name="time">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiODuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiODuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;timeout&quot;, new String[] { &quot;-t&quot;, &quot;&quot; + time });
 		return this;
@@ -4313,14 +4531,18 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsiOEuqQEe2dZbaZEpXSag" name="quality">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_TsiOE-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiOE-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;thumb&quot;, new String[] { &quot;-th&quot;, &quot;&quot; + x, &quot;:&quot;, &quot;&quot; + y, &quot;:&quot;, &quot;&quot; + quality });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsiOFOqQEe2dZbaZEpXSag" name="turnOffThumbnail" specification="_To-jreqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_TsiOFeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiOFeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;thumb&quot;, new String[] { &quot;-th&quot;, &quot;none&quot; });
 		return this;
@@ -4328,7 +4550,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TsiOFuqQEe2dZbaZEpXSag" name="setEncoding" specification="_TrrSYuqQEe2dZbaZEpXSag">
               <ownedParameter xmi:id="_TsiOF-qQEe2dZbaZEpXSag" name="encoding" type="_TpDcIeqQEe2dZbaZEpXSag"/>
-              <ownedParameter xmi:id="_TsiOGOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_TsiOGOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;encoding&quot;, new String[] { &quot;-e&quot;, encoding.toString() });
 		return this;
@@ -4338,7 +4562,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Tsi1AeqQEe2dZbaZEpXSag" name="camNumber">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_Tsi1AuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsi1AuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>if (camNumber &lt; 0)
 			camNumber = 0;
@@ -4349,42 +4575,54 @@ camera.takeStill(&quot;APicture.jpg&quot;);
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsi1A-qQEe2dZbaZEpXSag" name="enableBurst" specification="_To_KsuqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsi1BOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsi1BOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;burst&quot;, new String[] { &quot;-bm&quot; });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsi1BeqQEe2dZbaZEpXSag" name="disableBurst" specification="_To_Ks-qQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsi1BuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsi1BuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;burst&quot;, null);
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsi1B-qQEe2dZbaZEpXSag" name="setDateTimeOn" specification="_To_KtOqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsi1COqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsi1COqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;datetime&quot;, new String[] { &quot;-dt&quot; });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsi1CeqQEe2dZbaZEpXSag" name="setDateTimeOff" specification="_To_KteqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsi1CuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsi1CuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;datetime&quot;, null);
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsi1C-qQEe2dZbaZEpXSag" name="setTimestampOn" specification="_To_KtuqQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsi1DOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsi1DOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;timestamp&quot;, new String[] { &quot;-ts&quot; });
 		return this;
 	</body>
             </ownedBehavior>
             <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Tsi1DeqQEe2dZbaZEpXSag" name="setTimestampOff" specification="_To_Kt-qQEe2dZbaZEpXSag">
-              <ownedParameter xmi:id="_Tsi1DuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
+              <ownedParameter xmi:id="_Tsi1DuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return">
+                <name xsi:nil="true"/>
+              </ownedParameter>
               <language>java</language>
               <body>options.put(&quot;timestamp&quot;, null);
 		return this;
@@ -4394,7 +4632,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <eAnnotations xmi:id="_To5rIeqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_To5rIuqQEe2dZbaZEpXSag" key="create"/>
               </eAnnotations>
-              <ownedComment xmi:id="_TsnGc-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ-3A_lREe2Zkbv89_xNuQ">
                 <body>Creates new RPiCamera. The resulting RPiCamera's save directory will be set to
      * &quot;/home/pi/Pictures&quot; and will have a default image width and height of 500.
 	 * @throws FailedToRunRaspistillException</body>
@@ -4405,7 +4643,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <eAnnotations xmi:id="_To6SMuqQEe2dZbaZEpXSag" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_To6SM-qQEe2dZbaZEpXSag" key="create"/>
               </eAnnotations>
-              <ownedComment xmi:id="_TsnGdOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eEPlREe2Zkbv89_xNuQ">
                 <body>Creates new RPiCamera and sets its save directory. The resulting RPiCamera will have a
      * default image width and height of 500.
 	 * 
@@ -4418,7 +4656,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_To6SNOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To6SNeqQEe2dZbaZEpXSag" name="takeStill" method="_TsgYy-qQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag _TsACc-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsnGdeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eEflREe2Zkbv89_xNuQ">
                 <body>Takes an image of the specified width and height and saves it under the 
 	 * specified name to the RPiCamera's save directory (&quot;/home/pi/Pictures&quot; by 
 	 * default). The image's encoding will be the same as the RPiCamera's encoding 
@@ -4456,7 +4694,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsACcuqQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To6SOeqQEe2dZbaZEpXSag" name="takeStill" method="_TsgY0OqQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag _TsACc-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsnGduqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eEvlREe2Zkbv89_xNuQ">
                 <body>Takes an image and saves it under the specified name to the RPiCamera's save 
 	 * directory (&quot;/home/pi/Pictures&quot; by default). The image's encoding will be the 
 	 * same as the RPiCamera's encoding setting (JPEG by default).
@@ -4485,7 +4723,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsApgeqQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To6SO-qQEe2dZbaZEpXSag" name="takeBufferedStill" method="_TsgY0-qQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag _TsACc-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsnGd-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eE_lREe2Zkbv89_xNuQ">
                 <body>Takes an image of the specified width and height and stores it in a BufferedImage
 	 * object. The resulting image is NOT saved anywhere in the Pi's memory. The image's 
 	 * encoding will be the same as the RPiCamera's encoding setting (JPEG by default).
@@ -4518,7 +4756,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsApguqQEe2dZbaZEpXSag" type="_Tro2EOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To65QuqQEe2dZbaZEpXSag" name="takeBufferedStill" method="_TsgY1-qQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag _TsACc-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsnGeOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eFPlREe2Zkbv89_xNuQ">
                 <body>Takes an image and stores it in a BufferedImage object. The resulting image is 
 	 * NOT saved anywhere in the Pi's memory. The image's encoding will be the same as 
 	 * the RPiCamera's encoding setting (JPEG by default).
@@ -4542,7 +4780,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsApg-qQEe2dZbaZEpXSag" type="_Tro2EOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To65Q-qQEe2dZbaZEpXSag" name="takeStillAsRGB" method="_TsgY2eqQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsnGeeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eFflREe2Zkbv89_xNuQ">
                 <body>Captures an image and returns the RGB values of that image. Images taken in this manner
 	 * are not encoded, rather rather their RGB values are stored in an int array. Indexes 0 - 2 
 	 * of the array make up the red, green, and blue values of the upper left pixel in the image. 
@@ -4606,7 +4844,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               </ownedParameter>
             </ownedOperation>
             <ownedOperation xmi:id="_To65SuqQEe2dZbaZEpXSag" name="takeStillAsRGB" method="_Tsg_0OqQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntgOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eFvlREe2Zkbv89_xNuQ">
                 <body>Captures an image and returns the RGB values of that image. Images taken in this manner
 	 * are not encoded, rather rather their RGB values are stored in an int array. Indexes 0 - 2 
 	 * of the array make up the red, green, and blue values of the upper left pixel in the image. 
@@ -4662,7 +4900,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               </ownedParameter>
             </ownedOperation>
             <ownedOperation xmi:id="_To7gU-qQEe2dZbaZEpXSag" name="timelapse" method="_Tsg_1OqQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag _TsACc-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntgeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eF_lREe2Zkbv89_xNuQ">
                 <body>Take a series of timelapsed photos for the specified time frame and save them under the 
 	 * specified filename to the RPiCamera's save directory. Length of time to timelapse for may 
 	 * be specified with the {@link #setTimeout(int)} method.
@@ -4717,12 +4955,12 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TsAphOqQEe2dZbaZEpXSag" type="_TrpdIeqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To7gV-qQEe2dZbaZEpXSag" name="stop" method="_Tsg_2eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntguqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eGPlREe2Zkbv89_xNuQ">
                 <body>Stops any raspistill processes being run by RPiCamera.</body>
               </ownedComment>
             </ownedOperation>
             <ownedOperation xmi:id="_To7gWOqQEe2dZbaZEpXSag" name="setSaveDir" method="_Tsg_2uqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntg-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eGflREe2Zkbv89_xNuQ">
                 <body>Sets the RPiCamera's save directory.
 	 * 
 	 * @param saveDir String containing directory for RPiCamera to save images to.</body>
@@ -4733,27 +4971,27 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqEMOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8HYOqQEe2dZbaZEpXSag" name="setToDefaults" method="_Tsg_3eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsnthOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eGvlREe2Zkbv89_xNuQ">
                 <body>Sets all RPiCamera options to their default settings, overriding any previously
 	 * set options.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrqEMeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8HYeqQEe2dZbaZEpXSag" name="turnOffPreview" method="_Tsg_3-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntheqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eG_lREe2Zkbv89_xNuQ">
                 <body>Turns off image preview.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrqEMuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8HYuqQEe2dZbaZEpXSag" name="turnOnPreview" method="_Tsg_4eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsnthuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eHPlREe2Zkbv89_xNuQ">
                 <body>Turns on image preview. Note the preview will be superimposed over the top of 
 	 * any other windows/graphics.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrqEM-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8HY-qQEe2dZbaZEpXSag" name="setFullPreviewOn" method="_Tsg_4-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsnth-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eHflREe2Zkbv89_xNuQ">
                 <body>Runs the preview windows using the full resolution capture mode. Maximum frames 
 	 * per second in this mode is 15fps and the preview will have the same field of view as 
 	 * the capture. Captures should happen more quickly as no mode change should be required. 
@@ -4762,13 +5000,13 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqENOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8HZOqQEe2dZbaZEpXSag" name="setFullPreviewOff" method="_Tsg_5eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntiOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eHvlREe2Zkbv89_xNuQ">
                 <body>Turns off fullpreview mode.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrqENeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8HZeqQEe2dZbaZEpXSag" name="turnOnPreview" method="_Tsg_5-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntieqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eH_lREe2Zkbv89_xNuQ">
                 <body>Defines the size and location on the screen that the preview window will be placed. 
 	 * Note the preview will be superimposed over the top of any other windows/graphics.
 	 * 
@@ -4792,7 +5030,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqENuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8HauqQEe2dZbaZEpXSag" name="setPreviewFullscreen" method="_Tsg_7eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntiuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eIPlREe2Zkbv89_xNuQ">
                 <body>Turn fullscreen preview on or off.
 	 * 
 	 * @param fullscreen turn on/off fullscreen.</body>
@@ -4803,7 +5041,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqEN-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8ucOqQEe2dZbaZEpXSag" name="setPreviewOpacity" method="_Tsg_8OqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsnti-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eIflREe2Zkbv89_xNuQ">
                 <body>Sets the preview window's opacity (0 to 255). Opacity values lower than 0
 	 * will set opacity to 0, values greater than 255 will set opacity to 255.
 	 * 
@@ -4815,7 +5053,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqEOOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8ucuqQEe2dZbaZEpXSag" name="setSharpness" method="_Tsg_8-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntjOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eIvlREe2Zkbv89_xNuQ">
                 <body>Sets sharpness of image (-100 to 100), default value is 0. Sharpness values
 	 * lower than -100 will set sharpness to -100, values greater than 100 will set
 	 * sharpness to 100.
@@ -4828,7 +5066,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqEOeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8udOqQEe2dZbaZEpXSag" name="setContrast" method="_Tsg_9uqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntjeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eI_lREe2Zkbv89_xNuQ">
                 <body>Sets contrast of image (-100 to 100), default value is 0. Contrast values lower
 	 * than -100 will set contrast to -100, values greater than 100 will set contrast
 	 * to 100.
@@ -4841,7 +5079,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqEOuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8uduqQEe2dZbaZEpXSag" name="setBrightness" method="_Tshm4OqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntjuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eJPlREe2Zkbv89_xNuQ">
                 <body>Sets brightness of image (0 to 100), default value is 50. 0 is black, 100 is white.
 	 * Brightness values lower than 0 will set brightness to 0, values greater than 100 will 
 	 * set brightness to 100.
@@ -4854,7 +5092,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqEO-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8ueOqQEe2dZbaZEpXSag" name="setSaturation" method="_Tshm4-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntj-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eJflREe2Zkbv89_xNuQ">
                 <body>Sets colour saturation of image (-100 to 100), default is 0. Saturation values lower
 	 * than -100 will set saturation to -100, values greater than 100 will set saturation to
 	 * 100.
@@ -4867,7 +5105,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqrQOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To8ueuqQEe2dZbaZEpXSag" name="setISO" method="_Tshm5uqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntkOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eJvlREe2Zkbv89_xNuQ">
                 <body>WARNING: OPERATION NOT YET SUPPORTED BY raspistill SOFTWARE. OPTION MAY STILL BE SET, 
 	 * BUT WILL HAVE NO EFFECT ON THE IMAGE UNTIL SUPPORT IS ADDED TO raspistill.&lt;br>
 	 * &lt;br>
@@ -4881,7 +5119,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqrQeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To9VgOqQEe2dZbaZEpXSag" name="setColourEffect" method="_Tshm8uqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntlOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eKvlREe2Zkbv89_xNuQ">
                 <body>Sets colour effect of RPiCamera. The specified U and V parameters (0 to 255) 
 	 * are applied to the U and Y channels of the image. 
 	 * For example, setColourEffect(128, 128) should result in a monochrome image.
@@ -4898,7 +5136,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqrS-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To9Vg-qQEe2dZbaZEpXSag" name="setRotation" method="_Tshm-eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntluqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFIflREe2Zkbv89_xNuQ">
                 <body>Sets the rotation of the image in viewfinder and resulting image. This 
 	 * can take any value from 0 upwards, but due to hardware constraints only 
 	 * 0, 90, 180 and 270 degree rotations are supported.
@@ -4911,31 +5149,31 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSUOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To9VheqQEe2dZbaZEpXSag" name="setHorizontalFlipOn" method="_Tshm_OqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntl-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFIvlREe2Zkbv89_xNuQ">
                 <body>Flips the preview and saved image horizontally.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrrSUeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To9VhuqQEe2dZbaZEpXSag" name="setHorizontalFlipOff" method="_Tshm_uqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntmOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFI_lREe2Zkbv89_xNuQ">
                 <body>Turns off horizontal flip.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrrSUuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To9Vh-qQEe2dZbaZEpXSag" name="setVerticalFlipOn" method="_TshnAOqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntmeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFJPlREe2Zkbv89_xNuQ">
                 <body>Flips the preview and saved image vertically.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrrSU-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To9ViOqQEe2dZbaZEpXSag" name="setVerticalFlipOff" method="_TshnAuqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntmuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFJflREe2Zkbv89_xNuQ">
                 <body>Turns off vertical flip.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrrSVOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To98kOqQEe2dZbaZEpXSag" name="setRegionOfInterest" method="_TsiN8OqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntm-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFJvlREe2Zkbv89_xNuQ">
                 <body>Allows the specification of the area of the sensor to be used as the source 
 	 * for the preview and capture. This is defined as x,y for the top left corner, 
 	 * and a width and height, all values in normalised coordinates (0.0-1.0). \
@@ -4963,7 +5201,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSVeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To98leqQEe2dZbaZEpXSag" name="setShutter" method="_TsiN9uqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntnOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFJ_lREe2Zkbv89_xNuQ">
                 <body>Set the shutter speed to the specified value (in microseconds). There 
 	 * is currently an upper limit of approximately 6000000us (6000ms, 6s). 
 	 * Shutter speed values passed in that are greater than 6000000 will be
@@ -4977,7 +5215,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSVuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To98l-qQEe2dZbaZEpXSag" name="setWidth" method="_TsiN_OqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntnuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFKflREe2Zkbv89_xNuQ">
                 <body>Sets width of images taken by RPiCamera. Note that this setting
 	 * can be overriden by the {@link #takeStill(String, int, int)}  and {@link #takeBufferedStill(int, int)} methods.
 	 * 
@@ -4989,7 +5227,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSWuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To98meqQEe2dZbaZEpXSag" name="setHeight" method="_TsiN_-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntn-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFKvlREe2Zkbv89_xNuQ">
                 <body>Sets height of images taken by the RPiCamera. Note that this settings
      * can be overriden by the {@link #takeStill(String, int, int)}  and {@link #takeBufferedStill(int, int)} methods.
 	 *
@@ -5001,7 +5239,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSW-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To-joOqQEe2dZbaZEpXSag" name="setQuality" method="_TsiOAuqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntoOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFK_lREe2Zkbv89_xNuQ">
                 <body>Sets quality of image (0 to 100), 75 is recommended for usual
 	 * purposes. Quality values lower than 0 will set quality to 0, values
 	 * greater than 100 will set quality to 100.
@@ -5014,7 +5252,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSXOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To-jouqQEe2dZbaZEpXSag" name="setAddRawBayer" method="_TsiOBeqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntoeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFLPlREe2Zkbv89_xNuQ">
                 <body>Appends raw Bayer data from the RPiCamera to the image's JPEG metadata.
 	 * 
 	 * @param add turn on/off bayer data.</body>
@@ -5025,7 +5263,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSXeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To-jpOqQEe2dZbaZEpXSag" name="setLinkLatestImage" method="_TsiOCOqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntouqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFLflREe2Zkbv89_xNuQ">
                 <body>Links latest image to the specified file. Intended for use with timelapse
 	 * photography. Allows the latest image in a series of time lapse photos to 
 	 * be easily accessed while the lapse is still running at the specified file, 
@@ -5043,7 +5281,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSXuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To-jp-qQEe2dZbaZEpXSag" name="setTimeout" method="_TsiODOqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsnto-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFLvlREe2Zkbv89_xNuQ">
                 <body>Sets the RPiCamera's timeout. RPiCamera runs for the specified number of 
 	 * milliseconds before taking the image. Default value is 5 seconds. If timeout 
 	 * value is 0, then RPiCamera will continue to run indefinitely (but can be stopped
@@ -5057,7 +5295,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSX-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To-jqeqQEe2dZbaZEpXSag" name="setThumbnailParams" method="_TsiOD-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntpOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFL_lREe2Zkbv89_xNuQ">
                 <body>Allows specification of the thumbnail image inserted in to the image file. 
 	 * If not specified, defaults are a size of 64x48 at quality 35.
 	 * 
@@ -5077,13 +5315,13 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSYOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To-jreqQEe2dZbaZEpXSag" name="turnOffThumbnail" method="_TsiOFOqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntpeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFMPlREe2Zkbv89_xNuQ">
                 <body>Turns off image thumbnails. Reduces image's file size slightly.</body>
               </ownedComment>
               <ownedParameter xmi:id="_TrrSYeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To_KsOqQEe2dZbaZEpXSag" name="selectCamera" method="_Tsi1AOqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntp-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFMvlREe2Zkbv89_xNuQ">
                 <body>Selects which camera to use (on a multicamera system). 0 or 1. Default is 0.
 	 * Values lower than 0 will select camera 0, values higher than 1 will select
 	 * camera 1.
@@ -5096,7 +5334,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Trr5YOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To_KsuqQEe2dZbaZEpXSag" name="enableBurst" method="_Tsi1A-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntqOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFM_lREe2Zkbv89_xNuQ">
                 <body>Turns on burst mode for RPiCamera. Prevents raspistill from switching
 	 * between preview and capture modes, saving a few 100ms of time for each 
 	 * capture.</body>
@@ -5104,13 +5342,13 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Trr5YeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To_Ks-qQEe2dZbaZEpXSag" name="disableBurst" method="_Tsi1BeqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntqeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFNPlREe2Zkbv89_xNuQ">
                 <body>Turns off burst mode for RPiCamera.</body>
               </ownedComment>
               <ownedParameter xmi:id="_Trr5YuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To_KtOqQEe2dZbaZEpXSag" name="setDateTimeOn" method="_Tsi1B-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntquqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFNflREe2Zkbv89_xNuQ">
                 <body>Replaces output pattern (%d) in save file name with DateTime (MonthDayHourMinSec).
      * E.g.
      *&lt;pre>{@code
@@ -5123,13 +5361,13 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Trr5Y-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To_KteqQEe2dZbaZEpXSag" name="setDateTimeOff" method="_Tsi1CeqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntq-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFNvlREe2Zkbv89_xNuQ">
                 <body>Disables effects of {@link #setDateTimeOn()}. This is default state of {@link RPiCamera}.</body>
               </ownedComment>
               <ownedParameter xmi:id="_Trr5ZOqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To_KtuqQEe2dZbaZEpXSag" name="setTimestampOn" method="_Tsi1C-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntrOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFN_lREe2Zkbv89_xNuQ">
                 <body>Replace output pattern (%d) with unix timestamp (seconds since 1970)
      * E.g.
      *&lt;pre>{@code
@@ -5142,13 +5380,13 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_Trr5ZeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_To_Kt-qQEe2dZbaZEpXSag" name="setTimestampOff" method="_Tsi1DeqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsoUkOqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFOPlREe2Zkbv89_xNuQ">
                 <body>Disables effects of {@link #setTimestampOn()}. This is default state of {@link RPiCamera}.</body>
               </ownedComment>
               <ownedParameter xmi:id="_Trr5ZuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_TrqrQuqQEe2dZbaZEpXSag" name="setExposure" method="_Tshm6eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntkeqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eJ_lREe2Zkbv89_xNuQ">
                 <body>Sets exposure mode of RPiCamera. Certain modes may not be supported
 	 * by raspistill software, depending on camera tuning.
 	 * 
@@ -5158,7 +5396,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqrROqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_TrqrReqQEe2dZbaZEpXSag" name="setAWB" method="_Tshm7OqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntkuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eKPlREe2Zkbv89_xNuQ">
                 <body>Sets Automatic White Balance (AWB) mode. Certain modes may not
 	 * be supported by raspistill software, depending on camera type.
 	 * 
@@ -5168,7 +5406,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqrR-qQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_TrqrSOqQEe2dZbaZEpXSag" name="setImageEffect" method="_Tshm7-qQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_Tsntk-qQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qQ_eKflREe2Zkbv89_xNuQ">
                 <body>Sets an effect to be applied to image. Certain settings may not be 
 	 * supported by raspistill software, depending on circumstances.
 	 * 
@@ -5178,7 +5416,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqrSuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_TrqrTOqQEe2dZbaZEpXSag" name="setMeteringMode" method="_Tshm9uqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntleqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFIPlREe2Zkbv89_xNuQ">
                 <body>Sets metering mode used for preview and capture.
 	 * 
 	 * @param meteringMode a MeteringMode enum specifying the desired mode.</body>
@@ -5187,7 +5425,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrqrTuqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_TrrSV-qQEe2dZbaZEpXSag" name="setDRC" method="_TsiN-eqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntneqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFKPlREe2Zkbv89_xNuQ">
                 <body>Sets the Dynamic Range Compression of image. DRC changes the images by 
 	 * increasing the range of dark areas of the image, and decreasing the 
 	 * brighter areas. This can improve the image in low light areas. 
@@ -5198,7 +5436,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
               <ownedParameter xmi:id="_TrrSWeqQEe2dZbaZEpXSag" type="_To5EGOqQEe2dZbaZEpXSag" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_TrrSYuqQEe2dZbaZEpXSag" name="setEncoding" method="_TsiOFuqQEe2dZbaZEpXSag">
-              <ownedComment xmi:id="_TsntpuqQEe2dZbaZEpXSag">
+              <ownedComment xmi:id="_qRAFMflREe2Zkbv89_xNuQ">
                 <body>Sets the encoding for images. Default is JPG. Note that unaccelerated image 
 	 * types (gif, png, bmp) will take much longer to save than JPG which is hardware 
 	 * accelerated. Also note that the filename suffix is completely ignored when deciding 
@@ -5467,6 +5705,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   <UMLLabProfile:LegacyStyledElement xmi:id="_Tsa5NOqQEe2dZbaZEpXSag" base_Element="_Tsa5M-qQEe2dZbaZEpXSag"/>
   <uml:OpaqueBehavior xmi:id="_TsgYxOqQEe2dZbaZEpXSag" name="getPrevCommand" specification="_TsULguqQEe2dZbaZEpXSag">
     <ownedParameter xmi:id="_TsgYxeqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -5475,6 +5714,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="_Tsi1D-qQEe2dZbaZEpXSag" name="toString" specification="_TpC1GuqQEe2dZbaZEpXSag">
     <ownedParameter xmi:id="_TsjcEOqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -5484,6 +5724,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="_TsjcEeqQEe2dZbaZEpXSag" name="toString" specification="_TpC1IeqQEe2dZbaZEpXSag">
     <ownedParameter xmi:id="_TsjcEuqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -5493,6 +5734,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="_TsjcE-qQEe2dZbaZEpXSag" name="toString" specification="_TpDcJuqQEe2dZbaZEpXSag">
     <ownedParameter xmi:id="_TsjcFOqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -5502,6 +5744,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="_TsjcFeqQEe2dZbaZEpXSag" name="toString" specification="_TpDcNeqQEe2dZbaZEpXSag">
     <ownedParameter xmi:id="_TsjcFuqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -5511,6 +5754,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="_TsjcF-qQEe2dZbaZEpXSag" name="toString" specification="_TpEDSOqQEe2dZbaZEpXSag">
     <ownedParameter xmi:id="_TsjcGOqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -5520,6 +5764,7 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   </uml:OpaqueBehavior>
   <uml:OpaqueBehavior xmi:id="_TsjcGeqQEe2dZbaZEpXSag" name="toString" specification="_TpEqReqQEe2dZbaZEpXSag">
     <ownedParameter xmi:id="_TsjcGuqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
     <language>java</language>
@@ -5531,7 +5776,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
     <ownedParameter xmi:id="_TskDNuqQEe2dZbaZEpXSag" name="encoding">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
-    <ownedParameter xmi:id="_TskDN-qQEe2dZbaZEpXSag" type="_TpHtkOqQEe2dZbaZEpXSag" direction="return"/>
+    <ownedParameter xmi:id="_TskDN-qQEe2dZbaZEpXSag" type="_TpHtkOqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
+    </ownedParameter>
     <language>java</language>
     <body>this.encoding = encoding;
 	        </body>
@@ -5548,7 +5795,9 @@ camera.takeStill(&quot;APicture.jpg&quot;);
     <ownedParameter xmi:id="_TskqMeqQEe2dZbaZEpXSag" name="encoding">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedParameter>
-    <ownedParameter xmi:id="_TskqMuqQEe2dZbaZEpXSag" type="_TpIUpeqQEe2dZbaZEpXSag" direction="return"/>
+    <ownedParameter xmi:id="_TskqMuqQEe2dZbaZEpXSag" type="_TpIUpeqQEe2dZbaZEpXSag" direction="return">
+      <name xsi:nil="true"/>
+    </ownedParameter>
     <language>java</language>
     <body>this.encoding = encoding;
 	        </body>
@@ -5588,5 +5837,21 @@ camera.takeStill(&quot;APicture.jpg&quot;);
   <UMLLabProfile:Reference xmi:id="_TsvpXOqQEe2dZbaZEpXSag" base_Element="_TsvpWuqQEe2dZbaZEpXSag"/>
   <UMLLabProfile:Reference xmi:id="_TswQYuqQEe2dZbaZEpXSag" base_Element="_TswQYOqQEe2dZbaZEpXSag"/>
   <UMLLabProfile:Reference xmi:id="_TswQZeqQEe2dZbaZEpXSag" base_Element="_TswQY-qQEe2dZbaZEpXSag"/>
-  <UMLLabProfile:Patch xmi:id="_Up3_8OqQEe2dZbaZEpXSag" base_Element="_TpHGgeqQEe2dZbaZEpXSag" patchText="@@ -5156,32 +5156,73 @@&#xA; 420(%22yuv420%22);%0A%0A&#xA;+%09        private final String encoding;%0A%0A&#xA; %09        PicEnco&#xA;@@ -5286,32 +5286,113 @@&#xA; ding;%0A%09        %7D&#xA;+%0A%0A%09        public String getEncoding() %7B%0A%09            return encoding;%0A%09        %7D&#xA; %0A%09    %7D%0A%0A%09    /*&#xA;@@ -5716,32 +5716,73 @@&#xA; 420(%22yuv420%22);%0A%0A&#xA;+%09        private final String encoding;%0A%0A&#xA; %09        VidEnco&#xA;@@ -5846,32 +5846,113 @@&#xA; ding;%0A%09        %7D&#xA;+%0A%0A%09        public String getEncoding() %7B%0A%09            return encoding;%0A%09        %7D&#xA; %0A%09    %7D%0A%0A%09    /*&#xA;@@ -9884,32 +9884,75 @@&#xA; e int quality;%0A%09&#xA;+            private PicEncoding encoding;%0A%09&#xA;             priv&#xA;@@ -14084,32 +14084,75 @@&#xA; nt recordTime;%0A%09&#xA;+            private VidEncoding encoding;%0A%09&#xA;             priv&#xA;" conflicting="false"/>
+  <uml:OpaqueBehavior xmi:id="_qQ7zsPlREe2Zkbv89_xNuQ" name="getEncoding" specification="_qQpf0PlREe2Zkbv89_xNuQ">
+    <ownedParameter xmi:id="_qQ8awPlREe2Zkbv89_xNuQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return encoding;
+	        </body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_qQ8awflREe2Zkbv89_xNuQ" name="getEncoding" specification="_qQpf0flREe2Zkbv89_xNuQ">
+    <ownedParameter xmi:id="_qQ8awvlREe2Zkbv89_xNuQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return encoding;
+	        </body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Patch xmi:id="_rvdnMPlREe2Zkbv89_xNuQ" base_Element="_TpHGgeqQEe2dZbaZEpXSag" patchText="@@ -5156,32 +5156,73 @@&#xA; 420(%22yuv420%22);%0A%0A&#xA;+%09        private final String encoding;%0A%0A&#xA; %09        PicEnco&#xA;@@ -5286,32 +5286,113 @@&#xA; ding;%0A%09        %7D&#xA;+%0A%0A%09        public String getEncoding() %7B%0A%09            return encoding;%0A%09        %7D&#xA; %0A%09    %7D%0A%0A%09    /*&#xA;@@ -5716,32 +5716,73 @@&#xA; 420(%22yuv420%22);%0A%0A&#xA;+%09        private final String encoding;%0A%0A&#xA; %09        VidEnco&#xA;@@ -5846,32 +5846,113 @@&#xA; ding;%0A%09        %7D&#xA;+%0A%0A%09        public String getEncoding() %7B%0A%09            return encoding;%0A%09        %7D&#xA; %0A%09    %7D%0A%0A%09    /*&#xA;@@ -9884,32 +9884,75 @@&#xA; e int quality;%0A%09&#xA;+            private PicEncoding encoding;%0A%09&#xA;             priv&#xA;@@ -14084,32 +14084,75 @@&#xA; nt recordTime;%0A%09&#xA;+            private VidEncoding encoding;%0A%09&#xA;             priv&#xA;" conflicting="false"/>
 </xmi:XMI>

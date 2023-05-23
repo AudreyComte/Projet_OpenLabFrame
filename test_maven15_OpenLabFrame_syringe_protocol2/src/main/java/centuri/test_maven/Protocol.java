@@ -1,7 +1,9 @@
 package centuri.test_maven;
 
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -158,13 +160,15 @@ public class Protocol implements Runnable {
 	}
 	
 	public static void exporterProtocol (ArrayList<Event> protocol, String name) {
-        try {
-            FileOutputStream file = new FileOutputStream(name);
-            ObjectOutputStream objStream = new ObjectOutputStream(file);
-            objStream.writeObject(protocol);
-            objStream.close();
-            file.close();
-            System.out.println("The protocol has been exported successfully!");
+		try {
+			FileWriter file = new FileWriter(name+".txt");
+			BufferedWriter output = new BufferedWriter(file);
+			for (int i = 0; i < protocol.size(); i ++) {
+				String expProtocol = protocol.get(i).toString();
+				output.write(expProtocol);
+			}
+		    output.close();
+	        System.out.println("The protocol has been exported successfully!");
         } catch (IOException e) {
             System.out.println("An error occurred while exporting the protocol: " + e.getMessage());
         }
@@ -186,7 +190,6 @@ public class Protocol implements Runnable {
         return protocol;
     }
 
-	
 	
 
 }

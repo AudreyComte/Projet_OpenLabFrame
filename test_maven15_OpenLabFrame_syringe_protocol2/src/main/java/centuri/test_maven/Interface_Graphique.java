@@ -15,6 +15,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.border.LineBorder;
 
 import java.awt.Color;
@@ -37,6 +38,8 @@ import java.util.Vector;
 import javax.swing.JList;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.File;
+
 import javax.swing.ListSelectionModel;
 
 public class Interface_Graphique extends JFrame {
@@ -190,6 +193,26 @@ public class Interface_Graphique extends JFrame {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
 
 		panel_9.add(lblNewLabel_3);
+		
+		
+		JFileChooser fc = new JFileChooser();
+		
+		JButton btnNewButton_JFileChooser = new JButton("To Select a file");
+		btnNewButton_JFileChooser.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int retour = fc.showOpenDialog(contentPane);
+				if (retour == JFileChooser.APPROVE_OPTION) {
+					 File file = fc.getSelectedFile();
+					 btnNewButton_JFileChooser.setText("Selected file : "+ file.getName()+"\n");
+					 Protocol.importerProtocol(file.getName());
+					 System.out.println("Chemin absolu : "+file.getAbsolutePath()+"\n");
+					 } else {
+					 System.out.println("L'ouverture est annulée\n");
+					 }
+				
+			}
+		});
+		panel_9.add(btnNewButton_JFileChooser);
 
 		
 		
