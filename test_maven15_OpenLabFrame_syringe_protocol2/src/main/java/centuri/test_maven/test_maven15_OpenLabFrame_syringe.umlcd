@@ -444,6 +444,9 @@
       <stereotypes xmi:id="_ozbT4flREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozbT4vlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozdJEPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5J9EfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5KkIPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5NAYPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kfDI5eqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_kfDI5uqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kfDI5-qQEe2dZbaZEpXSag" name="Camera">
@@ -615,6 +618,9 @@
       <stereotypes xmi:id="_ozas0PlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozbT4PlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozdJEflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5Iu8foTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5J9EPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5NncPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_keERiOqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_keERieqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_keERiuqQEe2dZbaZEpXSag" name="Arduino">
@@ -709,6 +715,9 @@
       <stereotypes xmi:id="_ozWbYflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozXCcPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozdwIPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5D2cPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5D2cfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5NncfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kcI-1eqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_kcI-1uqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kcI-1-qQEe2dZbaZEpXSag" name="Arduino">
@@ -793,6 +802,9 @@
       <stereotypes xmi:id="_ozciAPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozciAflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozdwIflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5MZUPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5MZUfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5OOgPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kgQp2uqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_kgQp2-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kgQp3OqQEe2dZbaZEpXSag" name="Camera">
@@ -892,6 +904,9 @@
       <stereotypes xmi:id="_ozb68vlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozb68_lREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozeXMPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5LyQPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5LyQfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5OOgfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kfz96uqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_kfz96-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kfz97OqQEe2dZbaZEpXSag" name="Arduino">
@@ -1030,95 +1045,6 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_khcVkOqQEe2dZbaZEpXSag" comments="_qROuoPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qROuoflREe2Zkbv89_xNuQ" name="Camera" associationsIn="_kfCh0OqQEe2dZbaZEpXSag _kfHaUOqQEe2dZbaZEpXSag _kgMYYOqQEe2dZbaZEpXSag">
-    <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGgeqQEe2dZbaZEpXSag"/>
-    <visualProperties xmi:id="_khcVkeqQEe2dZbaZEpXSag" position="1598.0,565.0" size="-1.0,-1.0"/>
-    <stereotypes xmi:id="_rveOQPlREe2Zkbv89_xNuQ" name="Patch">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_rvdnMPlREe2Zkbv89_xNuQ"/>
-    </stereotypes>
-    <visibility xmi:id="_khcVk-qQEe2dZbaZEpXSag" label="+"/>
-    <operations xmi:id="_khcVlOqQEe2dZbaZEpXSag" comments="_qRWqcPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRXRgPlREe2Zkbv89_xNuQ" name="Camera">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGguqQEe2dZbaZEpXSag"/>
-      <keywords xmi:id="_khcVleqQEe2dZbaZEpXSag" keyword="create"/>
-      <visibility xmi:id="_khcVluqQEe2dZbaZEpXSag" label="+"/>
-      <cardinality xmi:id="_khcVl-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_khcVmOqQEe2dZbaZEpXSag">
-        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGheqQEe2dZbaZEpXSag"/>
-        <type xmi:id="_khcVmeqQEe2dZbaZEpXSag" name="Camera">
-          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGgeqQEe2dZbaZEpXSag"/>
-        </type>
-      </outParameters>
-    </operations>
-    <operations xmi:id="_khcVmuqQEe2dZbaZEpXSag" comments="_qRemQPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRemQflREe2Zkbv89_xNuQ" name="takeStill">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGhuqQEe2dZbaZEpXSag"/>
-      <visibility xmi:id="_khcVm-qQEe2dZbaZEpXSag" label="+"/>
-      <cardinality xmi:id="_khcVnOqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-    </operations>
-    <operations xmi:id="_khcVneqQEe2dZbaZEpXSag" comments="_qRhCgPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRhCgflREe2Zkbv89_xNuQ" name="takeVid">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGh-qQEe2dZbaZEpXSag"/>
-      <visibility xmi:id="_khcVnuqQEe2dZbaZEpXSag" label="+"/>
-      <cardinality xmi:id="_khcVn-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-    </operations>
-    <operations xmi:id="_khcVoOqQEe2dZbaZEpXSag" comments="_qRo-UPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRo-UflREe2Zkbv89_xNuQ" name="init">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGiOqQEe2dZbaZEpXSag"/>
-      <visibility xmi:id="_khcVoeqQEe2dZbaZEpXSag" label="-"/>
-      <cardinality xmi:id="_khcVouqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-    </operations>
-    <operations xmi:id="_khcVo-qQEe2dZbaZEpXSag" comments="_qRqzgPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRrakPlREe2Zkbv89_xNuQ" name="takeStill">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx4eqQEe2dZbaZEpXSag"/>
-      <visibility xmi:id="_khcVpOqQEe2dZbaZEpXSag" label="+"/>
-      <cardinality xmi:id="_khcVpeqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_khcVpuqQEe2dZbaZEpXSag">
-        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx4-qQEe2dZbaZEpXSag"/>
-        <type xmi:id="_khcVp-qQEe2dZbaZEpXSag" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_khcVqOqQEe2dZbaZEpXSag" name="config">
-        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx4uqQEe2dZbaZEpXSag"/>
-        <cardinality xmi:id="_khcVqeqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-        <type xmi:id="_khcVquqQEe2dZbaZEpXSag" name="PicConfig">
-          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpJiwOqQEe2dZbaZEpXSag"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_khcVq-qQEe2dZbaZEpXSag" comments="_qR1LkPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qR1LkflREe2Zkbv89_xNuQ" name="takeVid">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx5OqQEe2dZbaZEpXSag"/>
-      <visibility xmi:id="_khcVrOqQEe2dZbaZEpXSag" label="+"/>
-      <cardinality xmi:id="_khcVreqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_khcVruqQEe2dZbaZEpXSag">
-        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx5uqQEe2dZbaZEpXSag"/>
-        <type xmi:id="_khcVr-qQEe2dZbaZEpXSag" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_khcVsOqQEe2dZbaZEpXSag" name="config">
-        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx5eqQEe2dZbaZEpXSag"/>
-        <cardinality xmi:id="_khcVseqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-        <type xmi:id="_khcVsuqQEe2dZbaZEpXSag" name="VidConfig">
-          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpL_AOqQEe2dZbaZEpXSag"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_khcVs-qQEe2dZbaZEpXSag" name="callBash">
-      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TsCesOqQEe2dZbaZEpXSag"/>
-      <visibility xmi:id="_khcVtOqQEe2dZbaZEpXSag" label="+"/>
-      <cardinality xmi:id="_khcVteqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_khcVtuqQEe2dZbaZEpXSag">
-        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TsCesuqQEe2dZbaZEpXSag"/>
-        <type xmi:id="_khcVt-qQEe2dZbaZEpXSag" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_khcVuOqQEe2dZbaZEpXSag" name="processBuilder">
-        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TsCeseqQEe2dZbaZEpXSag"/>
-        <cardinality xmi:id="_khcVueqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
-        <type xmi:id="_khcVuuqQEe2dZbaZEpXSag" name="ProcessBuilder">
-          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Tr_bYuqQEe2dZbaZEpXSag"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_kbQOAOqQEe2dZbaZEpXSag" name="Coordinate_Field" associationsOut="_kbOY0OqQEe2dZbaZEpXSag">
     <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TopzheqQEe2dZbaZEpXSag"/>
     <visualProperties xmi:id="_kbQOAeqQEe2dZbaZEpXSag" position="299.0,1278.0" size="-1.0,-1.0"/>
@@ -1131,6 +1057,9 @@
       <stereotypes xmi:id="_ozV0UflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozWbYPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozeXMflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5DPYPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5DPYfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5PcoPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kbQOBeqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_kbQOBuqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kbQOB-qQEe2dZbaZEpXSag" name="Field">
@@ -1387,6 +1316,9 @@
       <stereotypes xmi:id="_ozT_IPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozUmMPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozeXMvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H4-98PoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5AzIPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5PcofoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_katbdeqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_katbduqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_katbd-qQEe2dZbaZEpXSag" name="SerialPort">
@@ -1412,6 +1344,9 @@
       <stereotypes xmi:id="_ozUmMflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozUmMvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_oze-QPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5BaMPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5BaMfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5QqwPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_katbf-qQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_katbgOqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_katbgeqQEe2dZbaZEpXSag" name="DataOutputStream">
@@ -1426,6 +1361,9 @@
       <stereotypes xmi:id="_ozVNQPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozVNQflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_oze-QflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5CBQPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5CBQfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5RR0PoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_katbhOqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_katbheqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_katbhuqQEe2dZbaZEpXSag" name="OutputStream">
@@ -1440,6 +1378,9 @@
       <stereotypes xmi:id="_ozVNQvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozV0UPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_oze-QvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5CoUPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5CoUfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5R44PoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_katbieqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_katbiuqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_katbi-qQEe2dZbaZEpXSag" name="InputStream">
@@ -1540,6 +1481,9 @@
       <stereotypes xmi:id="_ozXCcflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozXCcvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozflUPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5EdgPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5EdgfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5R44foTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kctmleqQEe2dZbaZEpXSag" label="-"/>
       <cardinality xmi:id="_kctmluqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kctml-qQEe2dZbaZEpXSag" name="JPanel">
@@ -1554,6 +1498,9 @@
       <stereotypes xmi:id="_ozXpgPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozXpgflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozflUflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5FEkPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5FEkfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5Sf8PoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kctmmuqQEe2dZbaZEpXSag" label="-"/>
       <cardinality xmi:id="_kctmm-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kctmnOqQEe2dZbaZEpXSag" name="JTextField">
@@ -1568,6 +1515,9 @@
       <stereotypes xmi:id="_ozXpgvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozYQkPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozflUvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5FroPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5FrofoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5THAPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kctmn-qQEe2dZbaZEpXSag" label="-"/>
       <cardinality xmi:id="_kctmoOqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kctmoeqQEe2dZbaZEpXSag" name="JTextField">
@@ -1582,6 +1532,9 @@
       <stereotypes xmi:id="_ozYQkflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozYQkvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozgMYPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5GSsPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5GSsfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5THAfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kctmpOqQEe2dZbaZEpXSag" label="-"/>
       <cardinality xmi:id="_kctmpeqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kctmpuqQEe2dZbaZEpXSag" name="JTextField">
@@ -1596,6 +1549,9 @@
       <stereotypes xmi:id="_ozY3oPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozY3oflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozgMYflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5G5wPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5G5wfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5TuEPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kctmqeqQEe2dZbaZEpXSag" label="-"/>
       <cardinality xmi:id="_kctmquqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kctmq-qQEe2dZbaZEpXSag" name="JTextField">
@@ -1610,6 +1566,9 @@
       <stereotypes xmi:id="_ozZesPlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozZesflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozgMYvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5Hg0PoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5Hg0foTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5TuEfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kctmruqQEe2dZbaZEpXSag" label="-"/>
       <cardinality xmi:id="_kctmr-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kctmsOqQEe2dZbaZEpXSag" name="JTextField">
@@ -1659,6 +1618,12 @@
       <stereotypes xmi:id="_ozaFwvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozgzcPlREe2Zkbv89_xNuQ" name="Generics"/>
       <stereotypes xmi:id="_ozgzcflREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5IH4PoTEe2a46FF5dbWHg" name="Generics"/>
+      <stereotypes xmi:id="_H5IH4foTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5IH4voTEe2a46FF5dbWHg" name="Generics"/>
+      <stereotypes xmi:id="_H5Iu8PoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5UVIPoTEe2a46FF5dbWHg" name="Generics"/>
+      <stereotypes xmi:id="_H5UVIfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kdRANuqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_kdRAN-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kdRAOOqQEe2dZbaZEpXSag" name="ArrayList">
@@ -1873,6 +1838,9 @@
       <stereotypes xmi:id="_ozb68PlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozb68flREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_ozgzcvlREe2Zkbv89_xNuQ" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5LLMPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5LLMfoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_H5U8MPoTEe2a46FF5dbWHg" name="LegacyStyledElement"/>
       <visibility xmi:id="_kfJ2leqQEe2dZbaZEpXSag" label="~"/>
       <cardinality xmi:id="_kfJ2luqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
       <type xmi:id="_kfJ2l-qQEe2dZbaZEpXSag" name="Camera">
@@ -2186,6 +2154,95 @@
         <cardinality xmi:id="_kbs6T-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
         <type xmi:id="_kbs6UOqQEe2dZbaZEpXSag" name="Double">
           <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Tr4GouqQEe2dZbaZEpXSag"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_khcVkOqQEe2dZbaZEpXSag" comments="_qROuoPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qROuoflREe2Zkbv89_xNuQ" name="Camera" associationsIn="_kfCh0OqQEe2dZbaZEpXSag _kfHaUOqQEe2dZbaZEpXSag _kgMYYOqQEe2dZbaZEpXSag">
+    <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGgeqQEe2dZbaZEpXSag"/>
+    <visualProperties xmi:id="_khcVkeqQEe2dZbaZEpXSag" position="1598.0,565.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_rveOQPlREe2Zkbv89_xNuQ" name="Patch">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_rvdnMPlREe2Zkbv89_xNuQ"/>
+    </stereotypes>
+    <visibility xmi:id="_khcVk-qQEe2dZbaZEpXSag" label="+"/>
+    <operations xmi:id="_khcVlOqQEe2dZbaZEpXSag" comments="_qRWqcPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRXRgPlREe2Zkbv89_xNuQ" name="Camera">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGguqQEe2dZbaZEpXSag"/>
+      <keywords xmi:id="_khcVleqQEe2dZbaZEpXSag" keyword="create"/>
+      <visibility xmi:id="_khcVluqQEe2dZbaZEpXSag" label="+"/>
+      <cardinality xmi:id="_khcVl-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_khcVmOqQEe2dZbaZEpXSag">
+        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGheqQEe2dZbaZEpXSag"/>
+        <type xmi:id="_khcVmeqQEe2dZbaZEpXSag" name="Camera">
+          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGgeqQEe2dZbaZEpXSag"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_khcVmuqQEe2dZbaZEpXSag" comments="_qRemQPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRemQflREe2Zkbv89_xNuQ" name="takeStill">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGhuqQEe2dZbaZEpXSag"/>
+      <visibility xmi:id="_khcVm-qQEe2dZbaZEpXSag" label="+"/>
+      <cardinality xmi:id="_khcVnOqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_khcVneqQEe2dZbaZEpXSag" comments="_qRhCgPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRhCgflREe2Zkbv89_xNuQ" name="takeVid">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGh-qQEe2dZbaZEpXSag"/>
+      <visibility xmi:id="_khcVnuqQEe2dZbaZEpXSag" label="+"/>
+      <cardinality xmi:id="_khcVn-qQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_khcVoOqQEe2dZbaZEpXSag" comments="_qRo-UPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRo-UflREe2Zkbv89_xNuQ" name="init">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpHGiOqQEe2dZbaZEpXSag"/>
+      <visibility xmi:id="_khcVoeqQEe2dZbaZEpXSag" label="-"/>
+      <cardinality xmi:id="_khcVouqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_khcVo-qQEe2dZbaZEpXSag" comments="_qRqzgPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qRrakPlREe2Zkbv89_xNuQ" name="takeStill">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx4eqQEe2dZbaZEpXSag"/>
+      <visibility xmi:id="_khcVpOqQEe2dZbaZEpXSag" label="+"/>
+      <cardinality xmi:id="_khcVpeqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_khcVpuqQEe2dZbaZEpXSag">
+        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx4-qQEe2dZbaZEpXSag"/>
+        <type xmi:id="_khcVp-qQEe2dZbaZEpXSag" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_khcVqOqQEe2dZbaZEpXSag" name="config">
+        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx4uqQEe2dZbaZEpXSag"/>
+        <cardinality xmi:id="_khcVqeqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+        <type xmi:id="_khcVquqQEe2dZbaZEpXSag" name="PicConfig">
+          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpJiwOqQEe2dZbaZEpXSag"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_khcVq-qQEe2dZbaZEpXSag" comments="_qR1LkPlREe2Zkbv89_xNuQ" targetConnectionVisual="_qR1LkflREe2Zkbv89_xNuQ" name="takeVid">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx5OqQEe2dZbaZEpXSag"/>
+      <visibility xmi:id="_khcVrOqQEe2dZbaZEpXSag" label="+"/>
+      <cardinality xmi:id="_khcVreqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_khcVruqQEe2dZbaZEpXSag">
+        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx5uqQEe2dZbaZEpXSag"/>
+        <type xmi:id="_khcVr-qQEe2dZbaZEpXSag" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_khcVsOqQEe2dZbaZEpXSag" name="config">
+        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Trwx5eqQEe2dZbaZEpXSag"/>
+        <cardinality xmi:id="_khcVseqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+        <type xmi:id="_khcVsuqQEe2dZbaZEpXSag" name="VidConfig">
+          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TpL_AOqQEe2dZbaZEpXSag"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_khcVs-qQEe2dZbaZEpXSag" name="callBash">
+      <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TsCesOqQEe2dZbaZEpXSag"/>
+      <visibility xmi:id="_khcVtOqQEe2dZbaZEpXSag" label="+"/>
+      <cardinality xmi:id="_khcVteqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_khcVtuqQEe2dZbaZEpXSag">
+        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TsCesuqQEe2dZbaZEpXSag"/>
+        <type xmi:id="_khcVt-qQEe2dZbaZEpXSag" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_khcVuOqQEe2dZbaZEpXSag" name="processBuilder">
+        <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_TsCeseqQEe2dZbaZEpXSag"/>
+        <cardinality xmi:id="_khcVueqQEe2dZbaZEpXSag" label="1" max="1" min="1"/>
+        <type xmi:id="_khcVuuqQEe2dZbaZEpXSag" name="ProcessBuilder">
+          <modelElement href="test_maven15_OpenLabFrame_syringe.uml#_Tr_bYuqQEe2dZbaZEpXSag"/>
         </type>
       </parameters>
     </operations>

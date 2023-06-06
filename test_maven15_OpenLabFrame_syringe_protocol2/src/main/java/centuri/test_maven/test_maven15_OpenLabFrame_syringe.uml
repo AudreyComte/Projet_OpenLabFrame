@@ -2306,10 +2306,10 @@
             </ownedParameter>
           </ownedOperation>
           <ownedOperation xmi:id="_TsCesOqQEe2dZbaZEpXSag" name="callBash" method="_TskDMeqQEe2dZbaZEpXSag" raisedException="_TrY-c-qQEe2dZbaZEpXSag _TsACc-qQEe2dZbaZEpXSag">
-            <ownedParameter xmi:id="_TsCeseqQEe2dZbaZEpXSag" name="processBuilder" type="_Tr_bYuqQEe2dZbaZEpXSag"/>
             <ownedParameter xmi:id="_TsCesuqQEe2dZbaZEpXSag" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
             </ownedParameter>
+            <ownedParameter xmi:id="_TsCeseqQEe2dZbaZEpXSag" name="processBuilder" type="_Tr_bYuqQEe2dZbaZEpXSag"/>
           </ownedOperation>
           <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_TpHtkOqQEe2dZbaZEpXSag" name="PicEncoding">
             <ownedComment xmi:id="_qRAsPPlREe2Zkbv89_xNuQ">

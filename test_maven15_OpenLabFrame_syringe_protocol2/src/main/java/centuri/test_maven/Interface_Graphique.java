@@ -245,6 +245,7 @@ public class Interface_Graphique extends JFrame {
 
 		JLabel lblNewLabel_Mouvement = new JLabel("Mouvement");
 		lblNewLabel_Mouvement.setHorizontalAlignment(SwingConstants.CENTER);
+		panel_.setBorder(new LineBorder(new Color(128, 128, 128), 1, true));
 		panel_Mouvement.add(lblNewLabel_Mouvement);
 
 		JPanel panel = new JPanel();
