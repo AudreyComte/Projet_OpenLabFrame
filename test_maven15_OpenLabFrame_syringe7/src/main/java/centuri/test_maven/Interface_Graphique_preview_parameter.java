@@ -663,6 +663,16 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 						panel_27.add(lblNewLabel);
 						
 						JButton btnNewButton_6 = new JButton("Set as A1");
+						btnNewButton_6.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								coordinate.set_A1_x(counter_x.get_Counter());
+								System.out.println("A1 X = " + counter_x.get_Counter());
+								coordinate.set_A1_y(counter_y.get_Counter());
+								System.out.println("A1 Y = " + counter_y.get_Counter());
+								coordinate.set_A1_z(counter_z.get_Counter());
+								System.out.println("A1 Z = " + counter_z.get_Counter());
+							}
+						});
 						btnNewButton_6.setFont(new Font("Dialog", Font.BOLD, 11));
 						btnNewButton_6.setForeground(Color.WHITE);
 						btnNewButton_6.setBackground(Color.MAGENTA);

@@ -754,12 +754,23 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		panel_16.setLayout(new GridLayout(1, 2, 5, 0));
 		
 		JButton btnNewButton_6 = new JButton("Set as A1");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				coordinate.set_A1_x(counter_x.get_Counter());
+				System.out.println("A1 X = " + counter_x.get_Counter());
+				coordinate.set_A1_y(counter_y.get_Counter());
+				System.out.println("A1 Y = " + counter_y.get_Counter());
+				coordinate.set_A1_z(counter_z.get_Counter());
+				System.out.println("A1 Z = " + counter_z.get_Counter());
+			}
+		});
 		panel_16.add(btnNewButton_6);
 		btnNewButton_6.setFont(new Font("Dialog", Font.BOLD, 11));
 		btnNewButton_6.setForeground(Color.WHITE);
 		btnNewButton_6.setBackground(Color.MAGENTA);
 		
 		JButton btnNewButton_7 = new JButton("Set as position");
+		
 		panel_16.add(btnNewButton_7);
 		btnNewButton_7.setFont(new Font("Dialog", Font.BOLD, 11));
 		btnNewButton_7.setBackground(Color.ORANGE);
@@ -941,6 +952,15 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		JScrollPane scrollPane = new JScrollPane(list_2);
 		panel_22.add(scrollPane);
 		
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				listData_2.addElement("position " + (listData_2.size()+1)+ " (x = "+ counter_x.get_Counter()+ "; y = "+ counter_y.get_Counter() +"; z = "+ counter_z.get_Counter() +" ) \n");
+				tx.add(counter_x.get_Counter());
+				ty.add(counter_y.get_Counter());
+				tz.add(counter_z.get_Counter());
+				comboBox_1.addItem((listData_2.size())+"");
+			}
+		});
 	
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
