@@ -1048,8 +1048,8 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 				panel_timeTotal.add(btnNewButton_8);
 				btnNewButton_8.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						
-						int count = listData_2.getSize();
+					
+						int count = listData_2.getSize()-1;
 						int size = listData.getSize();
 						for (int i = 0; i < count; i++) {
 							for (int j = 0; j < size; j++) {
@@ -1060,6 +1060,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 
 						int l = 1;
 						for (int k = 0; k < listData.getSize(); k++) {
+							
 							if (listData.getElementAt(k).toString().contains("position") == true) {
 								listData.remove(k);
 								listData.add(k, "position "+l);
@@ -1068,6 +1069,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 								double coordinate_z = tz.get(l);
 								data.set(k + 1, new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino));
 								l++;
+								System.out.println(data.get(l));
 							}
 						}
 						
