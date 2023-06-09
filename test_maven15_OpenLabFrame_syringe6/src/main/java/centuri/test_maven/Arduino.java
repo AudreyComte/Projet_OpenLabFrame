@@ -36,6 +36,10 @@ public class Arduino {
 	public Arduino(String port) {
 		this.port = port;
 	}
+	
+	public String get_port() {
+		return this.port;
+	}
 
 	// method Start : ouverture du port donné en argument
 

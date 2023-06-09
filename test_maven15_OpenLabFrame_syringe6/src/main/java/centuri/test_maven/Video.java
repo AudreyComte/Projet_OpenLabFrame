@@ -16,6 +16,10 @@ public class Video extends Event {
 		this.record_Time = record_Time;
 		this.myCamera = myCamera;
 	}
+	
+	public int get_record_time() {
+		return this.record_Time;
+	}
 
 	@Override
 	public boolean toDo() {

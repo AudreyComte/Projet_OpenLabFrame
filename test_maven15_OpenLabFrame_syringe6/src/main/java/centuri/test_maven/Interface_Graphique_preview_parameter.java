@@ -31,6 +31,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.print.DocFlavor.URL;
 import javax.sql.rowset.serial.SerialException;
 import javax.swing.AbstractListModel;
@@ -42,7 +43,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -177,7 +182,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		Counter counter2_y =new Counter(0.0);
 		Counter counter2_z =new Counter(0.0);
 		
-		JPanel panel_Moving = new JPanel();
+		JPanel panel_Moving =new JPanel();
 		tabbedPane.addTab("Preview", null, panel_Moving, null);
 		panel_Moving.setLayout(new BorderLayout(0, 5));
 		
@@ -634,12 +639,23 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 						btn_moins_Z.setBackground(Color.CYAN);
 						
 						JPanel panel_18 = new JPanel();
-						panel_18.setBorder(new LineBorder(new Color(192, 192, 192), 2, true));
 						panel.add(panel_18, BorderLayout.EAST);
-						panel_18.setLayout(new GridLayout(0, 1, 0, 0));
+						panel_18.setLayout(new BorderLayout(0, 0));
 						
 						JLabel lblNewLabel = new JLabel("                                                          ");
-						panel_18.add(lblNewLabel);
+						panel_18.add(lblNewLabel, BorderLayout.NORTH);
+						
+						JPanel panel_27 = new JPanel();
+						panel_18.add(panel_27, BorderLayout.SOUTH);
+						panel_27.setLayout(new GridLayout(0, 2, 5, 0));
+						
+						JLabel lblNewLabel_3 = new JLabel("6 well plate");
+						lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+						panel_27.add(lblNewLabel_3);
+						
+						JLabel lblNewLabel_4 = new JLabel("Mouvement");
+						lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+						panel_27.add(lblNewLabel_4);
 						
 					
 									
@@ -1010,42 +1026,164 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 
 		JPanel panel_list3 = new JPanel();
 		panel_list2.add(panel_list3);
-		panel_list3.setLayout(new GridLayout(2, 1, 0, 10));
-
-		JPanel panel_remove_apply = new JPanel();
-		panel_list3.add(panel_remove_apply);
-
-		
-		// Bouton "Remouve"
-		JButton btnNewButton_remove = new JButton("Remove");
-		btnNewButton_remove.setBackground(Color.ORANGE);
-		btnNewButton_remove.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				int selectedIndex = list.getSelectedIndex();
-				listData.remove(selectedIndex);
-				data.remove(selectedIndex + 1);
-			}
-		});
-
-		
-		// Button "Apply to all well"
-		JButton btnNewButton_applyAll = new JButton("Apply to all well"); 
-		btnNewButton_applyAll.setForeground(Color.WHITE);
-		btnNewButton_applyAll.setBackground(Color.MAGENTA);
-		btnNewButton_applyAll.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				coordinate.apply_all(listData, data, arduino);
-			}
-		});
-		panel_remove_apply.setLayout(new GridLayout(0, 1, 0, 5));
-		panel_remove_apply.add(btnNewButton_applyAll);
-		panel_remove_apply.add(btnNewButton_remove);
+		panel_list3.setLayout(new GridLayout(1, 1, 0, 10));
 
 		JPanel panel_timeTotal = new JPanel();
 		panel_list3.add(panel_timeTotal);
-		panel_timeTotal.setLayout(new GridLayout(0, 1, 0, 0));
+		panel_timeTotal.setLayout(new GridLayout(6, 1, 0, 5));
+				
+						
+			            // Button "Apply to all well"
+						JButton btnNewButton_applyAll = new JButton("Apply to all well"); 
+						panel_timeTotal.add(btnNewButton_applyAll);
+						btnNewButton_applyAll.setForeground(Color.WHITE);
+						btnNewButton_applyAll.setBackground(Color.MAGENTA);
+						btnNewButton_applyAll.addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								coordinate.apply_all_well(listData, data, arduino);
+							}
+						});
+				
+				JButton btnNewButton_8 = new JButton("Apply to all mouvement");
+				panel_timeTotal.add(btnNewButton_8);
+				btnNewButton_8.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						
+						int count = listData_2.getSize();
+						int size = listData.getSize();
+						for (int i = 0; i < count; i++) {
+							for (int j = 0; j < size; j++) {
+								listData.addElement(listData.getElementAt(j));
+								data.add(data.get(j + 1));
+							}
+						}
+
+						int l = 1;
+						for (int k = 0; k < listData.getSize(); k++) {
+							if (listData.getElementAt(k).toString().contains("position") == true) {
+								listData.remove(k);
+								listData.add(k, "position "+l);
+								double coordinate_x = tx.get(l);
+								double coordinate_y = ty.get(l);
+								double coordinate_z = tz.get(l);
+								data.set(k + 1, new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino));
+								l++;
+							}
+						}
+						
+					}
+				});
+				btnNewButton_8.setBackground(Color.ORANGE);
+		
+				
+				// Bouton "Remouve" +
+				JButton btnNewButton_remove = new JButton("Remove");
+				panel_timeTotal.add(btnNewButton_remove);
+				btnNewButton_remove.setBackground(Color.LIGHT_GRAY);
+				btnNewButton_remove.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						int selectedIndex = list.getSelectedIndex();
+						listData.remove(selectedIndex);
+						data.remove(selectedIndex + 1);
+					}
+				});
+				
+				
+				JFrame frame = new JFrame("Save as");
+		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		        JButton btnNewButton_9 = new JButton("Save");
+				btnNewButton_9.addActionListener(new ActionListener() {
+		            @Override
+		            public void actionPerformed(ActionEvent e) {
+		                JFileChooser fileChooser = new JFileChooser();
+		                int result = fileChooser.showSaveDialog(frame);
+		                if (result == JFileChooser.APPROVE_OPTION) {
+		                    try {
+		                        String filePath = fileChooser.getSelectedFile().getAbsolutePath();
+		                        BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+		                        for (Event obj : data) {
+		                        	
+		                            if (obj instanceof Event) {
+		                            	
+		                                Event event = (Event) obj;
+		                                
+		                                if (event instanceof Mouvement) {
+		                                    Mouvement mouvement = (Mouvement) event;
+		                                    String info = "Mouvement" + "\n" + mouvement.get_coordinate_x().toString() + "\n"+ mouvement.get_coordinate_y().toString() +"\n"+ mouvement.get_coordinate_z().toString() +"\n"+ mouvement.get_myArduino().get_port() +"\n";
+		                                    writer.write(info);
+		                                }
+		                                if (event instanceof Picture) {
+		                                    Picture picture = (Picture) event;
+		                                    String info = "Picture" + "\n";
+		                                    writer.write(info);
+		                                }
+		                                if (event instanceof Video) {
+		                                    Video video = (Video) event;
+		                                    String info = "Video" + "\n" + video.get_record_time() +"\n";
+		                                    writer.write(info);
+		                                }
+		                                if (event instanceof Pause) {
+		                                    Pause pause = (Pause) event;
+		                                    String info = "Pause" + "\n" + pause.get_pause() + "\n";
+		                                    writer.write(info);
+		                                }
+		                                if (event instanceof Syringe) {
+		                                    Syringe syringe = (Syringe) event;
+		                                    String info = "Syringe" + "\n" + syringe.get_volum() +"\n" + syringe.get_myArduino().get_port() +"\n";
+		                                    writer.write(info);
+		                                }
+		                   
+		                                }
+		                            }
+
+		                        writer.close();
+		                        
+		                    } catch (IOException ex) {
+		                        ex.printStackTrace();
+		                    }
+		                }
+		            }
+		        });
+
+
+		        frame.pack();
+		        frame.setVisible(true);
+		    
+		
+		      
+		panel_timeTotal.add(btnNewButton_9);
+		
+		JButton btnNewButton_10 = new JButton("Import");
+		btnNewButton_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFileChooser fileChooser = new JFileChooser();
+				int result = fileChooser.showOpenDialog(null); 
+				if (result == JFileChooser.APPROVE_OPTION) {
+				    File selectedFile = fileChooser.getSelectedFile();
+				try (BufferedReader reader = new BufferedReader(new FileReader(selectedFile))) {
+					data.clear();
+				    StringBuilder content = new StringBuilder();
+				    String line;
+				    while ((line = reader.readLine()) != null) {
+				        content.append(line).append("\n");
+				        if (line.contentEquals("Mouvement")) {
+				        	Mouvement mouvement = new Mouvement(0.0,0.0,0.0,arduino);
+				        	data.add(mouvement);
+				        }
+	                    
+				       
+				    }
+				} catch (IOException a) {
+				    a.printStackTrace();
+				}
+			}
+		   }
+		});
+		panel_timeTotal.add(btnNewButton_10);
 
 		JLabel lblNewLabel_timeTotal = new JLabel("Total time : ");
+		lblNewLabel_timeTotal.setVerticalAlignment(SwingConstants.TOP);
 		lblNewLabel_timeTotal.setHorizontalAlignment(SwingConstants.LEFT);
 
 		panel_timeTotal.add(lblNewLabel_timeTotal);
@@ -1496,5 +1634,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 				protocol.stop();
 			}
 		});
+			
+		
 	}
 }

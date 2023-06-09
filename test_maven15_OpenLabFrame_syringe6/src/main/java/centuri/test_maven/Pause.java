@@ -13,6 +13,10 @@ int pause;
 		this.pause = pause;
 	}
 	
+	public int get_pause() {
+		return this.pause;
+	}
+	
 	
 	@Override
 	public boolean toDo() {

@@ -25,6 +25,22 @@ public class Mouvement extends Event {
 		this.coordinate_z = coordinate_z;
 		this.myArduino = myArduino;
 	}
+	
+	public Double get_coordinate_x() {
+		return this.coordinate_x;
+	}
+	
+	public Double get_coordinate_y() {
+		return this.coordinate_y;
+	}
+	
+	public Double get_coordinate_z() {
+		return this.coordinate_z;
+	}
+	
+	public Arduino get_myArduino() {
+		return this.myArduino;
+	}
 
 	
 	@Override

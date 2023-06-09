@@ -14,6 +14,14 @@ public class Syringe extends Event {
 		this.volum = volum;
 		this.myArduino = myArduino;
 	}
+	
+	public int get_volum () {
+		return this.volum;
+	}
+	
+	public Arduino get_myArduino() {
+		return this.myArduino;
+	}
 
 	@Override
 	public boolean toDo() {
