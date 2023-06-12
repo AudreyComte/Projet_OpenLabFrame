@@ -1069,7 +1069,6 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 								double coordinate_z = tz.get(l);
 								data.set(k + 1, new Mouvement(coordinate_x, coordinate_y, coordinate_z, arduino));
 								l++;
-								System.out.println(data.get(l));
 							}
 						}
 						
