@@ -38,6 +38,7 @@ public class Cross extends JFrame {
 	public Cross() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(800,200,1000,1000);
+		setAlwaysOnTop(true);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setForeground(Color.WHITE);

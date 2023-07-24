@@ -944,9 +944,10 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		btnNewButton_Start.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Cross point = new Cross();
-				ControllerCamera controller_cam = new ControllerCamera();
-				Thread t = new Thread(controller_cam);
-				t.start();
+				point.Cross();
+				//ControllerCamera controller_cam = new ControllerCamera();
+				//Thread t = new Thread(controller_cam);
+				//t.start();
 			}
 		});
 		btnNewButton_Start.setForeground(new Color(0, 0, 0));
@@ -982,7 +983,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		
 		JPanel panel_parameter2 = new JPanel();
 		tabbedPane.addTab("Parameter", null, panel_parameter2, null);
-		panel_parameter2.setLayout(new BorderLayout(0, 0));
+		panel_parameter2.setLayout(new BorderLayout(15, 15));
 		
 		
 		
@@ -1030,11 +1031,11 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 
 		JPanel panel_timeTotal = new JPanel();
 		panel_list3.add(panel_timeTotal);
-		panel_timeTotal.setLayout(new GridLayout(6, 1, 0, 5));
+		panel_timeTotal.setLayout(new GridLayout(5, 1, 0, 5));
 				
 						
 			            // Button "Apply to all well"
-						JButton btnNewButton_applyAll = new JButton("Apply to all well"); 
+						JButton btnNewButton_applyAll = new JButton("Apply to all WELL"); 
 						panel_timeTotal.add(btnNewButton_applyAll);
 						btnNewButton_applyAll.setForeground(Color.WHITE);
 						btnNewButton_applyAll.setBackground(Color.MAGENTA);
@@ -1044,7 +1045,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 							}
 						});
 				
-				JButton btnNewButton_8 = new JButton("Apply to all mouvement");
+				JButton btnNewButton_8 = new JButton("Apply to all MOUVEMENT");
 				panel_timeTotal.add(btnNewButton_8);
 				btnNewButton_8.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -1075,12 +1076,36 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 					}
 				});
 				btnNewButton_8.setBackground(Color.ORANGE);
+				
+				
+				JFrame frame = new JFrame("Save as");
+		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+		        frame.pack();
+		        frame.setVisible(true);
+				
+				JPanel panel_32 = new JPanel();
+				panel_timeTotal.add(panel_32);
+				panel_32.setLayout(new GridLayout(1, 2, 5, 0));
 		
 				
 				// Bouton "Remouve" +
 				JButton btnNewButton_remove = new JButton("Remove");
-				panel_timeTotal.add(btnNewButton_remove);
-				btnNewButton_remove.setBackground(Color.LIGHT_GRAY);
+				btnNewButton_remove.setForeground(new Color(255, 255, 255));
+				panel_32.add(btnNewButton_remove);
+				btnNewButton_remove.setBackground(new Color(147, 112, 219));
+				
+				JButton btnNewButton_11 = new JButton("Clear all");
+				btnNewButton_11.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						data.clear();
+						listData.clear();
+					}
+				});
+				btnNewButton_11.setForeground(Color.WHITE);
+				btnNewButton_11.setBackground(new Color(199, 21, 133));
+				panel_32.add(btnNewButton_11);
 				btnNewButton_remove.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						int selectedIndex = list.getSelectedIndex();
@@ -1088,13 +1113,41 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 						data.remove(selectedIndex + 1);
 					}
 				});
-				
-				
-				JFrame frame = new JFrame("Save as");
-		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		        JButton btnNewButton_9 = new JButton("Save");
-				btnNewButton_9.addActionListener(new ActionListener() {
+		
+		JPanel panel_33 = new JPanel();
+		panel_timeTotal.add(panel_33);
+				        panel_33.setLayout(new GridLayout(1, 2, 5, 0));
+		
+				        JButton btnNewButton_9 = new JButton("Save");
+				        panel_33.add(btnNewButton_9);
+				        
+				        JButton btnNewButton_10 = new JButton("Import");
+				        panel_33.add(btnNewButton_10);
+				        btnNewButton_10.addActionListener(new ActionListener() {
+				        	public void actionPerformed(ActionEvent e) {
+				        		JFileChooser fileChooser = new JFileChooser();
+				        		int result = fileChooser.showOpenDialog(null); 
+				        		if (result == JFileChooser.APPROVE_OPTION) {
+				        		    File selectedFile = fileChooser.getSelectedFile();
+				        		try (BufferedReader reader = new BufferedReader(new FileReader(selectedFile))) {
+				        			data.clear();
+				        		    StringBuilder content = new StringBuilder();
+				        		    String line;
+				        		    while ((line = reader.readLine()) != null) {
+				        		        content.append(line).append("\n");
+				        		        if (line.contentEquals("Mouvement")) {
+				        		        	Mouvement mouvement = new Mouvement(0.0,0.0,0.0,arduino);
+				        		        	data.add(mouvement);
+				        		        }
+	                    
+				        		    }
+				        		} catch (IOException a) {
+				        		    a.printStackTrace();
+				        		}
+				        	}
+				           }
+				        });
+				        btnNewButton_9.addActionListener(new ActionListener() {
 		            @Override
 		            public void actionPerformed(ActionEvent e) {
 		                JFileChooser fileChooser = new JFileChooser();
@@ -1146,42 +1199,6 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		                }
 		            }
 		        });
-
-
-		        frame.pack();
-		        frame.setVisible(true);
-		    
-		
-		      
-		panel_timeTotal.add(btnNewButton_9);
-		
-		JButton btnNewButton_10 = new JButton("Import");
-		btnNewButton_10.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				JFileChooser fileChooser = new JFileChooser();
-				int result = fileChooser.showOpenDialog(null); 
-				if (result == JFileChooser.APPROVE_OPTION) {
-				    File selectedFile = fileChooser.getSelectedFile();
-				try (BufferedReader reader = new BufferedReader(new FileReader(selectedFile))) {
-					data.clear();
-				    StringBuilder content = new StringBuilder();
-				    String line;
-				    while ((line = reader.readLine()) != null) {
-				        content.append(line).append("\n");
-				        if (line.contentEquals("Mouvement")) {
-				        	Mouvement mouvement = new Mouvement(0.0,0.0,0.0,arduino);
-				        	data.add(mouvement);
-				        }
-	                    
-				       
-				    }
-				} catch (IOException a) {
-				    a.printStackTrace();
-				}
-			}
-		   }
-		});
-		panel_timeTotal.add(btnNewButton_10);
 
 		JLabel lblNewLabel_timeTotal = new JLabel("Total time : ");
 		lblNewLabel_timeTotal.setVerticalAlignment(SwingConstants.TOP);
@@ -1597,6 +1614,7 @@ public class Interface_Graphique_preview_parameter extends JFrame {
 		panel_south.add(panel_Start_Stop, BorderLayout.EAST);
 		panel_Start_Stop.setLayout(new GridLayout(2, 2, 10, 10));
 
+		
 		// Button start
 		// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
